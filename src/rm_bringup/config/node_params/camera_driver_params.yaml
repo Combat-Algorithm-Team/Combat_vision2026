@@ -1,0 +1,5 @@
+/camera_driver:
+  ros__parameters:
+    camera_info_url: package://rm_bringup/config/camera_info.yaml
+    exposure_time: 6000
+    gain: 16.0
