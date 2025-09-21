@@ -1,0 +1,509 @@
+[  0%] Built target rm_interfaces__cpp
+[  0%] Built target ament_cmake_python_copy_rm_interfaces
+[ 12%] Built target rm_interfaces__rosidl_generator_c
+[ 24%] Built target rm_interfaces__rosidl_typesupport_c
+[ 36%] Built target rm_interfaces__rosidl_typesupport_introspection_c
+[ 48%] Built target rm_interfaces__rosidl_typesupport_cpp
+[ 60%] Built target rm_interfaces__rosidl_typesupport_introspection_cpp
+[ 72%] Built target rm_interfaces__rosidl_typesupport_fastrtps_cpp
+[ 84%] Built target rm_interfaces__rosidl_typesupport_fastrtps_c
+[ 84%] Built target rm_interfaces
+[ 85%] Built target rm_interfaces__py
+[ 96%] Built target rm_interfaces__rosidl_generator_py
+[ 99%] Built target rm_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[ 99%] Built target rm_interfaces__rosidl_typesupport_introspection_c__pyext
+[100%] Built target rm_interfaces__rosidl_typesupport_c__pyext
+running egg_info
+writing rm_interfaces.egg-info/PKG-INFO
+writing dependency_links to rm_interfaces.egg-info/dependency_links.txt
+writing top-level names to rm_interfaces.egg-info/top_level.txt
+reading manifest file 'rm_interfaces.egg-info/SOURCES.txt'
+writing manifest file 'rm_interfaces.egg-info/SOURCES.txt'
+[100%] Built target ament_cmake_python_build_rm_interfaces_egg
+-- Install configuration: ""
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/ament_index/resource_index/rosidl_interfaces/rm_interfaces
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/set_mode.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail/set_mode__functions.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail/set_mode__functions.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail/set_mode__struct.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail/set_mode__type_support.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/point2d.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/judge_system_data.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/operator_command.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/debug_armor.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/rosidl_generator_c__visibility_control.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/debug_light.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/debug_rune_angle.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/debug_lights.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/armor.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/serial_receive_data.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/debug_armors.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/armors.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/target.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/measurement.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armors__type_support.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/rune_target__type_support.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/point2d__struct.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armors__functions.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armor__type_support.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armors__type_support.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_lights__type_support.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armors__struct.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/measurement__functions.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/operator_command__functions.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/target__struct.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/serial_receive_data__struct.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armors__functions.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armor__functions.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_light__struct.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_lights__functions.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_lights__struct.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_light__functions.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/measurement__type_support.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armor__functions.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/operator_command__type_support.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armor__functions.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/target__type_support.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/point2d__functions.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/chassis_cmd__functions.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_lights__functions.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/point2d__functions.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/chassis_cmd__functions.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/gimbal_cmd__type_support.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/rune_target__struct.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_light__type_support.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armor__struct.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armors__functions.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_light__functions.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/rune_target__functions.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/gimbal_cmd__struct.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/chassis_cmd__type_support.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/judge_system_data__type_support.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/target__functions.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/serial_receive_data__type_support.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/gimbal_cmd__functions.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/point2d__type_support.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_rune_angle__functions.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armor__type_support.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/judge_system_data__functions.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/operator_command__struct.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armor__functions.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/judge_system_data__functions.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/serial_receive_data__functions.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/chassis_cmd__struct.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/operator_command__functions.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/measurement__functions.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armors__functions.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armors__struct.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/measurement__struct.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_rune_angle__type_support.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/target__functions.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/judge_system_data__struct.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armor__struct.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/serial_receive_data__functions.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_rune_angle__functions.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/rune_target__functions.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_rune_angle__struct.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/gimbal_cmd__functions.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/rune_target.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/gimbal_cmd.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/chassis_cmd.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/environment/library_path.sh
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/environment/library_path.dsv
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib/librm_interfaces__rosidl_generator_c.so
+-- Set non-toolchain portion of runtime path of "/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib/librm_interfaces__rosidl_generator_c.so" to ""
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail/set_mode__rosidl_typesupport_fastrtps_c.h
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/judge_system_data__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/operator_command__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/gimbal_cmd__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_light__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_rune_angle__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armor__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/chassis_cmd__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/measurement__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armors__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_lights__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armor__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/serial_receive_data__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/target__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/rune_target__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armors__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/point2d__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib/librm_interfaces__rosidl_typesupport_fastrtps_c.so
+-- Set non-toolchain portion of runtime path of "/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib/librm_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail/set_mode__rosidl_typesupport_introspection_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail/set_mode__type_support.c
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/operator_command__type_support.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/point2d__rosidl_typesupport_introspection_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/serial_receive_data__type_support.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_rune_angle__type_support.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_lights__rosidl_typesupport_introspection_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_rune_angle__rosidl_typesupport_introspection_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armors__type_support.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/point2d__type_support.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/measurement__type_support.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armors__type_support.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/gimbal_cmd__rosidl_typesupport_introspection_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armor__rosidl_typesupport_introspection_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/chassis_cmd__rosidl_typesupport_introspection_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armor__type_support.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/measurement__rosidl_typesupport_introspection_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/rune_target__type_support.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/chassis_cmd__type_support.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armor__rosidl_typesupport_introspection_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/operator_command__rosidl_typesupport_introspection_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/serial_receive_data__rosidl_typesupport_introspection_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armors__rosidl_typesupport_introspection_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/judge_system_data__type_support.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/target__type_support.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_light__type_support.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/gimbal_cmd__type_support.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armors__rosidl_typesupport_introspection_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armor__type_support.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/rune_target__rosidl_typesupport_introspection_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_light__rosidl_typesupport_introspection_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/target__rosidl_typesupport_introspection_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_lights__type_support.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/judge_system_data__rosidl_typesupport_introspection_c.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib/librm_interfaces__rosidl_typesupport_introspection_c.so
+-- Set non-toolchain portion of runtime path of "/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib/librm_interfaces__rosidl_typesupport_introspection_c.so" to ""
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib/librm_interfaces__rosidl_typesupport_c.so
+-- Set non-toolchain portion of runtime path of "/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib/librm_interfaces__rosidl_typesupport_c.so" to ""
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/set_mode.hpp
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail/set_mode__builder.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail/set_mode__struct.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail/set_mode__type_support.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail/set_mode__traits.hpp
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/point2d.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/judge_system_data.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/operator_command.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/armor.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/armors.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/serial_receive_data.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/gimbal_cmd.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/debug_armor.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/measurement.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/debug_rune_angle.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/debug_light.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/debug_armors.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/debug_lights.hpp
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armor__builder.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armors__type_support.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/point2d__builder.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/point2d__struct.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_rune_angle__struct.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armors__traits.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/target__struct.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/rune_target__traits.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_lights__traits.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_light__builder.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armor__struct.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_light__struct.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armor__traits.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/chassis_cmd__type_support.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/operator_command__builder.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armors__type_support.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/measurement__traits.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/gimbal_cmd__type_support.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/serial_receive_data__traits.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/target__traits.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/serial_receive_data__type_support.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/chassis_cmd__struct.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/operator_command__type_support.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/judge_system_data__builder.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_light__type_support.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/serial_receive_data__builder.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/rune_target__struct.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_light__traits.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armor__type_support.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/measurement__builder.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armor__struct.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_lights__type_support.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armors__builder.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/rune_target__type_support.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/target__builder.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_rune_angle__traits.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/judge_system_data__traits.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armors__builder.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armor__traits.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/gimbal_cmd__struct.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/point2d__traits.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/judge_system_data__struct.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/measurement__type_support.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/chassis_cmd__traits.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/target__type_support.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_lights__struct.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/gimbal_cmd__builder.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/point2d__type_support.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armors__traits.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/serial_receive_data__struct.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_rune_angle__builder.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armors__struct.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armors__struct.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_rune_angle__type_support.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/operator_command__struct.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armor__builder.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/measurement__struct.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/judge_system_data__type_support.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/chassis_cmd__builder.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_lights__builder.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armor__type_support.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/rune_target__builder.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/operator_command__traits.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/gimbal_cmd__traits.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/rune_target.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/target.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/chassis_cmd.hpp
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail/dds_fastrtps
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail/set_mode__rosidl_typesupport_fastrtps_cpp.hpp
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/dds_fastrtps
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/judge_system_data__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armors__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armors__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/gimbal_cmd__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_lights__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/chassis_cmd__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/measurement__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_light__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_rune_angle__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armor__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armor__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/rune_target__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/serial_receive_data__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/operator_command__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/target__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/point2d__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib/librm_interfaces__rosidl_typesupport_fastrtps_cpp.so
+-- Set non-toolchain portion of runtime path of "/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib/librm_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail/set_mode__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/srv/detail/set_mode__type_support.cpp
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/point2d__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armor__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/gimbal_cmd__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armors__type_support.cpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/target__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/serial_receive_data__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armors__type_support.cpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_lights__type_support.cpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/target__type_support.cpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/judge_system_data__type_support.cpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armor__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_lights__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_light__type_support.cpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armors__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armor__type_support.cpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_armor__type_support.cpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/point2d__type_support.cpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/rune_target__type_support.cpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_rune_angle__type_support.cpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_light__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/debug_rune_angle__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/armors__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/operator_command__type_support.cpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/chassis_cmd__type_support.cpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/measurement__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/rune_target__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/measurement__type_support.cpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/serial_receive_data__type_support.cpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/judge_system_data__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/chassis_cmd__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/operator_command__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/include/rm_interfaces/rm_interfaces/msg/detail/gimbal_cmd__type_support.cpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib/librm_interfaces__rosidl_typesupport_introspection_cpp.so
+-- Set non-toolchain portion of runtime path of "/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib/librm_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib/librm_interfaces__rosidl_typesupport_cpp.so
+-- Set non-toolchain portion of runtime path of "/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib/librm_interfaces__rosidl_typesupport_cpp.so" to ""
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/environment/pythonpath.sh
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/environment/pythonpath.dsv
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces-0.0.0-py3.10.egg-info
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/__init__.py
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/srv
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/srv/__init__.py
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/srv/_set_mode_s.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/srv/_set_mode.py
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_serial_receive_data.py
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/__init__.py
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_point2d_s.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_target_s.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_armors_s.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_operator_command.py
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_rune_target_s.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_armor_s.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_judge_system_data.py
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_point2d.py
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_debug_lights_s.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_rune_target.py
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_debug_rune_angle_s.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_debug_light_s.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_measurement.py
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_chassis_cmd.py
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_serial_receive_data_s.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_debug_light.py
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_judge_system_data_s.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_target.py
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_operator_command_s.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_debug_lights.py
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_debug_armors.py
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_gimbal_cmd.py
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_armor.py
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_chassis_cmd_s.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_debug_armors_s.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_armors.py
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_debug_rune_angle.py
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_debug_armor_s.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_debug_armor.py
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_gimbal_cmd_s.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_measurement_s.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/rm_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/librm_interfaces__rosidl_generator_py.so
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/rm_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/rm_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/_rm_interfaces_s.ep.rosidl_typesupport_c.c
+Listing '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces'...
+Compiling '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/__init__.py'...
+Listing '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg'...
+Compiling '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/__init__.py'...
+Compiling '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_armor.py'...
+Compiling '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_armors.py'...
+Compiling '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_chassis_cmd.py'...
+Compiling '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_debug_armor.py'...
+Compiling '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_debug_armors.py'...
+Compiling '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_debug_light.py'...
+Compiling '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_debug_lights.py'...
+Compiling '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_debug_rune_angle.py'...
+Compiling '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_gimbal_cmd.py'...
+Compiling '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_judge_system_data.py'...
+Compiling '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_measurement.py'...
+Compiling '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_operator_command.py'...
+Compiling '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_point2d.py'...
+Compiling '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_rune_target.py'...
+Compiling '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_serial_receive_data.py'...
+Compiling '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/msg/_target.py'...
+Listing '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/srv'...
+Compiling '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/srv/__init__.py'...
+Compiling '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/srv/_set_mode.py'...
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/rm_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+-- Set non-toolchain portion of runtime path of "/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/rm_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/rm_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+-- Set non-toolchain portion of runtime path of "/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/rm_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/rm_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+-- Set non-toolchain portion of runtime path of "/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages/rm_interfaces/rm_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib/librm_interfaces__rosidl_generator_py.so
+-- Set non-toolchain portion of runtime path of "/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib/librm_interfaces__rosidl_generator_py.so" to ""
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/Armor.idl
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/Armors.idl
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/Target.idl
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/RuneTarget.idl
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/Point2d.idl
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/GimbalCmd.idl
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/ChassisCmd.idl
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/DebugLight.idl
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/DebugLights.idl
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/DebugArmor.idl
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/DebugArmors.idl
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/DebugRuneAngle.idl
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/Measurement.idl
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/JudgeSystemData.idl
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/OperatorCommand.idl
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/SerialReceiveData.idl
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/srv/SetMode.idl
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/Armor.msg
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/Armors.msg
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/Target.msg
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/RuneTarget.msg
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/Point2d.msg
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/GimbalCmd.msg
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/ChassisCmd.msg
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/DebugLight.msg
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/DebugLights.msg
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/DebugArmor.msg
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/DebugArmors.msg
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/DebugRuneAngle.msg
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/Measurement.msg
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/JudgeSystemData.msg
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/OperatorCommand.msg
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/msg/SerialReceiveData.msg
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/srv/SetMode.srv
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/srv/SetMode_Request.msg
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/srv/SetMode_Response.msg
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/ament_index/resource_index/package_run_dependencies/rm_interfaces
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/ament_index/resource_index/parent_prefix_path/rm_interfaces
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/environment/ament_prefix_path.sh
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/environment/ament_prefix_path.dsv
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/environment/path.sh
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/environment/path.dsv
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/local_setup.bash
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/local_setup.sh
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/local_setup.zsh
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/local_setup.dsv
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/package.dsv
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/ament_index/resource_index/packages/rm_interfaces
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/cmake/export_rm_interfaces__rosidl_generator_cExport.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/cmake/export_rm_interfaces__rosidl_generator_cExport-noconfig.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/cmake/export_rm_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/cmake/export_rm_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/cmake/rm_interfaces__rosidl_typesupport_introspection_cExport.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/cmake/rm_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/cmake/rm_interfaces__rosidl_typesupport_cExport.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/cmake/rm_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/cmake/export_rm_interfaces__rosidl_generator_cppExport.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/cmake/export_rm_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/cmake/export_rm_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/cmake/rm_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/cmake/rm_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/cmake/rm_interfaces__rosidl_typesupport_cppExport.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/cmake/rm_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/cmake/export_rm_interfaces__rosidl_generator_pyExport.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/cmake/export_rm_interfaces__rosidl_generator_pyExport-noconfig.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/cmake/rosidl_cmake-extras.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/cmake/rm_interfacesConfig.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/cmake/rm_interfacesConfig-version.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/package.xml

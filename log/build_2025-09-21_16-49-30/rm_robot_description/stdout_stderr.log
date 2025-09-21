@@ -1,0 +1,35 @@
+[0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+[0m
+-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/ckl/RM/Combat_vision2026/build/rm_robot_description
+-- Install configuration: ""
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/urdf
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/urdf/sentry.urdf.xacro
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/urdf/rm_gimbal.urdf.xacro
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/ament_index/resource_index/package_run_dependencies/rm_robot_description
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/ament_index/resource_index/parent_prefix_path/rm_robot_description
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/environment/ament_prefix_path.sh
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/environment/path.sh
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/environment/path.dsv
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/local_setup.bash
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/local_setup.sh
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/local_setup.zsh
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/local_setup.dsv
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/package.dsv
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/ament_index/resource_index/packages/rm_robot_description
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/cmake/rm_robot_descriptionConfig.cmake
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/cmake/rm_robot_descriptionConfig-version.cmake
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/package.xml

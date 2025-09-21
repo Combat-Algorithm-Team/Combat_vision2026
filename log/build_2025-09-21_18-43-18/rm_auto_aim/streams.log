@@ -1,0 +1,51 @@
+[0.022s] Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_auto_aim': AMENT_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/ckl/RM/Combat_vision2026/src/rm_auto_aim/rm_auto_aim -DCMAKE_INSTALL_PREFIX=/home/ckl/RM/Combat_vision2026/install/rm_auto_aim
+[0.024s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.024s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.024s]   CMake.
+[0.024s] 
+[0.024s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.024s]   to tell CMake that the project requires at least <min> but has been updated
+[0.024s]   to work with policies introduced by <max> or earlier.
+[0.024s] 
+[0.024s] [0m
+[0.078s] -- The C compiler identification is GNU 11.4.0
+[0.141s] -- The CXX compiler identification is GNU 11.4.0
+[0.150s] -- Detecting C compiler ABI info
+[0.209s] -- Detecting C compiler ABI info - done
+[0.221s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.221s] -- Detecting C compile features
+[0.222s] -- Detecting C compile features - done
+[0.235s] -- Detecting CXX compiler ABI info
+[0.300s] -- Detecting CXX compiler ABI info - done
+[0.312s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.313s] -- Detecting CXX compile features
+[0.313s] -- Detecting CXX compile features - done
+[0.325s] -- Found ament_cmake_auto: 1.3.12 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.443s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter
+[0.533s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.607s] -- Added test 'lint_cmake' to check CMake code style
+[0.608s] -- Added test 'xmllint' to check XML markup files
+[0.610s] -- Configuring done (0.6s)
+[0.613s] -- Generating done (0.0s)
+[0.614s] -- Build files have been written to: /home/ckl/RM/Combat_vision2026/build/rm_auto_aim
+[0.618s] Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_auto_aim' returned '0': AMENT_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/ckl/RM/Combat_vision2026/src/rm_auto_aim/rm_auto_aim -DCMAKE_INSTALL_PREFIX=/home/ckl/RM/Combat_vision2026/install/rm_auto_aim
+[0.620s] Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_auto_aim': AMENT_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/rm_auto_aim -- -j16 -l16
+[0.644s] Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_auto_aim' returned '0': AMENT_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/rm_auto_aim -- -j16 -l16
+[0.645s] Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_auto_aim': AMENT_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/ckl/RM/Combat_vision2026/build/rm_auto_aim
+[0.645s] -- Install configuration: ""
+[0.646s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_auto_aim/share/ament_index/resource_index/package_run_dependencies/rm_auto_aim
+[0.646s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_auto_aim/share/ament_index/resource_index/parent_prefix_path/rm_auto_aim
+[0.646s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_auto_aim/share/rm_auto_aim/environment/ament_prefix_path.sh
+[0.646s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_auto_aim/share/rm_auto_aim/environment/ament_prefix_path.dsv
+[0.646s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_auto_aim/share/rm_auto_aim/environment/path.sh
+[0.647s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_auto_aim/share/rm_auto_aim/environment/path.dsv
+[0.647s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_auto_aim/share/rm_auto_aim/local_setup.bash
+[0.647s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_auto_aim/share/rm_auto_aim/local_setup.sh
+[0.647s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_auto_aim/share/rm_auto_aim/local_setup.zsh
+[0.647s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_auto_aim/share/rm_auto_aim/local_setup.dsv
+[0.647s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_auto_aim/share/rm_auto_aim/package.dsv
+[0.648s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_auto_aim/share/ament_index/resource_index/packages/rm_auto_aim
+[0.648s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_auto_aim/share/rm_auto_aim/cmake/rm_auto_aimConfig.cmake
+[0.648s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_auto_aim/share/rm_auto_aim/cmake/rm_auto_aimConfig-version.cmake
+[0.648s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_auto_aim/share/rm_auto_aim/package.xml
+[0.650s] Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_auto_aim' returned '0': AMENT_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/ckl/RM/Combat_vision2026/build/rm_auto_aim

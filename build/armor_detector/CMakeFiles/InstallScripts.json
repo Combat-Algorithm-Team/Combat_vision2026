@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/ckl/RM/Combat_vision2026/build/armor_detector/cmake_install.cmake",
+		"/home/ckl/RM/Combat_vision2026/build/armor_detector/gtest/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

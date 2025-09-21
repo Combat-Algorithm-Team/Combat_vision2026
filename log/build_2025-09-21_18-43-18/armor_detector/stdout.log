@@ -1,0 +1,68 @@
+[ 11%] Built target gtest_main
+[ 22%] Built target gtest
+[ 33%] Built target armor_detector_node
+[ 44%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/miseruz.cpp.o[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/spiral.cpp.o[0m
+[ 50%] [1m[32mLinking CXX shared library libarmor_detector.so[0m
+[ 88%] Built target armor_detector
+[ 94%] [32mBuilding CXX object CMakeFiles/test_detector.dir/test/test_detector.cpp.o[0m
+[100%] [1m[32mLinking CXX executable test_detector[0m
+[100%] Built target test_detector
+-- Install configuration: ""
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/lib/armor_detector/armor_detector_node
+-- Set non-toolchain portion of runtime path of "/home/ckl/RM/Combat_vision2026/install/armor_detector/lib/armor_detector/armor_detector_node" to ""
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/include
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/include/armor_detector
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/include/armor_detector/light_corner_corrector.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/include/armor_detector/types.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/include/armor_detector/ba_solver.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/include/armor_detector/armor_detector_node.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/include/armor_detector/armor_pose_estimator.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/include/armor_detector/number_classifier.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/include/armor_detector/armor_detector.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/include/armor_detector/graph_optimizer.hpp
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/environment/library_path.sh
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/environment/library_path.dsv
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/lib/libarmor_detector.so
+-- Set non-toolchain portion of runtime path of "/home/ckl/RM/Combat_vision2026/install/armor_detector/lib/libarmor_detector.so" to ""
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/origin1.png
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/num_warp.png
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/test.png
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/gray_bin.png
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/num_bin.png
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/blue.png
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/origin2.png
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/BA.png
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/pca1.png
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/raw.png
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/num_roi.png
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/hsv_bin.png
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/pca2.png
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/num_raw.png
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/model.svg
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/red.png
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/classify.png
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/model
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/model/label.txt
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/model/lenet.onnx
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/model/mlp.onnx
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/ament_index/resource_index/package_run_dependencies/armor_detector
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/ament_index/resource_index/parent_prefix_path/armor_detector
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/environment/ament_prefix_path.sh
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/environment/ament_prefix_path.dsv
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/environment/path.sh
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/environment/path.dsv
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/local_setup.bash
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/local_setup.sh
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/local_setup.zsh
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/local_setup.dsv
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/package.dsv
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/ament_index/resource_index/packages/armor_detector
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/ament_index/resource_index/rclcpp_components/armor_detector
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/cmake/ament_cmake_export_libraries-extras.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/cmake/armor_detectorConfig.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/cmake/armor_detectorConfig-version.cmake
+-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/package.xml

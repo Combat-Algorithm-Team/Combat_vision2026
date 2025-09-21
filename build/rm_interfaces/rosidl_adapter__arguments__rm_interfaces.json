@@ -1,0 +1,22 @@
+{
+  "package_name": "rm_interfaces",
+  "non_idl_tuples": [
+    "/home/ckl/RM/Combat_vision2026/src/rm_interfaces:msg/Armor.msg",
+    "/home/ckl/RM/Combat_vision2026/src/rm_interfaces:msg/Armors.msg",
+    "/home/ckl/RM/Combat_vision2026/src/rm_interfaces:msg/Target.msg",
+    "/home/ckl/RM/Combat_vision2026/src/rm_interfaces:msg/RuneTarget.msg",
+    "/home/ckl/RM/Combat_vision2026/src/rm_interfaces:msg/Point2d.msg",
+    "/home/ckl/RM/Combat_vision2026/src/rm_interfaces:msg/GimbalCmd.msg",
+    "/home/ckl/RM/Combat_vision2026/src/rm_interfaces:msg/ChassisCmd.msg",
+    "/home/ckl/RM/Combat_vision2026/src/rm_interfaces:msg/DebugLight.msg",
+    "/home/ckl/RM/Combat_vision2026/src/rm_interfaces:msg/DebugLights.msg",
+    "/home/ckl/RM/Combat_vision2026/src/rm_interfaces:msg/DebugArmor.msg",
+    "/home/ckl/RM/Combat_vision2026/src/rm_interfaces:msg/DebugArmors.msg",
+    "/home/ckl/RM/Combat_vision2026/src/rm_interfaces:msg/DebugRuneAngle.msg",
+    "/home/ckl/RM/Combat_vision2026/src/rm_interfaces:msg/Measurement.msg",
+    "/home/ckl/RM/Combat_vision2026/src/rm_interfaces:msg/JudgeSystemData.msg",
+    "/home/ckl/RM/Combat_vision2026/src/rm_interfaces:msg/OperatorCommand.msg",
+    "/home/ckl/RM/Combat_vision2026/src/rm_interfaces:msg/SerialReceiveData.msg",
+    "/home/ckl/RM/Combat_vision2026/src/rm_interfaces:srv/SetMode.srv"
+  ]
+}

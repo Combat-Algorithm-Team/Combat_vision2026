@@ -1,0 +1,98 @@
+[0mCMake Deprecation Warning at /opt/ros/humble/src/gtest_vendor/CMakeLists.txt:2 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+[0m
+[0mIn this package, headers install destination is set to `include` by ament_auto_package. It is recommended to install `include/armor_detector` instead and will be the default behavior of ament_auto_package from ROS 2 Kilted Kaiju. On distributions before Kilted, ament_auto_package behaves the same way when you use USE_SCOPED_HEADER_INSTALL_DIR option.[0m
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/miseruz.cpp:[m[K In function ‘[01m[Kint fyt::auto_aim::main()[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/miseruz.cpp:41:22:[m[K [01;31m[Kerror: [m[K‘[01m[KBLUE[m[K’ was not declared in this scope; did you mean ‘[01m[Kfyt::EnemyColor::BLUE[m[K’?
+   41 |   EnemyColor color = [01;31m[KBLUE[m[K;
+      |                      [01;31m[K^~~~[m[K
+      |                      [32m[Kfyt::EnemyColor::BLUE[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_detector.hpp:24[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_detector_node.hpp:46[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/miseruz.cpp:27[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/common.hpp:25:3:[m[K [01;36m[Knote: [m[K‘[01m[Kfyt::EnemyColor::BLUE[m[K’ declared here
+   25 |   [01;36m[KBLUE[m[K = 1,
+      |   [01;36m[K^~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/miseruz.cpp:57:12:[m[K [01;31m[Kerror: [m[K‘[01m[KreadImages[m[K’ was not declared in this scope
+   57 |   images = [01;31m[KreadImages[m[K(folder_path);
+      |            [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/miseruz.cpp:58:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kpnp_solver_[m[K’ was not declared in this scope; did you mean ‘[01m[KPnPSolver[m[K’?
+   58 |   [01;31m[Kpnp_solver_[m[K = std::make_unique<PnPSolver>(camera_info->k, camera_info->d);//camera_info is where?
+      |   [01;31m[K^~~~~~~~~~~[m[K
+      |   [32m[KPnPSolver[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/miseruz.cpp:58:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kcamera_info[m[K’ was not declared in this scope
+   58 |   pnp_solver_ = std::make_unique<PnPSolver>([01;31m[Kcamera_info[m[K->k, camera_info->d);//camera_info is where?
+      |                                             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/miseruz.cpp:66:26:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kfyt::auto_aim::Detector[m[K’
+   66 |   auto armors = detector_[01;31m[K->[m[Kdetect(img);
+      |                          [01;31m[K^~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/miseruz.cpp:66:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kimg[m[K’ was not declared in this scope; did you mean ‘[01m[Kimage[m[K’?
+   66 |   auto armors = detector_->detect([01;31m[Kimg[m[K);
+      |                                   [01;31m[K^~~[m[K
+      |                                   [32m[Kimage[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/miseruz.cpp:65:19:[m[K [01;31m[Kerror: [m[Kunused variable ‘[01m[Kimage[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Werror=unused-variable]8;;[m[K]
+   65 |   for(auto const& [01;31m[Kimage[m[K:images){
+      |                   [01;31m[K^~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/miseruz.cpp:74:3:[m[K [01;31m[Kerror: [m[Kno return statement in function returning non-void [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Werror=return-type]8;;[m[K]
+   74 |   [01;31m[K}[m[K
+      |   [01;31m[K^[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/miseruz.cpp:[m[K In function ‘[01m[Kstd::vector<cv::Mat> fyt::auto_aim::readImages(const string&)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/miseruz.cpp:84:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kendl[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd::endl[m[K’?
+   84 |         std::cout<<"failed to read image"<<[01;31m[Kendl[m[K;
+      |                                            [01;31m[K^~~~[m[K
+      |                                            [32m[Kstd::endl[m[K
+In file included from [01m[K/usr/include/c++/11/istream:39[m[K,
+                 from [01m[K/usr/include/c++/11/sstream:38[m[K,
+                 from [01m[K/usr/include/c++/11/bits/quoted_string.h:38[m[K,
+                 from [01m[K/usr/include/c++/11/iomanip:45[m[K,
+                 from [01m[K/usr/include/c++/11/bits/fs_path.h:39[m[K,
+                 from [01m[K/usr/include/c++/11/filesystem:45[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/miseruz.cpp:3[m[K:
+[01m[K/usr/include/c++/11/ostream:684:5:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::endl[m[K’ declared here
+  684 |     [01;36m[Kendl[m[K(basic_ostream<_CharT, _Traits>& __os)
+      |     [01;36m[K^~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:[m[K In function ‘[01m[Kint fyt::auto_aim::main()[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:41:22:[m[K [01;31m[Kerror: [m[K‘[01m[KBLUE[m[K’ was not declared in this scope; did you mean ‘[01m[Kfyt::EnemyColor::BLUE[m[K’?
+   41 |   EnemyColor color = [01;31m[KBLUE[m[K;
+      |                      [01;31m[K^~~~[m[K
+      |                      [32m[Kfyt::EnemyColor::BLUE[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_detector.hpp:24[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_detector_node.hpp:46[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:27[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/common.hpp:25:3:[m[K [01;36m[Knote: [m[K‘[01m[Kfyt::EnemyColor::BLUE[m[K’ declared here
+   25 |   [01;36m[KBLUE[m[K = 1,
+      |   [01;36m[K^~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:57:12:[m[K [01;31m[Kerror: [m[K‘[01m[KreadImages[m[K’ was not declared in this scope
+   57 |   images = [01;31m[KreadImages[m[K(folder_path);
+      |            [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:58:7:[m[K [01;31m[Kerror: [m[K‘[01m[KnameWindow[m[K’ is not a member of ‘[01m[Kcv[m[K’; did you mean ‘[01m[KnamedWindow[m[K’?
+   58 |   cv::[01;31m[KnameWindow[m[K("armor",cv::WINDOW_NORMAL);
+      |       [01;31m[K^~~~~~~~~~[m[K
+      |       [32m[KnamedWindow[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:61:13:[m[K [01;31m[Kerror: [m[K‘[01m[KwaitKey[m[K’ was not declared in this scope; did you mean ‘[01m[Kcv::waitKey[m[K’?
+   61 |     int key=[01;31m[KwaitKey[m[K(0);
+      |             [01;31m[K^~~~~~~[m[K
+      |             [32m[Kcv::waitKey[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:24[m[K:
+[01m[K/usr/local/include/opencv4/opencv2/highgui.hpp:324:18:[m[K [01;36m[Knote: [m[K‘[01m[Kcv::waitKey[m[K’ declared here
+  324 | CV_EXPORTS_W int [01;36m[KwaitKey[m[K(int delay = 0);
+      |                  [01;36m[K^~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:65:64:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+   65 | std::vector<cv::Mat> readImages(const std::string& folder_path)[01;31m[K{[m[K
+      |                                                                [01;31m[K^[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:78:1:[m[K [01;31m[Kerror: [m[Kno return statement in function returning non-void [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Werror=return-type]8;;[m[K]
+   78 | [01;31m[K}[m[K
+      | [01;31m[K^[m[K
+cc1plus: all warnings being treated as errors
+cc1plus: all warnings being treated as errors
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:191：CMakeFiles/armor_detector.dir/src/spiral.cpp.o] 错误 1
+gmake[2]: *** 正在等待未完成的任务....
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:163：CMakeFiles/armor_detector.dir/src/miseruz.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:182：CMakeFiles/armor_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

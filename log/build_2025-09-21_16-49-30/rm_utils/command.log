@@ -1,0 +1,2 @@
+Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_utils': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ckl/RM/Combat_vision2026/src/rm_utils -DCMAKE_INSTALL_PREFIX=/home/ckl/RM/Combat_vision2026/install/rm_utils
+Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_utils' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ckl/RM/Combat_vision2026/src/rm_utils -DCMAKE_INSTALL_PREFIX=/home/ckl/RM/Combat_vision2026/install/rm_utils
