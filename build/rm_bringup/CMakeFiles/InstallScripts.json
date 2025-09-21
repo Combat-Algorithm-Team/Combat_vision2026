@@ -1,7 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/home/ckl/RM/Combat_vision2026/build/rm_bringup/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

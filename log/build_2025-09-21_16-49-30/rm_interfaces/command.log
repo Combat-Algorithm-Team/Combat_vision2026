@@ -1,1 +1,0 @@
-Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ckl/RM/Combat_vision2026/src/rm_interfaces -DCMAKE_INSTALL_PREFIX=/home/ckl/RM/Combat_vision2026/install/rm_interfaces

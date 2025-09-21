@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -shared -Wl,-soname,libfytlogger.so -o libfytlogger.so CMakeFiles/fytlogger.dir/src/logger/logger_impl.cpp.o CMakeFiles/fytlogger.dir/src/logger/writer.cpp.o CMakeFiles/fytlogger.dir/src/logger/logger_pool.cpp.o  /usr/lib/x86_64-linux-gnu/libfmt.so.8.1.1 -Wl,--as-needed

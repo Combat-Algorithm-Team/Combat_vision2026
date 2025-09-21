@@ -1,8 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/home/ckl/RM/Combat_vision2026/build/rm_interfaces/cmake_install.cmake",
-		"/home/ckl/RM/Combat_vision2026/build/rm_interfaces/rm_interfaces__py/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

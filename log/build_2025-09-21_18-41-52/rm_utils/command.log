@@ -1,6 +1,0 @@
-Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_utils': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ckl/RM/Combat_vision2026/src/rm_utils -DCMAKE_INSTALL_PREFIX=/home/ckl/RM/Combat_vision2026/install/rm_utils
-Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_utils' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ckl/RM/Combat_vision2026/src/rm_utils -DCMAKE_INSTALL_PREFIX=/home/ckl/RM/Combat_vision2026/install/rm_utils
-Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_utils': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/rm_utils -- -j16 -l16
-Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_utils' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/rm_utils -- -j16 -l16
-Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_utils': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ckl/RM/Combat_vision2026/build/rm_utils
-Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_utils' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ckl/RM/Combat_vision2026/build/rm_utils

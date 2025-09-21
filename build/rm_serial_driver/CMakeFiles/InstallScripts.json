@@ -1,8 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/home/ckl/RM/Combat_vision2026/build/rm_serial_driver/cmake_install.cmake",
-		"/home/ckl/RM/Combat_vision2026/build/rm_serial_driver/gtest/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
