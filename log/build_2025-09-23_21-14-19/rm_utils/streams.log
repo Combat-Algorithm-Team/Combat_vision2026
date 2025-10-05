@@ -1,0 +1,124 @@
+[0.018s] Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_utils': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/ckl/RM/Combat_vision2026/src/rm_utils -DCMAKE_INSTALL_PREFIX=/home/ckl/RM/Combat_vision2026/install/rm_utils
+[0.026s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.026s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.026s]   CMake.
+[0.026s] 
+[0.027s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.027s]   to tell CMake that the project requires at least <min> but has been updated
+[0.027s]   to work with policies introduced by <max> or earlier.
+[0.027s] 
+[0.027s] [0m
+[0.162s] -- The C compiler identification is GNU 11.4.0
+[0.243s] -- The CXX compiler identification is GNU 11.4.0
+[0.270s] -- Detecting C compiler ABI info
+[0.339s] -- Detecting C compiler ABI info - done
+[0.350s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.352s] -- Detecting C compile features
+[0.353s] -- Detecting C compile features - done
+[0.371s] -- Detecting CXX compiler ABI info
+[0.440s] -- Detecting CXX compiler ABI info - done
+[0.453s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.453s] -- Detecting CXX compile features
+[0.453s] -- Detecting CXX compile features - done
+[0.469s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.603s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter
+[0.773s] -- Found rclcpp: 16.0.14 (/opt/ros/humble/share/rclcpp/cmake)
+[0.872s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.876s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.887s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.926s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.942s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.055s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.066s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.226s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")
+[1.266s] -- Found FastRTPS: /opt/ros/humble/include
+[1.314s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.343s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.410s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.411s] -- Found Threads: TRUE
+[1.546s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.553s] -- Found Eigen3: TRUE (found version "3.4.0")
+[1.554s] -- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+[1.578s] -- Found OpenCV: /usr (found suitable version "4.5.4", minimum required is "4")
+[1.582s] -- Found required Ceres dependency: Eigen version 3.4.0 in /usr/include/eigen3
+[1.588s] -- Found required Ceres dependency: glog
+[1.588s] -- Found required Ceres dependency: gflags
+[1.589s] -- Found Ceres version: 2.0.0 installed in: /usr with components: [EigenSparse, SparseLinearAlgebraLibrary, LAPACK, SuiteSparse, CXSparse, SchurSpecializations, Multithreading]
+[1.595s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.672s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.672s] -- Configured cppcheck include dirs: /home/ckl/RM/Combat_vision2026/src/rm_utils/include
+[1.672s] -- Configured cppcheck exclude dirs and/or files: 
+[1.674s] -- Added test 'lint_cmake' to check CMake code style
+[1.676s] -- Added test 'xmllint' to check XML markup files
+[1.678s] -- Configuring done (1.7s)
+[1.695s] -- Generating done (0.0s)
+[1.698s] -- Build files have been written to: /home/ckl/RM/Combat_vision2026/build/rm_utils
+[1.712s] Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_utils' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/ckl/RM/Combat_vision2026/src/rm_utils -DCMAKE_INSTALL_PREFIX=/home/ckl/RM/Combat_vision2026/install/rm_utils
+[1.712s] Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_utils': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/rm_utils -- -j16 -l16
+[1.743s] [  8%] [32mBuilding CXX object CMakeFiles/fytlogger.dir/src/logger/writer.cpp.o[0m
+[1.744s] [ 16%] [32mBuilding CXX object CMakeFiles/fytlogger.dir/src/logger/logger_pool.cpp.o[0m
+[1.744s] [ 25%] [32mBuilding CXX object CMakeFiles/fytlogger.dir/src/logger/logger_impl.cpp.o[0m
+[1.744s] [ 33%] [32mBuilding CXX object CMakeFiles/rm_utils.dir/src/math/pnp_solver.cpp.o[0m
+[1.744s] [ 41%] [32mBuilding CXX object CMakeFiles/rm_utils.dir/src/math/utils.cpp.o[0m
+[1.745s] [ 50%] [32mBuilding CXX object CMakeFiles/rm_utils.dir/src/math/trajectory_compensator.cpp.o[0m
+[1.745s] [ 58%] [32mBuilding CXX object CMakeFiles/rm_utils.dir/src/heartbeat.cpp.o[0m
+[1.745s] [ 83%] [32mBuilding CXX object CMakeFiles/rm_utils.dir/src/url_resolver.cpp.o[0m
+[1.745s] [ 83%] [32mBuilding CXX object CMakeFiles/rm_utils.dir/src/math/manual_compensator.cpp.o[0m
+[1.746s] [ 83%] [32mBuilding CXX object CMakeFiles/rm_utils.dir/src/math/extended_kalman_filter.cpp.o[0m
+[2.838s] [ 91%] [1m[32mLinking CXX shared library libfytlogger.so[0m
+[2.928s] [ 91%] Built target fytlogger
+[8.001s] [100%] [1m[32mLinking CXX shared library librm_utils.so[0m
+[8.142s] [100%] Built target rm_utils
+[8.150s] Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_utils' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/rm_utils -- -j16 -l16
+[8.151s] Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_utils': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ckl/RM/Combat_vision2026/build/rm_utils
+[8.155s] -- Install configuration: ""
+[8.155s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/include
+[8.155s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils
+[8.155s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/common.hpp
+[8.155s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/url_resolver.hpp
+[8.155s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/logger
+[8.155s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/logger/exception.hpp
+[8.155s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/logger/types.hpp
+[8.156s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/logger/logger_pool.hpp
+[8.156s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/logger/README.md
+[8.156s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/logger/log.hpp
+[8.156s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/logger/impl
+[8.156s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/logger/impl/logger_impl.hpp
+[8.156s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/logger/impl/global_mutex.hpp
+[8.156s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/logger/impl/writer.hpp
+[8.156s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/heartbeat.hpp
+[8.157s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math
+[8.157s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/particle_filter.hpp
+[8.157s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/trajectory_compensator.hpp
+[8.157s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/utils.hpp
+[8.157s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/manual_compensator.hpp
+[8.157s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/extended_kalman_filter.hpp
+[8.157s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/pnp_solver.hpp
+[8.157s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/assert.hpp
+[8.158s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/lib/librm_utils.so
+[8.158s] -- Set non-toolchain portion of runtime path of "/home/ckl/RM/Combat_vision2026/install/rm_utils/lib/librm_utils.so" to ""
+[8.158s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/lib/libfytlogger.so
+[8.159s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/environment/library_path.sh
+[8.159s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/environment/library_path.dsv
+[8.159s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/ament_index/resource_index/package_run_dependencies/rm_utils
+[8.159s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/ament_index/resource_index/parent_prefix_path/rm_utils
+[8.159s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/environment/ament_prefix_path.sh
+[8.160s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/environment/ament_prefix_path.dsv
+[8.160s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/environment/path.sh
+[8.160s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/environment/path.dsv
+[8.160s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/local_setup.bash
+[8.160s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/local_setup.sh
+[8.160s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/local_setup.zsh
+[8.160s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/local_setup.dsv
+[8.161s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/package.dsv
+[8.161s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/ament_index/resource_index/packages/rm_utils
+[8.161s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/cmake/rm_utilsExport.cmake
+[8.161s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/cmake/rm_utilsExport-noconfig.cmake
+[8.161s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/cmake/fytloggerExport.cmake
+[8.161s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/cmake/fytloggerExport-noconfig.cmake
+[8.161s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/cmake/ament_cmake_export_targets-extras.cmake
+[8.162s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/cmake/ament_cmake_export_dependencies-extras.cmake
+[8.162s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/cmake/rm_utilsConfig.cmake
+[8.162s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/cmake/rm_utilsConfig-version.cmake
+[8.162s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/package.xml
+[8.164s] Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_utils' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ckl/RM/Combat_vision2026/build/rm_utils

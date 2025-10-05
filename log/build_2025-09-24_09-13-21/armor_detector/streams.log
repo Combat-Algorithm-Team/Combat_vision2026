@@ -1,0 +1,40 @@
+[0.017s] Invoking command in '/home/ckl/RM/Combat_vision2026/build/armor_detector': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/armor_detector -- -j16 -l16
+[0.053s] [  8%] Built target gtest_main
+[0.054s] [ 20%] Built target gtest
+[0.055s] [ 24%] Built target armor_detector_node
+[0.097s] [ 28%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/armor_detector.cpp.o[0m
+[0.100s] [ 32%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/spiral.cpp.o[0m
+[2.287s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_detector.cpp:[m[K In constructor ‘[01m[Kfyt::auto_aim::Detector::Detector(const int&, const fyt::EnemyColor&, const fyt::auto_aim::Detector::LightParams&, const fyt::auto_aim::Detector::ArmorParams&)[m[K’:
+[2.287s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_detector.cpp:43:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kcout[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd::cout[m[K’?
+[2.287s]    43 |   [01;31m[Kcout[m[K<<"detector inited"<<endl;
+[2.287s]       |   [01;31m[K^~~~[m[K
+[2.287s]       |   [32m[Kstd::cout[m[K
+[2.287s] In file included from [01m[K/usr/include/opencv4/opencv2/flann/params.h:37[m[K,
+[2.287s]                  from [01m[K/usr/include/opencv4/opencv2/flann/flann_base.hpp:41[m[K,
+[2.287s]                  from [01m[K/usr/include/opencv4/opencv2/flann.hpp:48[m[K,
+[2.287s]                  from [01m[K/usr/include/opencv4/opencv2/opencv.hpp:65[m[K,
+[2.287s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/light_corner_corrector.hpp:20[m[K,
+[2.287s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_detector.hpp:31[m[K,
+[2.288s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_detector.cpp:19[m[K:
+[2.288s] [01m[K/usr/include/c++/11/iostream:61:18:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::cout[m[K’ declared here
+[2.288s]    61 |   extern ostream [01;36m[Kcout[m[K;          /// Linked to standard output
+[2.288s]       |                  [01;36m[K^~~~[m[K
+[2.288s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_detector.cpp:43:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kendl[m[K’ was not declared in this scope; did you mean ‘[01m[Kstd::endl[m[K’?
+[2.288s]    43 |   cout<<"detector inited"<<[01;31m[Kendl[m[K;
+[2.288s]       |                            [01;31m[K^~~~[m[K
+[2.288s]       |                            [32m[Kstd::endl[m[K
+[2.288s] In file included from [01m[K/usr/include/c++/11/istream:39[m[K,
+[2.288s]                  from [01m[K/usr/include/c++/11/sstream:38[m[K,
+[2.288s]                  from [01m[K/usr/include/c++/11/complex:45[m[K,
+[2.288s]                  from [01m[K/usr/include/opencv4/opencv2/core/cvstd.inl.hpp:47[m[K,
+[2.288s]                  from [01m[K/usr/include/opencv4/opencv2/core.hpp:3306[m[K,
+[2.288s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_detector.hpp:28[m[K,
+[2.289s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_detector.cpp:19[m[K:
+[2.289s] [01m[K/usr/include/c++/11/ostream:684:5:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::endl[m[K’ declared here
+[2.289s]   684 |     [01;36m[Kendl[m[K(basic_ostream<_CharT, _Traits>& __os)
+[2.289s]       |     [01;36m[K^~~~[m[K
+[2.765s] gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:79：CMakeFiles/armor_detector.dir/src/armor_detector.cpp.o] 错误 1
+[2.765s] gmake[2]: *** 正在等待未完成的任务....
+[10.700s] gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+[10.701s] gmake: *** [Makefile:146：all] 错误 2
+[10.703s] Invoked command in '/home/ckl/RM/Combat_vision2026/build/armor_detector' returned '2': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/armor_detector -- -j16 -l16

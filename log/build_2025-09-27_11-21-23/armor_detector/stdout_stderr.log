@@ -1,0 +1,11 @@
+[ 11%] Built target gtest_main
+[ 14%] Built target gtest
+[ 22%] Built target armor_detector_node
+[ 25%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/spiral.cpp.o[0m
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:102:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass fyt::auto_aim::ArmorPoseEstimator[m[K’ has no member named ‘[01m[Karmors_msg_[m[K’
+  102 |   armor_pose_estimator_->[01;31m[Karmors_msg_[m[K.armors = armor_pose_estimator_->extractArmorPoses(armors, imu_to_camera_);
+      |                          [01;31m[K^~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:191：CMakeFiles/armor_detector.dir/src/spiral.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

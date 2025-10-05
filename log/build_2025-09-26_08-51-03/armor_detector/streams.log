@@ -1,0 +1,26 @@
+[0.021s] Invoking command in '/home/ckl/RM/Combat_vision2026/build/armor_detector': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/armor_detector -- -j16 -l16
+[0.057s] [ 16%] Built target gtest_main
+[0.057s] [ 16%] Built target gtest
+[0.059s] [ 24%] Built target armor_detector_node
+[0.111s] [ 28%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/spiral.cpp.o[0m
+[12.942s] [ 32%] [1m[32mLinking CXX shared library libarmor_detector.so[0m
+[13.249s] [ 60%] Built target armor_detector
+[13.275s] [ 64%] [1m[32mLinking CXX executable test_detector[0m
+[13.315s] [ 72%] [32mBuilding CXX object CMakeFiles/spiral_detector.dir/src/armor_detector.cpp.o[0m
+[13.315s] [ 72%] [32mBuilding CXX object CMakeFiles/spiral_detector.dir/src/spiral.cpp.o[0m
+[13.747s] /usr/bin/ld: libarmor_detector.so: undefined reference to `fyt::auto_aim::readImages(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+[13.753s] /usr/bin/ld: libarmor_detector.so: undefined reference to `fyt::auto_aim::resizeWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, cv::Mat, int)'
+[13.775s] collect2: error: ld returned 1 exit status
+[13.777s] gmake[2]: *** [CMakeFiles/test_detector.dir/build.make:310：test_detector] 错误 1
+[13.777s] gmake[1]: *** [CMakeFiles/Makefile2:283：CMakeFiles/test_detector.dir/all] 错误 2
+[13.777s] gmake[1]: *** 正在等待未完成的任务....
+[25.521s] [ 76%] [1m[32mLinking CXX executable spiral_detector[0m
+[25.668s] /usr/bin/ld: warning: libtbb.so.2, needed by /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.5.4d, may conflict with libtbb.so.12
+[25.964s] /usr/bin/ld: CMakeFiles/spiral_detector.dir/src/spiral.cpp.o: in function `main':
+[25.964s] spiral.cpp:(.text.startup+0x78f): undefined reference to `fyt::auto_aim::readImages(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+[25.964s] /usr/bin/ld: spiral.cpp:(.text.startup+0x873): undefined reference to `fyt::auto_aim::resizeWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, cv::Mat, int)'
+[26.008s] collect2: error: ld returned 1 exit status
+[26.010s] gmake[2]: *** [CMakeFiles/spiral_detector.dir/build.make:404：spiral_detector] 错误 1
+[26.010s] gmake[1]: *** [CMakeFiles/Makefile2:217：CMakeFiles/spiral_detector.dir/all] 错误 2
+[26.010s] gmake: *** [Makefile:146：all] 错误 2
+[26.012s] Invoked command in '/home/ckl/RM/Combat_vision2026/build/armor_detector' returned '2': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/armor_detector -- -j16 -l16

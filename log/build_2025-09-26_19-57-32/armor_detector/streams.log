@@ -1,0 +1,183 @@
+[0.016s] Invoking command in '/home/ckl/RM/Combat_vision2026/build/armor_detector': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/armor_detector -- -j16 -l16
+[0.054s] [  7%] Built target gtest
+[0.055s] [ 14%] Built target gtest_main
+[0.056s] [ 22%] Built target armor_detector_node
+[0.105s] [ 25%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o[0m
+[5.315s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:[m[K In member function ‘[01m[Kvoid fyt::auto_aim::BoundSolver::drawBound(cv::Mat&)[m[K’:
+[5.315s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:15:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kuchar[m[K’ is not a member of ‘[01m[KEigen[m[K’; did you mean ‘[01m[Kuchar[m[K’?
+[5.315s]    15 |       if(edge_img.at<Eigen::[01;31m[Kuchar[m[K>(i, j) == 255){
+[5.315s]       |                             [01;31m[K^~~~~[m[K
+[5.316s] In file included from [01m[K/usr/include/opencv4/opencv2/core/cvdef.h:190[m[K,
+[5.316s]                  from [01m[K/usr/include/opencv4/opencv2/core.hpp:52[m[K,
+[5.316s]                  from [01m[K/usr/include/opencv4/opencv2/core/core.hpp:48[m[K,
+[5.316s]                  from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:43[m[K,
+[5.316s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:14[m[K,
+[5.316s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[5.316s] [01m[K/usr/include/opencv4/opencv2/core/hal/interface.h:51:26:[m[K [01;36m[Knote: [m[K‘[01m[Kuchar[m[K’ declared here
+[5.316s]    51 |    typedef unsigned char [01;36m[Kuchar[m[K;
+[5.316s]       |                          [01;36m[K^~~~~[m[K
+[5.316s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:15:35:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kcv::Mat::at<<expression error> >(int&, int&)[m[K’
+[5.316s]    15 |       if([01;31m[Kedge_img.at<Eigen::uchar>(i, j)[m[K == 255){
+[5.316s]       |          [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[5.316s] In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:58[m[K,
+[5.316s]                  from [01m[K/usr/include/opencv4/opencv2/core/core.hpp:48[m[K,
+[5.316s]                  from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:43[m[K,
+[5.316s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:14[m[K,
+[5.316s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[5.316s] [01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1921:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> _Tp& cv::Mat::at(int)[m[K’
+[5.316s]  1921 |     template<typename _Tp> _Tp& [01;36m[Kat[m[K(int i0=0);
+[5.317s]       |                                 [01;36m[K^~[m[K
+[5.317s] [01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1921:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.317s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:15:35:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.317s]    15 |       if([01;31m[Kedge_img.at<Eigen::uchar>(i, j)[m[K == 255){
+[5.317s]       |          [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[5.317s] In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:58[m[K,
+[5.317s]                  from [01m[K/usr/include/opencv4/opencv2/core/core.hpp:48[m[K,
+[5.317s]                  from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:43[m[K,
+[5.317s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:14[m[K,
+[5.317s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[5.317s] [01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1925:39:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> const _Tp& cv::Mat::at(int) const[m[K’
+[5.317s]  1925 |     template<typename _Tp> const _Tp& [01;36m[Kat[m[K(int i0=0) const;
+[5.317s]       |                                       [01;36m[K^~[m[K
+[5.317s] [01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1925:39:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.317s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:15:35:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.317s]    15 |       if([01;31m[Kedge_img.at<Eigen::uchar>(i, j)[m[K == 255){
+[5.317s]       |          [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[5.317s] In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:58[m[K,
+[5.317s]                  from [01m[K/usr/include/opencv4/opencv2/core/core.hpp:48[m[K,
+[5.317s]                  from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:43[m[K,
+[5.317s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:14[m[K,
+[5.317s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[5.318s] [01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1930:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> _Tp& cv::Mat::at(int, int)[m[K’
+[5.318s]  1930 |     template<typename _Tp> _Tp& [01;36m[Kat[m[K(int row, int col);
+[5.318s]       |                                 [01;36m[K^~[m[K
+[5.318s] [01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1930:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.318s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:15:35:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.318s]    15 |       if([01;31m[Kedge_img.at<Eigen::uchar>(i, j)[m[K == 255){
+[5.318s]       |          [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[5.318s] In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:58[m[K,
+[5.318s]                  from [01m[K/usr/include/opencv4/opencv2/core/core.hpp:48[m[K,
+[5.318s]                  from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:43[m[K,
+[5.318s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:14[m[K,
+[5.318s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[5.318s] [01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1935:39:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> const _Tp& cv::Mat::at(int, int) const[m[K’
+[5.318s]  1935 |     template<typename _Tp> const _Tp& [01;36m[Kat[m[K(int row, int col) const;
+[5.318s]       |                                       [01;36m[K^~[m[K
+[5.318s] [01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1935:39:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.318s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:15:35:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.318s]    15 |       if([01;31m[Kedge_img.at<Eigen::uchar>(i, j)[m[K == 255){
+[5.318s]       |          [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[5.318s] In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:58[m[K,
+[5.318s]                  from [01m[K/usr/include/opencv4/opencv2/core/core.hpp:48[m[K,
+[5.318s]                  from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:43[m[K,
+[5.318s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:14[m[K,
+[5.318s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[5.318s] [01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1942:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> _Tp& cv::Mat::at(int, int, int)[m[K’
+[5.318s]  1942 |     template<typename _Tp> _Tp& [01;36m[Kat[m[K(int i0, int i1, int i2);
+[5.319s]       |                                 [01;36m[K^~[m[K
+[5.319s] [01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1942:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.319s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:15:35:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.319s]    15 |       if([01;31m[Kedge_img.at<Eigen::uchar>(i, j)[m[K == 255){
+[5.319s]       |          [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[5.319s] In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:58[m[K,
+[5.319s]                  from [01m[K/usr/include/opencv4/opencv2/core/core.hpp:48[m[K,
+[5.319s]                  from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:43[m[K,
+[5.319s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:14[m[K,
+[5.319s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[5.319s] [01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1948:39:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> const _Tp& cv::Mat::at(int, int, int) const[m[K’
+[5.319s]  1948 |     template<typename _Tp> const _Tp& [01;36m[Kat[m[K(int i0, int i1, int i2) const;
+[5.319s]       |                                       [01;36m[K^~[m[K
+[5.319s] [01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1948:39:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.319s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:15:35:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.319s]    15 |       if([01;31m[Kedge_img.at<Eigen::uchar>(i, j)[m[K == 255){
+[5.319s]       |          [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[5.319s] In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:58[m[K,
+[5.319s]                  from [01m[K/usr/include/opencv4/opencv2/core/core.hpp:48[m[K,
+[5.319s]                  from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:43[m[K,
+[5.319s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:14[m[K,
+[5.319s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[5.319s] [01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1953:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> _Tp& cv::Mat::at(const int*)[m[K’
+[5.319s]  1953 |     template<typename _Tp> _Tp& [01;36m[Kat[m[K(const int* idx);
+[5.319s]       |                                 [01;36m[K^~[m[K
+[5.320s] [01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1953:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.320s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:15:35:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.320s]    15 |       if([01;31m[Kedge_img.at<Eigen::uchar>(i, j)[m[K == 255){
+[5.320s]       |          [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[5.320s] In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:58[m[K,
+[5.320s]                  from [01m[K/usr/include/opencv4/opencv2/core/core.hpp:48[m[K,
+[5.320s]                  from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:43[m[K,
+[5.320s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:14[m[K,
+[5.320s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[5.320s] [01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1957:39:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> const _Tp& cv::Mat::at(const int*) const[m[K’
+[5.320s]  1957 |     template<typename _Tp> const _Tp& [01;36m[Kat[m[K(const int* idx) const;
+[5.320s]       |                                       [01;36m[K^~[m[K
+[5.320s] [01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1957:39:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.320s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:15:35:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.320s]    15 |       if([01;31m[Kedge_img.at<Eigen::uchar>(i, j)[m[K == 255){
+[5.320s]       |          [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[5.320s] In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:58[m[K,
+[5.320s]                  from [01m[K/usr/include/opencv4/opencv2/core/core.hpp:48[m[K,
+[5.320s]                  from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:43[m[K,
+[5.320s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:14[m[K,
+[5.320s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[5.320s] [01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1960:40:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, int n> _Tp& cv::Mat::at(const cv::Vec<int, n>&)[m[K’
+[5.320s]  1960 |     template<typename _Tp, int n> _Tp& [01;36m[Kat[m[K(const Vec<int, n>& idx);
+[5.320s]       |                                        [01;36m[K^~[m[K
+[5.320s] [01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1960:40:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.320s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:15:35:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.321s]    15 |       if([01;31m[Kedge_img.at<Eigen::uchar>(i, j)[m[K == 255){
+[5.321s]       |          [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[5.321s] In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:58[m[K,
+[5.321s]                  from [01m[K/usr/include/opencv4/opencv2/core/core.hpp:48[m[K,
+[5.321s]                  from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:43[m[K,
+[5.321s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:14[m[K,
+[5.321s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[5.321s] [01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1962:46:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, int n> const _Tp& cv::Mat::at(const cv::Vec<int, n>&) const[m[K’
+[5.321s]  1962 |     template<typename _Tp, int n> const _Tp& [01;36m[Kat[m[K(const Vec<int, n>& idx) const;
+[5.321s]       |                                              [01;36m[K^~[m[K
+[5.321s] [01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1962:46:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.321s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:15:35:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.321s]    15 |       if([01;31m[Kedge_img.at<Eigen::uchar>(i, j)[m[K == 255){
+[5.321s]       |          [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[5.321s] In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:58[m[K,
+[5.321s]                  from [01m[K/usr/include/opencv4/opencv2/core/core.hpp:48[m[K,
+[5.321s]                  from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:43[m[K,
+[5.321s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:14[m[K,
+[5.321s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[5.321s] [01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1968:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> _Tp& cv::Mat::at(cv::Point)[m[K’
+[5.321s]  1968 |     template<typename _Tp> _Tp& [01;36m[Kat[m[K(Point pt);
+[5.321s]       |                                 [01;36m[K^~[m[K
+[5.321s] [01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1968:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.321s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:15:35:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.322s]    15 |       if([01;31m[Kedge_img.at<Eigen::uchar>(i, j)[m[K == 255){
+[5.322s]       |          [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[5.322s] In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:58[m[K,
+[5.322s]                  from [01m[K/usr/include/opencv4/opencv2/core/core.hpp:48[m[K,
+[5.322s]                  from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:43[m[K,
+[5.322s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:14[m[K,
+[5.322s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[5.322s] [01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1973:39:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> const _Tp& cv::Mat::at(cv::Point) const[m[K’
+[5.322s]  1973 |     template<typename _Tp> const _Tp& [01;36m[Kat[m[K(Point pt) const;
+[5.322s]       |                                       [01;36m[K^~[m[K
+[5.322s] [01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1973:39:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.322s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:15:35:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.322s]    15 |       if([01;31m[Kedge_img.at<Eigen::uchar>(i, j)[m[K == 255){
+[5.322s]       |          [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[5.322s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:16:23:[m[K [01;31m[Kerror: [m[K‘[01m[KVec3b[m[K’ is not a member of ‘[01m[KEigen[m[K’; did you mean ‘[01m[Kcv::Vec3b[m[K’?
+[5.322s]    16 |         img.at<Eigen::[01;31m[KVec3b[m[K> = cv::Vec3b(0, 0, 255);
+[5.322s]       |                       [01;31m[K^~~~~[m[K
+[5.322s] In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:56[m[K,
+[5.322s]                  from [01m[K/usr/include/opencv4/opencv2/core/core.hpp:48[m[K,
+[5.322s]                  from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:43[m[K,
+[5.322s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:14[m[K,
+[5.322s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[5.322s] [01m[K/usr/include/opencv4/opencv2/core/matx.hpp:410:23:[m[K [01;36m[Knote: [m[K‘[01m[Kcv::Vec3b[m[K’ declared here
+[5.322s]   410 | typedef Vec<uchar, 3> [01;36m[KVec3b[m[K;
+[5.322s]       |                       [01;36m[K^~~~~[m[K
+[5.323s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:16:13:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[Ktemplate<class _Tp> const _Tp& cv::Mat::at(cv::Point) const[m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
+[5.323s]    16 |         [01;31m[Kimg.at<Eigen::Vec3b>[m[K = cv::Vec3b(0, 0, 255);
+[5.323s]       |         [01;31m[K~~~~^~~~~~~~~~~~~~~~[m[K
+[8.183s] gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:135：CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o] 错误 1
+[8.184s] gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+[8.184s] gmake: *** [Makefile:146：all] 错误 2
+[8.186s] Invoked command in '/home/ckl/RM/Combat_vision2026/build/armor_detector' returned '2': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/armor_detector -- -j16 -l16

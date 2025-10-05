@@ -1,0 +1,82 @@
+[0.019s] Invoking command in '/home/ckl/RM/Combat_vision2026/build/armor_detector': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/armor_detector -- -j16 -l16
+[0.064s] [  8%] Built target gtest_main
+[0.065s] [ 16%] Built target gtest
+[0.070s] [ 24%] Built target armor_detector_node
+[0.082s] [ 28%] [1m[32mLinking CXX shared library libarmor_detector.so[0m
+[0.408s] [ 60%] Built target armor_detector
+[0.421s] [ 72%] [32mBuilding CXX object CMakeFiles/spiral_detector.dir/src/light_corner_corrector.cpp.o[0m
+[0.421s] [ 72%] [32mBuilding CXX object CMakeFiles/spiral_detector.dir/src/armor_detector.cpp.o[0m
+[0.421s] [ 72%] [32mBuilding CXX object CMakeFiles/spiral_detector.dir/src/spiral.cpp.o[0m
+[0.421s] [ 76%] [32mBuilding CXX object CMakeFiles/spiral_detector.dir/src/ba_solver.cpp.o[0m
+[0.421s] [ 80%] [32mBuilding CXX object CMakeFiles/spiral_detector.dir/src/armor_pose_estimator.cpp.o[0m
+[0.422s] [ 88%] [32mBuilding CXX object CMakeFiles/spiral_detector.dir/src/graph_optimizer.cpp.o[0m
+[0.422s] [ 88%] [32mBuilding CXX object CMakeFiles/spiral_detector.dir/src/number_classifier.cpp.o[0m
+[0.422s] [ 92%] [32mBuilding CXX object CMakeFiles/test_detector.dir/test/test_detector.cpp.o[0m
+[6.092s] [ 96%] [1m[32mLinking CXX executable test_detector[0m
+[6.640s] [ 96%] Built target test_detector
+[14.873s] [100%] [1m[32mLinking CXX executable spiral_detector[0m
+[15.043s] /usr/bin/ld: warning: libtbb.so.2, needed by /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.5.4d, may conflict with libtbb.so.12
+[15.380s] [100%] Built target spiral_detector
+[15.393s] Invoked command in '/home/ckl/RM/Combat_vision2026/build/armor_detector' returned '0': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/armor_detector -- -j16 -l16
+[15.394s] Invoking command in '/home/ckl/RM/Combat_vision2026/build/armor_detector': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/ckl/RM/Combat_vision2026/build/armor_detector
+[15.395s] -- Install configuration: ""
+[15.396s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/lib/armor_detector/spiral_detector
+[15.397s] -- Set non-toolchain portion of runtime path of "/home/ckl/RM/Combat_vision2026/install/armor_detector/lib/armor_detector/spiral_detector" to ""
+[15.397s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/lib/armor_detector/armor_detector_node
+[15.397s] -- Set non-toolchain portion of runtime path of "/home/ckl/RM/Combat_vision2026/install/armor_detector/lib/armor_detector/armor_detector_node" to ""
+[15.397s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/include
+[15.397s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/include/armor_detector
+[15.397s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/include/armor_detector/light_corner_corrector.hpp
+[15.397s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/include/armor_detector/types.hpp
+[15.398s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/include/armor_detector/ba_solver.hpp
+[15.398s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/include/armor_detector/armor_detector_node.hpp
+[15.398s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/include/armor_detector/armor_pose_estimator.hpp
+[15.398s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/include/armor_detector/number_classifier.hpp
+[15.398s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/include/armor_detector/armor_detector.hpp
+[15.398s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/include/armor_detector/graph_optimizer.hpp
+[15.400s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/environment/library_path.sh
+[15.400s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/environment/library_path.dsv
+[15.400s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/lib/libarmor_detector.so
+[15.403s] -- Set non-toolchain portion of runtime path of "/home/ckl/RM/Combat_vision2026/install/armor_detector/lib/libarmor_detector.so" to ""
+[15.403s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs
+[15.403s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/origin1.png
+[15.405s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/num_warp.png
+[15.406s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/test.png
+[15.408s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/gray_bin.png
+[15.410s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/num_bin.png
+[15.412s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/blue.png
+[15.413s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/origin2.png
+[15.415s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/BA.png
+[15.416s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/pca1.png
+[15.418s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/raw.png
+[15.419s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/num_roi.png
+[15.421s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/hsv_bin.png
+[15.422s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/pca2.png
+[15.424s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/num_raw.png
+[15.425s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/model.svg
+[15.427s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/red.png
+[15.428s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/classify.png
+[15.430s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/model
+[15.430s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/model/label.txt
+[15.431s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/model/lenet.onnx
+[15.433s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/model/mlp.onnx
+[15.435s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/ament_index/resource_index/package_run_dependencies/armor_detector
+[15.435s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/ament_index/resource_index/parent_prefix_path/armor_detector
+[15.435s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/environment/ament_prefix_path.sh
+[15.435s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/environment/ament_prefix_path.dsv
+[15.435s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/environment/path.sh
+[15.435s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/environment/path.dsv
+[15.435s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/local_setup.bash
+[15.436s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/local_setup.sh
+[15.436s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/local_setup.zsh
+[15.436s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/local_setup.dsv
+[15.436s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/package.dsv
+[15.436s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/ament_index/resource_index/packages/armor_detector
+[15.436s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/ament_index/resource_index/rclcpp_components/armor_detector
+[15.437s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/cmake/ament_cmake_export_dependencies-extras.cmake
+[15.437s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/cmake/ament_cmake_export_include_directories-extras.cmake
+[15.437s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/cmake/ament_cmake_export_libraries-extras.cmake
+[15.437s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/cmake/armor_detectorConfig.cmake
+[15.437s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/cmake/armor_detectorConfig-version.cmake
+[15.437s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/package.xml
+[15.439s] Invoked command in '/home/ckl/RM/Combat_vision2026/build/armor_detector' returned '0': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/ckl/RM/Combat_vision2026/build/armor_detector

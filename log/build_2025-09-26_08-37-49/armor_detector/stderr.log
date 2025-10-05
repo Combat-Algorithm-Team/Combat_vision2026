@@ -1,0 +1,56 @@
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:57:16:[m[K [01;31m[Kerror: [m[K‘[01m[KArmor[m[K’ has not been declared
+   57 |       "small", [01;31m[KArmor[m[K::buildObjectPoints<cv::Point3f>(SMALL_ARMOR_WIDTH,
+      |                [01;31m[K^~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:57:52:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   57 |       "small", Armor::buildObjectPoints<cv::Point3f[01;31m[K>[m[K(SMALL_ARMOR_WIDTH,
+      |                                                    [01;31m[K^[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:57:54:[m[K [01;31m[Kerror: [m[K‘[01m[KSMALL_ARMOR_WIDTH[m[K’ was not declared in this scope; did you mean ‘[01m[Kfyt::auto_aim::SMALL_ARMOR_WIDTH[m[K’?
+   57 |       "small", Armor::buildObjectPoints<cv::Point3f>([01;31m[KSMALL_ARMOR_WIDTH[m[K,
+      |                                                      [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |                                                      [32m[Kfyt::auto_aim::SMALL_ARMOR_WIDTH[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/light_corner_corrector.hpp:22[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_detector.hpp:31[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:27[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:37:18:[m[K [01;36m[Knote: [m[K‘[01m[Kfyt::auto_aim::SMALL_ARMOR_WIDTH[m[K’ declared here
+   37 | constexpr double [01;36m[KSMALL_ARMOR_WIDTH[m[K = 130 / 1000.0; // 135
+      |                  [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:58:54:[m[K [01;31m[Kerror: [m[K‘[01m[KSMALL_ARMOR_HEIGHT[m[K’ was not declared in this scope; did you mean ‘[01m[Kfyt::auto_aim::SMALL_ARMOR_HEIGHT[m[K’?
+   58 |                                                      [01;31m[KSMALL_ARMOR_HEIGHT[m[K));
+      |                                                      [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+      |                                                      [32m[Kfyt::auto_aim::SMALL_ARMOR_HEIGHT[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/light_corner_corrector.hpp:22[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_detector.hpp:31[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:27[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:38:18:[m[K [01;36m[Knote: [m[K‘[01m[Kfyt::auto_aim::SMALL_ARMOR_HEIGHT[m[K’ declared here
+   38 | constexpr double [01;36m[KSMALL_ARMOR_HEIGHT[m[K = 50 / 1000.0; // 55
+      |                  [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:60:16:[m[K [01;31m[Kerror: [m[K‘[01m[KArmor[m[K’ has not been declared
+   60 |       "large", [01;31m[KArmor[m[K::buildObjectPoints<cv::Point3f>(LARGE_ARMOR_WIDTH,
+      |                [01;31m[K^~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:60:52:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   60 |       "large", Armor::buildObjectPoints<cv::Point3f[01;31m[K>[m[K(LARGE_ARMOR_WIDTH,
+      |                                                    [01;31m[K^[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:60:54:[m[K [01;31m[Kerror: [m[K‘[01m[KLARGE_ARMOR_WIDTH[m[K’ was not declared in this scope; did you mean ‘[01m[Kfyt::auto_aim::LARGE_ARMOR_WIDTH[m[K’?
+   60 |       "large", Armor::buildObjectPoints<cv::Point3f>([01;31m[KLARGE_ARMOR_WIDTH[m[K,
+      |                                                      [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |                                                      [32m[Kfyt::auto_aim::LARGE_ARMOR_WIDTH[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/light_corner_corrector.hpp:22[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_detector.hpp:31[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:27[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:39:18:[m[K [01;36m[Knote: [m[K‘[01m[Kfyt::auto_aim::LARGE_ARMOR_WIDTH[m[K’ declared here
+   39 | constexpr double [01;36m[KLARGE_ARMOR_WIDTH[m[K = 225.0 / 1000.0;
+      |                  [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:61:54:[m[K [01;31m[Kerror: [m[K‘[01m[KLARGE_ARMOR_HEIGHT[m[K’ was not declared in this scope; did you mean ‘[01m[Kfyt::auto_aim::LARGE_ARMOR_HEIGHT[m[K’?
+   61 |                                                      [01;31m[KLARGE_ARMOR_HEIGHT[m[K));
+      |                                                      [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+      |                                                      [32m[Kfyt::auto_aim::LARGE_ARMOR_HEIGHT[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/light_corner_corrector.hpp:22[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_detector.hpp:31[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:27[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:40:18:[m[K [01;36m[Knote: [m[K‘[01m[Kfyt::auto_aim::LARGE_ARMOR_HEIGHT[m[K’ declared here
+   40 | constexpr double [01;36m[KLARGE_ARMOR_HEIGHT[m[K = 50.0 / 1000.0; // 55
+      |                  [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:177：CMakeFiles/armor_detector.dir/src/spiral.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

@@ -22,6 +22,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake_modules)
 set(EXTERNAL_INCLUDE_DIRS ${G2O_INCLUDE_DIR})
 set(EXTERNAL_LIBS ${G2O_LIBRARIES})
 
+find_package(Threads REQUIRED)
 find_package(ament_cmake_auto REQUIRED)
 find_package(OpenCV REQUIRED)
 find_package(TBB REQUIRED COMPONENTS tbb)
@@ -36,6 +37,45 @@ ament_auto_find_build_dependencies()
 
 ament_auto_add_library(${PROJECT_NAME} SHARED
   DIRECTORY src
+)
+
+add_executable(spiral_detector 
+  src/spiral.cpp
+  # 添加spiral.cpp依赖的其他源文件
+  src/armor_detector.cpp
+  src/light_corner_corrector.cpp
+  src/number_classifier.cpp
+  src/armor_pose_estimator.cpp
+  src/ba_solver.cpp
+  src/graph_optimizer.cpp
+  src/bound_solver.cpp
+)
+
+target_include_directories(spiral_detector PUBLIC
+  include
+  ${OpenCV_INCLUDE_DIRS}
+  ${G2O_INCLUDE_DIRS}
+  ${Sophus_INCLUDE_DIRS}
+  ${EIGEN3_INCLUDE_DIRS}
+)
+
+target_link_libraries(spiral_detector
+  ${PROJECT_NAME}  # 链接主库
+  ${OpenCV_LIBS}
+  g2o_core
+  g2o_stuff
+  g2o_solver_csparse
+  g2o_types_sba
+  g2o_types_slam3d
+  g2o_solver_dense
+  fmt::fmt
+  tbb
+  Threads::Threads 
+)
+
+# 安装可执行文件到lib/${PROJECT_NAME}目录
+install(TARGETS spiral_detector
+  RUNTIME DESTINATION lib/${PROJECT_NAME}
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC

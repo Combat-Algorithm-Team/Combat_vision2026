@@ -1,0 +1,61 @@
+[ 14%] Built target gtest_main
+[ 14%] Built target gtest
+[ 22%] Built target armor_detector_node
+[ 25%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/armor_detector_node.cpp.o[0m
+[ 29%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/armor_pose_estimator.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/spiral.cpp.o[0m
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:58:49:[m[K [01;31m[Kerror: [m[K‘[01m[KArmorPoseEstimator[m[K’ was not declared in this scope; did you mean ‘[01m[Karmor_pose_estimator_[m[K’?
+   58 |   auto armor_pose_estimator_ = std::make_unique<[01;31m[KArmorPoseEstimator[m[K>(camera_info);
+      |                                                 [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+      |                                                 [32m[Karmor_pose_estimator_[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:58:68:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_unique<<expression error> >(std::shared_ptr<sensor_msgs::msg::CameraInfo_<std::allocator<void> > >&)[m[K’
+   58 |   auto armor_pose_estimator_ = [01;31m[Kstd::make_unique<ArmorPoseEstimator>(camera_info)[m[K;
+      |                                [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/locale_conv.h:41[m[K,
+                 from [01m[K/usr/include/c++/11/locale:43[m[K,
+                 from [01m[K/usr/include/c++/11/bits/fs_path.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/filesystem:45[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:3[m[K:
+[01m[K/usr/include/c++/11/bits/unique_ptr.h:961:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...)[m[K’
+  961 |     [01;36m[Kmake_unique[m[K(_Args&&... __args)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/unique_ptr.h:961:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:58:68:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   58 |   auto armor_pose_estimator_ = [01;31m[Kstd::make_unique<ArmorPoseEstimator>(camera_info)[m[K;
+      |                                [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/locale_conv.h:41[m[K,
+                 from [01m[K/usr/include/c++/11/locale:43[m[K,
+                 from [01m[K/usr/include/c++/11/bits/fs_path.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/filesystem:45[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:3[m[K:
+[01m[K/usr/include/c++/11/bits/unique_ptr.h:967:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> typename std::_MakeUniq<_Tp>::__array std::make_unique(std::size_t)[m[K’
+  967 |     [01;36m[Kmake_unique[m[K(size_t __num)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/unique_ptr.h:967:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:58:68:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   58 |   auto armor_pose_estimator_ = [01;31m[Kstd::make_unique<ArmorPoseEstimator>(camera_info)[m[K;
+      |                                [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/locale_conv.h:41[m[K,
+                 from [01m[K/usr/include/c++/11/locale:43[m[K,
+                 from [01m[K/usr/include/c++/11/bits/fs_path.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/filesystem:45[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:3[m[K:
+[01m[K/usr/include/c++/11/bits/unique_ptr.h:973:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> typename std::_MakeUniq<_Tp>::__invalid_type std::make_unique(_Args&& ...)[m[K’ (deleted)
+  973 |     [01;36m[Kmake_unique[m[K(_Args&&...) = delete;
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/unique_ptr.h:973:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:58:68:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   58 |   auto armor_pose_estimator_ = [01;31m[Kstd::make_unique<ArmorPoseEstimator>(camera_info)[m[K;
+      |                                [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:71:23:[m[K [01;31m[Kerror: [m[K‘[01m[KArmors[m[K’ is not a member of ‘[01m[Krm_interfaces::msg[m[K’
+   71 |   rm_interfaces::msg::[01;31m[KArmors[m[K armors_msg_;
+      |                       [01;31m[K^~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:101:3:[m[K [01;31m[Kerror: [m[K‘[01m[Karmors_msg_[m[K’ was not declared in this scope
+  101 |   [01;31m[Karmors_msg_[m[K.armors = armor_pose_estimator_->extractArmorPoses(armors, imu_to_camera_);
+      |   [01;31m[K^~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:191：CMakeFiles/armor_detector.dir/src/spiral.cpp.o] 错误 1
+gmake[2]: *** 正在等待未完成的任务....
+gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

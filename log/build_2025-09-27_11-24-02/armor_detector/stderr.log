@@ -1,0 +1,11 @@
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:103:23:[m[K [01;31m[Kerror: [m[K‘[01m[KArmors[m[K’ is not a member of ‘[01m[Krm_interfaces::msg[m[K’; did you mean ‘[01m[KArmor_[m[K’?
+  103 |   rm_interfaces::msg::[01;31m[KArmors[m[K armors_msg_;
+      |                       [01;31m[K^~~~~~[m[K
+      |                       [32m[KArmor_[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:104:3:[m[K [01;31m[Kerror: [m[K‘[01m[Karmors_msg_[m[K’ was not declared in this scope
+  104 |   [01;31m[Karmors_msg_[m[K.armors = armor_pose_estimator_->extractArmorPoses(armors, imu_to_camera_);
+      |   [01;31m[K^~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:191：CMakeFiles/armor_detector.dir/src/spiral.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

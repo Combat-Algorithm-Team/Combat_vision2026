@@ -1,0 +1,17 @@
+/home/ckl/RM/Combat_vision2026/build/rm_interfaces/rosidl_adapter/rm_interfaces:msg/Armor.idl
+/home/ckl/RM/Combat_vision2026/build/rm_interfaces/rosidl_adapter/rm_interfaces:msg/Armors.idl
+/home/ckl/RM/Combat_vision2026/build/rm_interfaces/rosidl_adapter/rm_interfaces:msg/Target.idl
+/home/ckl/RM/Combat_vision2026/build/rm_interfaces/rosidl_adapter/rm_interfaces:msg/RuneTarget.idl
+/home/ckl/RM/Combat_vision2026/build/rm_interfaces/rosidl_adapter/rm_interfaces:msg/Point2d.idl
+/home/ckl/RM/Combat_vision2026/build/rm_interfaces/rosidl_adapter/rm_interfaces:msg/GimbalCmd.idl
+/home/ckl/RM/Combat_vision2026/build/rm_interfaces/rosidl_adapter/rm_interfaces:msg/ChassisCmd.idl
+/home/ckl/RM/Combat_vision2026/build/rm_interfaces/rosidl_adapter/rm_interfaces:msg/DebugLight.idl
+/home/ckl/RM/Combat_vision2026/build/rm_interfaces/rosidl_adapter/rm_interfaces:msg/DebugLights.idl
+/home/ckl/RM/Combat_vision2026/build/rm_interfaces/rosidl_adapter/rm_interfaces:msg/DebugArmor.idl
+/home/ckl/RM/Combat_vision2026/build/rm_interfaces/rosidl_adapter/rm_interfaces:msg/DebugArmors.idl
+/home/ckl/RM/Combat_vision2026/build/rm_interfaces/rosidl_adapter/rm_interfaces:msg/DebugRuneAngle.idl
+/home/ckl/RM/Combat_vision2026/build/rm_interfaces/rosidl_adapter/rm_interfaces:msg/Measurement.idl
+/home/ckl/RM/Combat_vision2026/build/rm_interfaces/rosidl_adapter/rm_interfaces:msg/JudgeSystemData.idl
+/home/ckl/RM/Combat_vision2026/build/rm_interfaces/rosidl_adapter/rm_interfaces:msg/OperatorCommand.idl
+/home/ckl/RM/Combat_vision2026/build/rm_interfaces/rosidl_adapter/rm_interfaces:msg/SerialReceiveData.idl
+/home/ckl/RM/Combat_vision2026/build/rm_interfaces/rosidl_adapter/rm_interfaces:srv/SetMode.idl

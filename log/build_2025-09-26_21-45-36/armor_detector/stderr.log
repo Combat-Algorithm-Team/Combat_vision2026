@@ -1,0 +1,8 @@
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:[m[K In member function ‘[01m[Kvoid fyt::auto_aim::BoundSolver::drawBound(cv::Mat&)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:23:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kpoint[m[K’ was not declared in this scope; did you mean ‘[01m[Kpoints[m[K’?
+   23 |   cv::line(img, points[3], [01;31m[Kpoint[m[K[0], cv::Scalar(0, 0, 255), 3);
+      |                            [01;31m[K^~~~~[m[K
+      |                            [32m[Kpoints[m[K
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:135：CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

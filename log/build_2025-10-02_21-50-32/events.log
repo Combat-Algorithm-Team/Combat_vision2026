@@ -1,0 +1,393 @@
+[0.000000] (-) TimerEvent: {}
+[0.000224] (-) JobUnselected: {'identifier': 'armor_solver'}
+[0.000270] (-) JobUnselected: {'identifier': 'hik_camera'}
+[0.000283] (-) JobUnselected: {'identifier': 'rm_auto_aim'}
+[0.000298] (-) JobUnselected: {'identifier': 'rm_bringup'}
+[0.000308] (-) JobUnselected: {'identifier': 'rm_interfaces'}
+[0.000319] (-) JobUnselected: {'identifier': 'rm_robot_description'}
+[0.000329] (-) JobUnselected: {'identifier': 'rm_serial_driver'}
+[0.000338] (-) JobUnselected: {'identifier': 'rm_utils'}
+[0.000349] (armor_detector) JobQueued: {'identifier': 'armor_detector', 'dependencies': OrderedDict([('rm_interfaces', '/home/ckl/RM/Combat_vision2026/install/rm_interfaces'), ('rm_utils', '/home/ckl/RM/Combat_vision2026/install/rm_utils')])}
+[0.000364] (armor_detector) JobStarted: {'identifier': 'armor_detector'}
+[0.014381] (armor_detector) JobProgress: {'identifier': 'armor_detector', 'progress': 'cmake'}
+[0.015651] (armor_detector) JobProgress: {'identifier': 'armor_detector', 'progress': 'build'}
+[0.015759] (armor_detector) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ckl/RM/Combat_vision2026/build/armor_detector', '--', '-j16', '-l16'], 'cwd': '/home/ckl/RM/Combat_vision2026/build/armor_detector', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'ckl'), ('LC_TIME', 'zh_CN.UTF-8'), ('FONTCONFIG_PATH', '/etc/fonts'), ('GIO_MODULE_DIR', '/home/ckl/snap/code/common/.cache/gio-modules'), ('XDG_SESSION_TYPE', 'x11'), ('ALLUSERSPROFILE', '/opt/MVS/MVFG'), ('GIT_ASKPASS', '/snap/code/208/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('GTK_EXE_PREFIX_VSCODE_SNAP_ORIG', ''), ('GDK_BACKEND_VSCODE_SNAP_ORIG', ''), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32'), ('HOME', '/home/ckl'), ('CHROME_DESKTOP', 'code.desktop'), ('LOCPATH_VSCODE_SNAP_ORIG', ''), ('TERM_PROGRAM_VERSION', '1.104.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GTK_PATH', '/snap/code/208/usr/lib/x86_64-linux-gnu/gtk-3.0'), ('XDG_DATA_HOME_VSCODE_SNAP_ORIG', ''), ('GTK_IM_MODULE_FILE', '/home/ckl/snap/code/common/.cache/immodules/immodules.cache'), ('GIO_LAUNCHED_DESKTOP_FILE', '/var/lib/snapd/desktop/applications/code_code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG', ''), ('VSCODE_GIT_ASKPASS_MAIN', '/snap/code/208/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/snap/code/208/usr/share/code/code'), ('MANAGERPID', '2449'), ('SYSTEMD_EXEC_PID', '2861'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4211'), ('COLCON_PREFIX_PATH', '/home/ckl/RM/Combat_vision2026/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'ckl'), ('JOURNAL_STREAM', '8:13897'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_SESSION_CLASS', 'user'), ('XDG_DATA_DIRS_VSCODE_SNAP_ORIG', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('USERNAME', 'ckl'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('MVCAM_SDK_PATH', '/opt/MVS'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/ckl-ASUS-TUF-Gaming-A15-FA507NV-FA507NV:@/tmp/.ICE-unix/2823,unix/ckl-ASUS-TUF-Gaming-A15-FA507NV-FA507NV:/tmp/.ICE-unix/2823'), ('GTK_EXE_PREFIX', '/snap/code/208/usr'), ('INVOCATION_ID', '6c3874bc0b4048dbaa3f1b630400b09f'), ('MVCAM_GENICAM_CLPROTOCOL', '/opt/MVS/lib/CLProtocol'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('BAMF_DESKTOP_FILE_HINT', '/var/lib/snapd/desktop/applications/code_code.desktop'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LOCPATH', '/snap/code/208/usr/lib/locale'), ('LD_PRELOAD', '/lib/x86_64-linux-gnu/libpthread.so.0'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('GIO_MODULE_DIR_VSCODE_SNAP_ORIG', ''), ('XDG_DATA_HOME', '/home/ckl/snap/code/208/.local/share'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-66f21244f2.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('GSETTINGS_SCHEMA_DIR', '/home/ckl/snap/code/208/.local/share/glib-2.0/schemas'), ('AMENT_PREFIX_PATH', '/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GTK_PATH_VSCODE_SNAP_ORIG', ''), ('FONTCONFIG_FILE', '/etc/fonts/fonts.conf'), ('GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG', ''), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ckl/RM/Combat_vision2026/build/armor_detector'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/home/ckl/snap/code/208/.local/share:/home/ckl/snap/code/208:/snap/code/208/usr/share:/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble'), ('MVCAM_COMMON_RUNENV', '/opt/MVS/lib')]), 'shell': False}
+[0.054086] (armor_detector) StdoutLine: {'line': b'[ 14%] Built target gtest_main\n'}
+[0.054345] (armor_detector) StdoutLine: {'line': b'[ 14%] Built target gtest\n'}
+[0.055038] (armor_detector) StdoutLine: {'line': b'[ 22%] Built target armor_detector_node\n'}
+[0.099337] (-) TimerEvent: {}
+[0.104448] (armor_detector) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o\x1b[0m\n'}
+[0.199466] (-) TimerEvent: {}
+[0.299791] (-) TimerEvent: {}
+[0.400102] (-) TimerEvent: {}
+[0.500441] (-) TimerEvent: {}
+[0.600783] (-) TimerEvent: {}
+[0.701131] (-) TimerEvent: {}
+[0.801463] (-) TimerEvent: {}
+[0.901836] (-) TimerEvent: {}
+[1.002165] (-) TimerEvent: {}
+[1.102511] (-) TimerEvent: {}
+[1.202888] (-) TimerEvent: {}
+[1.303234] (-) TimerEvent: {}
+[1.403599] (-) TimerEvent: {}
+[1.503943] (-) TimerEvent: {}
+[1.604268] (-) TimerEvent: {}
+[1.704584] (-) TimerEvent: {}
+[1.804869] (-) TimerEvent: {}
+[1.905303] (-) TimerEvent: {}
+[2.005681] (-) TimerEvent: {}
+[2.106014] (-) TimerEvent: {}
+[2.206331] (-) TimerEvent: {}
+[2.306634] (-) TimerEvent: {}
+[2.406985] (-) TimerEvent: {}
+[2.507330] (-) TimerEvent: {}
+[2.607630] (-) TimerEvent: {}
+[2.707957] (-) TimerEvent: {}
+[2.808297] (-) TimerEvent: {}
+[2.908587] (-) TimerEvent: {}
+[3.008921] (-) TimerEvent: {}
+[3.109234] (-) TimerEvent: {}
+[3.209574] (-) TimerEvent: {}
+[3.309891] (-) TimerEvent: {}
+[3.410167] (-) TimerEvent: {}
+[3.510481] (-) TimerEvent: {}
+[3.610793] (-) TimerEvent: {}
+[3.711108] (-) TimerEvent: {}
+[3.811438] (-) TimerEvent: {}
+[3.911779] (-) TimerEvent: {}
+[4.012100] (-) TimerEvent: {}
+[4.112389] (-) TimerEvent: {}
+[4.212772] (-) TimerEvent: {}
+[4.313114] (-) TimerEvent: {}
+[4.413470] (-) TimerEvent: {}
+[4.513835] (-) TimerEvent: {}
+[4.614159] (-) TimerEvent: {}
+[4.714468] (-) TimerEvent: {}
+[4.814751] (-) TimerEvent: {}
+[4.915111] (-) TimerEvent: {}
+[5.015436] (-) TimerEvent: {}
+[5.115773] (-) TimerEvent: {}
+[5.216095] (-) TimerEvent: {}
+[5.316431] (-) TimerEvent: {}
+[5.416853] (-) TimerEvent: {}
+[5.517133] (-) TimerEvent: {}
+[5.617506] (-) TimerEvent: {}
+[5.717828] (-) TimerEvent: {}
+[5.818153] (-) TimerEvent: {}
+[5.918489] (-) TimerEvent: {}
+[6.018794] (-) TimerEvent: {}
+[6.119089] (-) TimerEvent: {}
+[6.219509] (-) TimerEvent: {}
+[6.319851] (-) TimerEvent: {}
+[6.420174] (-) TimerEvent: {}
+[6.520587] (-) TimerEvent: {}
+[6.620955] (-) TimerEvent: {}
+[6.721319] (-) TimerEvent: {}
+[6.821744] (-) TimerEvent: {}
+[6.922111] (-) TimerEvent: {}
+[7.022468] (-) TimerEvent: {}
+[7.122847] (-) TimerEvent: {}
+[7.223215] (-) TimerEvent: {}
+[7.323600] (-) TimerEvent: {}
+[7.423965] (-) TimerEvent: {}
+[7.524333] (-) TimerEvent: {}
+[7.624708] (-) TimerEvent: {}
+[7.725449] (-) TimerEvent: {}
+[7.825840] (-) TimerEvent: {}
+[7.926175] (-) TimerEvent: {}
+[8.026559] (-) TimerEvent: {}
+[8.126894] (-) TimerEvent: {}
+[8.227228] (-) TimerEvent: {}
+[8.327573] (-) TimerEvent: {}
+[8.427905] (-) TimerEvent: {}
+[8.528240] (-) TimerEvent: {}
+[8.628591] (-) TimerEvent: {}
+[8.728935] (-) TimerEvent: {}
+[8.829362] (-) TimerEvent: {}
+[8.929733] (-) TimerEvent: {}
+[9.030082] (-) TimerEvent: {}
+[9.130428] (-) TimerEvent: {}
+[9.230778] (-) TimerEvent: {}
+[9.331110] (-) TimerEvent: {}
+[9.431439] (-) TimerEvent: {}
+[9.531787] (-) TimerEvent: {}
+[9.632116] (-) TimerEvent: {}
+[9.732449] (-) TimerEvent: {}
+[9.832793] (-) TimerEvent: {}
+[9.933126] (-) TimerEvent: {}
+[10.033457] (-) TimerEvent: {}
+[10.133797] (-) TimerEvent: {}
+[10.234128] (-) TimerEvent: {}
+[10.334457] (-) TimerEvent: {}
+[10.434802] (-) TimerEvent: {}
+[10.535132] (-) TimerEvent: {}
+[10.635476] (-) TimerEvent: {}
+[10.735812] (-) TimerEvent: {}
+[10.836137] (-) TimerEvent: {}
+[10.936464] (-) TimerEvent: {}
+[11.036804] (-) TimerEvent: {}
+[11.137145] (-) TimerEvent: {}
+[11.237481] (-) TimerEvent: {}
+[11.337865] (-) TimerEvent: {}
+[11.438207] (-) TimerEvent: {}
+[11.538557] (-) TimerEvent: {}
+[11.638891] (-) TimerEvent: {}
+[11.739307] (-) TimerEvent: {}
+[11.839639] (-) TimerEvent: {}
+[11.939963] (-) TimerEvent: {}
+[12.040296] (-) TimerEvent: {}
+[12.140626] (-) TimerEvent: {}
+[12.240956] (-) TimerEvent: {}
+[12.341290] (-) TimerEvent: {}
+[12.441621] (-) TimerEvent: {}
+[12.541953] (-) TimerEvent: {}
+[12.642279] (-) TimerEvent: {}
+[12.742604] (-) TimerEvent: {}
+[12.842926] (-) TimerEvent: {}
+[12.943257] (-) TimerEvent: {}
+[13.043593] (-) TimerEvent: {}
+[13.143921] (-) TimerEvent: {}
+[13.244247] (-) TimerEvent: {}
+[13.344591] (-) TimerEvent: {}
+[13.444915] (-) TimerEvent: {}
+[13.545241] (-) TimerEvent: {}
+[13.645576] (-) TimerEvent: {}
+[13.745969] (-) TimerEvent: {}
+[13.846334] (-) TimerEvent: {}
+[13.936862] (armor_detector) StdoutLine: {'line': b'[ 29%] \x1b[1m\x1b[32mLinking CXX shared library libarmor_detector.so\x1b[0m\n'}
+[13.946433] (-) TimerEvent: {}
+[14.046759] (-) TimerEvent: {}
+[14.147088] (-) TimerEvent: {}
+[14.247417] (-) TimerEvent: {}
+[14.347797] (-) TimerEvent: {}
+[14.395863] (armor_detector) StdoutLine: {'line': b'[ 59%] Built target armor_detector\n'}
+[14.421111] (armor_detector) StdoutLine: {'line': b'[ 62%] \x1b[1m\x1b[32mLinking CXX executable test_detector\x1b[0m\n'}
+[14.447900] (-) TimerEvent: {}
+[14.456592] (armor_detector) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/spiral_detector.dir/src/spiral.cpp.o\x1b[0m\n'}
+[14.456788] (armor_detector) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/spiral_detector.dir/src/armor_pose_estimator.cpp.o\x1b[0m\n'}
+[14.457080] (armor_detector) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/spiral_detector.dir/src/bound_solver.cpp.o\x1b[0m\n'}
+[14.548047] (-) TimerEvent: {}
+[14.648406] (-) TimerEvent: {}
+[14.748755] (-) TimerEvent: {}
+[14.849046] (-) TimerEvent: {}
+[14.949318] (-) TimerEvent: {}
+[14.972232] (armor_detector) StdoutLine: {'line': b'[ 77%] Built target test_detector\n'}
+[15.049414] (-) TimerEvent: {}
+[15.149691] (-) TimerEvent: {}
+[15.250059] (-) TimerEvent: {}
+[15.350403] (-) TimerEvent: {}
+[15.450759] (-) TimerEvent: {}
+[15.551083] (-) TimerEvent: {}
+[15.651380] (-) TimerEvent: {}
+[15.751715] (-) TimerEvent: {}
+[15.851998] (-) TimerEvent: {}
+[15.952322] (-) TimerEvent: {}
+[16.052657] (-) TimerEvent: {}
+[16.152981] (-) TimerEvent: {}
+[16.253315] (-) TimerEvent: {}
+[16.353633] (-) TimerEvent: {}
+[16.453972] (-) TimerEvent: {}
+[16.554333] (-) TimerEvent: {}
+[16.654753] (-) TimerEvent: {}
+[16.755107] (-) TimerEvent: {}
+[16.855458] (-) TimerEvent: {}
+[16.955828] (-) TimerEvent: {}
+[17.056181] (-) TimerEvent: {}
+[17.156563] (-) TimerEvent: {}
+[17.256918] (-) TimerEvent: {}
+[17.357263] (-) TimerEvent: {}
+[17.457664] (-) TimerEvent: {}
+[17.558038] (-) TimerEvent: {}
+[17.658390] (-) TimerEvent: {}
+[17.758831] (-) TimerEvent: {}
+[17.859214] (-) TimerEvent: {}
+[17.959578] (-) TimerEvent: {}
+[18.059936] (-) TimerEvent: {}
+[18.160287] (-) TimerEvent: {}
+[18.260637] (-) TimerEvent: {}
+[18.360990] (-) TimerEvent: {}
+[18.461343] (-) TimerEvent: {}
+[18.561707] (-) TimerEvent: {}
+[18.662057] (-) TimerEvent: {}
+[18.762411] (-) TimerEvent: {}
+[18.862775] (-) TimerEvent: {}
+[18.963128] (-) TimerEvent: {}
+[19.063478] (-) TimerEvent: {}
+[19.163909] (-) TimerEvent: {}
+[19.264257] (-) TimerEvent: {}
+[19.364626] (-) TimerEvent: {}
+[19.464982] (-) TimerEvent: {}
+[19.565330] (-) TimerEvent: {}
+[19.665685] (-) TimerEvent: {}
+[19.766029] (-) TimerEvent: {}
+[19.866381] (-) TimerEvent: {}
+[19.966738] (-) TimerEvent: {}
+[20.067090] (-) TimerEvent: {}
+[20.167438] (-) TimerEvent: {}
+[20.267808] (-) TimerEvent: {}
+[20.368152] (-) TimerEvent: {}
+[20.468507] (-) TimerEvent: {}
+[20.568935] (-) TimerEvent: {}
+[20.669282] (-) TimerEvent: {}
+[20.769675] (-) TimerEvent: {}
+[20.870077] (-) TimerEvent: {}
+[20.970427] (-) TimerEvent: {}
+[21.070785] (-) TimerEvent: {}
+[21.171103] (-) TimerEvent: {}
+[21.271438] (-) TimerEvent: {}
+[21.371812] (-) TimerEvent: {}
+[21.472168] (-) TimerEvent: {}
+[21.572517] (-) TimerEvent: {}
+[21.672872] (-) TimerEvent: {}
+[21.773221] (-) TimerEvent: {}
+[21.873580] (-) TimerEvent: {}
+[21.973926] (-) TimerEvent: {}
+[22.074271] (-) TimerEvent: {}
+[22.174621] (-) TimerEvent: {}
+[22.274972] (-) TimerEvent: {}
+[22.375320] (-) TimerEvent: {}
+[22.475745] (-) TimerEvent: {}
+[22.576090] (-) TimerEvent: {}
+[22.676439] (-) TimerEvent: {}
+[22.776821] (-) TimerEvent: {}
+[22.877175] (-) TimerEvent: {}
+[22.977521] (-) TimerEvent: {}
+[23.077878] (-) TimerEvent: {}
+[23.178233] (-) TimerEvent: {}
+[23.278618] (-) TimerEvent: {}
+[23.378968] (-) TimerEvent: {}
+[23.479319] (-) TimerEvent: {}
+[23.579668] (-) TimerEvent: {}
+[23.680011] (-) TimerEvent: {}
+[23.780361] (-) TimerEvent: {}
+[23.880720] (-) TimerEvent: {}
+[23.981073] (-) TimerEvent: {}
+[24.081419] (-) TimerEvent: {}
+[24.181792] (-) TimerEvent: {}
+[24.282132] (-) TimerEvent: {}
+[24.382474] (-) TimerEvent: {}
+[24.482841] (-) TimerEvent: {}
+[24.583201] (-) TimerEvent: {}
+[24.683659] (-) TimerEvent: {}
+[24.783997] (-) TimerEvent: {}
+[24.884336] (-) TimerEvent: {}
+[24.984692] (-) TimerEvent: {}
+[25.085044] (-) TimerEvent: {}
+[25.185386] (-) TimerEvent: {}
+[25.285749] (-) TimerEvent: {}
+[25.386089] (-) TimerEvent: {}
+[25.486430] (-) TimerEvent: {}
+[25.586778] (-) TimerEvent: {}
+[25.687116] (-) TimerEvent: {}
+[25.787457] (-) TimerEvent: {}
+[25.887815] (-) TimerEvent: {}
+[25.988151] (-) TimerEvent: {}
+[26.088484] (-) TimerEvent: {}
+[26.188844] (-) TimerEvent: {}
+[26.289169] (-) TimerEvent: {}
+[26.389490] (-) TimerEvent: {}
+[26.489824] (-) TimerEvent: {}
+[26.590158] (-) TimerEvent: {}
+[26.690487] (-) TimerEvent: {}
+[26.790832] (-) TimerEvent: {}
+[26.891167] (-) TimerEvent: {}
+[26.991503] (-) TimerEvent: {}
+[27.091957] (-) TimerEvent: {}
+[27.192581] (-) TimerEvent: {}
+[27.292941] (-) TimerEvent: {}
+[27.393267] (-) TimerEvent: {}
+[27.493596] (-) TimerEvent: {}
+[27.593922] (-) TimerEvent: {}
+[27.694250] (-) TimerEvent: {}
+[27.794590] (-) TimerEvent: {}
+[27.894914] (-) TimerEvent: {}
+[27.995251] (-) TimerEvent: {}
+[28.095988] (-) TimerEvent: {}
+[28.196314] (-) TimerEvent: {}
+[28.296641] (-) TimerEvent: {}
+[28.396968] (-) TimerEvent: {}
+[28.497300] (-) TimerEvent: {}
+[28.597695] (-) TimerEvent: {}
+[28.698022] (-) TimerEvent: {}
+[28.798349] (-) TimerEvent: {}
+[28.898749] (-) TimerEvent: {}
+[28.999090] (-) TimerEvent: {}
+[29.099415] (-) TimerEvent: {}
+[29.199753] (-) TimerEvent: {}
+[29.300082] (-) TimerEvent: {}
+[29.400408] (-) TimerEvent: {}
+[29.439203] (armor_detector) StdoutLine: {'line': b'[ 81%] \x1b[1m\x1b[32mLinking CXX executable spiral_detector\x1b[0m\n'}
+[29.500555] (-) TimerEvent: {}
+[29.600887] (-) TimerEvent: {}
+[29.611320] (armor_detector) StderrLine: {'line': b'/usr/bin/ld: warning: libtbb.so.2, needed by /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.5.4d, may conflict with libtbb.so.12\n'}
+[29.700995] (-) TimerEvent: {}
+[29.801338] (-) TimerEvent: {}
+[29.901689] (-) TimerEvent: {}
+[29.970987] (armor_detector) StdoutLine: {'line': b'[100%] Built target spiral_detector\n'}
+[29.982017] (armor_detector) CommandEnded: {'returncode': 0}
+[29.983038] (armor_detector) JobProgress: {'identifier': 'armor_detector', 'progress': 'install'}
+[29.988143] (armor_detector) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ckl/RM/Combat_vision2026/build/armor_detector'], 'cwd': '/home/ckl/RM/Combat_vision2026/build/armor_detector', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'ckl'), ('LC_TIME', 'zh_CN.UTF-8'), ('FONTCONFIG_PATH', '/etc/fonts'), ('GIO_MODULE_DIR', '/home/ckl/snap/code/common/.cache/gio-modules'), ('XDG_SESSION_TYPE', 'x11'), ('ALLUSERSPROFILE', '/opt/MVS/MVFG'), ('GIT_ASKPASS', '/snap/code/208/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('GTK_EXE_PREFIX_VSCODE_SNAP_ORIG', ''), ('GDK_BACKEND_VSCODE_SNAP_ORIG', ''), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32'), ('HOME', '/home/ckl'), ('CHROME_DESKTOP', 'code.desktop'), ('LOCPATH_VSCODE_SNAP_ORIG', ''), ('TERM_PROGRAM_VERSION', '1.104.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GTK_PATH', '/snap/code/208/usr/lib/x86_64-linux-gnu/gtk-3.0'), ('XDG_DATA_HOME_VSCODE_SNAP_ORIG', ''), ('GTK_IM_MODULE_FILE', '/home/ckl/snap/code/common/.cache/immodules/immodules.cache'), ('GIO_LAUNCHED_DESKTOP_FILE', '/var/lib/snapd/desktop/applications/code_code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG', ''), ('VSCODE_GIT_ASKPASS_MAIN', '/snap/code/208/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/snap/code/208/usr/share/code/code'), ('MANAGERPID', '2449'), ('SYSTEMD_EXEC_PID', '2861'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4211'), ('COLCON_PREFIX_PATH', '/home/ckl/RM/Combat_vision2026/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'ckl'), ('JOURNAL_STREAM', '8:13897'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_SESSION_CLASS', 'user'), ('XDG_DATA_DIRS_VSCODE_SNAP_ORIG', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('USERNAME', 'ckl'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('MVCAM_SDK_PATH', '/opt/MVS'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/ckl-ASUS-TUF-Gaming-A15-FA507NV-FA507NV:@/tmp/.ICE-unix/2823,unix/ckl-ASUS-TUF-Gaming-A15-FA507NV-FA507NV:/tmp/.ICE-unix/2823'), ('GTK_EXE_PREFIX', '/snap/code/208/usr'), ('INVOCATION_ID', '6c3874bc0b4048dbaa3f1b630400b09f'), ('MVCAM_GENICAM_CLPROTOCOL', '/opt/MVS/lib/CLProtocol'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('BAMF_DESKTOP_FILE_HINT', '/var/lib/snapd/desktop/applications/code_code.desktop'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LOCPATH', '/snap/code/208/usr/lib/locale'), ('LD_PRELOAD', '/lib/x86_64-linux-gnu/libpthread.so.0'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('GIO_MODULE_DIR_VSCODE_SNAP_ORIG', ''), ('XDG_DATA_HOME', '/home/ckl/snap/code/208/.local/share'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-66f21244f2.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('GSETTINGS_SCHEMA_DIR', '/home/ckl/snap/code/208/.local/share/glib-2.0/schemas'), ('AMENT_PREFIX_PATH', '/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GTK_PATH_VSCODE_SNAP_ORIG', ''), ('FONTCONFIG_FILE', '/etc/fonts/fonts.conf'), ('GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG', ''), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ckl/RM/Combat_vision2026/build/armor_detector'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/home/ckl/snap/code/208/.local/share:/home/ckl/snap/code/208:/snap/code/208/usr/share:/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble'), ('MVCAM_COMMON_RUNENV', '/opt/MVS/lib')]), 'shell': False}
+[29.994844] (armor_detector) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[29.995019] (armor_detector) StdoutLine: {'line': b'-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/lib/armor_detector/spiral_detector\n'}
+[29.996691] (armor_detector) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/ckl/RM/Combat_vision2026/install/armor_detector/lib/armor_detector/spiral_detector" to ""\n'}
+[29.998101] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/lib/armor_detector/armor_detector_node\n'}
+[29.998251] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/include\n'}
+[29.998390] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/include/armor_detector\n'}
+[29.998475] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/include/armor_detector/light_corner_corrector.hpp\n'}
+[29.998598] (armor_detector) StdoutLine: {'line': b'-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/include/armor_detector/bound_solver.hpp\n'}
+[29.998738] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/include/armor_detector/types.hpp\n'}
+[29.998839] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/include/armor_detector/ba_solver.hpp\n'}
+[29.998916] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/include/armor_detector/armor_detector_node.hpp\n'}
+[29.998991] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/include/armor_detector/armor_pose_estimator.hpp\n'}
+[29.999066] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/include/armor_detector/number_classifier.hpp\n'}
+[29.999165] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/include/armor_detector/armor_detector.hpp\n'}
+[29.999240] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/include/armor_detector/graph_optimizer.hpp\n'}
+[29.999312] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/environment/library_path.sh\n'}
+[29.999384] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/environment/library_path.dsv\n'}
+[29.999455] (armor_detector) StdoutLine: {'line': b'-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/lib/libarmor_detector.so\n'}
+[30.001760] (-) TimerEvent: {}
+[30.003823] (armor_detector) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/ckl/RM/Combat_vision2026/install/armor_detector/lib/libarmor_detector.so" to ""\n'}
+[30.003937] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs\n'}
+[30.003992] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/origin1.png\n'}
+[30.004063] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/num_warp.png\n'}
+[30.004168] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/test.png\n'}
+[30.004219] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/gray_bin.png\n'}
+[30.004264] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/num_bin.png\n'}
+[30.004311] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/blue.png\n'}
+[30.004358] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/origin2.png\n'}
+[30.004462] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/BA.png\n'}
+[30.004513] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/pca1.png\n'}
+[30.004596] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/raw.png\n'}
+[30.004646] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/num_roi.png\n'}
+[30.004719] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/hsv_bin.png\n'}
+[30.004787] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/pca2.png\n'}
+[30.004838] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/num_raw.png\n'}
+[30.004897] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/model.svg\n'}
+[30.004943] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/red.png\n'}
+[30.004984] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/docs/classify.png\n'}
+[30.005023] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/model\n'}
+[30.005061] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/model/label.txt\n'}
+[30.005099] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/model/lenet.onnx\n'}
+[30.005137] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/model/mlp.onnx\n'}
+[30.005174] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/ament_index/resource_index/package_run_dependencies/armor_detector\n'}
+[30.005213] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/ament_index/resource_index/parent_prefix_path/armor_detector\n'}
+[30.005250] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/environment/ament_prefix_path.sh\n'}
+[30.005288] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/environment/ament_prefix_path.dsv\n'}
+[30.005326] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/environment/path.sh\n'}
+[30.005364] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/environment/path.dsv\n'}
+[30.005402] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/local_setup.bash\n'}
+[30.005440] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/local_setup.sh\n'}
+[30.005476] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/local_setup.zsh\n'}
+[30.005513] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/local_setup.dsv\n'}
+[30.005575] (armor_detector) StdoutLine: {'line': b'-- Installing: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/package.dsv\n'}
+[30.006349] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/ament_index/resource_index/packages/armor_detector\n'}
+[30.006439] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/ament_index/resource_index/rclcpp_components/armor_detector\n'}
+[30.006489] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[30.006578] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[30.006685] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[30.006752] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/cmake/armor_detectorConfig.cmake\n'}
+[30.006812] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/cmake/armor_detectorConfig-version.cmake\n'}
+[30.006870] (armor_detector) StdoutLine: {'line': b'-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/package.xml\n'}
+[30.009436] (armor_detector) CommandEnded: {'returncode': 0}
+[30.027958] (armor_detector) JobEnded: {'identifier': 'armor_detector', 'rc': 0}
+[30.028559] (-) EventReactorShutdown: {}

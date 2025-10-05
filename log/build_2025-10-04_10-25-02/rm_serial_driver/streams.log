@@ -1,0 +1,51 @@
+[0.016s] Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_serial_driver': AMENT_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/rm_serial_driver -- -j16 -l16
+[0.058s] [ 11%] Built target gtest_main
+[0.058s] [ 23%] Built target gtest
+[0.062s] [ 35%] Built target rm_serial_driver_node
+[0.062s] [ 47%] Built target virtual_serial_node
+[0.076s] [ 52%] [1m[32mLinking CXX shared library librm_serial_driver.so[0m
+[0.388s] [ 88%] Built target rm_serial_driver
+[0.413s] [ 94%] [1m[32mLinking CXX executable test_fixed_packet_tool[0m
+[0.580s] [100%] Built target test_fixed_packet_tool
+[0.587s] Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_serial_driver' returned '0': AMENT_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/rm_serial_driver -- -j16 -l16
+[0.591s] Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_serial_driver': AMENT_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/ckl/RM/Combat_vision2026/build/rm_serial_driver
+[0.597s] -- Install configuration: ""
+[0.599s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib/rm_serial_driver/rm_serial_driver_node
+[0.601s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib/rm_serial_driver/virtual_serial_node
+[0.601s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/include
+[0.602s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/include/rm_serial_driver
+[0.602s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/include/rm_serial_driver/uart_transporter.hpp
+[0.602s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/include/rm_serial_driver/protocol_factory.hpp
+[0.602s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/include/rm_serial_driver/fixed_packet_tool.hpp
+[0.602s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/include/rm_serial_driver/fixed_packet.hpp
+[0.602s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/include/rm_serial_driver/protocol
+[0.602s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/include/rm_serial_driver/protocol/infantry_protocol.hpp
+[0.602s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/include/rm_serial_driver/protocol/default_protocol.hpp
+[0.603s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/include/rm_serial_driver/protocol/sentry_protocol.hpp
+[0.603s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/include/rm_serial_driver/transporter_interface.hpp
+[0.603s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/include/rm_serial_driver/serial_driver_node.hpp
+[0.603s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/include/rm_serial_driver/protocol.hpp
+[0.603s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/environment/library_path.sh
+[0.603s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/environment/library_path.dsv
+[0.606s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib/librm_serial_driver.so
+[0.609s] -- Set non-toolchain portion of runtime path of "/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib/librm_serial_driver.so" to ""
+[0.610s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/ament_index/resource_index/package_run_dependencies/rm_serial_driver
+[0.610s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/ament_index/resource_index/parent_prefix_path/rm_serial_driver
+[0.610s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/environment/ament_prefix_path.sh
+[0.610s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/environment/ament_prefix_path.dsv
+[0.610s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/environment/path.sh
+[0.610s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/environment/path.dsv
+[0.610s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/local_setup.bash
+[0.610s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/local_setup.sh
+[0.610s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/local_setup.zsh
+[0.610s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/local_setup.dsv
+[0.610s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/package.dsv
+[0.611s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/ament_index/resource_index/packages/rm_serial_driver
+[0.612s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/ament_index/resource_index/rclcpp_components/rm_serial_driver
+[0.612s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.612s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.612s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/cmake/ament_cmake_export_libraries-extras.cmake
+[0.612s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/cmake/rm_serial_driverConfig.cmake
+[0.612s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/cmake/rm_serial_driverConfig-version.cmake
+[0.612s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/package.xml
+[0.615s] Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_serial_driver' returned '0': AMENT_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32:/opt/MVS/lib/64:/opt/MVS/lib/32 PYTHONPATH=/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/ckl/RM/Combat_vision2026/build/rm_serial_driver

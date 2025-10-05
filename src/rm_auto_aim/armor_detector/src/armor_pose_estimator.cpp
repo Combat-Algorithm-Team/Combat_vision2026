@@ -32,6 +32,8 @@ ArmorPoseEstimator::ArmorPoseEstimator(
   // BA solver
   ba_solver_ = std::make_unique<BaSolver>(camera_info->k, camera_info->d);
 
+  bound_solver_ = std::make_unique<BoundSolver>(camera_info);
+
   R_gimbal_camera_ = Eigen::Matrix3d::Identity();
   R_gimbal_camera_ << 0, 0, 1, -1, 0, 0, 0, -1, 0;
 
@@ -52,6 +54,7 @@ ArmorPoseEstimator::extractArmorPoses(const std::vector<Armor> &armors,
       sortPnPResult(armor, rvecs, tvecs);
       cv::Mat rmat;
       cv::Rodrigues(rvecs[0], rmat);
+      std::cout<<"tvec is :"<<tvecs[0]<<std::endl;
 
       Eigen::Matrix3d R = utils::cvToEigen(rmat);
       Eigen::Vector3d t = utils::cvToEigen(tvecs[0]);
@@ -59,14 +62,27 @@ ArmorPoseEstimator::extractArmorPoses(const std::vector<Armor> &armors,
       double armor_roll =
           rotationMatrixToRPY(R_gimbal_camera_ * R)[0] * 180 / M_PI;
 
+      // if (armor_yaw > 0) {
+      // std::cout << "Armor yaw is positive: " << armor_yaw << " degrees" << std::endl;
+      // } else if (armor_yaw < 0) {
+      // std::cout << "Armor yaw is negative: " << armor_yaw << " degrees" << std::endl;
+      // } else {
+      // std::cout << "Armor yaw is zero" << std::endl;
+      // }
+
       if (use_ba_ && armor_roll < 15) {
         // Use BA alogorithm to optimize the pose from PnP
         // solveBa() will modify the rotation_matrix
+        std::cout<<"use_ba_"<<std::endl;
         R = ba_solver_->solveBa(armor, t, R, R_imu_camera);
+      }
+      if (use_bound_) {
+        std::cout<<"use_bound_"<<std::endl;
+        R = bound_solver_ ->solveBound(armor, t, R, R_imu_camera);
       }
       Eigen::Quaterniond q(R);
 
-      // Fill the armor message
+      // Fill the armor message     
       rm_interfaces::msg::Armor armor_msg;
 
       // Fill basic info
@@ -87,9 +103,10 @@ ArmorPoseEstimator::extractArmorPoses(const std::vector<Armor> &armors,
           pnp_solver_->calculateDistanceToCenter(armor.center);
 
       armors_msg.push_back(std::move(armor_msg));
-    } else {
-      FYT_WARN("armor_detector", "PnP Failed!");
-    }
+    } 
+    // else {
+    //   FYT_WARN("armor_detector", "PnP Failed!");
+    // }
   }
 
   return armors_msg;
@@ -98,7 +115,7 @@ ArmorPoseEstimator::extractArmorPoses(const std::vector<Armor> &armors,
 Eigen::Vector3d ArmorPoseEstimator::rotationMatrixToRPY(const Eigen::Matrix3d &R) {
   // Transform to camera frame
   Eigen::Quaterniond q(R);
-  // Get armor yaw
+  // Get armor yawDetector::Armor
   tf2::Quaternion tf_q(q.x(), q.y(), q.z(), q.w());
   Eigen::Vector3d rpy;
   tf2::Matrix3x3(tf_q).getRPY(rpy[0], rpy[1], rpy[2]);
@@ -160,7 +177,7 @@ void ArmorPoseEstimator::sortPnPResult(const Armor &armor,
       (angle < 0 && rpy1[2] < 0 && rpy2[2] > 0)) {
     std::swap(rvec1, rvec2);
     std::swap(tvec1, tvec2);
-    FYT_DEBUG("armor_detector", "PnP Solution 2 Selected");
+    // FYT_DEBUG("armor_detector", "PnP Solution 2 Selected");
   }
 }
 

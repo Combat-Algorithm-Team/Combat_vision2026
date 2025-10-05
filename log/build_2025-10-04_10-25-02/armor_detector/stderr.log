@@ -1,0 +1,59 @@
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:65:33:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator<<[m[K’ (operand types are ‘[01m[KEigen::CommaInitializer<Eigen::Matrix<double, 3, 3> >[m[K’ and ‘[01m[Kdouble[m[K’)
+   65 |   [32m[Kimu_to_camera_ << 2.22045e-16[m[K [01;31m[K<<[m[K [34m[K2.22045e-16[m[K << 1
+      |   [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K [01;31m[K^~[m[K [34m[K~~~~~~~~~~~[m[K
+      |                  [32m[K|[m[K                 [34m[K|[m[K
+      |                  [32m[K|[m[K                 [34m[Kdouble[m[K
+      |                  [32m[KEigen::CommaInitializer<Eigen::Matrix<double, 3, 3> >[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:269[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:25[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:25[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:27[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/IO.h:249:16:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Derived> std::ostream& Eigen::operator<<(std::ostream&, const Eigen::DenseBase<Derived>&)[m[K’
+  249 | std::ostream & [01;36m[Koperator[m[K <<
+      |                [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/IO.h:249:16:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:65:36:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::DenseBase<Derived>[m[K’ and ‘[01m[Kdouble[m[K’
+   65 |   imu_to_camera_ << 2.22045e-16 << [01;36m[K2.22045e-16[m[K << 1
+      |                                    [01;36m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/unsupported/Eigen/CXX11/Tensor:69[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:64[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/utils.hpp:23[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:32[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:27[m[K:
+[01m[K/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorIndexList.h:328:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class FirstType, class ... OtherTypes> std::ostream& Eigen::operator<<(std::ostream&, const Eigen::IndexList<FirstType, OtherTypes ...>&)[m[K’
+  328 | std::ostream& [01;36m[Koperator[m[K<<(std::ostream& os,
+      |               [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorIndexList.h:328:15:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:65:36:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::IndexList<FirstType, OtherTypes ...>[m[K’ and ‘[01m[Kdouble[m[K’
+   65 |   imu_to_camera_ << 2.22045e-16 << [01;36m[K2.22045e-16[m[K << 1
+      |                                    [01;36m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/unsupported/Eigen/CXX11/Tensor:71[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:64[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/utils.hpp:23[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:32[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:27[m[K:
+[01m[K/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDimensions.h:387:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class IndexType, int NumDims> std::ostream& Eigen::operator<<(std::ostream&, const Eigen::DSizes<IndexType, NumDims>&)[m[K’
+  387 | std::ostream& [01;36m[Koperator[m[K<<(std::ostream& os,
+      |               [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorDimensions.h:387:15:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:65:36:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::DSizes<IndexType, NumDims>[m[K’ and ‘[01m[Kdouble[m[K’
+   65 |   imu_to_camera_ << 2.22045e-16 << [01;36m[K2.22045e-16[m[K << 1
+      |                                    [01;36m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/unsupported/Eigen/CXX11/Tensor:132[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:64[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/utils.hpp:23[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:32[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:27[m[K:
+[01m[K/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorIO.h:59:15:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class T> std::ostream& Eigen::operator<<(std::ostream&, const Eigen::TensorBase<Derived, 0>&)[m[K’
+   59 | std::ostream& [01;36m[Koperator[m[K << (std::ostream& os, const TensorBase<T, ReadOnlyAccessors>& expr) {
+      |               [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/unsupported/Eigen/CXX11/src/Tensor/TensorIO.h:59:15:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:65:36:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::TensorBase<Derived, 0>[m[K’ and ‘[01m[Kdouble[m[K’
+   65 |   imu_to_camera_ << 2.22045e-16 << [01;36m[K2.22045e-16[m[K << 1
+      |                                    [01;36m[K^~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:191：CMakeFiles/armor_detector.dir/src/spiral.cpp.o] 错误 1
+gmake[2]: *** 正在等待未完成的任务....
+gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

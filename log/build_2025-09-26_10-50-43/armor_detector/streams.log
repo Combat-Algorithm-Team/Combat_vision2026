@@ -1,0 +1,24 @@
+[0.018s] Invoking command in '/home/ckl/RM/Combat_vision2026/build/armor_detector': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/armor_detector -- -j16 -l16
+[0.054s] [  7%] Built target gtest_main
+[0.054s] [ 14%] Built target gtest
+[0.058s] [ 22%] Built target armor_detector_node
+[0.111s] [ 25%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/armor_detector_node.cpp.o[0m
+[0.113s] [ 29%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/spiral.cpp.o[0m
+[5.198s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[5.199s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:97:3:[m[K [01;31m[Kerror: [m[K‘[01m[Karmor_msgs_[m[K’ was not declared in this scope; did you mean ‘[01m[Karmors_msg_[m[K’?
+[5.199s]    97 |   [01;31m[Karmor_msgs_[m[K.armors = armor_pose_estimator->extrateArmorPoses(armors, imu_to_camera);
+[5.199s]       |   [01;31m[K^~~~~~~~~~~[m[K
+[5.199s]       |   [32m[Karmors_msg_[m[K
+[5.203s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:97:24:[m[K [01;31m[Kerror: [m[K‘[01m[Karmor_pose_estimator[m[K’ was not declared in this scope; did you mean ‘[01m[Karmor_pose_estimator_[m[K’?
+[5.204s]    97 |   armor_msgs_.armors = [01;31m[Karmor_pose_estimator[m[K->extrateArmorPoses(armors, imu_to_camera);
+[5.204s]       |                        [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[5.204s]       |                        [32m[Karmor_pose_estimator_[m[K
+[5.208s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:97:72:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_to_camera[m[K’ was not declared in this scope; did you mean ‘[01m[Kimu_to_camera_[m[K’?
+[5.208s]    97 |   armor_msgs_.armors = armor_pose_estimator->extrateArmorPoses(armors, [01;31m[Kimu_to_camera[m[K);
+[5.208s]       |                                                                        [01;31m[K^~~~~~~~~~~~~[m[K
+[5.208s]       |                                                                        [32m[Kimu_to_camera_[m[K
+[8.799s] gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:191：CMakeFiles/armor_detector.dir/src/spiral.cpp.o] 错误 1
+[8.799s] gmake[2]: *** 正在等待未完成的任务....
+[24.713s] gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+[24.713s] gmake: *** [Makefile:146：all] 错误 2
+[24.716s] Invoked command in '/home/ckl/RM/Combat_vision2026/build/armor_detector' returned '2': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/armor_detector -- -j16 -l16

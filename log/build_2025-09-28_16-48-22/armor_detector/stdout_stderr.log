@@ -1,0 +1,92 @@
+[  7%] Built target gtest_main
+[ 14%] Built target gtest
+[ 22%] Built target armor_detector_node
+[ 25%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/armor_detector_node.cpp.o[0m
+[ 29%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/armor_pose_estimator.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/spiral.cpp.o[0m
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:[m[K In member function ‘[01m[KEigen::Matrix3d fyt::auto_aim::BoundSolver::solveBound(const fyt::auto_aim::Armor&, const Vector3d&, const Matrix3d&, const Matrix3d&)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:43:16:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kconst std::vector<Eigen::Matrix<double, 3, 1>, std::allocator<Eigen::Matrix<double, 3, 1> > >[m[K’ to ‘[01m[KEigen::Vector3d[m[K’ {aka ‘[01m[KEigen::Matrix<double, 3, 1>[m[K’}
+   43 |   reprojection([01;31m[Kobject_points[m[K, R_camera_armor, t_camera_armor);   //to get bound_solver->projected_points
+      |                [01;31m[K^~~~~~~~~~~~~[m[K
+      |                [01;31m[K|[m[K
+      |                [01;31m[Kconst std::vector<Eigen::Matrix<double, 3, 1>, std::allocator<Eigen::Matrix<double, 3, 1> > >[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:47:39:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid fyt::auto_aim::BoundSolver::reprojection(Eigen::Vector3d, Eigen::Matrix3d, cv::Mat)[m[K’
+   47 |     void reprojection([01;36m[KEigen::Vector3d object_points[m[K, Eigen::Matrix3d R_camera_armor, cv::Mat t_camera_armor);
+      |                       [01;36m[K~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:46:10:[m[K [01;31m[Kerror: [m[Kunused variable ‘[01m[Kerror[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Werror=unused-variable]8;;[m[K]
+   46 |   double [01;31m[Kerror[m[K = calculateProjectionError();
+      |          [01;31m[K^~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:[m[K In member function ‘[01m[Kvoid fyt::auto_aim::BoundSolver::reprojection(Eigen::Vector3d, Eigen::Matrix3d, cv::Mat)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:111:56:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Keigen2cv(Eigen::Vector3d&)[m[K’
+  111 |   std::vector<cv::Point3f> bound_points  = [01;31m[Kcv::eigen2cv(object_points)[m[K;
+      |                                            [01;31m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/utils.hpp:23[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:37[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:100:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, int _layout> void cv::eigen2cv(const Eigen::Tensor<_Tp, 3, _layout>&, cv::OutputArray)[m[K’
+  100 | void [01;36m[Keigen2cv[m[K( const Eigen::Tensor<_Tp, 3, _layout> &src, OutputArray dst )
+      |      [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:100:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:111:56:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Vector3d[m[K’ {aka ‘[01m[KEigen::Matrix<double, 3, 1>[m[K’} is not derived from ‘[01m[Kconst Eigen::Tensor<_Tp, 3, _layout>[m[K’
+  111 |   std::vector<cv::Point3f> bound_points  = [01;36m[Kcv::eigen2cv(object_points)[m[K;
+      |                                            [01;36m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/utils.hpp:23[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:37[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:185:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, int _rows, int _cols, int _options, int _maxRows, int _maxCols> void cv::eigen2cv(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&, cv::OutputArray)[m[K’
+  185 | void [01;36m[Keigen2cv[m[K( const Eigen::Matrix<_Tp, _rows, _cols, _options, _maxRows, _maxCols>& src, OutputArray dst )
+      |      [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:185:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:111:56:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+  111 |   std::vector<cv::Point3f> bound_points  = [01;36m[Kcv::eigen2cv(object_points)[m[K;
+      |                                            [01;36m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/utils.hpp:23[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:37[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:203:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, int _rows, int _cols, int _options, int _maxRows, int _maxCols> void cv::eigen2cv(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&, cv::Matx<_Tp, m, n>&)[m[K’
+  203 | void [01;36m[Keigen2cv[m[K( const Eigen::Matrix<_Tp, _rows, _cols, _options, _maxRows, _maxCols>& src,
+      |      [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:203:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:111:56:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+  111 |   std::vector<cv::Point3f> bound_points  = [01;36m[Kcv::eigen2cv(object_points)[m[K;
+      |                                            [01;36m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:114:15:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Keigen2cv(cv::Mat&, cv::Mat&)[m[K’
+  114 |   [01;31m[Kcv::eigen2cv(t_camera_armor, tvec)[m[K;
+      |   [01;31m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/utils.hpp:23[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:37[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:100:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, int _layout> void cv::eigen2cv(const Eigen::Tensor<_Tp, 3, _layout>&, cv::OutputArray)[m[K’
+  100 | void [01;36m[Keigen2cv[m[K( const Eigen::Tensor<_Tp, 3, _layout> &src, OutputArray dst )
+      |      [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:100:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:114:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Mat[m[K’ is not derived from ‘[01m[Kconst Eigen::Tensor<_Tp, 3, _layout>[m[K’
+  114 |   [01;36m[Kcv::eigen2cv(t_camera_armor, tvec)[m[K;
+      |   [01;36m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/utils.hpp:23[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:37[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:185:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, int _rows, int _cols, int _options, int _maxRows, int _maxCols> void cv::eigen2cv(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&, cv::OutputArray)[m[K’
+  185 | void [01;36m[Keigen2cv[m[K( const Eigen::Matrix<_Tp, _rows, _cols, _options, _maxRows, _maxCols>& src, OutputArray dst )
+      |      [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:185:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:114:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Mat[m[K’ is not derived from ‘[01m[Kconst Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>[m[K’
+  114 |   [01;36m[Kcv::eigen2cv(t_camera_armor, tvec)[m[K;
+      |   [01;36m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/utils.hpp:23[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:37[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:203:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, int _rows, int _cols, int _options, int _maxRows, int _maxCols> void cv::eigen2cv(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&, cv::Matx<_Tp, m, n>&)[m[K’
+  203 | void [01;36m[Keigen2cv[m[K( const Eigen::Matrix<_Tp, _rows, _cols, _options, _maxRows, _maxCols>& src,
+      |      [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:203:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:114:15:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Mat[m[K’ is not derived from ‘[01m[Kconst Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>[m[K’
+  114 |   [01;36m[Kcv::eigen2cv(t_camera_armor, tvec)[m[K;
+      |   [01;36m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+cc1plus: all warnings being treated as errors
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:135：CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o] 错误 1
+gmake[2]: *** 正在等待未完成的任务....
+gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

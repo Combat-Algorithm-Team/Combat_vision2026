@@ -1,0 +1,262 @@
+[0.000000] (-) TimerEvent: {}
+[0.000153] (-) JobUnselected: {'identifier': 'armor_solver'}
+[0.000192] (-) JobUnselected: {'identifier': 'hik_camera'}
+[0.000218] (-) JobUnselected: {'identifier': 'rm_auto_aim'}
+[0.000247] (-) JobUnselected: {'identifier': 'rm_bringup'}
+[0.000269] (-) JobUnselected: {'identifier': 'rm_interfaces'}
+[0.000290] (-) JobUnselected: {'identifier': 'rm_robot_description'}
+[0.000311] (-) JobUnselected: {'identifier': 'rm_serial_driver'}
+[0.000333] (-) JobUnselected: {'identifier': 'rm_utils'}
+[0.000358] (armor_detector) JobQueued: {'identifier': 'armor_detector', 'dependencies': OrderedDict([('rm_interfaces', '/home/ckl/RM/Combat_vision2026/install/rm_interfaces'), ('rm_utils', '/home/ckl/RM/Combat_vision2026/install/rm_utils')])}
+[0.000395] (armor_detector) JobStarted: {'identifier': 'armor_detector'}
+[0.020201] (armor_detector) JobProgress: {'identifier': 'armor_detector', 'progress': 'cmake'}
+[0.020942] (armor_detector) JobProgress: {'identifier': 'armor_detector', 'progress': 'build'}
+[0.021598] (armor_detector) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ckl/RM/Combat_vision2026/build/armor_detector', '--', '-j16', '-l16'], 'cwd': '/home/ckl/RM/Combat_vision2026/build/armor_detector', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'ckl'), ('LC_TIME', 'zh_CN.UTF-8'), ('FONTCONFIG_PATH', '/etc/fonts'), ('GIO_MODULE_DIR', '/home/ckl/snap/code/common/.cache/gio-modules'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/snap/code/207/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('GTK_EXE_PREFIX_VSCODE_SNAP_ORIG', ''), ('GDK_BACKEND_VSCODE_SNAP_ORIG', ''), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ckl'), ('CHROME_DESKTOP', 'code.desktop'), ('LOCPATH_VSCODE_SNAP_ORIG', ''), ('TERM_PROGRAM_VERSION', '1.104.1'), ('DESKTOP_SESSION', 'ubuntu'), ('GTK_PATH', '/snap/code/207/usr/lib/x86_64-linux-gnu/gtk-3.0'), ('XDG_DATA_HOME_VSCODE_SNAP_ORIG', ''), ('GTK_IM_MODULE_FILE', '/home/ckl/snap/code/common/.cache/immodules/immodules.cache'), ('GIO_LAUNCHED_DESKTOP_FILE', '/var/lib/snapd/desktop/applications/code_code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG', ''), ('VSCODE_GIT_ASKPASS_MAIN', '/snap/code/207/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/snap/code/207/usr/share/code/code'), ('MANAGERPID', '1783'), ('SYSTEMD_EXEC_PID', '2174'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4155'), ('COLCON_PREFIX_PATH', '/home/ckl/RM/Combat_vision2026/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'ckl'), ('JOURNAL_STREAM', '8:21701'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_SESSION_CLASS', 'user'), ('XDG_DATA_DIRS_VSCODE_SNAP_ORIG', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('USERNAME', 'ckl'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/ckl-ASUS-TUF-Gaming-A15-FA507NV-FA507NV:@/tmp/.ICE-unix/2135,unix/ckl-ASUS-TUF-Gaming-A15-FA507NV-FA507NV:/tmp/.ICE-unix/2135'), ('GTK_EXE_PREFIX', '/snap/code/207/usr'), ('INVOCATION_ID', 'ced3f4fa27c341ee86e6b24fdcc287fc'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('BAMF_DESKTOP_FILE_HINT', '/var/lib/snapd/desktop/applications/code_code.desktop'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LOCPATH', '/snap/code/207/usr/lib/locale'), ('LD_PRELOAD', '/lib/x86_64-linux-gnu/libpthread.so.0'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('GIO_MODULE_DIR_VSCODE_SNAP_ORIG', ''), ('XDG_DATA_HOME', '/home/ckl/snap/code/207/.local/share'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-66f21244f2.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('GSETTINGS_SCHEMA_DIR', '/home/ckl/snap/code/207/.local/share/glib-2.0/schemas'), ('AMENT_PREFIX_PATH', '/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GTK_PATH_VSCODE_SNAP_ORIG', ''), ('FONTCONFIG_FILE', '/etc/fonts/fonts.conf'), ('GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG', ''), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ckl/RM/Combat_vision2026/build/armor_detector'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/home/ckl/snap/code/207/.local/share:/home/ckl/snap/code/207:/snap/code/207/usr/share:/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble')]), 'shell': False}
+[0.076048] (armor_detector) StdoutLine: {'line': b'[  7%] Built target gtest_main\n'}
+[0.076264] (armor_detector) StdoutLine: {'line': b'[ 14%] Built target gtest\n'}
+[0.084164] (armor_detector) StdoutLine: {'line': b'[ 22%] Built target armor_detector_node\n'}
+[0.099354] (-) TimerEvent: {}
+[0.136077] (armor_detector) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/armor_detector.dir/src/armor_detector_node.cpp.o\x1b[0m\n'}
+[0.136704] (armor_detector) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/armor_detector.dir/src/armor_pose_estimator.cpp.o\x1b[0m\n'}
+[0.137007] (armor_detector) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o\x1b[0m\n'}
+[0.137497] (armor_detector) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/armor_detector.dir/src/spiral.cpp.o\x1b[0m\n'}
+[0.199455] (-) TimerEvent: {}
+[0.299718] (-) TimerEvent: {}
+[0.400051] (-) TimerEvent: {}
+[0.500361] (-) TimerEvent: {}
+[0.600760] (-) TimerEvent: {}
+[0.701167] (-) TimerEvent: {}
+[0.801504] (-) TimerEvent: {}
+[0.901821] (-) TimerEvent: {}
+[1.002083] (-) TimerEvent: {}
+[1.102343] (-) TimerEvent: {}
+[1.202634] (-) TimerEvent: {}
+[1.302934] (-) TimerEvent: {}
+[1.403281] (-) TimerEvent: {}
+[1.503628] (-) TimerEvent: {}
+[1.604036] (-) TimerEvent: {}
+[1.704385] (-) TimerEvent: {}
+[1.804738] (-) TimerEvent: {}
+[1.905160] (-) TimerEvent: {}
+[2.005475] (-) TimerEvent: {}
+[2.105744] (-) TimerEvent: {}
+[2.206056] (-) TimerEvent: {}
+[2.306328] (-) TimerEvent: {}
+[2.406656] (-) TimerEvent: {}
+[2.506978] (-) TimerEvent: {}
+[2.607400] (-) TimerEvent: {}
+[2.707744] (-) TimerEvent: {}
+[2.808072] (-) TimerEvent: {}
+[2.908397] (-) TimerEvent: {}
+[3.008705] (-) TimerEvent: {}
+[3.109005] (-) TimerEvent: {}
+[3.209300] (-) TimerEvent: {}
+[3.309626] (-) TimerEvent: {}
+[3.409951] (-) TimerEvent: {}
+[3.510286] (-) TimerEvent: {}
+[3.610640] (-) TimerEvent: {}
+[3.710980] (-) TimerEvent: {}
+[3.811337] (-) TimerEvent: {}
+[3.911717] (-) TimerEvent: {}
+[4.012071] (-) TimerEvent: {}
+[4.032665] (armor_detector) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1\x1b[m\x1b[K:\n'}
+[4.032970] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:45:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstring\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[Kstdin\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[4.033057] (armor_detector) StderrLine: {'line': b'   45 |     void BoundSolver::setBoundPoints(const \x1b[01;31m\x1b[Kstring\x1b[m\x1b[K& armor_type, const std::vector<cv::Point3f> bound_points);;\n'}
+[4.033125] (armor_detector) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[4.033189] (armor_detector) StderrLine: {'line': b'      |                                            \x1b[32m\x1b[Kstdin\x1b[m\x1b[K\n'}
+[4.033254] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:45:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kextra qualification \xe2\x80\x98\x1b[01m\x1b[Kfyt::auto_aim::BoundSolver::\x1b[m\x1b[K\xe2\x80\x99 on member \xe2\x80\x98\x1b[01m\x1b[KsetBoundPoints\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.033330] (armor_detector) StderrLine: {'line': b'   45 |     void \x1b[01;31m\x1b[KBoundSolver\x1b[m\x1b[K::setBoundPoints(const string& armor_type, const std::vector<cv::Point3f> bound_points);;\n'}
+[4.033393] (armor_detector) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.046830] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:25:40:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstring\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[Kstdin\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[4.047149] (armor_detector) StderrLine: {'line': b'   25 | void BoundSolver::setBoundPoints(const \x1b[01;31m\x1b[Kstring\x1b[m\x1b[K& bound_type, const std::vector<cv::Point3f> bound_points){\n'}
+[4.047226] (armor_detector) StderrLine: {'line': b'      |                                        \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[4.047296] (armor_detector) StderrLine: {'line': b'      |                                        \x1b[32m\x1b[Kstdin\x1b[m\x1b[K\n'}
+[4.047358] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid fyt::auto_aim::BoundSolver::setBoundPoints(const int&, std::vector<cv::Point3_<float> >)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.047432] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:26:20:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno match for \xe2\x80\x98\x1b[01m\x1b[Koperator[]\x1b[m\x1b[K\xe2\x80\x99 (operand types are \xe2\x80\x98\x1b[01m\x1b[Kstd::unordered_map<std::__cxx11::basic_string<char>, std::vector<cv::Point3_<float> > >\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99)\n'}
+[4.047556] (armor_detector) StderrLine: {'line': b'   26 |   bound_points_map_\x1b[01;31m\x1b[K[\x1b[m\x1b[Kbound_type] = bound_points;\n'}
+[4.047686] (armor_detector) StderrLine: {'line': b'      |                    \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[4.047802] (armor_detector) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/unordered_map:47\x1b[m\x1b[K,\n'}
+[4.047919] (armor_detector) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/functional:61\x1b[m\x1b[K,\n'}
+[4.048032] (armor_detector) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13\x1b[m\x1b[K,\n'}
+[4.048145] (armor_detector) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/algorithm:74\x1b[m\x1b[K,\n'}
+[4.048258] (armor_detector) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:4\x1b[m\x1b[K,\n'}
+[4.048371] (armor_detector) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1\x1b[m\x1b[K:\n'}
+[4.048510] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/unordered_map.h:979:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::mapped_type& std::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::operator[](const key_type&) [with _Key = std::__cxx11::basic_string<char>; _Tp = std::vector<cv::Point3_<float> >; _Hash = std::hash<std::__cxx11::basic_string<char> >; _Pred = std::equal_to<std::__cxx11::basic_string<char> >; _Alloc = std::allocator<std::pair<const std::__cxx11::basic_string<char>, std::vector<cv::Point3_<float> > > >; std::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::mapped_type = std::vector<cv::Point3_<float> >; std::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::key_type = std::__cxx11::basic_string<char>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.048660] (armor_detector) StderrLine: {'line': b'  979 |       \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K[](const key_type& __k)\n'}
+[4.048748] (armor_detector) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.048807] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/unordered_map.h:979:34:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst key_type&\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kconst std::__cxx11::basic_string<char>&\x1b[m\x1b[K\xe2\x80\x99}\n'}
+[4.048870] (armor_detector) StderrLine: {'line': b'  979 |       operator[](\x1b[01;36m\x1b[Kconst key_type& __k\x1b[m\x1b[K)\n'}
+[4.048935] (armor_detector) StderrLine: {'line': b'      |                  \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[4.048994] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/unordered_map.h:983:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::mapped_type& std::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::operator[](std::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::key_type&&) [with _Key = std::__cxx11::basic_string<char>; _Tp = std::vector<cv::Point3_<float> >; _Hash = std::hash<std::__cxx11::basic_string<char> >; _Pred = std::equal_to<std::__cxx11::basic_string<char> >; _Alloc = std::allocator<std::pair<const std::__cxx11::basic_string<char>, std::vector<cv::Point3_<float> > > >; std::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::mapped_type = std::vector<cv::Point3_<float> >; std::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::key_type = std::__cxx11::basic_string<char>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.049059] (armor_detector) StderrLine: {'line': b'  983 |       \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K[](key_type&& __k)\n'}
+[4.049118] (armor_detector) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.049177] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/unordered_map.h:983:29:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kstd::unordered_map<std::__cxx11::basic_string<char>, std::vector<cv::Point3_<float> > >::key_type&&\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstd::__cxx11::basic_string<char>&&\x1b[m\x1b[K\xe2\x80\x99}\n'}
+[4.049238] (armor_detector) StderrLine: {'line': b'  983 |       operator[](\x1b[01;36m\x1b[Kkey_type&& __k\x1b[m\x1b[K)\n'}
+[4.049296] (armor_detector) StderrLine: {'line': b'      |                  \x1b[01;36m\x1b[K~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[4.050929] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:\x1b[m\x1b[K At global scope:\n'}
+[4.051175] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:47:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstring\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[Kstdin\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[4.051280] (armor_detector) StderrLine: {'line': b'   47 | void BoundSolver::reprojection(const \x1b[01;31m\x1b[Kstring\x1b[m\x1b[K& bound_type, cv::Mat rvec, cv::Mat tvec){\n'}
+[4.051377] (armor_detector) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[4.051479] (armor_detector) StderrLine: {'line': b'      |                                      \x1b[32m\x1b[Kstdin\x1b[m\x1b[K\n'}
+[4.051573] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:47:6:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno declaration matches \xe2\x80\x98\x1b[01m\x1b[Kvoid fyt::auto_aim::BoundSolver::reprojection(const int&, cv::Mat, cv::Mat)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.051675] (armor_detector) StderrLine: {'line': b'   47 | void \x1b[01;31m\x1b[KBoundSolver\x1b[m\x1b[K::reprojection(const string& bound_type, cv::Mat rvec, cv::Mat tvec){\n'}
+[4.051760] (armor_detector) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.051841] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:47:6:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kno functions named \xe2\x80\x98\x1b[01m\x1b[Kvoid fyt::auto_aim::BoundSolver::reprojection(const int&, cv::Mat, cv::Mat)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.051927] (armor_detector) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1\x1b[m\x1b[K:\n'}
+[4.052009] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:39:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass fyt::auto_aim::BoundSolver\x1b[m\x1b[K\xe2\x80\x99 defined here\n'}
+[4.052092] (armor_detector) StderrLine: {'line': b'   39 | class \x1b[01;36m\x1b[KBoundSolver\x1b[m\x1b[K{\n'}
+[4.052171] (armor_detector) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.052249] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:51:6:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno declaration matches \xe2\x80\x98\x1b[01m\x1b[Kvoid fyt::auto_aim::BoundSolver::drawProjection(cv::Mat)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.052331] (armor_detector) StderrLine: {'line': b'   51 | void \x1b[01;31m\x1b[KBoundSolver\x1b[m\x1b[K::drawProjection(cv::Mat img){\n'}
+[4.052407] (armor_detector) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.052501] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:51:6:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kno functions named \xe2\x80\x98\x1b[01m\x1b[Kvoid fyt::auto_aim::BoundSolver::drawProjection(cv::Mat)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.052598] (armor_detector) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1\x1b[m\x1b[K:\n'}
+[4.052682] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:39:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass fyt::auto_aim::BoundSolver\x1b[m\x1b[K\xe2\x80\x99 defined here\n'}
+[4.052765] (armor_detector) StderrLine: {'line': b'   39 | class \x1b[01;36m\x1b[KBoundSolver\x1b[m\x1b[K{\n'}
+[4.052844] (armor_detector) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.112182] (-) TimerEvent: {}
+[4.193698] (armor_detector) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:27\x1b[m\x1b[K:\n'}
+[4.193911] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:45:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstring\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[Kstdin\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[4.194019] (armor_detector) StderrLine: {'line': b'   45 |     void BoundSolver::setBoundPoints(const \x1b[01;31m\x1b[Kstring\x1b[m\x1b[K& armor_type, const std::vector<cv::Point3f> bound_points);;\n'}
+[4.194117] (armor_detector) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[4.194196] (armor_detector) StderrLine: {'line': b'      |                                            \x1b[32m\x1b[Kstdin\x1b[m\x1b[K\n'}
+[4.194256] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:45:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kextra qualification \xe2\x80\x98\x1b[01m\x1b[Kfyt::auto_aim::BoundSolver::\x1b[m\x1b[K\xe2\x80\x99 on member \xe2\x80\x98\x1b[01m\x1b[KsetBoundPoints\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.194320] (armor_detector) StderrLine: {'line': b'   45 |     void \x1b[01;31m\x1b[KBoundSolver\x1b[m\x1b[K::setBoundPoints(const string& armor_type, const std::vector<cv::Point3f> bound_points);;\n'}
+[4.194382] (armor_detector) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.212286] (-) TimerEvent: {}
+[4.312589] (-) TimerEvent: {}
+[4.412924] (-) TimerEvent: {}
+[4.513207] (-) TimerEvent: {}
+[4.551732] (armor_detector) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_pose_estimator.hpp:32\x1b[m\x1b[K,\n'}
+[4.551966] (armor_detector) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_pose_estimator.cpp:15\x1b[m\x1b[K:\n'}
+[4.552075] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:45:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstring\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[Kstdin\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[4.552157] (armor_detector) StderrLine: {'line': b'   45 |     void BoundSolver::setBoundPoints(const \x1b[01;31m\x1b[Kstring\x1b[m\x1b[K& armor_type, const std::vector<cv::Point3f> bound_points);;\n'}
+[4.552234] (armor_detector) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[4.552300] (armor_detector) StderrLine: {'line': b'      |                                            \x1b[32m\x1b[Kstdin\x1b[m\x1b[K\n'}
+[4.552360] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:45:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kextra qualification \xe2\x80\x98\x1b[01m\x1b[Kfyt::auto_aim::BoundSolver::\x1b[m\x1b[K\xe2\x80\x99 on member \xe2\x80\x98\x1b[01m\x1b[KsetBoundPoints\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.552439] (armor_detector) StderrLine: {'line': b'   45 |     void \x1b[01;31m\x1b[KBoundSolver\x1b[m\x1b[K::setBoundPoints(const string& armor_type, const std::vector<cv::Point3f> bound_points);;\n'}
+[4.552511] (armor_detector) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.613347] (-) TimerEvent: {}
+[4.631438] (armor_detector) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_pose_estimator.hpp:32\x1b[m\x1b[K,\n'}
+[4.632579] (armor_detector) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_detector_node.hpp:47\x1b[m\x1b[K,\n'}
+[4.632703] (armor_detector) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_detector_node.cpp:47\x1b[m\x1b[K:\n'}
+[4.632786] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:45:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstring\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[Kstdin\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[4.632869] (armor_detector) StderrLine: {'line': b'   45 |     void BoundSolver::setBoundPoints(const \x1b[01;31m\x1b[Kstring\x1b[m\x1b[K& armor_type, const std::vector<cv::Point3f> bound_points);;\n'}
+[4.632932] (armor_detector) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[4.632992] (armor_detector) StderrLine: {'line': b'      |                                            \x1b[32m\x1b[Kstdin\x1b[m\x1b[K\n'}
+[4.633049] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:45:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kextra qualification \xe2\x80\x98\x1b[01m\x1b[Kfyt::auto_aim::BoundSolver::\x1b[m\x1b[K\xe2\x80\x99 on member \xe2\x80\x98\x1b[01m\x1b[KsetBoundPoints\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.633115] (armor_detector) StderrLine: {'line': b'   45 |     void \x1b[01;31m\x1b[KBoundSolver\x1b[m\x1b[K::setBoundPoints(const string& armor_type, const std::vector<cv::Point3f> bound_points);;\n'}
+[4.633176] (armor_detector) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.659892] (armor_detector) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:135\xef\xbc\x9aCMakeFiles/armor_detector.dir/src/bound_solver.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[4.660159] (armor_detector) StderrLine: {'line': b'gmake[2]: *** \xe6\xad\xa3\xe5\x9c\xa8\xe7\xad\x89\xe5\xbe\x85\xe6\x9c\xaa\xe5\xae\x8c\xe6\x88\x90\xe7\x9a\x84\xe4\xbb\xbb\xe5\x8a\xa1....\n'}
+[4.713437] (-) TimerEvent: {}
+[4.813822] (-) TimerEvent: {}
+[4.914156] (-) TimerEvent: {}
+[5.014492] (-) TimerEvent: {}
+[5.114819] (-) TimerEvent: {}
+[5.160456] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_pose_estimator.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[Kfyt::auto_aim::ArmorPoseEstimator::ArmorPoseEstimator(sensor_msgs::msg::CameraInfo_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.160698] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_pose_estimator.cpp:42:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass fyt::auto_aim::BoundSolver\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[KsetObjectPoints\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<cv::Point3_<float> > fyt::auto_aim::BoundSolver::object_points\x1b[m\x1b[K\xe2\x80\x99? (not accessible from this context)\n'}
+[5.160811] (armor_detector) StderrLine: {'line': b'   42 |   bound_solver_->\x1b[01;31m\x1b[KsetObjectPoints\x1b[m\x1b[K(\n'}
+[5.160898] (armor_detector) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.160985] (armor_detector) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_pose_estimator.hpp:32\x1b[m\x1b[K,\n'}
+[5.161065] (armor_detector) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_pose_estimator.cpp:15\x1b[m\x1b[K:\n'}
+[5.161143] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:49:30:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclared private here\n'}
+[5.161259] (armor_detector) StderrLine: {'line': b'   49 |     std::vector<cv::Point3f> \x1b[01;36m\x1b[Kobject_points\x1b[m\x1b[K;\n'}
+[5.161358] (armor_detector) StderrLine: {'line': b'      |                              \x1b[01;36m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.185002] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_pose_estimator.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<rm_interfaces::msg::Armor_<std::allocator<void> > > fyt::auto_aim::ArmorPoseEstimator::extractArmorPoses(const std::vector<fyt::auto_aim::Armor>&, Eigen::Matrix3d)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.185182] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_pose_estimator.cpp:82:24:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass fyt::auto_aim::BoundSolver\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kreprojection\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.185261] (armor_detector) StderrLine: {'line': b'   82 |         bound_solver_->\x1b[01;31m\x1b[Kreprojection\x1b[m\x1b[K("small_left", rvecs[0], tvecs[0]);\n'}
+[5.185313] (armor_detector) StderrLine: {'line': b'      |                        \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.207948] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint main()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.208219] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:106:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Karmor_pose_estimator\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Karmor_pose_estimator_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[5.208337] (armor_detector) StderrLine: {'line': b'  106 |   \x1b[01;31m\x1b[Karmor_pose_estimator\x1b[m\x1b[K->bound_solver_->drawBound(img);\n'}
+[5.208435] (armor_detector) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.208530] (armor_detector) StderrLine: {'line': b'      |   \x1b[32m\x1b[Karmor_pose_estimator_\x1b[m\x1b[K\n'}
+[5.208612] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:109:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass fyt::auto_aim::BoundSolver\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[KdetectProjection\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.208695] (armor_detector) StderrLine: {'line': b'  109 |   bound_solver_->\x1b[01;31m\x1b[KdetectProjection\x1b[m\x1b[K(img);\n'}
+[5.208770] (armor_detector) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.214925] (-) TimerEvent: {}
+[5.315247] (-) TimerEvent: {}
+[5.415487] (-) TimerEvent: {}
+[5.515794] (-) TimerEvent: {}
+[5.616090] (-) TimerEvent: {}
+[5.716436] (-) TimerEvent: {}
+[5.816754] (-) TimerEvent: {}
+[5.917070] (-) TimerEvent: {}
+[6.017384] (-) TimerEvent: {}
+[6.117666] (-) TimerEvent: {}
+[6.217971] (-) TimerEvent: {}
+[6.318310] (-) TimerEvent: {}
+[6.418644] (-) TimerEvent: {}
+[6.518983] (-) TimerEvent: {}
+[6.619326] (-) TimerEvent: {}
+[6.719650] (-) TimerEvent: {}
+[6.819949] (-) TimerEvent: {}
+[6.920445] (-) TimerEvent: {}
+[7.020834] (-) TimerEvent: {}
+[7.121194] (-) TimerEvent: {}
+[7.221487] (-) TimerEvent: {}
+[7.321820] (-) TimerEvent: {}
+[7.422109] (-) TimerEvent: {}
+[7.522489] (-) TimerEvent: {}
+[7.622880] (-) TimerEvent: {}
+[7.723314] (-) TimerEvent: {}
+[7.823724] (-) TimerEvent: {}
+[7.924109] (-) TimerEvent: {}
+[8.024500] (-) TimerEvent: {}
+[8.124889] (-) TimerEvent: {}
+[8.225281] (-) TimerEvent: {}
+[8.325688] (-) TimerEvent: {}
+[8.426122] (-) TimerEvent: {}
+[8.526501] (-) TimerEvent: {}
+[8.626868] (-) TimerEvent: {}
+[8.727221] (-) TimerEvent: {}
+[8.827592] (-) TimerEvent: {}
+[8.927979] (-) TimerEvent: {}
+[9.027500] (armor_detector) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:191\xef\xbc\x9aCMakeFiles/armor_detector.dir/src/spiral.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[9.028027] (-) TimerEvent: {}
+[9.104597] (armor_detector) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:107\xef\xbc\x9aCMakeFiles/armor_detector.dir/src/armor_pose_estimator.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[9.128259] (-) TimerEvent: {}
+[9.228598] (-) TimerEvent: {}
+[9.328941] (-) TimerEvent: {}
+[9.429276] (-) TimerEvent: {}
+[9.529619] (-) TimerEvent: {}
+[9.629933] (-) TimerEvent: {}
+[9.730262] (-) TimerEvent: {}
+[9.830603] (-) TimerEvent: {}
+[9.930929] (-) TimerEvent: {}
+[10.031258] (-) TimerEvent: {}
+[10.131614] (-) TimerEvent: {}
+[10.231952] (-) TimerEvent: {}
+[10.332288] (-) TimerEvent: {}
+[10.432833] (-) TimerEvent: {}
+[10.533207] (-) TimerEvent: {}
+[10.633835] (-) TimerEvent: {}
+[10.734185] (-) TimerEvent: {}
+[10.834519] (-) TimerEvent: {}
+[10.934855] (-) TimerEvent: {}
+[11.035185] (-) TimerEvent: {}
+[11.135523] (-) TimerEvent: {}
+[11.235854] (-) TimerEvent: {}
+[11.336185] (-) TimerEvent: {}
+[11.436523] (-) TimerEvent: {}
+[11.536858] (-) TimerEvent: {}
+[11.637198] (-) TimerEvent: {}
+[11.737532] (-) TimerEvent: {}
+[11.837864] (-) TimerEvent: {}
+[11.938195] (-) TimerEvent: {}
+[12.038524] (-) TimerEvent: {}
+[12.138859] (-) TimerEvent: {}
+[12.239198] (-) TimerEvent: {}
+[12.339528] (-) TimerEvent: {}
+[12.439857] (-) TimerEvent: {}
+[12.540192] (-) TimerEvent: {}
+[12.640531] (-) TimerEvent: {}
+[12.740871] (-) TimerEvent: {}
+[12.832917] (armor_detector) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:93\xef\xbc\x9aCMakeFiles/armor_detector.dir/src/armor_detector_node.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[12.833346] (armor_detector) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:185\xef\xbc\x9aCMakeFiles/armor_detector.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[12.833872] (armor_detector) StderrLine: {'line': b'gmake: *** [Makefile:146\xef\xbc\x9aall] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[12.835954] (armor_detector) CommandEnded: {'returncode': 2}
+[12.840939] (-) TimerEvent: {}
+[12.875087] (armor_detector) JobEnded: {'identifier': 'armor_detector', 'rc': 2}
+[12.885806] (-) EventReactorShutdown: {}

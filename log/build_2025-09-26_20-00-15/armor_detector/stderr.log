@@ -1,0 +1,18 @@
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:[m[K In member function ‘[01m[Kvoid fyt::auto_aim::BoundSolver::drawBound(cv::Mat&)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:16:23:[m[K [01;31m[Kerror: [m[K‘[01m[KVec3b[m[K’ is not a member of ‘[01m[KEigen[m[K’; did you mean ‘[01m[Kcv::Vec3b[m[K’?
+   16 |         img.at<Eigen::[01;31m[KVec3b[m[K> = cv::Vec3b(0, 0, 255);
+      |                       [01;31m[K^~~~~[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:56[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:43[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:14[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/matx.hpp:410:23:[m[K [01;36m[Knote: [m[K‘[01m[Kcv::Vec3b[m[K’ declared here
+  410 | typedef Vec<uchar, 3> [01;36m[KVec3b[m[K;
+      |                       [01;36m[K^~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:16:13:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[Ktemplate<class _Tp> const _Tp& cv::Mat::at(cv::Point) const[m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
+   16 |         [01;31m[Kimg.at<Eigen::Vec3b>[m[K = cv::Vec3b(0, 0, 255);
+      |         [01;31m[K~~~~^~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:135：CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

@@ -1,0 +1,23 @@
+[0.035s] Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/rm_robot_description -- -j16 -l16
+[0.058s] Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/rm_robot_description -- -j16 -l16
+[0.065s] Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ckl/RM/Combat_vision2026/build/rm_robot_description
+[0.070s] -- Install configuration: ""
+[0.070s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/urdf
+[0.070s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/urdf/sentry.urdf.xacro
+[0.070s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/urdf/rm_gimbal.urdf.xacro
+[0.070s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/ament_index/resource_index/package_run_dependencies/rm_robot_description
+[0.070s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/ament_index/resource_index/parent_prefix_path/rm_robot_description
+[0.071s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/environment/ament_prefix_path.sh
+[0.071s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/environment/ament_prefix_path.dsv
+[0.071s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/environment/path.sh
+[0.071s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/environment/path.dsv
+[0.071s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/local_setup.bash
+[0.071s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/local_setup.sh
+[0.071s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/local_setup.zsh
+[0.071s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/local_setup.dsv
+[0.071s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/package.dsv
+[0.071s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/ament_index/resource_index/packages/rm_robot_description
+[0.072s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/cmake/rm_robot_descriptionConfig.cmake
+[0.072s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/cmake/rm_robot_descriptionConfig-version.cmake
+[0.073s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/package.xml
+[0.073s] Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ckl/RM/Combat_vision2026/build/rm_robot_description

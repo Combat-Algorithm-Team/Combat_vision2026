@@ -1,0 +1,20 @@
+[  7%] Built target gtest_main
+[ 14%] Built target gtest
+[ 22%] Built target armor_detector_node
+[ 25%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/armor_detector_node.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/armor_pose_estimator.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/spiral.cpp.o[0m
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_pose_estimator.cpp:[m[K In constructor ‘[01m[Kfyt::auto_aim::ArmorPoseEstimator::ArmorPoseEstimator(sensor_msgs::msg::CameraInfo_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_pose_estimator.cpp:42:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass fyt::auto_aim::BoundSolver[m[K’ has no member named ‘[01m[KsetObjectPoints[m[K’; did you mean ‘[01m[Kstd::vector<cv::Point3_<float> > fyt::auto_aim::BoundSolver::object_points[m[K’? (not accessible from this context)
+   42 |   bound_solver_->[01;31m[KsetObjectPoints[m[K(
+      |                  [01;31m[K^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_pose_estimator.hpp:32[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_pose_estimator.cpp:15[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:53:30:[m[K [01;36m[Knote: [m[Kdeclared private here
+   53 |     std::vector<cv::Point3f> [01;36m[Kobject_points[m[K;
+      |                              [01;36m[K^~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:107：CMakeFiles/armor_detector.dir/src/armor_pose_estimator.cpp.o] 错误 1
+gmake[2]: *** 正在等待未完成的任务....
+gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

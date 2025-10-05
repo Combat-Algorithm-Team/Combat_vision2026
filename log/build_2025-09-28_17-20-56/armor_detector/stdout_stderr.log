@@ -1,0 +1,15 @@
+[  7%] Built target gtest_main
+[ 22%] Built target gtest
+[ 22%] Built target armor_detector_node
+[ 25%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o[0m
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:[m[K In member function ‘[01m[KEigen::Matrix3d fyt::auto_aim::BoundSolver::solveBound(const fyt::auto_aim::Armor&, const Vector3d&, const Matrix3d&, const Matrix3d&)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:17:16:[m[K [01;31m[Kerror: [m[Kvariable ‘[01m[KR_camera_imu[m[K’ set but not used [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Werror=unused-but-set-variable]8;;[m[K]
+   17 |   Sophus::SO3d [01;31m[KR_camera_imu[m[K = Sophus::SO3d(R_imu_camera.transpose());
+      |                [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:33:16:[m[K [01;31m[Kerror: [m[Kvariable ‘[01m[KR_pitch[m[K’ set but not used [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Werror=unused-but-set-variable]8;;[m[K]
+   33 |   Sophus::SO3d [01;31m[KR_pitch[m[K = Sophus::SO3d::exp(Eigen::Vector3d(0, armor_pitch, 0));
+      |                [01;31m[K^~~~~~~[m[K
+cc1plus: all warnings being treated as errors
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:135：CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

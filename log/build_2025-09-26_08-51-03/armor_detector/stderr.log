@@ -1,0 +1,14 @@
+/usr/bin/ld: libarmor_detector.so: undefined reference to `fyt::auto_aim::readImages(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/usr/bin/ld: libarmor_detector.so: undefined reference to `fyt::auto_aim::resizeWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, cv::Mat, int)'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/test_detector.dir/build.make:310：test_detector] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:283：CMakeFiles/test_detector.dir/all] 错误 2
+gmake[1]: *** 正在等待未完成的任务....
+/usr/bin/ld: warning: libtbb.so.2, needed by /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.5.4d, may conflict with libtbb.so.12
+/usr/bin/ld: CMakeFiles/spiral_detector.dir/src/spiral.cpp.o: in function `main':
+spiral.cpp:(.text.startup+0x78f): undefined reference to `fyt::auto_aim::readImages(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)'
+/usr/bin/ld: spiral.cpp:(.text.startup+0x873): undefined reference to `fyt::auto_aim::resizeWindow(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, cv::Mat, int)'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/spiral_detector.dir/build.make:404：spiral_detector] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:217：CMakeFiles/spiral_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

@@ -1,0 +1,7 @@
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:[m[K In member function ‘[01m[Kvoid fyt::auto_aim::BoundSolver::drawBound(cv::Mat&)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:13:61:[m[K [01;31m[Kerror: [m[K‘[01m[Kedge[m[K’ was not declared in this scope
+   13 |   std::cout<<"size_of_img:"<<img.size()<<"\tsize_of_edge:"<<[01;31m[Kedge[m[K.size()<<std::endl;
+      |                                                             [01;31m[K^~~~[m[K
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:135：CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

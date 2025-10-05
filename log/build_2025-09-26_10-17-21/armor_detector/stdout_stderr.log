@@ -1,0 +1,14 @@
+[ 11%] Built target gtest_main
+[ 14%] Built target gtest
+[ 22%] Built target armor_detector_node
+[ 25%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/spiral.cpp.o[0m
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:63:62:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::shared_ptr<sensor_msgs::msg::CameraInfo_<std::allocator<void> > >[m[K’ has no member named ‘[01m[Kk[m[K’
+   63 |   auto pnp_solver_ = std::make_unique<PnPSolver>(camera_info.[01;31m[Kk[m[K, camera_info.d);
+      |                                                              [01;31m[K^[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:63:77:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::shared_ptr<sensor_msgs::msg::CameraInfo_<std::allocator<void> > >[m[K’ has no member named ‘[01m[Kd[m[K’
+   63 |   auto pnp_solver_ = std::make_unique<PnPSolver>(camera_info.k, camera_info.[01;31m[Kd[m[K);
+      |                                                                             [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:191：CMakeFiles/armor_detector.dir/src/spiral.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

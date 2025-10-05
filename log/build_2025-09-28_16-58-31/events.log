@@ -1,0 +1,293 @@
+[0.000000] (-) TimerEvent: {}
+[0.000168] (-) JobUnselected: {'identifier': 'armor_solver'}
+[0.000223] (-) JobUnselected: {'identifier': 'hik_camera'}
+[0.000269] (-) JobUnselected: {'identifier': 'rm_auto_aim'}
+[0.000311] (-) JobUnselected: {'identifier': 'rm_bringup'}
+[0.000380] (-) JobUnselected: {'identifier': 'rm_interfaces'}
+[0.000424] (-) JobUnselected: {'identifier': 'rm_robot_description'}
+[0.000454] (-) JobUnselected: {'identifier': 'rm_serial_driver'}
+[0.000630] (-) JobUnselected: {'identifier': 'rm_utils'}
+[0.000678] (armor_detector) JobQueued: {'identifier': 'armor_detector', 'dependencies': OrderedDict([('rm_interfaces', '/home/ckl/RM/Combat_vision2026/install/rm_interfaces'), ('rm_utils', '/home/ckl/RM/Combat_vision2026/install/rm_utils')])}
+[0.000720] (armor_detector) JobStarted: {'identifier': 'armor_detector'}
+[0.012956] (armor_detector) JobProgress: {'identifier': 'armor_detector', 'progress': 'cmake'}
+[0.014743] (armor_detector) JobProgress: {'identifier': 'armor_detector', 'progress': 'build'}
+[0.014803] (armor_detector) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ckl/RM/Combat_vision2026/build/armor_detector', '--', '-j16', '-l16'], 'cwd': '/home/ckl/RM/Combat_vision2026/build/armor_detector', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:en_US:en'), ('USER', 'ckl'), ('LC_TIME', 'zh_CN.UTF-8'), ('FONTCONFIG_PATH', '/etc/fonts'), ('GIO_MODULE_DIR', '/home/ckl/snap/code/common/.cache/gio-modules'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/snap/code/208/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('GTK_EXE_PREFIX_VSCODE_SNAP_ORIG', ''), ('GDK_BACKEND_VSCODE_SNAP_ORIG', ''), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ckl'), ('CHROME_DESKTOP', 'code.desktop'), ('LOCPATH_VSCODE_SNAP_ORIG', ''), ('TERM_PROGRAM_VERSION', '1.104.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GTK_PATH', '/snap/code/208/usr/lib/x86_64-linux-gnu/gtk-3.0'), ('XDG_DATA_HOME_VSCODE_SNAP_ORIG', ''), ('GTK_IM_MODULE_FILE', '/home/ckl/snap/code/common/.cache/immodules/immodules.cache'), ('GIO_LAUNCHED_DESKTOP_FILE', '/var/lib/snapd/desktop/applications/code_code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG', ''), ('VSCODE_GIT_ASKPASS_MAIN', '/snap/code/208/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_NODE', '/snap/code/208/usr/share/code/code'), ('MANAGERPID', '1805'), ('SYSTEMD_EXEC_PID', '2203'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3905'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'ckl'), ('JOURNAL_STREAM', '8:24659'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_SESSION_CLASS', 'user'), ('XDG_DATA_DIRS_VSCODE_SNAP_ORIG', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('USERNAME', 'ckl'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/ckl-ASUS-TUF-Gaming-A15-FA507NV-FA507NV:@/tmp/.ICE-unix/2177,unix/ckl-ASUS-TUF-Gaming-A15-FA507NV-FA507NV:/tmp/.ICE-unix/2177'), ('GTK_EXE_PREFIX', '/snap/code/208/usr'), ('INVOCATION_ID', 'dd7f936585ae41e7b670957be435460d'), ('PAPERSIZE', 'a4'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('BAMF_DESKTOP_FILE_HINT', '/var/lib/snapd/desktop/applications/code_code.desktop'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LOCPATH', '/snap/code/208/usr/lib/locale'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('GIO_MODULE_DIR_VSCODE_SNAP_ORIG', ''), ('XDG_DATA_HOME', '/home/ckl/snap/code/208/.local/share'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-66f21244f2.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('GSETTINGS_SCHEMA_DIR', '/home/ckl/snap/code/208/.local/share/glib-2.0/schemas'), ('AMENT_PREFIX_PATH', '/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GTK_PATH_VSCODE_SNAP_ORIG', ''), ('FONTCONFIG_FILE', '/etc/fonts/fonts.conf'), ('GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG', ''), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/ckl/RM/Combat_vision2026/build/armor_detector'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/home/ckl/snap/code/208/.local/share:/home/ckl/snap/code/208:/snap/code/208/usr/share:/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/opt/ros/humble')]), 'shell': False}
+[0.050112] (armor_detector) StdoutLine: {'line': b'[ 14%] Built target gtest\n'}
+[0.050481] (armor_detector) StdoutLine: {'line': b'[ 14%] Built target gtest_main\n'}
+[0.052280] (armor_detector) StdoutLine: {'line': b'[ 22%] Built target armor_detector_node\n'}
+[0.098508] (armor_detector) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/armor_detector.dir/src/armor_detector_node.cpp.o\x1b[0m\n'}
+[0.098710] (armor_detector) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/armor_detector.dir/src/armor_pose_estimator.cpp.o\x1b[0m\n'}
+[0.099294] (-) TimerEvent: {}
+[0.099615] (armor_detector) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o\x1b[0m\n'}
+[0.100519] (armor_detector) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/armor_detector.dir/src/spiral.cpp.o\x1b[0m\n'}
+[0.199414] (-) TimerEvent: {}
+[0.299714] (-) TimerEvent: {}
+[0.400015] (-) TimerEvent: {}
+[0.500322] (-) TimerEvent: {}
+[0.600678] (-) TimerEvent: {}
+[0.700983] (-) TimerEvent: {}
+[0.801325] (-) TimerEvent: {}
+[0.901645] (-) TimerEvent: {}
+[1.001981] (-) TimerEvent: {}
+[1.102333] (-) TimerEvent: {}
+[1.202626] (-) TimerEvent: {}
+[1.302971] (-) TimerEvent: {}
+[1.403303] (-) TimerEvent: {}
+[1.503634] (-) TimerEvent: {}
+[1.603930] (-) TimerEvent: {}
+[1.704244] (-) TimerEvent: {}
+[1.804516] (-) TimerEvent: {}
+[1.904879] (-) TimerEvent: {}
+[2.005235] (-) TimerEvent: {}
+[2.105575] (-) TimerEvent: {}
+[2.205905] (-) TimerEvent: {}
+[2.306241] (-) TimerEvent: {}
+[2.406584] (-) TimerEvent: {}
+[2.506913] (-) TimerEvent: {}
+[2.607261] (-) TimerEvent: {}
+[2.707607] (-) TimerEvent: {}
+[2.807949] (-) TimerEvent: {}
+[2.908252] (-) TimerEvent: {}
+[3.008571] (-) TimerEvent: {}
+[3.108860] (-) TimerEvent: {}
+[3.209210] (-) TimerEvent: {}
+[3.309534] (-) TimerEvent: {}
+[3.409824] (-) TimerEvent: {}
+[3.510168] (-) TimerEvent: {}
+[3.610503] (-) TimerEvent: {}
+[3.710823] (-) TimerEvent: {}
+[3.811099] (-) TimerEvent: {}
+[3.911408] (-) TimerEvent: {}
+[4.011694] (-) TimerEvent: {}
+[4.060155] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix3d fyt::auto_aim::BoundSolver::solveBound(const fyt::auto_aim::Armor&, const Vector3d&, const Matrix3d&, const Matrix3d&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.060402] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:43:16:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kcannot convert \xe2\x80\x98\x1b[01m\x1b[Kconst std::vector<Eigen::Matrix<double, 3, 1>, std::allocator<Eigen::Matrix<double, 3, 1> > >\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[KEigen::Vector3d\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[KEigen::Matrix<double, 3, 1>\x1b[m\x1b[K\xe2\x80\x99}\n'}
+[4.060506] (armor_detector) StderrLine: {'line': b'   43 |   reprojection(\x1b[01;31m\x1b[Kobject_points\x1b[m\x1b[K, R_camera_armor, t_camera_armor);   //to get bound_solver->projected_points\n'}
+[4.060593] (armor_detector) StderrLine: {'line': b'      |                \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.060675] (armor_detector) StderrLine: {'line': b'      |                \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[4.060754] (armor_detector) StderrLine: {'line': b'      |                \x1b[01;31m\x1b[Kconst std::vector<Eigen::Matrix<double, 3, 1>, std::allocator<Eigen::Matrix<double, 3, 1> > >\x1b[m\x1b[K\n'}
+[4.060829] (armor_detector) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1\x1b[m\x1b[K:\n'}
+[4.060928] (armor_detector) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:47:39:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  initializing argument 1 of \xe2\x80\x98\x1b[01m\x1b[Kvoid fyt::auto_aim::BoundSolver::reprojection(Eigen::Vector3d, Eigen::Matrix3d, Eigen::Vector3d)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.061008] (armor_detector) StderrLine: {'line': b'   47 |     void reprojection(\x1b[01;36m\x1b[KEigen::Vector3d object_points\x1b[m\x1b[K, Eigen::Matrix3d R_camera_armor, Eigen::Vector3d t_camera_armor);\n'}
+[4.061082] (armor_detector) StderrLine: {'line': b'      |                       \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.111814] (-) TimerEvent: {}
+[4.212172] (-) TimerEvent: {}
+[4.312486] (-) TimerEvent: {}
+[4.412793] (-) TimerEvent: {}
+[4.513076] (-) TimerEvent: {}
+[4.613385] (-) TimerEvent: {}
+[4.713650] (-) TimerEvent: {}
+[4.813971] (-) TimerEvent: {}
+[4.914274] (-) TimerEvent: {}
+[5.014616] (-) TimerEvent: {}
+[5.037868] (armor_detector) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:135\xef\xbc\x9aCMakeFiles/armor_detector.dir/src/bound_solver.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[5.038072] (armor_detector) StderrLine: {'line': b'gmake[2]: *** \xe6\xad\xa3\xe5\x9c\xa8\xe7\xad\x89\xe5\xbe\x85\xe6\x9c\xaa\xe5\xae\x8c\xe6\x88\x90\xe7\x9a\x84\xe4\xbb\xbb\xe5\x8a\xa1....\n'}
+[5.114720] (-) TimerEvent: {}
+[5.215089] (-) TimerEvent: {}
+[5.315461] (-) TimerEvent: {}
+[5.415779] (-) TimerEvent: {}
+[5.516096] (-) TimerEvent: {}
+[5.616376] (-) TimerEvent: {}
+[5.716713] (-) TimerEvent: {}
+[5.817040] (-) TimerEvent: {}
+[5.917347] (-) TimerEvent: {}
+[6.017685] (-) TimerEvent: {}
+[6.118039] (-) TimerEvent: {}
+[6.218417] (-) TimerEvent: {}
+[6.318807] (-) TimerEvent: {}
+[6.419208] (-) TimerEvent: {}
+[6.519599] (-) TimerEvent: {}
+[6.620107] (-) TimerEvent: {}
+[6.720507] (-) TimerEvent: {}
+[6.820904] (-) TimerEvent: {}
+[6.921287] (-) TimerEvent: {}
+[7.021667] (-) TimerEvent: {}
+[7.122055] (-) TimerEvent: {}
+[7.222441] (-) TimerEvent: {}
+[7.322830] (-) TimerEvent: {}
+[7.423238] (-) TimerEvent: {}
+[7.523628] (-) TimerEvent: {}
+[7.624111] (-) TimerEvent: {}
+[7.724499] (-) TimerEvent: {}
+[7.824867] (-) TimerEvent: {}
+[7.925221] (-) TimerEvent: {}
+[8.025540] (-) TimerEvent: {}
+[8.125937] (-) TimerEvent: {}
+[8.226299] (-) TimerEvent: {}
+[8.326654] (-) TimerEvent: {}
+[8.427027] (-) TimerEvent: {}
+[8.527380] (-) TimerEvent: {}
+[8.627731] (-) TimerEvent: {}
+[8.728105] (-) TimerEvent: {}
+[8.828468] (-) TimerEvent: {}
+[8.928827] (-) TimerEvent: {}
+[9.029195] (-) TimerEvent: {}
+[9.129546] (-) TimerEvent: {}
+[9.230005] (-) TimerEvent: {}
+[9.330364] (-) TimerEvent: {}
+[9.430726] (-) TimerEvent: {}
+[9.531098] (-) TimerEvent: {}
+[9.631449] (-) TimerEvent: {}
+[9.731808] (-) TimerEvent: {}
+[9.832177] (-) TimerEvent: {}
+[9.932525] (-) TimerEvent: {}
+[10.032887] (-) TimerEvent: {}
+[10.133230] (-) TimerEvent: {}
+[10.233580] (-) TimerEvent: {}
+[10.333929] (-) TimerEvent: {}
+[10.434266] (-) TimerEvent: {}
+[10.534634] (-) TimerEvent: {}
+[10.635040] (-) TimerEvent: {}
+[10.735428] (-) TimerEvent: {}
+[10.835953] (-) TimerEvent: {}
+[10.936302] (-) TimerEvent: {}
+[11.036653] (-) TimerEvent: {}
+[11.137016] (-) TimerEvent: {}
+[11.237370] (-) TimerEvent: {}
+[11.337684] (-) TimerEvent: {}
+[11.438026] (-) TimerEvent: {}
+[11.538374] (-) TimerEvent: {}
+[11.638717] (-) TimerEvent: {}
+[11.739086] (-) TimerEvent: {}
+[11.839436] (-) TimerEvent: {}
+[11.939779] (-) TimerEvent: {}
+[12.040132] (-) TimerEvent: {}
+[12.140465] (-) TimerEvent: {}
+[12.240804] (-) TimerEvent: {}
+[12.341149] (-) TimerEvent: {}
+[12.441490] (-) TimerEvent: {}
+[12.541831] (-) TimerEvent: {}
+[12.642182] (-) TimerEvent: {}
+[12.742514] (-) TimerEvent: {}
+[12.842860] (-) TimerEvent: {}
+[12.943191] (-) TimerEvent: {}
+[13.043542] (-) TimerEvent: {}
+[13.143968] (-) TimerEvent: {}
+[13.244299] (-) TimerEvent: {}
+[13.344642] (-) TimerEvent: {}
+[13.445009] (-) TimerEvent: {}
+[13.545376] (-) TimerEvent: {}
+[13.645741] (-) TimerEvent: {}
+[13.746124] (-) TimerEvent: {}
+[13.846485] (-) TimerEvent: {}
+[13.946869] (-) TimerEvent: {}
+[14.047229] (-) TimerEvent: {}
+[14.147591] (-) TimerEvent: {}
+[14.247955] (-) TimerEvent: {}
+[14.348319] (-) TimerEvent: {}
+[14.448681] (-) TimerEvent: {}
+[14.549027] (-) TimerEvent: {}
+[14.649361] (-) TimerEvent: {}
+[14.749772] (-) TimerEvent: {}
+[14.850118] (-) TimerEvent: {}
+[14.950458] (-) TimerEvent: {}
+[15.050797] (-) TimerEvent: {}
+[15.151151] (-) TimerEvent: {}
+[15.251483] (-) TimerEvent: {}
+[15.351856] (-) TimerEvent: {}
+[15.452166] (-) TimerEvent: {}
+[15.552473] (-) TimerEvent: {}
+[15.652763] (-) TimerEvent: {}
+[15.753075] (-) TimerEvent: {}
+[15.853379] (-) TimerEvent: {}
+[15.953682] (-) TimerEvent: {}
+[16.054001] (-) TimerEvent: {}
+[16.154313] (-) TimerEvent: {}
+[16.254631] (-) TimerEvent: {}
+[16.354937] (-) TimerEvent: {}
+[16.455232] (-) TimerEvent: {}
+[16.555520] (-) TimerEvent: {}
+[16.655811] (-) TimerEvent: {}
+[16.756565] (-) TimerEvent: {}
+[16.856903] (-) TimerEvent: {}
+[16.957251] (-) TimerEvent: {}
+[17.057589] (-) TimerEvent: {}
+[17.157913] (-) TimerEvent: {}
+[17.258238] (-) TimerEvent: {}
+[17.358566] (-) TimerEvent: {}
+[17.458911] (-) TimerEvent: {}
+[17.559235] (-) TimerEvent: {}
+[17.659559] (-) TimerEvent: {}
+[17.759927] (-) TimerEvent: {}
+[17.860254] (-) TimerEvent: {}
+[17.960584] (-) TimerEvent: {}
+[18.060912] (-) TimerEvent: {}
+[18.161238] (-) TimerEvent: {}
+[18.261567] (-) TimerEvent: {}
+[18.362020] (-) TimerEvent: {}
+[18.462348] (-) TimerEvent: {}
+[18.562678] (-) TimerEvent: {}
+[18.663017] (-) TimerEvent: {}
+[18.763347] (-) TimerEvent: {}
+[18.863672] (-) TimerEvent: {}
+[18.964016] (-) TimerEvent: {}
+[19.064346] (-) TimerEvent: {}
+[19.164672] (-) TimerEvent: {}
+[19.265014] (-) TimerEvent: {}
+[19.365338] (-) TimerEvent: {}
+[19.465667] (-) TimerEvent: {}
+[19.566007] (-) TimerEvent: {}
+[19.666334] (-) TimerEvent: {}
+[19.766663] (-) TimerEvent: {}
+[19.867002] (-) TimerEvent: {}
+[19.967336] (-) TimerEvent: {}
+[20.067662] (-) TimerEvent: {}
+[20.168001] (-) TimerEvent: {}
+[20.268328] (-) TimerEvent: {}
+[20.368656] (-) TimerEvent: {}
+[20.469010] (-) TimerEvent: {}
+[20.569345] (-) TimerEvent: {}
+[20.669677] (-) TimerEvent: {}
+[20.770025] (-) TimerEvent: {}
+[20.870352] (-) TimerEvent: {}
+[20.970681] (-) TimerEvent: {}
+[21.071021] (-) TimerEvent: {}
+[21.171345] (-) TimerEvent: {}
+[21.271672] (-) TimerEvent: {}
+[21.372015] (-) TimerEvent: {}
+[21.472428] (-) TimerEvent: {}
+[21.572756] (-) TimerEvent: {}
+[21.673097] (-) TimerEvent: {}
+[21.773428] (-) TimerEvent: {}
+[21.873757] (-) TimerEvent: {}
+[21.974104] (-) TimerEvent: {}
+[22.074443] (-) TimerEvent: {}
+[22.174771] (-) TimerEvent: {}
+[22.275520] (-) TimerEvent: {}
+[22.375861] (-) TimerEvent: {}
+[22.476234] (-) TimerEvent: {}
+[22.576614] (-) TimerEvent: {}
+[22.678217] (-) TimerEvent: {}
+[22.778541] (-) TimerEvent: {}
+[22.879003] (-) TimerEvent: {}
+[22.979332] (-) TimerEvent: {}
+[23.079662] (-) TimerEvent: {}
+[23.180011] (-) TimerEvent: {}
+[23.280339] (-) TimerEvent: {}
+[23.380665] (-) TimerEvent: {}
+[23.481008] (-) TimerEvent: {}
+[23.581333] (-) TimerEvent: {}
+[23.681658] (-) TimerEvent: {}
+[23.782002] (-) TimerEvent: {}
+[23.882328] (-) TimerEvent: {}
+[23.982656] (-) TimerEvent: {}
+[24.082997] (-) TimerEvent: {}
+[24.183960] (-) TimerEvent: {}
+[24.284304] (-) TimerEvent: {}
+[24.384638] (-) TimerEvent: {}
+[24.485004] (-) TimerEvent: {}
+[24.585340] (-) TimerEvent: {}
+[24.685682] (-) TimerEvent: {}
+[24.786025] (-) TimerEvent: {}
+[24.886363] (-) TimerEvent: {}
+[24.986692] (-) TimerEvent: {}
+[25.087045] (-) TimerEvent: {}
+[25.187380] (-) TimerEvent: {}
+[25.287722] (-) TimerEvent: {}
+[25.388084] (-) TimerEvent: {}
+[25.488463] (-) TimerEvent: {}
+[25.588878] (-) TimerEvent: {}
+[25.591951] (armor_detector) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:185\xef\xbc\x9aCMakeFiles/armor_detector.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[25.592414] (armor_detector) StderrLine: {'line': b'gmake: *** [Makefile:146\xef\xbc\x9aall] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[25.594181] (armor_detector) CommandEnded: {'returncode': 2}
+[25.605008] (armor_detector) JobEnded: {'identifier': 'armor_detector', 'rc': 2}
+[25.615766] (-) EventReactorShutdown: {}

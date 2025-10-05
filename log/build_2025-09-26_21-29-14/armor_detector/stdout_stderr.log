@@ -1,0 +1,21 @@
+[ 14%] Built target gtest_main
+[ 14%] Built target gtest
+[ 22%] Built target armor_detector_node
+[ 25%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o[0m
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:[m[K In member function ‘[01m[Kvoid fyt::auto_aim::BoundSolver::drawBound(cv::Mat&)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:19:19:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kcv::RotatedRect[m[K’ to ‘[01m[Kcv::Point2f*[m[K’ {aka ‘[01m[Kcv::Point_<float>*[m[K’}
+   19 |   boundary.points([01;31m[Kboundary[m[K);
+      |                   [01;31m[K^~~~~~~~[m[K
+      |                   [01;31m[K|[m[K
+      |                   [01;31m[Kcv::RotatedRect[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:57[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:43[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:14[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/types.hpp:540:25:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid cv::RotatedRect::points(cv::Point2f*) const[m[K’
+  540 |     void points([01;36m[KPoint2f pts[][m[K) const;
+      |                 [01;36m[K~~~~~~~~^~~~~[m[K
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:135：CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

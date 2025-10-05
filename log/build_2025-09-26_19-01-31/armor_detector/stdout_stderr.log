@@ -1,0 +1,94 @@
+[ 14%] Built target gtest
+[ 14%] Built target gtest_main
+[ 22%] Built target armor_detector_node
+[ 25%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o[0m
+[ 29%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/spiral.cpp.o[0m
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:36[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:[m[K In constructor ‘[01m[Kfyt::auto_aim::BoundSolver::BoundSolver(int, int, cv::Size, double)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:53:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kfyt::auto_aim::BoundSolver::gaussian_kernel[m[K’ will be initialized after [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Werror=reorder]8;;[m[K]
+   53 |     cv::Size [01;31m[Kgaussian_kernel[m[K;
+      |              [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:51:12:[m[K [01;31m[Kerror: [m[K  ‘[01m[Kdouble fyt::auto_aim::BoundSolver::sigmaX[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Werror=reorder]8;;[m[K]
+   51 |     double [01;31m[KsigmaX[m[K;
+      |            [01;31m[K^~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:43:5:[m[K [01;31m[Kerror: [m[K  when initialized here [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Werror=reorder]8;;[m[K]
+   43 |     [01;31m[KBoundSolver[m[K(int low_thres, int high_thres, cv::Size gaussian_kernel,double sigmaX):
+      |     [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:[m[K In constructor ‘[01m[Kfyt::auto_aim::BoundSolver::BoundSolver(int, int, cv::Size, double)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:53:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kfyt::auto_aim::BoundSolver::gaussian_kernel[m[K’ will be initialized after [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Werror=reorder]8;;[m[K]
+   53 |     cv::Size [01;31m[Kgaussian_kernel[m[K;
+      |              [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:51:12:[m[K [01;31m[Kerror: [m[K  ‘[01m[Kdouble fyt::auto_aim::BoundSolver::sigmaX[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Werror=reorder]8;;[m[K]
+   51 |     double [01;31m[KsigmaX[m[K;
+      |            [01;31m[K^~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:43:5:[m[K [01;31m[Kerror: [m[K  when initialized here [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Werror=reorder]8;;[m[K]
+   43 |     [01;31m[KBoundSolver[m[K(int low_thres, int high_thres, cv::Size gaussian_kernel,double sigmaX):
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:[m[K In member function ‘[01m[Kvoid fyt::auto_aim::BoundSolver::processImage(cv::Mat)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:5:7:[m[K [01;31m[Kerror: [m[K‘[01m[KGaussian[m[K’ is not a member of ‘[01m[Kcv[m[K’; did you mean ‘[01m[KGaussianBlur[m[K’?
+    5 |   cv::[01;31m[KGaussian[m[K(img, blurred_img, gaussian_kernel, sigmaX);
+      |       [01;31m[K^~~~~~~~[m[K
+      |       [32m[KGaussianBlur[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:[m[K In member function ‘[01m[Kcv::Mat fyt::auto_aim::BoundSolver::detectBound(cv::Mat)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:8:33:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kcv::Mat[m[K’ and ‘[01m[Kvoid[m[K’)
+    8 |   blurred_img = processImage(img[01;31m[K)[m[K;
+      |                                 [01;31m[K^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:58[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:43[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:14[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1064:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kcv::Mat& cv::Mat::operator=(const cv::Mat&)[m[K’
+ 1064 |     Mat& [01;36m[Koperator[m[K = (const Mat& m);
+      |          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1064:33:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kvoid[m[K’ to ‘[01m[Kconst cv::Mat&[m[K’
+ 1064 |     Mat& operator = ([01;36m[Kconst Mat& m[m[K);
+      |                      [01;36m[K~~~~~~~~~~~^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core/mat.hpp:3764[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/core.hpp:58[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:43[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:14[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.inl.hpp:3008:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kcv::Mat& cv::Mat::operator=(const cv::MatExpr&)[m[K’
+ 3008 | Mat& [01;36m[KMat[m[K::operator = (const MatExpr& e)
+      |      [01;36m[K^~~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.inl.hpp:3008:38:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kvoid[m[K’ to ‘[01m[Kconst cv::MatExpr&[m[K’
+ 3008 | Mat& Mat::operator = ([01;36m[Kconst MatExpr& e[m[K)
+      |                       [01;36m[K~~~~~~~~~~~~~~~^[m[K
+In file included from [01m[K/usr/include/opencv4/opencv2/core.hpp:58[m[K,
+                 from [01m[K/usr/include/opencv4/opencv2/core/core.hpp:48[m[K,
+                 from [01m[K/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:43[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:14[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1251:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kcv::Mat& cv::Mat::operator=(const Scalar&)[m[K’
+ 1251 |     Mat& [01;36m[Koperator[m[K = (const Scalar& s);
+      |          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:1251:36:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kvoid[m[K’ to ‘[01m[Kconst Scalar&[m[K’ {aka ‘[01m[Kconst cv::Scalar_<double>&[m[K’}
+ 1251 |     Mat& operator = ([01;36m[Kconst Scalar& s[m[K);
+      |                      [01;36m[K~~~~~~~~~~~~~~^[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:2092:10:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kcv::Mat& cv::Mat::operator=(cv::Mat&&)[m[K’
+ 2092 |     Mat& [01;36m[Koperator[m[K = (Mat&& m);
+      |          [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/mat.hpp:2092:28:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kvoid[m[K’ to ‘[01m[Kcv::Mat&&[m[K’
+ 2092 |     Mat& operator = ([01;36m[KMat&& m[m[K);
+      |                      [01;36m[K~~~~~~^[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:[m[K At global scope:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:12:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid fyt::auto_aim::BoundSolver::drawBound(cv::Mat&)[m[K’
+   12 | void [01;31m[KBoundSolver[m[K::drawBound(cv::Mat &img){
+      |      [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:49:10:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kvoid fyt::auto_aim::BoundSolver::drawBound(cv::Mat)[m[K’
+   49 |     void [01;36m[KdrawBound[m[K(cv::Mat edge);
+      |          [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:41:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass fyt::auto_aim::BoundSolver[m[K’ defined here
+   41 | class [01;36m[KBoundSolver[m[K{
+      |       [01;36m[K^~~~~~~~~~~[m[K
+cc1plus: all warnings being treated as errors
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:135：CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o] 错误 1
+gmake[2]: *** 正在等待未完成的任务....
+cc1plus: all warnings being treated as errors
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:191：CMakeFiles/armor_detector.dir/src/spiral.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

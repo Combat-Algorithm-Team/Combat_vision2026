@@ -1,0 +1,10 @@
+[ 16%] Built target gtest_main
+[ 16%] Built target gtest
+[ 24%] Built target armor_detector_node
+[ 28%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/spiral.cpp.o[0m
+[ 32%] [1m[32mLinking CXX shared library libarmor_detector.so[0m
+[ 60%] Built target armor_detector
+[ 64%] [1m[32mLinking CXX executable test_detector[0m
+[ 72%] [32mBuilding CXX object CMakeFiles/spiral_detector.dir/src/armor_detector.cpp.o[0m
+[ 72%] [32mBuilding CXX object CMakeFiles/spiral_detector.dir/src/spiral.cpp.o[0m
+[ 76%] [1m[32mLinking CXX executable spiral_detector[0m

@@ -1,0 +1,44 @@
+[ 11%] Built target gtest_main
+[ 23%] Built target gtest
+[ 47%] Built target virtual_serial_node
+[ 47%] Built target rm_serial_driver_node
+[ 88%] Built target rm_serial_driver
+[100%] Built target test_fixed_packet_tool
+-- Install configuration: ""
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib/rm_serial_driver/rm_serial_driver_node
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib/rm_serial_driver/virtual_serial_node
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/include
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/include/rm_serial_driver
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/include/rm_serial_driver/uart_transporter.hpp
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/include/rm_serial_driver/protocol_factory.hpp
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/include/rm_serial_driver/fixed_packet_tool.hpp
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/include/rm_serial_driver/fixed_packet.hpp
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/include/rm_serial_driver/protocol
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/include/rm_serial_driver/protocol/infantry_protocol.hpp
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/include/rm_serial_driver/protocol/default_protocol.hpp
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/include/rm_serial_driver/protocol/sentry_protocol.hpp
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/include/rm_serial_driver/transporter_interface.hpp
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/include/rm_serial_driver/serial_driver_node.hpp
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/include/rm_serial_driver/protocol.hpp
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/environment/library_path.sh
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/environment/library_path.dsv
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib/librm_serial_driver.so
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/ament_index/resource_index/package_run_dependencies/rm_serial_driver
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/ament_index/resource_index/parent_prefix_path/rm_serial_driver
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/environment/ament_prefix_path.sh
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/environment/path.sh
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/environment/path.dsv
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/local_setup.bash
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/local_setup.sh
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/local_setup.zsh
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/local_setup.dsv
+-- Installing: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/package.dsv
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/ament_index/resource_index/packages/rm_serial_driver
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/ament_index/resource_index/rclcpp_components/rm_serial_driver
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/cmake/ament_cmake_export_libraries-extras.cmake
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/cmake/rm_serial_driverConfig.cmake
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/cmake/rm_serial_driverConfig-version.cmake
+-- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/package.xml

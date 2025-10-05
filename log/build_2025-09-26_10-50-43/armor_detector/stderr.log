@@ -1,0 +1,17 @@
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:97:3:[m[K [01;31m[Kerror: [m[K‘[01m[Karmor_msgs_[m[K’ was not declared in this scope; did you mean ‘[01m[Karmors_msg_[m[K’?
+   97 |   [01;31m[Karmor_msgs_[m[K.armors = armor_pose_estimator->extrateArmorPoses(armors, imu_to_camera);
+      |   [01;31m[K^~~~~~~~~~~[m[K
+      |   [32m[Karmors_msg_[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:97:24:[m[K [01;31m[Kerror: [m[K‘[01m[Karmor_pose_estimator[m[K’ was not declared in this scope; did you mean ‘[01m[Karmor_pose_estimator_[m[K’?
+   97 |   armor_msgs_.armors = [01;31m[Karmor_pose_estimator[m[K->extrateArmorPoses(armors, imu_to_camera);
+      |                        [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+      |                        [32m[Karmor_pose_estimator_[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:97:72:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_to_camera[m[K’ was not declared in this scope; did you mean ‘[01m[Kimu_to_camera_[m[K’?
+   97 |   armor_msgs_.armors = armor_pose_estimator->extrateArmorPoses(armors, [01;31m[Kimu_to_camera[m[K);
+      |                                                                        [01;31m[K^~~~~~~~~~~~~[m[K
+      |                                                                        [32m[Kimu_to_camera_[m[K
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:191：CMakeFiles/armor_detector.dir/src/spiral.cpp.o] 错误 1
+gmake[2]: *** 正在等待未完成的任务....
+gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

@@ -1,0 +1,64 @@
+[0.026s] Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_bringup': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble /usr/bin/cmake /home/ckl/RM/Combat_vision2026/src/rm_bringup -DCMAKE_INSTALL_PREFIX=/home/ckl/RM/Combat_vision2026/install/rm_bringup
+[0.034s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[0.034s]   Compatibility with CMake < 3.10 will be removed from a future version of
+[0.034s]   CMake.
+[0.034s] 
+[0.034s]   Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+[0.034s]   to tell CMake that the project requires at least <min> but has been updated
+[0.034s]   to work with policies introduced by <max> or earlier.
+[0.034s] 
+[0.034s] [0m
+[0.074s] -- The C compiler identification is GNU 11.4.0
+[0.139s] -- The CXX compiler identification is GNU 11.4.0
+[0.146s] -- Detecting C compiler ABI info
+[0.205s] -- Detecting C compiler ABI info - done
+[0.218s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.219s] -- Detecting C compile features
+[0.219s] -- Detecting C compile features - done
+[0.232s] -- Detecting CXX compiler ABI info
+[0.300s] -- Detecting CXX compiler ABI info - done
+[0.316s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.316s] -- Detecting CXX compile features
+[0.316s] -- Detecting CXX compile features - done
+[0.325s] -- Found ament_cmake_auto: 1.3.12 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.441s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter
+[0.539s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.584s] -- Configuring done (0.6s)
+[0.587s] -- Generating done (0.0s)
+[0.588s] -- Build files have been written to: /home/ckl/RM/Combat_vision2026/build/rm_bringup
+[0.592s] Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_bringup' returned '0': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble /usr/bin/cmake /home/ckl/RM/Combat_vision2026/src/rm_bringup -DCMAKE_INSTALL_PREFIX=/home/ckl/RM/Combat_vision2026/install/rm_bringup
+[0.593s] Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_bringup': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/rm_bringup -- -j16 -l16
+[0.616s] Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_bringup' returned '0': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/rm_bringup -- -j16 -l16
+[0.618s] Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_bringup': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble /usr/bin/cmake --install /home/ckl/RM/Combat_vision2026/build/rm_bringup
+[0.621s] -- Install configuration: ""
+[0.621s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_bringup/share/rm_bringup/launch
+[0.621s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_bringup/share/rm_bringup/launch/bringup_navigation.launch.py
+[0.622s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_bringup/share/rm_bringup/launch/bringup.launch.py
+[0.623s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_bringup/share/rm_bringup/config
+[0.624s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_bringup/share/rm_bringup/config/camera_info.yaml
+[0.625s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_bringup/share/rm_bringup/config/launch_params.yaml
+[0.625s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_bringup/share/rm_bringup/config/node_params
+[0.625s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_bringup/share/rm_bringup/config/node_params/rune_detector_params.yaml
+[0.625s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_bringup/share/rm_bringup/config/node_params/armor_solver_params.yaml
+[0.625s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_bringup/share/rm_bringup/config/node_params/serial_driver_params.yaml
+[0.626s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_bringup/share/rm_bringup/config/node_params/rune_solver_params.yaml
+[0.626s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_bringup/share/rm_bringup/config/node_params/camera_driver_params.yaml
+[0.626s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_bringup/share/rm_bringup/config/node_params/video_player_params.yaml
+[0.627s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_bringup/share/rm_bringup/config/node_params/armor_detector_params.yaml
+[0.627s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_bringup/share/rm_bringup/config/node_params/virtual_serial_params.yaml
+[0.627s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_bringup/share/ament_index/resource_index/package_run_dependencies/rm_bringup
+[0.627s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_bringup/share/ament_index/resource_index/parent_prefix_path/rm_bringup
+[0.628s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_bringup/share/rm_bringup/environment/ament_prefix_path.sh
+[0.628s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_bringup/share/rm_bringup/environment/ament_prefix_path.dsv
+[0.628s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_bringup/share/rm_bringup/environment/path.sh
+[0.628s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_bringup/share/rm_bringup/environment/path.dsv
+[0.628s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_bringup/share/rm_bringup/local_setup.bash
+[0.628s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_bringup/share/rm_bringup/local_setup.sh
+[0.628s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_bringup/share/rm_bringup/local_setup.zsh
+[0.628s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_bringup/share/rm_bringup/local_setup.dsv
+[0.629s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_bringup/share/rm_bringup/package.dsv
+[0.629s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_bringup/share/ament_index/resource_index/packages/rm_bringup
+[0.629s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_bringup/share/rm_bringup/cmake/rm_bringupConfig.cmake
+[0.629s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_bringup/share/rm_bringup/cmake/rm_bringupConfig-version.cmake
+[0.629s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_bringup/share/rm_bringup/package.xml
+[0.631s] Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_bringup' returned '0': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble /usr/bin/cmake --install /home/ckl/RM/Combat_vision2026/build/rm_bringup

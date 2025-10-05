@@ -1,0 +1,12 @@
+[ 14%] Built target gtest
+[ 14%] Built target gtest_main
+[ 22%] Built target armor_detector_node
+[ 25%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/spiral.cpp.o[0m
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:97:24:[m[K [01;31m[Kerror: [m[K‘[01m[Karmor_pose_estimator[m[K’ was not declared in this scope; did you mean ‘[01m[Karmor_pose_estimator_[m[K’?
+   97 |   armors_msg_.armors = [01;31m[Karmor_pose_estimator[m[K->extrateArmorPoses(armors, imu_to_camera_);
+      |                        [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+      |                        [32m[Karmor_pose_estimator_[m[K
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:191：CMakeFiles/armor_detector.dir/src/spiral.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

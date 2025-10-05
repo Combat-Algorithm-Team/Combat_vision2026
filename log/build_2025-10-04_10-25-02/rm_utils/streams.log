@@ -1,0 +1,58 @@
+[0.022s] Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_utils': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/rm_utils -- -j16 -l16
+[0.056s] [ 33%] Built target fytlogger
+[0.064s] [ 41%] [32mBuilding CXX object CMakeFiles/rm_utils.dir/src/math/pnp_solver.cpp.o[0m
+[1.323s] [ 50%] [1m[32mLinking CXX shared library librm_utils.so[0m
+[1.470s] [100%] Built target rm_utils
+[1.477s] Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_utils' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/rm_utils -- -j16 -l16
+[1.480s] Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_utils': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ckl/RM/Combat_vision2026/build/rm_utils
+[1.488s] -- Install configuration: ""
+[1.488s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/include
+[1.488s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils
+[1.488s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/common.hpp
+[1.488s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/url_resolver.hpp
+[1.488s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/logger
+[1.489s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/logger/exception.hpp
+[1.489s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/logger/types.hpp
+[1.489s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/logger/logger_pool.hpp
+[1.489s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/logger/README.md
+[1.489s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/logger/log.hpp
+[1.489s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/logger/impl
+[1.489s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/logger/impl/logger_impl.hpp
+[1.489s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/logger/impl/global_mutex.hpp
+[1.489s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/logger/impl/writer.hpp
+[1.489s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/heartbeat.hpp
+[1.489s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math
+[1.489s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/particle_filter.hpp
+[1.489s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/trajectory_compensator.hpp
+[1.489s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/utils.hpp
+[1.489s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/manual_compensator.hpp
+[1.489s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/extended_kalman_filter.hpp
+[1.489s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/pnp_solver.hpp
+[1.489s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/assert.hpp
+[1.490s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/lib/librm_utils.so
+[1.490s] -- Set non-toolchain portion of runtime path of "/home/ckl/RM/Combat_vision2026/install/rm_utils/lib/librm_utils.so" to ""
+[1.492s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/lib/libfytlogger.so
+[1.492s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/environment/library_path.sh
+[1.492s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/environment/library_path.dsv
+[1.492s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/ament_index/resource_index/package_run_dependencies/rm_utils
+[1.492s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/ament_index/resource_index/parent_prefix_path/rm_utils
+[1.492s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/environment/ament_prefix_path.sh
+[1.492s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/environment/ament_prefix_path.dsv
+[1.493s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/environment/path.sh
+[1.493s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/environment/path.dsv
+[1.493s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/local_setup.bash
+[1.493s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/local_setup.sh
+[1.493s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/local_setup.zsh
+[1.493s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/local_setup.dsv
+[1.493s] -- Installing: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/package.dsv
+[1.494s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/ament_index/resource_index/packages/rm_utils
+[1.496s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/cmake/rm_utilsExport.cmake
+[1.496s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/cmake/rm_utilsExport-noconfig.cmake
+[1.497s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/cmake/fytloggerExport.cmake
+[1.497s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/cmake/fytloggerExport-noconfig.cmake
+[1.497s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/cmake/ament_cmake_export_targets-extras.cmake
+[1.497s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.497s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/cmake/rm_utilsConfig.cmake
+[1.497s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/cmake/rm_utilsConfig-version.cmake
+[1.497s] -- Up-to-date: /home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/package.xml
+[1.499s] Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_utils' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ckl/RM/Combat_vision2026/build/rm_utils

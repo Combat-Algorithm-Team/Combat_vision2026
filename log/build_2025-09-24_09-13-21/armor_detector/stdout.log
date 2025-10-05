@@ -1,0 +1,5 @@
+[  8%] Built target gtest_main
+[ 20%] Built target gtest
+[ 24%] Built target armor_detector_node
+[ 28%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/armor_detector.cpp.o[0m
+[ 32%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/spiral.cpp.o[0m

@@ -28,7 +28,7 @@ PnPSolver::PnPSolver(const std::array<double, 9> &camera_matrix,
 
 void PnPSolver::setObjectPoints(const std::string &coord_frame_name,
                                 const std::vector<cv::Point3f> &object_points) noexcept {
-  object_points_map_[coord_frame_name] = object_points;
+  object_points_map_[coord_frame_name] = object_points; 
 }
 
 float PnPSolver::calculateDistanceToCenter(const cv::Point2f &image_point) const noexcept {

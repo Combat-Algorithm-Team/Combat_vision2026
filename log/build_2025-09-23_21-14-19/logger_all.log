@@ -1,0 +1,652 @@
+[0.075s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.075s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x74af9b8d3a30>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x74af9ba10f10>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x74af9ba10f10>>)
+[0.192s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.192s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.192s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.192s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.192s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.192s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.192s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ckl/RM/Combat_vision2026'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.192s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.200s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extensions ['ignore', 'ignore_ament_install']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'ignore'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'ignore_ament_install'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extensions ['colcon_pkg']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'colcon_pkg'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extensions ['colcon_meta']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'colcon_meta'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extensions ['ros']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'ros'
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extensions ['cmake', 'python']
+[0.201s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'cmake'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'python'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extensions ['python_setup_py']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim) by extension 'python_setup_py'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extensions ['ignore', 'ignore_ament_install']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extension 'ignore'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extension 'ignore_ament_install'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extensions ['colcon_pkg']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extension 'colcon_pkg'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extensions ['colcon_meta']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extension 'colcon_meta'
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extensions ['ros']
+[0.202s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_detector) by extension 'ros'
+[0.205s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rm_auto_aim/armor_detector' with type 'ros.ament_cmake' and name 'armor_detector'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_solver) by extensions ['ignore', 'ignore_ament_install']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_solver) by extension 'ignore'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_solver) by extension 'ignore_ament_install'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_solver) by extensions ['colcon_pkg']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_solver) by extension 'colcon_pkg'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_solver) by extensions ['colcon_meta']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_solver) by extension 'colcon_meta'
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_solver) by extensions ['ros']
+[0.205s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/armor_solver) by extension 'ros'
+[0.206s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rm_auto_aim/armor_solver' with type 'ros.ament_cmake' and name 'armor_solver'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/rm_auto_aim) by extensions ['ignore', 'ignore_ament_install']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/rm_auto_aim) by extension 'ignore'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/rm_auto_aim) by extension 'ignore_ament_install'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/rm_auto_aim) by extensions ['colcon_pkg']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/rm_auto_aim) by extension 'colcon_pkg'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/rm_auto_aim) by extensions ['colcon_meta']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/rm_auto_aim) by extension 'colcon_meta'
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/rm_auto_aim) by extensions ['ros']
+[0.206s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_auto_aim/rm_auto_aim) by extension 'ros'
+[0.206s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rm_auto_aim/rm_auto_aim' with type 'ros.ament_cmake' and name 'rm_auto_aim'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_bringup) by extension 'ignore'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_bringup) by extension 'ignore_ament_install'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_bringup) by extensions ['colcon_pkg']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_bringup) by extension 'colcon_pkg'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_bringup) by extensions ['colcon_meta']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_bringup) by extension 'colcon_meta'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_bringup) by extensions ['ros']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_bringup) by extension 'ros'
+[0.207s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rm_bringup' with type 'ros.ament_cmake' and name 'rm_bringup'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver) by extensions ['ignore', 'ignore_ament_install']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver) by extension 'ignore'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver) by extension 'ignore_ament_install'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver) by extensions ['colcon_pkg']
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver) by extension 'colcon_pkg'
+[0.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver) by extensions ['colcon_meta']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver) by extension 'colcon_meta'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver) by extensions ['ros']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver) by extension 'ros'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver) by extensions ['cmake', 'python']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver) by extension 'cmake'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver) by extension 'python'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver) by extensions ['python_setup_py']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver) by extension 'python_setup_py'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver/rm_serial_driver) by extensions ['ignore', 'ignore_ament_install']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver/rm_serial_driver) by extension 'ignore'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver/rm_serial_driver) by extension 'ignore_ament_install'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver/rm_serial_driver) by extensions ['colcon_pkg']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver/rm_serial_driver) by extension 'colcon_pkg'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver/rm_serial_driver) by extensions ['colcon_meta']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver/rm_serial_driver) by extension 'colcon_meta'
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver/rm_serial_driver) by extensions ['ros']
+[0.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver/rm_serial_driver) by extension 'ros'
+[0.209s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rm_hardware_driver/rm_serial_driver' with type 'ros.ament_cmake' and name 'rm_serial_driver'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver/ros2_hik_camera) by extensions ['ignore', 'ignore_ament_install']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver/ros2_hik_camera) by extension 'ignore'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver/ros2_hik_camera) by extension 'ignore_ament_install'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver/ros2_hik_camera) by extensions ['colcon_pkg']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver/ros2_hik_camera) by extension 'colcon_pkg'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver/ros2_hik_camera) by extensions ['colcon_meta']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver/ros2_hik_camera) by extension 'colcon_meta'
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver/ros2_hik_camera) by extensions ['ros']
+[0.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_hardware_driver/ros2_hik_camera) by extension 'ros'
+[0.210s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rm_hardware_driver/ros2_hik_camera' with type 'ros.ament_cmake' and name 'hik_camera'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_interfaces) by extension 'ignore'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_interfaces) by extension 'ignore_ament_install'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_interfaces) by extensions ['colcon_pkg']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_interfaces) by extension 'colcon_pkg'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_interfaces) by extensions ['colcon_meta']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_interfaces) by extension 'colcon_meta'
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_interfaces) by extensions ['ros']
+[0.210s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_interfaces) by extension 'ros'
+[0.211s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rm_interfaces' with type 'ros.ament_cmake' and name 'rm_interfaces'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_robot_description) by extensions ['ignore', 'ignore_ament_install']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_robot_description) by extension 'ignore'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_robot_description) by extension 'ignore_ament_install'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_robot_description) by extensions ['colcon_pkg']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_robot_description) by extension 'colcon_pkg'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_robot_description) by extensions ['colcon_meta']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_robot_description) by extension 'colcon_meta'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_robot_description) by extensions ['ros']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_robot_description) by extension 'ros'
+[0.211s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rm_robot_description' with type 'ros.ament_cmake' and name 'rm_robot_description'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_upstart) by extensions ['ignore', 'ignore_ament_install']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_upstart) by extension 'ignore'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_upstart) by extension 'ignore_ament_install'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_upstart) by extensions ['colcon_pkg']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_upstart) by extension 'colcon_pkg'
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_upstart) by extensions ['colcon_meta']
+[0.211s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_upstart) by extension 'colcon_meta'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_upstart) by extensions ['ros']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_upstart) by extension 'ros'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_upstart) by extensions ['cmake', 'python']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_upstart) by extension 'cmake'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_upstart) by extension 'python'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_upstart) by extensions ['python_setup_py']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_upstart) by extension 'python_setup_py'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_utils) by extensions ['ignore', 'ignore_ament_install']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_utils) by extension 'ignore'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_utils) by extension 'ignore_ament_install'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_utils) by extensions ['colcon_pkg']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_utils) by extension 'colcon_pkg'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_utils) by extensions ['colcon_meta']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_utils) by extension 'colcon_meta'
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_utils) by extensions ['ros']
+[0.212s] Level 1:colcon.colcon_core.package_identification:_identify(src/rm_utils) by extension 'ros'
+[0.213s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rm_utils' with type 'ros.ament_cmake' and name 'rm_utils'
+[0.213s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.213s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.213s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.213s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.213s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.237s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.237s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.237s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/ckl/RM/Combat_vision2026/install/rm_bringup' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.238s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.238s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/ckl/RM/Combat_vision2026/install/rm_auto_aim' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.238s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/ckl/RM/Combat_vision2026/install/armor_solver' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.238s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/ckl/RM/Combat_vision2026/install/armor_detector' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.238s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/ckl/RM/Combat_vision2026/install/rm_utils' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.238s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/ckl/RM/Combat_vision2026/install/rm_robot_description' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.238s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/ckl/RM/Combat_vision2026/install/rm_interfaces' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.238s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/ckl/RM/Combat_vision2026/install/hik_camera' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.238s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/ckl/RM/Combat_vision2026/install/rm_bringup' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.238s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.238s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/ckl/RM/Combat_vision2026/install/rm_auto_aim' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.238s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/ckl/RM/Combat_vision2026/install/armor_solver' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.238s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/ckl/RM/Combat_vision2026/install/armor_detector' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.238s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/ckl/RM/Combat_vision2026/install/rm_utils' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.238s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/ckl/RM/Combat_vision2026/install/rm_robot_description' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.238s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/ckl/RM/Combat_vision2026/install/rm_interfaces' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.238s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/ckl/RM/Combat_vision2026/install/hik_camera' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.239s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 0 installed packages in /home/ckl/RM/Combat_vision2026/install
+[0.240s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 320 installed packages in /opt/ros/humble
+[0.241s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.275s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_args' from command line to 'None'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_target' from command line to 'None'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_clean_cache' from command line to 'False'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_clean_first' from command line to 'False'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'cmake_force_configure' from command line to 'False'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'ament_cmake_args' from command line to 'None'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'catkin_cmake_args' from command line to 'None'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'hik_camera' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.276s] DEBUG:colcon.colcon_core.verb:Building package 'hik_camera' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ckl/RM/Combat_vision2026/build/hik_camera', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ckl/RM/Combat_vision2026/install/hik_camera', 'merge_install': False, 'path': '/home/ckl/RM/Combat_vision2026/src/rm_hardware_driver/ros2_hik_camera', 'symlink_install': False, 'test_result_base': None}
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'rm_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'rm_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'rm_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'rm_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'rm_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'rm_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'rm_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'rm_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'rm_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.276s] DEBUG:colcon.colcon_core.verb:Building package 'rm_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ckl/RM/Combat_vision2026/build/rm_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ckl/RM/Combat_vision2026/install/rm_interfaces', 'merge_install': False, 'path': '/home/ckl/RM/Combat_vision2026/src/rm_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'rm_robot_description' build argument 'cmake_args' from command line to 'None'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'rm_robot_description' build argument 'cmake_target' from command line to 'None'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'rm_robot_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'rm_robot_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'rm_robot_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'rm_robot_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.276s] Level 5:colcon.colcon_core.verb:set package 'rm_robot_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.277s] Level 5:colcon.colcon_core.verb:set package 'rm_robot_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.277s] Level 5:colcon.colcon_core.verb:set package 'rm_robot_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.277s] DEBUG:colcon.colcon_core.verb:Building package 'rm_robot_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ckl/RM/Combat_vision2026/build/rm_robot_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ckl/RM/Combat_vision2026/install/rm_robot_description', 'merge_install': False, 'path': '/home/ckl/RM/Combat_vision2026/src/rm_robot_description', 'symlink_install': False, 'test_result_base': None}
+[0.277s] Level 5:colcon.colcon_core.verb:set package 'rm_utils' build argument 'cmake_args' from command line to 'None'
+[0.277s] Level 5:colcon.colcon_core.verb:set package 'rm_utils' build argument 'cmake_target' from command line to 'None'
+[0.277s] Level 5:colcon.colcon_core.verb:set package 'rm_utils' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.277s] Level 5:colcon.colcon_core.verb:set package 'rm_utils' build argument 'cmake_clean_cache' from command line to 'False'
+[0.277s] Level 5:colcon.colcon_core.verb:set package 'rm_utils' build argument 'cmake_clean_first' from command line to 'False'
+[0.277s] Level 5:colcon.colcon_core.verb:set package 'rm_utils' build argument 'cmake_force_configure' from command line to 'False'
+[0.277s] Level 5:colcon.colcon_core.verb:set package 'rm_utils' build argument 'ament_cmake_args' from command line to 'None'
+[0.277s] Level 5:colcon.colcon_core.verb:set package 'rm_utils' build argument 'catkin_cmake_args' from command line to 'None'
+[0.277s] Level 5:colcon.colcon_core.verb:set package 'rm_utils' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.277s] DEBUG:colcon.colcon_core.verb:Building package 'rm_utils' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ckl/RM/Combat_vision2026/build/rm_utils', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ckl/RM/Combat_vision2026/install/rm_utils', 'merge_install': False, 'path': '/home/ckl/RM/Combat_vision2026/src/rm_utils', 'symlink_install': False, 'test_result_base': None}
+[0.277s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'cmake_args' from command line to 'None'
+[0.277s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'cmake_target' from command line to 'None'
+[0.277s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.277s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'cmake_clean_cache' from command line to 'False'
+[0.277s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'cmake_clean_first' from command line to 'False'
+[0.277s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'cmake_force_configure' from command line to 'False'
+[0.277s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'ament_cmake_args' from command line to 'None'
+[0.277s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'catkin_cmake_args' from command line to 'None'
+[0.277s] Level 5:colcon.colcon_core.verb:set package 'armor_detector' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.277s] DEBUG:colcon.colcon_core.verb:Building package 'armor_detector' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ckl/RM/Combat_vision2026/build/armor_detector', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ckl/RM/Combat_vision2026/install/armor_detector', 'merge_install': False, 'path': '/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector', 'symlink_install': False, 'test_result_base': None}
+[0.277s] Level 5:colcon.colcon_core.verb:set package 'armor_solver' build argument 'cmake_args' from command line to 'None'
+[0.277s] Level 5:colcon.colcon_core.verb:set package 'armor_solver' build argument 'cmake_target' from command line to 'None'
+[0.277s] Level 5:colcon.colcon_core.verb:set package 'armor_solver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'armor_solver' build argument 'cmake_clean_cache' from command line to 'False'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'armor_solver' build argument 'cmake_clean_first' from command line to 'False'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'armor_solver' build argument 'cmake_force_configure' from command line to 'False'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'armor_solver' build argument 'ament_cmake_args' from command line to 'None'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'armor_solver' build argument 'catkin_cmake_args' from command line to 'None'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'armor_solver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.278s] DEBUG:colcon.colcon_core.verb:Building package 'armor_solver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ckl/RM/Combat_vision2026/build/armor_solver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ckl/RM/Combat_vision2026/install/armor_solver', 'merge_install': False, 'path': '/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_solver', 'symlink_install': False, 'test_result_base': None}
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'cmake_args' from command line to 'None'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'cmake_target' from command line to 'None'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'cmake_clean_cache' from command line to 'False'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'cmake_clean_first' from command line to 'False'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'cmake_force_configure' from command line to 'False'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'ament_cmake_args' from command line to 'None'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'catkin_cmake_args' from command line to 'None'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'rm_serial_driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.278s] DEBUG:colcon.colcon_core.verb:Building package 'rm_serial_driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ckl/RM/Combat_vision2026/build/rm_serial_driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver', 'merge_install': False, 'path': '/home/ckl/RM/Combat_vision2026/src/rm_hardware_driver/rm_serial_driver', 'symlink_install': False, 'test_result_base': None}
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'rm_auto_aim' build argument 'cmake_args' from command line to 'None'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'rm_auto_aim' build argument 'cmake_target' from command line to 'None'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'rm_auto_aim' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'rm_auto_aim' build argument 'cmake_clean_cache' from command line to 'False'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'rm_auto_aim' build argument 'cmake_clean_first' from command line to 'False'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'rm_auto_aim' build argument 'cmake_force_configure' from command line to 'False'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'rm_auto_aim' build argument 'ament_cmake_args' from command line to 'None'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'rm_auto_aim' build argument 'catkin_cmake_args' from command line to 'None'
+[0.278s] Level 5:colcon.colcon_core.verb:set package 'rm_auto_aim' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.278s] DEBUG:colcon.colcon_core.verb:Building package 'rm_auto_aim' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ckl/RM/Combat_vision2026/build/rm_auto_aim', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ckl/RM/Combat_vision2026/install/rm_auto_aim', 'merge_install': False, 'path': '/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/rm_auto_aim', 'symlink_install': False, 'test_result_base': None}
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'rm_bringup' build argument 'cmake_args' from command line to 'None'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'rm_bringup' build argument 'cmake_target' from command line to 'None'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'rm_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'rm_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'rm_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'rm_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'rm_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'rm_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.279s] Level 5:colcon.colcon_core.verb:set package 'rm_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.279s] DEBUG:colcon.colcon_core.verb:Building package 'rm_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ckl/RM/Combat_vision2026/build/rm_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ckl/RM/Combat_vision2026/install/rm_bringup', 'merge_install': False, 'path': '/home/ckl/RM/Combat_vision2026/src/rm_bringup', 'symlink_install': False, 'test_result_base': None}
+[0.279s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.280s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.280s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ckl/RM/Combat_vision2026/src/rm_interfaces' with build type 'ament_cmake'
+[0.280s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ckl/RM/Combat_vision2026/src/rm_interfaces'
+[0.281s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.282s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.282s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.284s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ckl/RM/Combat_vision2026/src/rm_utils' with build type 'ament_cmake'
+[0.285s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ckl/RM/Combat_vision2026/src/rm_utils'
+[0.285s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.285s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.288s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ckl/RM/Combat_vision2026/src/rm_hardware_driver/ros2_hik_camera' with build type 'ament_cmake'
+[0.288s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ckl/RM/Combat_vision2026/src/rm_hardware_driver/ros2_hik_camera'
+[0.288s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.288s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.291s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ckl/RM/Combat_vision2026/src/rm_robot_description' with build type 'ament_cmake'
+[0.291s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ckl/RM/Combat_vision2026/src/rm_robot_description'
+[0.291s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.291s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.300s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/ckl/RM/Combat_vision2026/src/rm_interfaces -DCMAKE_INSTALL_PREFIX=/home/ckl/RM/Combat_vision2026/install/rm_interfaces
+[0.303s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_utils': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/ckl/RM/Combat_vision2026/src/rm_utils -DCMAKE_INSTALL_PREFIX=/home/ckl/RM/Combat_vision2026/install/rm_utils
+[0.306s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ckl/RM/Combat_vision2026/build/hik_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/ckl/RM/Combat_vision2026/src/rm_hardware_driver/ros2_hik_camera -DCMAKE_INSTALL_PREFIX=/home/ckl/RM/Combat_vision2026/install/hik_camera
+[0.315s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/ckl/RM/Combat_vision2026/src/rm_robot_description -DCMAKE_INSTALL_PREFIX=/home/ckl/RM/Combat_vision2026/install/rm_robot_description
+[1.187s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/ckl/RM/Combat_vision2026/src/rm_robot_description -DCMAKE_INSTALL_PREFIX=/home/ckl/RM/Combat_vision2026/install/rm_robot_description
+[1.189s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/rm_robot_description -- -j16 -l16
+[1.213s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/rm_robot_description -- -j16 -l16
+[1.219s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ckl/RM/Combat_vision2026/build/rm_robot_description
+[1.229s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rm_robot_description)
+[1.229s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ckl/RM/Combat_vision2026/build/rm_robot_description
+[1.231s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_robot_description' for CMake module files
+[1.231s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_robot_description' for CMake config files
+[1.231s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_robot_description', 'cmake_prefix_path')
+[1.231s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/hook/cmake_prefix_path.ps1'
+[1.232s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/hook/cmake_prefix_path.dsv'
+[1.232s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/hook/cmake_prefix_path.sh'
+[1.233s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_robot_description/bin'
+[1.233s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_robot_description/lib/pkgconfig/rm_robot_description.pc'
+[1.233s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_robot_description/lib/python3.10/site-packages'
+[1.233s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_robot_description/bin'
+[1.234s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/package.ps1'
+[1.234s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/package.dsv'
+[1.234s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/package.sh'
+[1.235s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/package.bash'
+[1.235s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/package.zsh'
+[1.236s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/colcon-core/packages/rm_robot_description)
+[1.236s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rm_robot_description)
+[1.237s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_robot_description' for CMake module files
+[1.237s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_robot_description' for CMake config files
+[1.237s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_robot_description', 'cmake_prefix_path')
+[1.237s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/hook/cmake_prefix_path.ps1'
+[1.238s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/hook/cmake_prefix_path.dsv'
+[1.238s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/hook/cmake_prefix_path.sh'
+[1.238s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_robot_description/bin'
+[1.238s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_robot_description/lib/pkgconfig/rm_robot_description.pc'
+[1.238s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_robot_description/lib/python3.10/site-packages'
+[1.239s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_robot_description/bin'
+[1.239s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/package.ps1'
+[1.239s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/package.dsv'
+[1.239s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/package.sh'
+[1.240s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/package.bash'
+[1.240s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/rm_robot_description/package.zsh'
+[1.240s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ckl/RM/Combat_vision2026/install/rm_robot_description/share/colcon-core/packages/rm_robot_description)
+[1.997s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_utils' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/ckl/RM/Combat_vision2026/src/rm_utils -DCMAKE_INSTALL_PREFIX=/home/ckl/RM/Combat_vision2026/install/rm_utils
+[1.998s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_utils': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/rm_utils -- -j16 -l16
+[2.022s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ckl/RM/Combat_vision2026/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/ckl/RM/Combat_vision2026/src/rm_hardware_driver/ros2_hik_camera -DCMAKE_INSTALL_PREFIX=/home/ckl/RM/Combat_vision2026/install/hik_camera
+[2.023s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ckl/RM/Combat_vision2026/build/hik_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/hik_camera -- -j16 -l16
+[3.512s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/ckl/RM/Combat_vision2026/src/rm_interfaces -DCMAKE_INSTALL_PREFIX=/home/ckl/RM/Combat_vision2026/install/rm_interfaces
+[3.513s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/rm_interfaces -- -j16 -l16
+[6.656s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ckl/RM/Combat_vision2026/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/hik_camera -- -j16 -l16
+[6.656s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ckl/RM/Combat_vision2026/build/hik_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ckl/RM/Combat_vision2026/build/hik_camera
+[6.761s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hik_camera)
+[6.766s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/hik_camera' for CMake module files
+[6.767s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/hik_camera' for CMake config files
+[6.767s] Level 1:colcon.colcon_core.shell:create_environment_hook('hik_camera', 'cmake_prefix_path')
+[6.768s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.ps1'
+[6.769s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ckl/RM/Combat_vision2026/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.dsv'
+[6.769s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.sh'
+[6.770s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ckl/RM/Combat_vision2026/build/hik_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ckl/RM/Combat_vision2026/build/hik_camera
+[6.774s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/hik_camera/lib'
+[6.775s] Level 1:colcon.colcon_core.shell:create_environment_hook('hik_camera', 'ld_library_path_lib')
+[6.775s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.ps1'
+[6.776s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ckl/RM/Combat_vision2026/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.dsv'
+[6.778s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.sh'
+[6.779s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/hik_camera/bin'
+[6.779s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/hik_camera/lib/pkgconfig/hik_camera.pc'
+[6.779s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/hik_camera/lib/python3.10/site-packages'
+[6.779s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/hik_camera/bin'
+[6.780s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/hik_camera/share/hik_camera/package.ps1'
+[6.781s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ckl/RM/Combat_vision2026/install/hik_camera/share/hik_camera/package.dsv'
+[6.781s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/hik_camera/share/hik_camera/package.sh'
+[6.787s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/hik_camera/share/hik_camera/package.bash'
+[6.788s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/hik_camera/share/hik_camera/package.zsh'
+[6.789s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ckl/RM/Combat_vision2026/install/hik_camera/share/colcon-core/packages/hik_camera)
+[6.790s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hik_camera)
+[6.790s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/hik_camera' for CMake module files
+[6.791s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/hik_camera' for CMake config files
+[6.791s] Level 1:colcon.colcon_core.shell:create_environment_hook('hik_camera', 'cmake_prefix_path')
+[6.792s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.ps1'
+[6.792s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ckl/RM/Combat_vision2026/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.dsv'
+[6.793s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/hik_camera/share/hik_camera/hook/cmake_prefix_path.sh'
+[6.794s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/hik_camera/lib'
+[6.794s] Level 1:colcon.colcon_core.shell:create_environment_hook('hik_camera', 'ld_library_path_lib')
+[6.794s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.ps1'
+[6.795s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ckl/RM/Combat_vision2026/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.dsv'
+[6.795s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/hik_camera/share/hik_camera/hook/ld_library_path_lib.sh'
+[6.796s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/hik_camera/bin'
+[6.796s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/hik_camera/lib/pkgconfig/hik_camera.pc'
+[6.796s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/hik_camera/lib/python3.10/site-packages'
+[6.797s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/hik_camera/bin'
+[6.797s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/hik_camera/share/hik_camera/package.ps1'
+[6.799s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ckl/RM/Combat_vision2026/install/hik_camera/share/hik_camera/package.dsv'
+[6.799s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/hik_camera/share/hik_camera/package.sh'
+[6.800s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/hik_camera/share/hik_camera/package.bash'
+[6.801s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/hik_camera/share/hik_camera/package.zsh'
+[6.801s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ckl/RM/Combat_vision2026/install/hik_camera/share/colcon-core/packages/hik_camera)
+[8.435s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_utils' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/rm_utils -- -j16 -l16
+[8.436s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_utils': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ckl/RM/Combat_vision2026/build/rm_utils
+[8.448s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rm_utils)
+[8.449s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_utils' for CMake module files
+[8.449s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_utils' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ckl/RM/Combat_vision2026/build/rm_utils
+[8.449s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_utils' for CMake config files
+[8.449s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_utils', 'cmake_prefix_path')
+[8.450s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/hook/cmake_prefix_path.ps1'
+[8.450s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/hook/cmake_prefix_path.dsv'
+[8.450s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/hook/cmake_prefix_path.sh'
+[8.451s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_utils/lib'
+[8.451s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_utils', 'ld_library_path_lib')
+[8.451s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/hook/ld_library_path_lib.ps1'
+[8.451s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/hook/ld_library_path_lib.dsv'
+[8.451s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/hook/ld_library_path_lib.sh'
+[8.452s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_utils/bin'
+[8.452s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_utils/lib/pkgconfig/rm_utils.pc'
+[8.452s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_utils/lib/python3.10/site-packages'
+[8.452s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_utils/bin'
+[8.452s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/package.ps1'
+[8.452s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/package.dsv'
+[8.453s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/package.sh'
+[8.453s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/package.bash'
+[8.453s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/package.zsh'
+[8.453s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ckl/RM/Combat_vision2026/install/rm_utils/share/colcon-core/packages/rm_utils)
+[8.454s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rm_utils)
+[8.454s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_utils' for CMake module files
+[8.454s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_utils' for CMake config files
+[8.455s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_utils', 'cmake_prefix_path')
+[8.455s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/hook/cmake_prefix_path.ps1'
+[8.455s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/hook/cmake_prefix_path.dsv'
+[8.455s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/hook/cmake_prefix_path.sh'
+[8.456s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_utils/lib'
+[8.456s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_utils', 'ld_library_path_lib')
+[8.456s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/hook/ld_library_path_lib.ps1'
+[8.456s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/hook/ld_library_path_lib.dsv'
+[8.456s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/hook/ld_library_path_lib.sh'
+[8.457s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_utils/bin'
+[8.457s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_utils/lib/pkgconfig/rm_utils.pc'
+[8.457s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_utils/lib/python3.10/site-packages'
+[8.457s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_utils/bin'
+[8.457s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/package.ps1'
+[8.457s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/package.dsv'
+[8.458s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/package.sh'
+[8.458s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/package.bash'
+[8.458s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_utils/share/rm_utils/package.zsh'
+[8.459s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ckl/RM/Combat_vision2026/install/rm_utils/share/colcon-core/packages/rm_utils)
+[9.928s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/rm_interfaces -- -j16 -l16
+[9.929s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ckl/RM/Combat_vision2026/build/rm_interfaces
+[10.049s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rm_interfaces)
+[10.049s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_interfaces' for CMake module files
+[10.049s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/ckl/RM/Combat_vision2026/build/rm_interfaces
+[10.050s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_interfaces' for CMake config files
+[10.051s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_interfaces', 'cmake_prefix_path')
+[10.051s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/hook/cmake_prefix_path.ps1'
+[10.051s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/hook/cmake_prefix_path.dsv'
+[10.052s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/hook/cmake_prefix_path.sh'
+[10.052s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib'
+[10.052s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_interfaces', 'ld_library_path_lib')
+[10.052s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/hook/ld_library_path_lib.ps1'
+[10.052s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/hook/ld_library_path_lib.dsv'
+[10.053s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/hook/ld_library_path_lib.sh'
+[10.053s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/bin'
+[10.053s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib/pkgconfig/rm_interfaces.pc'
+[10.053s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib/python3.10/site-packages'
+[10.053s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/bin'
+[10.053s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/package.ps1'
+[10.054s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/package.dsv'
+[10.054s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/package.sh'
+[10.054s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/package.bash'
+[10.054s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/package.zsh'
+[10.055s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/colcon-core/packages/rm_interfaces)
+[10.055s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rm_interfaces)
+[10.055s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_interfaces' for CMake module files
+[10.056s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_interfaces' for CMake config files
+[10.057s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_interfaces', 'cmake_prefix_path')
+[10.057s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/hook/cmake_prefix_path.ps1'
+[10.057s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/hook/cmake_prefix_path.dsv'
+[10.057s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/hook/cmake_prefix_path.sh'
+[10.058s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib'
+[10.058s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_interfaces', 'ld_library_path_lib')
+[10.058s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/hook/ld_library_path_lib.ps1'
+[10.058s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/hook/ld_library_path_lib.dsv'
+[10.058s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/hook/ld_library_path_lib.sh'
+[10.059s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/bin'
+[10.059s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib/pkgconfig/rm_interfaces.pc'
+[10.059s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib/python3.10/site-packages'
+[10.059s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/bin'
+[10.059s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/package.ps1'
+[10.059s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/package.dsv'
+[10.060s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/package.sh'
+[10.060s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/package.bash'
+[10.060s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/rm_interfaces/package.zsh'
+[10.061s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ckl/RM/Combat_vision2026/install/rm_interfaces/share/colcon-core/packages/rm_interfaces)
+[10.061s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector' with build type 'ament_cmake'
+[10.061s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector'
+[10.061s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[10.061s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[10.065s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_solver' with build type 'ament_cmake'
+[10.065s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_solver'
+[10.065s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[10.065s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[10.068s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ckl/RM/Combat_vision2026/src/rm_hardware_driver/rm_serial_driver' with build type 'ament_cmake'
+[10.069s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ckl/RM/Combat_vision2026/src/rm_hardware_driver/rm_serial_driver'
+[10.069s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[10.069s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[10.077s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ckl/RM/Combat_vision2026/build/armor_detector': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector -DCMAKE_INSTALL_PREFIX=/home/ckl/RM/Combat_vision2026/install/armor_detector
+[10.078s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ckl/RM/Combat_vision2026/build/armor_solver': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_solver -DCMAKE_INSTALL_PREFIX=/home/ckl/RM/Combat_vision2026/install/armor_solver
+[10.084s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_serial_driver': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/ckl/RM/Combat_vision2026/src/rm_hardware_driver/rm_serial_driver -DCMAKE_INSTALL_PREFIX=/home/ckl/RM/Combat_vision2026/install/rm_serial_driver
+[11.480s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ckl/RM/Combat_vision2026/build/armor_solver' returned '0': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_solver -DCMAKE_INSTALL_PREFIX=/home/ckl/RM/Combat_vision2026/install/armor_solver
+[11.481s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ckl/RM/Combat_vision2026/build/armor_solver': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/armor_solver -- -j16 -l16
+[11.564s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_serial_driver' returned '0': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/ckl/RM/Combat_vision2026/src/rm_hardware_driver/rm_serial_driver -DCMAKE_INSTALL_PREFIX=/home/ckl/RM/Combat_vision2026/install/rm_serial_driver
+[11.565s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_serial_driver': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/rm_serial_driver -- -j16 -l16
+[11.593s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ckl/RM/Combat_vision2026/build/armor_detector' returned '0': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector -DCMAKE_INSTALL_PREFIX=/home/ckl/RM/Combat_vision2026/install/armor_detector
+[11.594s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ckl/RM/Combat_vision2026/build/armor_detector': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/armor_detector -- -j16 -l16
+[40.081s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ckl/RM/Combat_vision2026/build/armor_solver' returned '0': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/armor_solver -- -j16 -l16
+[40.083s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ckl/RM/Combat_vision2026/build/armor_solver': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/ckl/RM/Combat_vision2026/build/armor_solver
+[40.097s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(armor_solver)
+[40.098s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/armor_solver' for CMake module files
+[40.099s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ckl/RM/Combat_vision2026/build/armor_solver' returned '0': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/ckl/RM/Combat_vision2026/build/armor_solver
+[40.099s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/armor_solver' for CMake config files
+[40.099s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_solver', 'cmake_prefix_path')
+[40.100s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/hook/cmake_prefix_path.ps1'
+[40.101s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/hook/cmake_prefix_path.dsv'
+[40.101s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/hook/cmake_prefix_path.sh'
+[40.102s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/armor_solver/lib'
+[40.102s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_solver', 'ld_library_path_lib')
+[40.102s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/hook/ld_library_path_lib.ps1'
+[40.102s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/hook/ld_library_path_lib.dsv'
+[40.102s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/hook/ld_library_path_lib.sh'
+[40.103s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/armor_solver/bin'
+[40.103s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/armor_solver/lib/pkgconfig/armor_solver.pc'
+[40.103s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/armor_solver/lib/python3.10/site-packages'
+[40.103s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/armor_solver/bin'
+[40.103s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/package.ps1'
+[40.104s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/package.dsv'
+[40.104s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/package.sh'
+[40.105s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/package.bash'
+[40.105s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/package.zsh'
+[40.105s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ckl/RM/Combat_vision2026/install/armor_solver/share/colcon-core/packages/armor_solver)
+[40.106s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(armor_solver)
+[40.106s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/armor_solver' for CMake module files
+[40.107s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/armor_solver' for CMake config files
+[40.107s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_solver', 'cmake_prefix_path')
+[40.107s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/hook/cmake_prefix_path.ps1'
+[40.108s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/hook/cmake_prefix_path.dsv'
+[40.108s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/hook/cmake_prefix_path.sh'
+[40.108s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/armor_solver/lib'
+[40.108s] Level 1:colcon.colcon_core.shell:create_environment_hook('armor_solver', 'ld_library_path_lib')
+[40.109s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/hook/ld_library_path_lib.ps1'
+[40.109s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/hook/ld_library_path_lib.dsv'
+[40.109s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/hook/ld_library_path_lib.sh'
+[40.109s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/armor_solver/bin'
+[40.109s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/armor_solver/lib/pkgconfig/armor_solver.pc'
+[40.110s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/armor_solver/lib/python3.10/site-packages'
+[40.110s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/armor_solver/bin'
+[40.110s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/package.ps1'
+[40.110s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/package.dsv'
+[40.111s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/package.sh'
+[40.111s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/package.bash'
+[40.111s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/package.zsh'
+[40.112s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ckl/RM/Combat_vision2026/install/armor_solver/share/colcon-core/packages/armor_solver)
+[40.726s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_serial_driver' returned '0': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/rm_serial_driver -- -j16 -l16
+[40.728s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ckl/RM/Combat_vision2026/build/rm_serial_driver': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/ckl/RM/Combat_vision2026/build/rm_serial_driver
+[40.743s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rm_serial_driver)
+[40.743s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver' for CMake module files
+[40.744s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ckl/RM/Combat_vision2026/build/rm_serial_driver' returned '0': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/ckl/RM/Combat_vision2026/build/rm_serial_driver
+[40.744s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver' for CMake config files
+[40.745s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_serial_driver', 'cmake_prefix_path')
+[40.745s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/hook/cmake_prefix_path.ps1'
+[40.745s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/hook/cmake_prefix_path.dsv'
+[40.745s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/hook/cmake_prefix_path.sh'
+[40.746s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib'
+[40.746s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_serial_driver', 'ld_library_path_lib')
+[40.746s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/hook/ld_library_path_lib.ps1'
+[40.746s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/hook/ld_library_path_lib.dsv'
+[40.747s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/hook/ld_library_path_lib.sh'
+[40.747s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/bin'
+[40.747s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib/pkgconfig/rm_serial_driver.pc'
+[40.747s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib/python3.10/site-packages'
+[40.747s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/bin'
+[40.748s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/package.ps1'
+[40.748s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/package.dsv'
+[40.748s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/package.sh'
+[40.749s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/package.bash'
+[40.749s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/package.zsh'
+[40.749s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/colcon-core/packages/rm_serial_driver)
+[40.749s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rm_serial_driver)
+[40.750s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver' for CMake module files
+[40.750s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver' for CMake config files
+[40.750s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_serial_driver', 'cmake_prefix_path')
+[40.751s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/hook/cmake_prefix_path.ps1'
+[40.751s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/hook/cmake_prefix_path.dsv'
+[40.751s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/hook/cmake_prefix_path.sh'
+[40.751s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib'
+[40.752s] Level 1:colcon.colcon_core.shell:create_environment_hook('rm_serial_driver', 'ld_library_path_lib')
+[40.752s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/hook/ld_library_path_lib.ps1'
+[40.752s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/hook/ld_library_path_lib.dsv'
+[40.752s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/hook/ld_library_path_lib.sh'
+[40.753s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/bin'
+[40.753s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib/pkgconfig/rm_serial_driver.pc'
+[40.753s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib/python3.10/site-packages'
+[40.753s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/bin'
+[40.753s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/package.ps1'
+[40.754s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/package.dsv'
+[40.754s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/package.sh'
+[40.755s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/package.bash'
+[40.755s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/rm_serial_driver/package.zsh'
+[40.755s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/share/colcon-core/packages/rm_serial_driver)
+[50.819s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ckl/RM/Combat_vision2026/build/armor_detector' returned '2': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/armor_detector -- -j16 -l16
+[50.820s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(armor_detector)
+[50.820s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/armor_detector' for CMake module files
+[50.820s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/armor_detector' for CMake config files
+[50.820s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/armor_detector/bin'
+[50.820s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/armor_detector/lib/pkgconfig/armor_detector.pc'
+[50.820s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/armor_detector/lib/python3.10/site-packages'
+[50.821s] Level 1:colcon.colcon_core.environment:checking '/home/ckl/RM/Combat_vision2026/install/armor_detector/bin'
+[50.821s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/package.ps1'
+[50.821s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/package.dsv'
+[50.821s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/package.sh'
+[50.822s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/package.bash'
+[50.822s] INFO:colcon.colcon_core.shell:Creating package script '/home/ckl/RM/Combat_vision2026/install/armor_detector/share/armor_detector/package.zsh'
+[50.822s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ckl/RM/Combat_vision2026/install/armor_detector/share/colcon-core/packages/armor_detector)
+[50.833s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[50.833s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[50.833s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[50.833s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[50.851s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[50.851s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[50.851s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[50.924s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[50.925s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ckl/RM/Combat_vision2026/install/local_setup.ps1'
+[50.925s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ckl/RM/Combat_vision2026/install/_local_setup_util_ps1.py'
+[50.926s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ckl/RM/Combat_vision2026/install/setup.ps1'
+[50.928s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ckl/RM/Combat_vision2026/install/local_setup.sh'
+[50.928s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ckl/RM/Combat_vision2026/install/_local_setup_util_sh.py'
+[50.929s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ckl/RM/Combat_vision2026/install/setup.sh'
+[50.930s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ckl/RM/Combat_vision2026/install/local_setup.bash'
+[50.930s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ckl/RM/Combat_vision2026/install/setup.bash'
+[50.931s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ckl/RM/Combat_vision2026/install/local_setup.zsh'
+[50.932s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ckl/RM/Combat_vision2026/install/setup.zsh'

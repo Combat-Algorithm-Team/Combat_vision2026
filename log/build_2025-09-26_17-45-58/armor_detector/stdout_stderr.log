@@ -1,0 +1,37 @@
+[ 14%] Built target gtest
+[ 14%] Built target gtest_main
+[ 22%] Built target armor_detector_node
+[ 25%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/armor_pose_estimator.cpp.o[0m
+[ 29%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/spiral.cpp.o[0m
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:[m[K In function ‘[01m[Kdouble fyt::auto_aim::newtonIteration(double, int)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:21:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kiteratino[m[K’ was not declared in this scope; did you mean ‘[01m[Kiteration[m[K’?
+   21 |   while([01;31m[Kiteratino[m[K < iteration_times){
+      |         [01;31m[K^~~~~~~~~[m[K
+      |         [32m[Kiteration[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:22:10:[m[K [01;31m[Kerror: [m[Ktoo many arguments to function ‘[01m[Kdouble fyt::auto_aim::df()[m[K’
+   22 |     if([01;31m[Kdf(x)[m[K == 0)
+      |        [01;31m[K~~^~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:15:8:[m[K [01;36m[Knote: [m[Kdeclared here
+   15 | double [01;36m[Kdf[m[K(){
+      |        [01;36m[K^~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:24:15:[m[K [01;31m[Kerror: [m[Ktoo many arguments to function ‘[01m[Kdouble fyt::auto_aim::f()[m[K’
+   24 |     x = x0 - [01;31m[Kf(x)[m[K / df(x);
+      |              [01;31m[K~^~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:12:8:[m[K [01;36m[Knote: [m[Kdeclared here
+   12 | double [01;36m[Kf[m[K(){
+      |        [01;36m[K^[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:24:23:[m[K [01;31m[Kerror: [m[Ktoo many arguments to function ‘[01m[Kdouble fyt::auto_aim::df()[m[K’
+   24 |     x = x0 - f(x) / [01;31m[Kdf(x)[m[K;
+      |                     [01;31m[K~~^~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:15:8:[m[K [01;36m[Knote: [m[Kdeclared here
+   15 | double [01;36m[Kdf[m[K(){
+      |        [01;36m[K^~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:20:7:[m[K [01;31m[Kerror: [m[Kunused variable ‘[01m[Kiteration[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Werror=unused-variable]8;;[m[K]
+   20 |   int [01;31m[Kiteration[m[K = 0;
+      |       [01;31m[K^~~~~~~~~[m[K
+cc1plus: all warnings being treated as errors
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:135：CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o] 错误 1
+gmake[2]: *** 正在等待未完成的任务....
+gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

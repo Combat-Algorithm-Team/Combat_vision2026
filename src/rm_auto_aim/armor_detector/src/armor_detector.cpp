@@ -34,13 +34,13 @@
 // project
 #include "armor_detector/types.hpp"
 #include "rm_utils/common.hpp"
-
 namespace fyt::auto_aim {
 Detector::Detector(const int &bin_thres,
                    const EnemyColor &color,
                    const LightParams &l,
                    const ArmorParams &a)
-: binary_thres(bin_thres), detect_color(color), light_params(l), armor_params(a) {}
+: binary_thres(bin_thres), detect_color(color), light_params(l), armor_params(a) {
+}
 
 std::vector<Armor> Detector::detect(const cv::Mat &input) noexcept {
   // 1. Preprocess the image
@@ -139,6 +139,7 @@ std::vector<Armor> Detector::matchLights(const std::vector<Light> &lights) noexc
   std::vector<Armor> armors;
   this->debug_armors.data.clear();
   // Loop all the pairing of lights
+  std::cout<<"going to matchLights"<<std::endl;
   for (auto light_1 = lights.begin(); light_1 != lights.end(); light_1++) {
     if (light_1->color != detect_color) continue;
     double max_iter_width = light_1->length * armor_params.max_large_center_distance;
@@ -149,16 +150,25 @@ std::vector<Armor> Detector::matchLights(const std::vector<Light> &lights) noexc
         continue;
       }
       if (light_2->center.x - light_1->center.x > max_iter_width) break;
-
+      std::cout<<"going to isArmor"<<std::endl;
       auto type = isArmor(*light_1, *light_2);
       if (type != ArmorType::INVALID) {
         auto armor = Armor(*light_1, *light_2);
         armor.type = type;
         armors.emplace_back(armor);
+        std::cout<<"armor founded"<<std::endl;
       }
     }
   }
-
+  
+//  if(lights.size() >= 2){
+//   auto light_1 = lights.begin();
+//   auto light_2 = light_1 + 1;
+//   auto type = isArmor(*light_1, *light_2);
+//   auto armor = Armor(*light_1, *light_2);
+//   armor.type = type;
+//   armors.emplace_back(armor);
+//   }
   return armors;
 }
 

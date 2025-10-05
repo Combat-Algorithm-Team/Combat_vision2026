@@ -1,0 +1,39 @@
+[0.050s] Invoking command in '/home/ckl/RM/Combat_vision2026/build/armor_detector': AMENT_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/armor_detector -- -j16 -l16
+[0.117s] [ 14%] Built target gtest
+[0.117s] [ 14%] Built target gtest_main
+[0.125s] [ 22%] Built target armor_detector_node
+[0.171s] [ 25%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/armor_pose_estimator.cpp.o[0m
+[0.172s] [ 29%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o[0m
+[0.173s] [ 33%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/spiral.cpp.o[0m
+[5.770s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:[m[K In function ‘[01m[Kdouble fyt::auto_aim::newtonIteration(double, int)[m[K’:
+[5.770s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:21:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kiteratino[m[K’ was not declared in this scope; did you mean ‘[01m[Kiteration[m[K’?
+[5.770s]    21 |   while([01;31m[Kiteratino[m[K < iteration_times){
+[5.770s]       |         [01;31m[K^~~~~~~~~[m[K
+[5.771s]       |         [32m[Kiteration[m[K
+[5.771s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:22:10:[m[K [01;31m[Kerror: [m[Ktoo many arguments to function ‘[01m[Kdouble fyt::auto_aim::df()[m[K’
+[5.771s]    22 |     if([01;31m[Kdf(x)[m[K == 0)
+[5.771s]       |        [01;31m[K~~^~~[m[K
+[5.771s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:15:8:[m[K [01;36m[Knote: [m[Kdeclared here
+[5.771s]    15 | double [01;36m[Kdf[m[K(){
+[5.771s]       |        [01;36m[K^~[m[K
+[5.771s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:24:15:[m[K [01;31m[Kerror: [m[Ktoo many arguments to function ‘[01m[Kdouble fyt::auto_aim::f()[m[K’
+[5.771s]    24 |     x = x0 - [01;31m[Kf(x)[m[K / df(x);
+[5.771s]       |              [01;31m[K~^~~[m[K
+[5.771s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:12:8:[m[K [01;36m[Knote: [m[Kdeclared here
+[5.771s]    12 | double [01;36m[Kf[m[K(){
+[5.771s]       |        [01;36m[K^[m[K
+[5.771s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:24:23:[m[K [01;31m[Kerror: [m[Ktoo many arguments to function ‘[01m[Kdouble fyt::auto_aim::df()[m[K’
+[5.771s]    24 |     x = x0 - f(x) / [01;31m[Kdf(x)[m[K;
+[5.772s]       |                     [01;31m[K~~^~~[m[K
+[5.772s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:15:8:[m[K [01;36m[Knote: [m[Kdeclared here
+[5.772s]    15 | double [01;36m[Kdf[m[K(){
+[5.772s]       |        [01;36m[K^~[m[K
+[5.772s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:20:7:[m[K [01;31m[Kerror: [m[Kunused variable ‘[01m[Kiteration[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Werror=unused-variable]8;;[m[K]
+[5.772s]    20 |   int [01;31m[Kiteration[m[K = 0;
+[5.772s]       |       [01;31m[K^~~~~~~~~[m[K
+[8.751s] cc1plus: all warnings being treated as errors
+[8.820s] gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:135：CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o] 错误 1
+[8.820s] gmake[2]: *** 正在等待未完成的任务....
+[12.550s] gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+[12.551s] gmake: *** [Makefile:146：all] 错误 2
+[12.553s] Invoked command in '/home/ckl/RM/Combat_vision2026/build/armor_detector' returned '2': AMENT_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/armor_detector -- -j16 -l16

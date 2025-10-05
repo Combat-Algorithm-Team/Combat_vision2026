@@ -1,0 +1,405 @@
+[  7%] Built target gtest_main
+[ 14%] Built target gtest
+[ 22%] Built target armor_detector_node
+[ 25%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/armor_detector.cpp.o[0m
+[ 29%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/armor_detector_node.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/armor_pose_estimator.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/ba_solver.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/graph_optimizer.cpp.o[0m
+[ 48%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/light_corner_corrector.cpp.o[0m
+[ 51%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/number_classifier.cpp.o[0m
+[ 55%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/spiral.cpp.o[0m
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/light_corner_corrector.hpp:22[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/light_corner_corrector.cpp:16[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:123:57:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[Kconst[m[K’
+  123 |                                                         [01;31m[Kconst[m[K double &ex_d, const bool &clock) noexcept {
+      |                                                         [01;31m[K^~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:[m[K In static member function ‘[01m[Kstatic std::vector<_Tp> fyt::auto_aim::Armor::buildBoundPoints(const double&, const double&, const double&, const double&)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:125:14:[m[K [01;31m[Kerror: [m[Kthe address of ‘[01m[Kclock_t clock()[m[K’ will never be NULL [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-Werror=address]8;;[m[K]
+  125 |     if([01;31m[Kclock == 0[m[K){
+      |        [01;31m[K~~~~~~^~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:128:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kex_d[m[K’ was not declared in this scope
+  128 |              PointType(-[01;31m[Kex_d[m[K, (w + lw) / 2, h / 2),
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:130:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+  130 |     [01;31m[K}[m[K else {
+      |     [01;31m[K^[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:131:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kex_d[m[K’ was not declared in this scope
+  131 |       return{PointType(-[01;31m[Kex_d[m[K, (w + lw) / 2, -h / 2),
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:135:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+  135 |     [01;31m[K}[m[K
+      |     [01;31m[K^[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/graph_optimizer.hpp:37[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/graph_optimizer.cpp:17[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:123:57:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[Kconst[m[K’
+  123 |                                                         [01;31m[Kconst[m[K double &ex_d, const bool &clock) noexcept {
+      |                                                         [01;31m[K^~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:[m[K In static member function ‘[01m[Kstatic std::vector<T> fyt::auto_aim::Armor::buildBoundPoints(const double&, const double&, const double&, const double&)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:125:14:[m[K [01;31m[Kerror: [m[Kthe address of ‘[01m[Kclock_t clock()[m[K’ will never be NULL [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-Werror=address]8;;[m[K]
+  125 |     if([01;31m[Kclock == 0[m[K){
+      |        [01;31m[K~~~~~~^~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:128:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kex_d[m[K’ was not declared in this scope
+  128 |              PointType(-[01;31m[Kex_d[m[K, (w + lw) / 2, h / 2),
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:130:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+  130 |     [01;31m[K}[m[K else {
+      |     [01;31m[K^[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:131:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kex_d[m[K’ was not declared in this scope
+  131 |       return{PointType(-[01;31m[Kex_d[m[K, (w + lw) / 2, -h / 2),
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:135:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+  135 |     [01;31m[K}[m[K
+      |     [01;31m[K^[m[K
+cc1plus: all warnings being treated as errors
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:163：CMakeFiles/armor_detector.dir/src/light_corner_corrector.cpp.o] 错误 1
+gmake[2]: *** 正在等待未完成的任务....
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/graph_optimizer.hpp:37[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/ba_solver.hpp:40[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/ba_solver.cpp:17[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:123:57:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[Kconst[m[K’
+  123 |                                                         [01;31m[Kconst[m[K double &ex_d, const bool &clock) noexcept {
+      |                                                         [01;31m[K^~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:[m[K In static member function ‘[01m[Kstatic std::vector<_Tp> fyt::auto_aim::Armor::buildBoundPoints(const double&, const double&, const double&, const double&)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:125:14:[m[K [01;31m[Kerror: [m[Kthe address of ‘[01m[Kclock_t clock()[m[K’ will never be NULL [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-Werror=address]8;;[m[K]
+  125 |     if([01;31m[Kclock == 0[m[K){
+      |        [01;31m[K~~~~~~^~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:128:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kex_d[m[K’ was not declared in this scope
+  128 |              PointType(-[01;31m[Kex_d[m[K, (w + lw) / 2, h / 2),
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:130:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+  130 |     [01;31m[K}[m[K else {
+      |     [01;31m[K^[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:131:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kex_d[m[K’ was not declared in this scope
+  131 |       return{PointType(-[01;31m[Kex_d[m[K, (w + lw) / 2, -h / 2),
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:135:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+  135 |     [01;31m[K}[m[K
+      |     [01;31m[K^[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/light_corner_corrector.hpp:22[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_detector.hpp:31[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_detector.cpp:19[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:123:57:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[Kconst[m[K’
+  123 |                                                         [01;31m[Kconst[m[K double &ex_d, const bool &clock) noexcept {
+      |                                                         [01;31m[K^~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:[m[K In static member function ‘[01m[Kstatic std::vector<_Tp> fyt::auto_aim::Armor::buildBoundPoints(const double&, const double&, const double&, const double&)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:125:14:[m[K [01;31m[Kerror: [m[Kthe address of ‘[01m[Kclock_t clock()[m[K’ will never be NULL [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-Werror=address]8;;[m[K]
+  125 |     if([01;31m[Kclock == 0[m[K){
+      |        [01;31m[K~~~~~~^~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:128:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kex_d[m[K’ was not declared in this scope
+  128 |              PointType(-[01;31m[Kex_d[m[K, (w + lw) / 2, h / 2),
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:130:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+  130 |     [01;31m[K}[m[K else {
+      |     [01;31m[K^[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:131:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kex_d[m[K’ was not declared in this scope
+  131 |       return{PointType(-[01;31m[Kex_d[m[K, (w + lw) / 2, -h / 2),
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:135:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+  135 |     [01;31m[K}[m[K
+      |     [01;31m[K^[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/number_classifier.hpp:31[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/number_classifier.cpp:40[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:123:57:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[Kconst[m[K’
+  123 |                                                         [01;31m[Kconst[m[K double &ex_d, const bool &clock) noexcept {
+      |                                                         [01;31m[K^~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:[m[K In static member function ‘[01m[Kstatic std::vector<_Tp> fyt::auto_aim::Armor::buildBoundPoints(const double&, const double&, const double&, const double&)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:125:14:[m[K [01;31m[Kerror: [m[Kthe address of ‘[01m[Kclock_t clock()[m[K’ will never be NULL [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-Werror=address]8;;[m[K]
+  125 |     if([01;31m[Kclock == 0[m[K){
+      |        [01;31m[K~~~~~~^~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:128:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kex_d[m[K’ was not declared in this scope
+  128 |              PointType(-[01;31m[Kex_d[m[K, (w + lw) / 2, h / 2),
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:130:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+  130 |     [01;31m[K}[m[K else {
+      |     [01;31m[K^[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:131:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kex_d[m[K’ was not declared in this scope
+  131 |       return{PointType(-[01;31m[Kex_d[m[K, (w + lw) / 2, -h / 2),
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:135:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+  135 |     [01;31m[K}[m[K
+      |     [01;31m[K^[m[K
+cc1plus: all warnings being treated as errors
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:177：CMakeFiles/armor_detector.dir/src/number_classifier.cpp.o] 错误 1
+cc1plus: all warnings being treated as errors
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:79：CMakeFiles/armor_detector.dir/src/armor_detector.cpp.o] 错误 1
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:32[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:27[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:123:57:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[Kconst[m[K’
+  123 |                                                         [01;31m[Kconst[m[K double &ex_d, const bool &clock) noexcept {
+      |                                                         [01;31m[K^~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:[m[K In static member function ‘[01m[Kstatic std::vector<_Tp> fyt::auto_aim::Armor::buildBoundPoints(const double&, const double&, const double&, const double&)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:125:14:[m[K [01;31m[Kerror: [m[Kthe address of ‘[01m[Kclock_t clock()[m[K’ will never be NULL [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-Werror=address]8;;[m[K]
+  125 |     if([01;31m[Kclock == 0[m[K){
+      |        [01;31m[K~~~~~~^~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:128:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kex_d[m[K’ was not declared in this scope
+  128 |              PointType(-[01;31m[Kex_d[m[K, (w + lw) / 2, h / 2),
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:130:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+  130 |     [01;31m[K}[m[K else {
+      |     [01;31m[K^[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:131:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kex_d[m[K’ was not declared in this scope
+  131 |       return{PointType(-[01;31m[Kex_d[m[K, (w + lw) / 2, -h / 2),
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:135:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+  135 |     [01;31m[K}[m[K
+      |     [01;31m[K^[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:32[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:123:57:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[Kconst[m[K’
+  123 |                                                         [01;31m[Kconst[m[K double &ex_d, const bool &clock) noexcept {
+      |                                                         [01;31m[K^~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:[m[K In static member function ‘[01m[Kstatic std::vector<_Tp> fyt::auto_aim::Armor::buildBoundPoints(const double&, const double&, const double&, const double&)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:125:14:[m[K [01;31m[Kerror: [m[Kthe address of ‘[01m[Kclock_t clock()[m[K’ will never be NULL [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-Werror=address]8;;[m[K]
+  125 |     if([01;31m[Kclock == 0[m[K){
+      |        [01;31m[K~~~~~~^~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:128:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kex_d[m[K’ was not declared in this scope
+  128 |              PointType(-[01;31m[Kex_d[m[K, (w + lw) / 2, h / 2),
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:130:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+  130 |     [01;31m[K}[m[K else {
+      |     [01;31m[K^[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:131:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kex_d[m[K’ was not declared in this scope
+  131 |       return{PointType(-[01;31m[Kex_d[m[K, (w + lw) / 2, -h / 2),
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:135:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+  135 |     [01;31m[K}[m[K
+      |     [01;31m[K^[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:32[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_pose_estimator.hpp:32[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_pose_estimator.cpp:15[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:123:57:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[Kconst[m[K’
+  123 |                                                         [01;31m[Kconst[m[K double &ex_d, const bool &clock) noexcept {
+      |                                                         [01;31m[K^~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:[m[K In static member function ‘[01m[Kstatic std::vector<_Tp> fyt::auto_aim::Armor::buildBoundPoints(const double&, const double&, const double&, const double&)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:125:14:[m[K [01;31m[Kerror: [m[Kthe address of ‘[01m[Kclock_t clock()[m[K’ will never be NULL [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-Werror=address]8;;[m[K]
+  125 |     if([01;31m[Kclock == 0[m[K){
+      |        [01;31m[K~~~~~~^~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:128:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kex_d[m[K’ was not declared in this scope
+  128 |              PointType(-[01;31m[Kex_d[m[K, (w + lw) / 2, h / 2),
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:130:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+  130 |     [01;31m[K}[m[K else {
+      |     [01;31m[K^[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:131:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kex_d[m[K’ was not declared in this scope
+  131 |       return{PointType(-[01;31m[Kex_d[m[K, (w + lw) / 2, -h / 2),
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:135:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+  135 |     [01;31m[K}[m[K
+      |     [01;31m[K^[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:[m[K At global scope:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:12:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix3d[m[K’ in namespace ‘[01m[KEigen[m[K’ does not name a type; did you mean ‘[01m[KMatrix3d[m[K’?
+   12 | Eigen::[01;31m[Kmatrix3d[m[K
+      |        [01;31m[K^~~~~~~~[m[K
+      |        [32m[KMatrix3d[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:56:6:[m[K [01;31m[Kerror: [m[K‘[01m[KBoundsolver[m[K’ has not been declared
+   56 | void [01;31m[KBoundsolver[m[K::setImagePoints(bool clock){
+      |      [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:[m[K In function ‘[01m[Kvoid fyt::auto_aim::setImagePoints(bool)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:57:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ is not a member of ‘[01m[Kcv[m[K’
+   57 |   cv::[01;31m[Kvector[m[K<cv::Point2f> points;
+      |       [01;31m[K^~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:57:7:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/usr/include/c++/11/vector:67[m[K,
+                 from [01m[K/usr/include/c++/11/functional:62[m[K,
+                 from [01m[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/11/algorithm:74[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:4[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/stl_vector.h:389:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::vector[m[K’
+  389 |     class [01;36m[Kvector[m[K : protected _Vector_base<_Tp, _Alloc>
+      |           [01;36m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/functional:62[m[K,
+                 from [01m[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13[m[K,
+                 from [01m[K/usr/include/c++/11/algorithm:74[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:4[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[01m[K/usr/include/c++/11/vector:86:13:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::pmr::vector[m[K’
+   86 |       using [01;36m[Kvector[m[K = std::vector<_Tp, polymorphic_allocator<_Tp>>;
+      |             [01;36m[K^~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:57:25:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   57 |   cv::vector<cv::Point2f[01;31m[K>[m[K points;
+      |                         [01;31m[K^[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:57:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kpoints[m[K’ was not declared in this scope; did you mean ‘[01m[Kprintf[m[K’?
+   57 |   cv::vector<cv::Point2f> [01;31m[Kpoints[m[K;
+      |                           [01;31m[K^~~~~~[m[K
+      |                           [32m[Kprintf[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:58:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kboundaries[m[K’ was not declared in this scope; did you mean ‘[01m[Kboundary[m[K’?
+   58 |   for(auto boundary : [01;31m[Kboundaries[m[K){
+      |                       [01;31m[K^~~~~~~~~~[m[K
+      |                       [32m[Kboundary[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:61:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kimage_points[m[K’ was not declared in this scope; did you mean ‘[01m[KsetImagePoints[m[K’?
+   61 |       [01;31m[Kimage_points[m[K.empalce_back(points[0]);
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+      |       [32m[KsetImagePoints[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:64:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kimage_points[m[K’ was not declared in this scope; did you mean ‘[01m[KsetImagePoints[m[K’?
+   64 |       [01;31m[Kimage_points[m[K.empalce_back(points[2]);
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+      |       [32m[KsetImagePoints[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:[m[K In member function ‘[01m[Kvoid fyt::auto_aim::BoundSolver::reprojection(Eigen::Vector3d, Eigen::Matrix3d, cv::Mat)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:110:56:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Keigen2cv(Eigen::Vector3d&)[m[K’
+  110 |   std::vector<cv::Point3f> bound_points  = [01;31m[Kcv::eigen2cv(object_points)[m[K;
+      |                                            [01;31m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/utils.hpp:23[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:37[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:100:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, int _layout> void cv::eigen2cv(const Eigen::Tensor<_Tp, 3, _layout>&, cv::OutputArray)[m[K’
+  100 | void [01;36m[Keigen2cv[m[K( const Eigen::Tensor<_Tp, 3, _layout> &src, OutputArray dst )
+      |      [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:100:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:110:56:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Vector3d[m[K’ {aka ‘[01m[KEigen::Matrix<double, 3, 1>[m[K’} is not derived from ‘[01m[Kconst Eigen::Tensor<_Tp, 3, _layout>[m[K’
+  110 |   std::vector<cv::Point3f> bound_points  = [01;36m[Kcv::eigen2cv(object_points)[m[K;
+      |                                            [01;36m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/utils.hpp:23[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:37[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:185:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, int _rows, int _cols, int _options, int _maxRows, int _maxCols> void cv::eigen2cv(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&, cv::OutputArray)[m[K’
+  185 | void [01;36m[Keigen2cv[m[K( const Eigen::Matrix<_Tp, _rows, _cols, _options, _maxRows, _maxCols>& src, OutputArray dst )
+      |      [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:185:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:110:56:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+  110 |   std::vector<cv::Point3f> bound_points  = [01;36m[Kcv::eigen2cv(object_points)[m[K;
+      |                                            [01;36m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/utils.hpp:23[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:37[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:203:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, int _rows, int _cols, int _options, int _maxRows, int _maxCols> void cv::eigen2cv(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&, cv::Matx<_Tp, m, n>&)[m[K’
+  203 | void [01;36m[Keigen2cv[m[K( const Eigen::Matrix<_Tp, _rows, _cols, _options, _maxRows, _maxCols>& src,
+      |      [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:203:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:110:56:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+  110 |   std::vector<cv::Point3f> bound_points  = [01;36m[Kcv::eigen2cv(object_points)[m[K;
+      |                                            [01;36m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:111:27:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Keigen2cv(Eigen::Matrix3d&)[m[K’
+  111 |   auto rvec = [01;31m[Kcv::eigen2cv(R_camera_armor)[m[K;
+      |               [01;31m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/utils.hpp:23[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:37[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:100:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, int _layout> void cv::eigen2cv(const Eigen::Tensor<_Tp, 3, _layout>&, cv::OutputArray)[m[K’
+  100 | void [01;36m[Keigen2cv[m[K( const Eigen::Tensor<_Tp, 3, _layout> &src, OutputArray dst )
+      |      [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:100:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:111:27:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Matrix3d[m[K’ {aka ‘[01m[KEigen::Matrix<double, 3, 3>[m[K’} is not derived from ‘[01m[Kconst Eigen::Tensor<_Tp, 3, _layout>[m[K’
+  111 |   auto rvec = [01;36m[Kcv::eigen2cv(R_camera_armor)[m[K;
+      |               [01;36m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/utils.hpp:23[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:37[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:185:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, int _rows, int _cols, int _options, int _maxRows, int _maxCols> void cv::eigen2cv(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&, cv::OutputArray)[m[K’
+  185 | void [01;36m[Keigen2cv[m[K( const Eigen::Matrix<_Tp, _rows, _cols, _options, _maxRows, _maxCols>& src, OutputArray dst )
+      |      [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:185:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:111:27:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+  111 |   auto rvec = [01;36m[Kcv::eigen2cv(R_camera_armor)[m[K;
+      |               [01;36m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/utils.hpp:23[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:37[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:203:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, int _rows, int _cols, int _options, int _maxRows, int _maxCols> void cv::eigen2cv(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&, cv::Matx<_Tp, m, n>&)[m[K’
+  203 | void [01;36m[Keigen2cv[m[K( const Eigen::Matrix<_Tp, _rows, _cols, _options, _maxRows, _maxCols>& src,
+      |      [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:203:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:111:27:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+  111 |   auto rvec = [01;36m[Kcv::eigen2cv(R_camera_armor)[m[K;
+      |               [01;36m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:112:27:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Keigen2cv(cv::Mat&)[m[K’
+  112 |   auto tvec = [01;31m[Kcv::eigen2cv(t_camera_armor)[m[K;
+      |               [01;31m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/utils.hpp:23[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:37[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:100:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, int _layout> void cv::eigen2cv(const Eigen::Tensor<_Tp, 3, _layout>&, cv::OutputArray)[m[K’
+  100 | void [01;36m[Keigen2cv[m[K( const Eigen::Tensor<_Tp, 3, _layout> &src, OutputArray dst )
+      |      [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:100:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:112:27:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Mat[m[K’ is not derived from ‘[01m[Kconst Eigen::Tensor<_Tp, 3, _layout>[m[K’
+  112 |   auto tvec = [01;36m[Kcv::eigen2cv(t_camera_armor)[m[K;
+      |               [01;36m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/utils.hpp:23[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:37[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:185:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, int _rows, int _cols, int _options, int _maxRows, int _maxCols> void cv::eigen2cv(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&, cv::OutputArray)[m[K’
+  185 | void [01;36m[Keigen2cv[m[K( const Eigen::Matrix<_Tp, _rows, _cols, _options, _maxRows, _maxCols>& src, OutputArray dst )
+      |      [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:185:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:112:27:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Mat[m[K’ is not derived from ‘[01m[Kconst Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>[m[K’
+  112 |   auto tvec = [01;36m[Kcv::eigen2cv(t_camera_armor)[m[K;
+      |               [01;36m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/utils.hpp:23[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:37[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:203:6:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, int _rows, int _cols, int _options, int _maxRows, int _maxCols> void cv::eigen2cv(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&, cv::Matx<_Tp, m, n>&)[m[K’
+  203 | void [01;36m[Keigen2cv[m[K( const Eigen::Matrix<_Tp, _rows, _cols, _options, _maxRows, _maxCols>& src,
+      |      [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/opencv4/opencv2/core/eigen.hpp:203:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:112:27:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcv::Mat[m[K’ is not derived from ‘[01m[Kconst Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>[m[K’
+  112 |   auto tvec = [01;36m[Kcv::eigen2cv(t_camera_armor)[m[K;
+      |               [01;36m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/light_corner_corrector.hpp:22[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_detector.hpp:31[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_detector_node.hpp:46[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_detector_node.cpp:47[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:123:57:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[Kconst[m[K’
+  123 |                                                         [01;31m[Kconst[m[K double &ex_d, const bool &clock) noexcept {
+      |                                                         [01;31m[K^~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:[m[K In static member function ‘[01m[Kstatic std::vector<_Tp> fyt::auto_aim::Armor::buildBoundPoints(const double&, const double&, const double&, const double&)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:125:14:[m[K [01;31m[Kerror: [m[Kthe address of ‘[01m[Kclock_t clock()[m[K’ will never be NULL [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Waddress-Werror=address]8;;[m[K]
+  125 |     if([01;31m[Kclock == 0[m[K){
+      |        [01;31m[K~~~~~~^~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:128:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kex_d[m[K’ was not declared in this scope
+  128 |              PointType(-[01;31m[Kex_d[m[K, (w + lw) / 2, h / 2),
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:130:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+  130 |     [01;31m[K}[m[K else {
+      |     [01;31m[K^[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:131:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kex_d[m[K’ was not declared in this scope
+  131 |       return{PointType(-[01;31m[Kex_d[m[K, (w + lw) / 2, -h / 2),
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:135:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+  135 |     [01;31m[K}[m[K
+      |     [01;31m[K^[m[K
+cc1plus: all warnings being treated as errors
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:135：CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o] 错误 1
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_pose_estimator.cpp:[m[K In member function ‘[01m[Kstd::vector<rm_interfaces::msg::Armor_<std::allocator<void> > > fyt::auto_aim::ArmorPoseEstimator::extractArmorPoses(const std::vector<fyt::auto_aim::Armor>&, Eigen::Matrix3d)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_pose_estimator.cpp:83:37:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kconst char [11][m[K’ to ‘[01m[KEigen::Vector3d[m[K’ {aka ‘[01m[KEigen::Matrix<double, 3, 1>[m[K’}
+   83 |         bound_solver_->reprojection([01;31m[K"small_left"[m[K, rvecs[0], tvecs[0]);
+      |                                     [01;31m[K^~~~~~~~~~~~[m[K
+      |                                     [01;31m[K|[m[K
+      |                                     [01;31m[Kconst char [11][m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_pose_estimator.hpp:32[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_pose_estimator.cpp:15[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:47:39:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid fyt::auto_aim::BoundSolver::reprojection(Eigen::Vector3d, Eigen::Matrix3d, cv::Mat)[m[K’
+   47 |     void reprojection([01;36m[KEigen::Vector3d object_points[m[K, Eigen::Matrix3d R_camera_armor, cv::Mat t_camera_armor);
+      |                       [01;36m[K~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_pose_estimator.cpp:84:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass fyt::auto_aim::BoundSolver[m[K’ has no member named ‘[01m[KsolverBound[m[K’
+   84 |         R = bound_solver_ ->[01;31m[KsolverBound[m[K(armor, t, R, R_imu_camera);
+      |                             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_detector_node.cpp:[m[K In constructor ‘[01m[Kfyt::auto_aim::ArmorDetectorNode::ArmorDetectorNode(const rclcpp::NodeOptions&)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_detector_node.cpp:67:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kuse_bound_[m[K’ was not declared in this scope; did you mean ‘[01m[Kuse_ba_[m[K’?
+   67 |   [01;31m[Kuse_bound_[m[K = this->declare_parameter("use_bound", true);
+      |   [01;31m[K^~~~~~~~~~[m[K
+      |   [32m[Kuse_ba_[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_detector_node.cpp:[m[K In lambda function:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_detector_node.cpp:124:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kuse_bound_[m[K’ is not captured
+  124 |         armor_pose_estimator_->enableBound([01;31m[Kuse_bound_[m[K);
+      |                                            [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_detector_node.cpp:117:12:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+  117 |       [this[01;36m[K][m[K(sensor_msgs::msg::CameraInfo::SharedPtr camera_info) {
+      |            [01;36m[K^[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_detector_node.cpp:67:3:[m[K [01;36m[Knote: [m[K‘[01m[K<typeprefixerror>use_bound_[m[K’ declared here
+   67 |   [01;36m[Kuse_bound_[m[K = this->declare_parameter("use_bound", true);
+      |   [01;36m[K^~~~~~~~~~[m[K
+cc1plus: all warnings being treated as errors
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:149：CMakeFiles/armor_detector.dir/src/graph_optimizer.cpp.o] 错误 1
+cc1plus: all warnings being treated as errors
+cc1plus: all warnings being treated as errors
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:191：CMakeFiles/armor_detector.dir/src/spiral.cpp.o] 错误 1
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:107：CMakeFiles/armor_detector.dir/src/armor_pose_estimator.cpp.o] 错误 1
+cc1plus: all warnings being treated as errors
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:121：CMakeFiles/armor_detector.dir/src/ba_solver.cpp.o] 错误 1
+cc1plus: all warnings being treated as errors
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:93：CMakeFiles/armor_detector.dir/src/armor_detector_node.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

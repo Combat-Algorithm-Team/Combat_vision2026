@@ -1,0 +1,4 @@
+[ 14%] Built target gtest
+[ 14%] Built target gtest_main
+[ 22%] Built target armor_detector_node
+[ 25%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o[0m

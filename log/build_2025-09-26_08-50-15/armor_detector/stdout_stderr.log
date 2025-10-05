@@ -1,0 +1,38 @@
+[ 16%] Built target gtest
+[ 16%] Built target gtest_main
+[ 24%] Built target armor_detector_node
+[ 28%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/spiral.cpp.o[0m
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:36[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:40:10:[m[K [01;31m[Kerror: [m[Kexpected identifier before ‘[01m[K::[m[K’ token
+   40 | namespace[01;31m[K::[m[Kfyt::auto_aim{
+      |          [01;31m[K^~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:40:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kauto_aim[m[K’ in namespace ‘[01m[Kfyt[m[K’ does not name a type
+   40 | namespace::fyt::[01;31m[Kauto_aim[m[K{
+      |                 [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/light_corner_corrector.hpp:22[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_detector.hpp:31[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:27[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:34:16:[m[K [01;36m[Knote: [m[K‘[01m[Kfyt::auto_aim[m[K’ declared here
+   34 | namespace fyt::[01;36m[Kauto_aim[m[K {
+      |                [01;36m[K^~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:86:12:[m[K [01;31m[Kerror: [m[K‘[01m[KreadImages[m[K’ was not declared in this scope
+   86 |   images = [01;31m[KreadImages[m[K(folder_path);
+      |            [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:89:15:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KresizeWindow(const char [6], cv::Mat&, int)[m[K’
+   89 |   [01;31m[KresizeWindow("armor", img, 50)[m[K;
+      |   [01;31m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:24[m[K:
+[01m[K/usr/include/opencv4/opencv2/highgui.hpp:429:19:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::resizeWindow(const String&, int, int)[m[K’
+  429 | CV_EXPORTS_W void [01;36m[KresizeWindow[m[K(const String& winname, int width, int height);
+      |                   [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/usr/include/opencv4/opencv2/highgui.hpp:429:59:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kcv::Mat[m[K’ to ‘[01m[Kint[m[K’
+  429 | CV_EXPORTS_W void resizeWindow(const String& winname, [01;36m[Kint width[m[K, int height);
+      |                                                       [01;36m[K~~~~^~~~~[m[K
+[01m[K/usr/include/opencv4/opencv2/highgui.hpp:435:19:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::resizeWindow(const String&, const Size&)[m[K’
+  435 | CV_EXPORTS_W void [01;36m[KresizeWindow[m[K(const String& winname, const cv::Size& size);
+      |                   [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/usr/include/opencv4/opencv2/highgui.hpp:435:19:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 3 provided
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:177：CMakeFiles/armor_detector.dir/src/spiral.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

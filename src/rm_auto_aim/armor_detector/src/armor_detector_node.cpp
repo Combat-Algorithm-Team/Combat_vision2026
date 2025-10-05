@@ -64,6 +64,7 @@ ArmorDetectorNode::ArmorDetectorNode(const rclcpp::NodeOptions &options)
 
   // Tricks to make pose more accurate
   use_ba_ = this->declare_parameter("use_ba", true);
+  use_bound_ = this->declare_parameter("use_bound", false);
 
   // Armors Publisher
   armors_pub_ = this->create_publisher<rm_interfaces::msg::Armors>(
@@ -77,7 +78,7 @@ ArmorDetectorNode::ArmorDetectorNode(const rclcpp::NodeOptions &options)
   // See http://wiki.ros.org/rviz/DisplayTypes/Marker
   armor_marker_.ns = "armors";
   armor_marker_.action = visualization_msgs::msg::Marker::ADD;
-  armor_marker_.type = visualization_msgs::msg::Marker::CUBE;
+  armor_marker_.type = visualization_msgs::msg::Marker::CUBE;   
   armor_marker_.scale.x = 0.03;
   armor_marker_.scale.y = 0.15;
   armor_marker_.scale.z = 0.12;
@@ -120,6 +121,7 @@ ArmorDetectorNode::ArmorDetectorNode(const rclcpp::NodeOptions &options)
         // Setup armor pose solver
         armor_pose_estimator_ = std::make_unique<ArmorPoseEstimator>(cam_info_);
         armor_pose_estimator_->enableBA(use_ba_);
+        armor_pose_estimator_->enableBound(use_bound_);
         cam_info_sub_.reset();
       });
 

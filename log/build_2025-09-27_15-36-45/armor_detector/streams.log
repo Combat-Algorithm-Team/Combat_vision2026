@@ -1,0 +1,176 @@
+[0.019s] Invoking command in '/home/ckl/RM/Combat_vision2026/build/armor_detector': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/armor_detector -- -j16 -l16
+[0.054s] [ 14%] Built target gtest
+[0.054s] [ 14%] Built target gtest_main
+[0.057s] [ 22%] Built target armor_detector_node
+[0.113s] [ 25%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/armor_detector_node.cpp.o[0m
+[0.114s] [ 29%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/armor_pose_estimator.cpp.o[0m
+[0.114s] [ 33%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o[0m
+[0.115s] [ 37%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/spiral.cpp.o[0m
+[4.132s] In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[4.132s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:45:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kstring[m[K’ does not name a type; did you mean ‘[01m[Kstdin[m[K’?
+[4.132s]    45 |     void BoundSolver::setBoundPoints(const [01;31m[Kstring[m[K& armor_type, const std::vector<cv::Point3f> bound_points);
+[4.132s]       |                                            [01;31m[K^~~~~~[m[K
+[4.132s]       |                                            [32m[Kstdin[m[K
+[4.132s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:45:10:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[Kfyt::auto_aim::BoundSolver::[m[K’ on member ‘[01m[KsetBoundPoints[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[4.132s]    45 |     void [01;31m[KBoundSolver[m[K::setBoundPoints(const string& armor_type, const std::vector<cv::Point3f> bound_points);
+[4.133s]       |          [01;31m[K^~~~~~~~~~~[m[K
+[4.133s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:46:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kstring[m[K’ does not name a type; did you mean ‘[01m[Kstdin[m[K’?
+[4.133s]    46 |     void BoundSolver::reprojection(const [01;31m[Kstring[m[K& bound_type, cv::Mat rvec, cv::Mat tvec);
+[4.133s]       |                                          [01;31m[K^~~~~~[m[K
+[4.133s]       |                                          [32m[Kstdin[m[K
+[4.134s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:46:10:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[Kfyt::auto_aim::BoundSolver::[m[K’ on member ‘[01m[Kreprojection[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[4.134s]    46 |     void [01;31m[KBoundSolver[m[K::reprojection(const string& bound_type, cv::Mat rvec, cv::Mat tvec);
+[4.134s]       |          [01;31m[K^~~~~~~~~~~[m[K
+[4.135s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:47:10:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[Kfyt::auto_aim::BoundSolver::[m[K’ on member ‘[01m[KdrawProjection[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[4.135s]    47 |     void [01;31m[KBoundSolver[m[K::drawProjection(cv::Mat img);
+[4.135s]       |          [01;31m[K^~~~~~~~~~~[m[K
+[4.150s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:25:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kstring[m[K’ does not name a type; did you mean ‘[01m[Kstdin[m[K’?
+[4.150s]    25 | void BoundSolver::setBoundPoints(const [01;31m[Kstring[m[K& bound_type, const std::vector<cv::Point3f> bound_points){
+[4.150s]       |                                        [01;31m[K^~~~~~[m[K
+[4.150s]       |                                        [32m[Kstdin[m[K
+[4.150s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:[m[K In member function ‘[01m[Kvoid fyt::auto_aim::BoundSolver::setBoundPoints(const int&, std::vector<cv::Point3_<float> >)[m[K’:
+[4.150s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:26:20:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator[][m[K’ (operand types are ‘[01m[Kstd::unordered_map<std::__cxx11::basic_string<char>, std::vector<cv::Point3_<float> > >[m[K’ and ‘[01m[Kconst int[m[K’)
+[4.150s]    26 |   bound_points_map_[01;31m[K[[m[Kbound_type] = bound_points;
+[4.150s]       |                    [01;31m[K^[m[K
+[4.150s] In file included from [01m[K/usr/include/c++/11/unordered_map:47[m[K,
+[4.150s]                  from [01m[K/usr/include/c++/11/functional:61[m[K,
+[4.151s]                  from [01m[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13[m[K,
+[4.151s]                  from [01m[K/usr/include/c++/11/algorithm:74[m[K,
+[4.151s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:4[m[K,
+[4.151s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[4.151s] [01m[K/usr/include/c++/11/bits/unordered_map.h:979:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::mapped_type& std::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::operator[](const key_type&) [with _Key = std::__cxx11::basic_string<char>; _Tp = std::vector<cv::Point3_<float> >; _Hash = std::hash<std::__cxx11::basic_string<char> >; _Pred = std::equal_to<std::__cxx11::basic_string<char> >; _Alloc = std::allocator<std::pair<const std::__cxx11::basic_string<char>, std::vector<cv::Point3_<float> > > >; std::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::mapped_type = std::vector<cv::Point3_<float> >; std::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::key_type = std::__cxx11::basic_string<char>][m[K’
+[4.151s]   979 |       [01;36m[Koperator[m[K[](const key_type& __k)
+[4.151s]       |       [01;36m[K^~~~~~~~[m[K
+[4.151s] [01m[K/usr/include/c++/11/bits/unordered_map.h:979:34:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst int[m[K’ to ‘[01m[Kconst key_type&[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>&[m[K’}
+[4.151s]   979 |       operator[]([01;36m[Kconst key_type& __k[m[K)
+[4.151s]       |                  [01;36m[K~~~~~~~~~~~~~~~~^~~[m[K
+[4.151s] [01m[K/usr/include/c++/11/bits/unordered_map.h:983:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::mapped_type& std::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::operator[](std::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::key_type&&) [with _Key = std::__cxx11::basic_string<char>; _Tp = std::vector<cv::Point3_<float> >; _Hash = std::hash<std::__cxx11::basic_string<char> >; _Pred = std::equal_to<std::__cxx11::basic_string<char> >; _Alloc = std::allocator<std::pair<const std::__cxx11::basic_string<char>, std::vector<cv::Point3_<float> > > >; std::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::mapped_type = std::vector<cv::Point3_<float> >; std::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::key_type = std::__cxx11::basic_string<char>][m[K’
+[4.151s]   983 |       [01;36m[Koperator[m[K[](key_type&& __k)
+[4.151s]       |       [01;36m[K^~~~~~~~[m[K
+[4.152s] [01m[K/usr/include/c++/11/bits/unordered_map.h:983:29:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst int[m[K’ to ‘[01m[Kstd::unordered_map<std::__cxx11::basic_string<char>, std::vector<cv::Point3_<float> > >::key_type&&[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>&&[m[K’}
+[4.152s]   983 |       operator[]([01;36m[Kkey_type&& __k[m[K)
+[4.152s]       |                  [01;36m[K~~~~~~~~~~~^~~[m[K
+[4.155s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:[m[K At global scope:
+[4.155s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:47:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kstring[m[K’ does not name a type; did you mean ‘[01m[Kstdin[m[K’?
+[4.155s]    47 | void BoundSolver::reprojection(const [01;31m[Kstring[m[K& bound_type, cv::Mat rvec, cv::Mat tvec){
+[4.156s]       |                                      [01;31m[K^~~~~~[m[K
+[4.156s]       |                                      [32m[Kstdin[m[K
+[4.156s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:[m[K In member function ‘[01m[Kvoid fyt::auto_aim::BoundSolver::reprojection(const int&, cv::Mat, cv::Mat)[m[K’:
+[4.156s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:48:60:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator[][m[K’ (operand types are ‘[01m[Kstd::unordered_map<std::__cxx11::basic_string<char>, std::vector<cv::Point3_<float> > >[m[K’ and ‘[01m[Kconst int[m[K’)
+[4.156s]    48 |   std::vector<cv::Point3f> bound_points = bound_points_map_[01;31m[K[[m[Kbound_type];
+[4.156s]       |                                                            [01;31m[K^[m[K
+[4.156s] In file included from [01m[K/usr/include/c++/11/unordered_map:47[m[K,
+[4.156s]                  from [01m[K/usr/include/c++/11/functional:61[m[K,
+[4.156s]                  from [01m[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:13[m[K,
+[4.156s]                  from [01m[K/usr/include/c++/11/algorithm:74[m[K,
+[4.156s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:4[m[K,
+[4.156s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[4.157s] [01m[K/usr/include/c++/11/bits/unordered_map.h:979:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::mapped_type& std::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::operator[](const key_type&) [with _Key = std::__cxx11::basic_string<char>; _Tp = std::vector<cv::Point3_<float> >; _Hash = std::hash<std::__cxx11::basic_string<char> >; _Pred = std::equal_to<std::__cxx11::basic_string<char> >; _Alloc = std::allocator<std::pair<const std::__cxx11::basic_string<char>, std::vector<cv::Point3_<float> > > >; std::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::mapped_type = std::vector<cv::Point3_<float> >; std::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::key_type = std::__cxx11::basic_string<char>][m[K’
+[4.157s]   979 |       [01;36m[Koperator[m[K[](const key_type& __k)
+[4.157s]       |       [01;36m[K^~~~~~~~[m[K
+[4.157s] [01m[K/usr/include/c++/11/bits/unordered_map.h:979:34:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst int[m[K’ to ‘[01m[Kconst key_type&[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>&[m[K’}
+[4.157s]   979 |       operator[]([01;36m[Kconst key_type& __k[m[K)
+[4.157s]       |                  [01;36m[K~~~~~~~~~~~~~~~~^~~[m[K
+[4.157s] [01m[K/usr/include/c++/11/bits/unordered_map.h:983:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::mapped_type& std::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::operator[](std::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::key_type&&) [with _Key = std::__cxx11::basic_string<char>; _Tp = std::vector<cv::Point3_<float> >; _Hash = std::hash<std::__cxx11::basic_string<char> >; _Pred = std::equal_to<std::__cxx11::basic_string<char> >; _Alloc = std::allocator<std::pair<const std::__cxx11::basic_string<char>, std::vector<cv::Point3_<float> > > >; std::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::mapped_type = std::vector<cv::Point3_<float> >; std::unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>::key_type = std::__cxx11::basic_string<char>][m[K’
+[4.157s]   983 |       [01;36m[Koperator[m[K[](key_type&& __k)
+[4.157s]       |       [01;36m[K^~~~~~~~[m[K
+[4.157s] [01m[K/usr/include/c++/11/bits/unordered_map.h:983:29:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst int[m[K’ to ‘[01m[Kstd::unordered_map<std::__cxx11::basic_string<char>, std::vector<cv::Point3_<float> > >::key_type&&[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>&&[m[K’}
+[4.157s]   983 |       operator[]([01;36m[Kkey_type&& __k[m[K)
+[4.157s]       |                  [01;36m[K~~~~~~~~~~~^~~[m[K
+[4.262s] In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:27[m[K:
+[4.262s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:45:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kstring[m[K’ does not name a type; did you mean ‘[01m[Kstdin[m[K’?
+[4.262s]    45 |     void BoundSolver::setBoundPoints(const [01;31m[Kstring[m[K& armor_type, const std::vector<cv::Point3f> bound_points);
+[4.262s]       |                                            [01;31m[K^~~~~~[m[K
+[4.262s]       |                                            [32m[Kstdin[m[K
+[4.262s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:45:10:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[Kfyt::auto_aim::BoundSolver::[m[K’ on member ‘[01m[KsetBoundPoints[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[4.262s]    45 |     void [01;31m[KBoundSolver[m[K::setBoundPoints(const string& armor_type, const std::vector<cv::Point3f> bound_points);
+[4.262s]       |          [01;31m[K^~~~~~~~~~~[m[K
+[4.265s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:46:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kstring[m[K’ does not name a type; did you mean ‘[01m[Kstdin[m[K’?
+[4.265s]    46 |     void BoundSolver::reprojection(const [01;31m[Kstring[m[K& bound_type, cv::Mat rvec, cv::Mat tvec);
+[4.265s]       |                                          [01;31m[K^~~~~~[m[K
+[4.265s]       |                                          [32m[Kstdin[m[K
+[4.265s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:46:10:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[Kfyt::auto_aim::BoundSolver::[m[K’ on member ‘[01m[Kreprojection[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[4.265s]    46 |     void [01;31m[KBoundSolver[m[K::reprojection(const string& bound_type, cv::Mat rvec, cv::Mat tvec);
+[4.265s]       |          [01;31m[K^~~~~~~~~~~[m[K
+[4.265s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:47:10:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[Kfyt::auto_aim::BoundSolver::[m[K’ on member ‘[01m[KdrawProjection[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[4.265s]    47 |     void [01;31m[KBoundSolver[m[K::drawProjection(cv::Mat img);
+[4.265s]       |          [01;31m[K^~~~~~~~~~~[m[K
+[4.579s] In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_pose_estimator.hpp:32[m[K,
+[4.579s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_pose_estimator.cpp:15[m[K:
+[4.579s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:45:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kstring[m[K’ does not name a type; did you mean ‘[01m[Kstdin[m[K’?
+[4.580s]    45 |     void BoundSolver::setBoundPoints(const [01;31m[Kstring[m[K& armor_type, const std::vector<cv::Point3f> bound_points);
+[4.580s]       |                                            [01;31m[K^~~~~~[m[K
+[4.580s]       |                                            [32m[Kstdin[m[K
+[4.580s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:45:10:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[Kfyt::auto_aim::BoundSolver::[m[K’ on member ‘[01m[KsetBoundPoints[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[4.580s]    45 |     void [01;31m[KBoundSolver[m[K::setBoundPoints(const string& armor_type, const std::vector<cv::Point3f> bound_points);
+[4.580s]       |          [01;31m[K^~~~~~~~~~~[m[K
+[4.582s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:46:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kstring[m[K’ does not name a type; did you mean ‘[01m[Kstdin[m[K’?
+[4.582s]    46 |     void BoundSolver::reprojection(const [01;31m[Kstring[m[K& bound_type, cv::Mat rvec, cv::Mat tvec);
+[4.582s]       |                                          [01;31m[K^~~~~~[m[K
+[4.582s]       |                                          [32m[Kstdin[m[K
+[4.582s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:46:10:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[Kfyt::auto_aim::BoundSolver::[m[K’ on member ‘[01m[Kreprojection[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[4.582s]    46 |     void [01;31m[KBoundSolver[m[K::reprojection(const string& bound_type, cv::Mat rvec, cv::Mat tvec);
+[4.582s]       |          [01;31m[K^~~~~~~~~~~[m[K
+[4.582s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:47:10:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[Kfyt::auto_aim::BoundSolver::[m[K’ on member ‘[01m[KdrawProjection[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[4.582s]    47 |     void [01;31m[KBoundSolver[m[K::drawProjection(cv::Mat img);
+[4.582s]       |          [01;31m[K^~~~~~~~~~~[m[K
+[4.763s] gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:135：CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o] 错误 1
+[4.763s] gmake[2]: *** 正在等待未完成的任务....
+[4.898s] In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_pose_estimator.hpp:32[m[K,
+[4.898s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_detector_node.hpp:47[m[K,
+[4.898s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_detector_node.cpp:47[m[K:
+[4.898s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:45:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kstring[m[K’ does not name a type; did you mean ‘[01m[Kstdin[m[K’?
+[4.898s]    45 |     void BoundSolver::setBoundPoints(const [01;31m[Kstring[m[K& armor_type, const std::vector<cv::Point3f> bound_points);
+[4.899s]       |                                            [01;31m[K^~~~~~[m[K
+[4.899s]       |                                            [32m[Kstdin[m[K
+[4.899s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:45:10:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[Kfyt::auto_aim::BoundSolver::[m[K’ on member ‘[01m[KsetBoundPoints[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[4.899s]    45 |     void [01;31m[KBoundSolver[m[K::setBoundPoints(const string& armor_type, const std::vector<cv::Point3f> bound_points);
+[4.899s]       |          [01;31m[K^~~~~~~~~~~[m[K
+[4.901s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:46:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kstring[m[K’ does not name a type; did you mean ‘[01m[Kstdin[m[K’?
+[4.901s]    46 |     void BoundSolver::reprojection(const [01;31m[Kstring[m[K& bound_type, cv::Mat rvec, cv::Mat tvec);
+[4.901s]       |                                          [01;31m[K^~~~~~[m[K
+[4.901s]       |                                          [32m[Kstdin[m[K
+[4.901s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:46:10:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[Kfyt::auto_aim::BoundSolver::[m[K’ on member ‘[01m[Kreprojection[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[4.901s]    46 |     void [01;31m[KBoundSolver[m[K::reprojection(const string& bound_type, cv::Mat rvec, cv::Mat tvec);
+[4.901s]       |          [01;31m[K^~~~~~~~~~~[m[K
+[4.901s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:47:10:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[Kfyt::auto_aim::BoundSolver::[m[K’ on member ‘[01m[KdrawProjection[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[4.901s]    47 |     void [01;31m[KBoundSolver[m[K::drawProjection(cv::Mat img);
+[4.901s]       |          [01;31m[K^~~~~~~~~~~[m[K
+[5.200s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_pose_estimator.cpp:[m[K In constructor ‘[01m[Kfyt::auto_aim::ArmorPoseEstimator::ArmorPoseEstimator(sensor_msgs::msg::CameraInfo_<std::allocator<void> >::SharedPtr)[m[K’:
+[5.200s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_pose_estimator.cpp:42:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass fyt::auto_aim::BoundSolver[m[K’ has no member named ‘[01m[KsetObjectPoints[m[K’; did you mean ‘[01m[Kstd::vector<cv::Point3_<float> > fyt::auto_aim::BoundSolver::object_points[m[K’? (not accessible from this context)
+[5.200s]    42 |   bound_solver_->[01;31m[KsetObjectPoints[m[K(
+[5.200s]       |                  [01;31m[K^~~~~~~~~~~~~~~[m[K
+[5.200s] In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_pose_estimator.hpp:32[m[K,
+[5.200s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_pose_estimator.cpp:15[m[K:
+[5.200s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:51:30:[m[K [01;36m[Knote: [m[Kdeclared private here
+[5.200s]    51 |     std::vector<cv::Point3f> [01;36m[Kobject_points[m[K;
+[5.200s]       |                              [01;36m[K^~~~~~~~~~~~~[m[K
+[5.223s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_pose_estimator.cpp:[m[K In member function ‘[01m[Kstd::vector<rm_interfaces::msg::Armor_<std::allocator<void> > > fyt::auto_aim::ArmorPoseEstimator::extractArmorPoses(const std::vector<fyt::auto_aim::Armor>&, Eigen::Matrix3d)[m[K’:
+[5.223s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_pose_estimator.cpp:82:37:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kconst char*[m[K’ to ‘[01m[Kint[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[5.223s]    82 |         bound_solver_->reprojection([01;31m[K"small_left"[m[K, rvecs[0], tvecs[0]);
+[5.223s]       |                                     [01;31m[K^~~~~~~~~~~~[m[K
+[5.223s]       |                                     [01;31m[K|[m[K
+[5.223s]       |                                     [01;31m[Kconst char*[m[K
+[5.223s] In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_pose_estimator.hpp:32[m[K,
+[5.223s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_pose_estimator.cpp:15[m[K:
+[5.224s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:46:50:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid fyt::auto_aim::BoundSolver::reprojection(const int&, cv::Mat, cv::Mat)[m[K’
+[5.224s]    46 |     void BoundSolver::reprojection([01;36m[Kconst string& bound_type[m[K, cv::Mat rvec, cv::Mat tvec);
+[5.224s]       |                                    [01;36m[K~~~~~~~~~~~~~~^~~~~~~~~~[m[K
+[5.299s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[5.299s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:106:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd::unique_ptr<fyt::auto_aim::BoundSolver> fyt::auto_aim::ArmorPoseEstimator::bound_solver_[m[K’ is private within this context
+[5.299s]   106 |   armor_pose_estimator_->[01;31m[Kbound_solver_[m[K->drawBound(img);
+[5.299s]       |                          [01;31m[K^~~~~~~~~~~~~[m[K
+[5.299s] In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:30[m[K:
+[5.299s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_pose_estimator.hpp:63:32:[m[K [01;36m[Knote: [m[Kdeclared private here
+[5.299s]    63 |   std::unique_ptr<BoundSolver> [01;36m[Kbound_solver_[m[K;
+[5.299s]       |                                [01;36m[K^~~~~~~~~~~~~[m[K
+[5.299s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:109:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass fyt::auto_aim::BoundSolver[m[K’ has no member named ‘[01m[KdetectProjection[m[K’; did you mean ‘[01m[KdrawProjection[m[K’?
+[5.299s]   109 |   bound_solver_->[01;31m[KdetectProjection[m[K(img);
+[5.299s]       |                  [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[5.300s]       |                  [32m[KdrawProjection[m[K
+[9.068s] gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:191：CMakeFiles/armor_detector.dir/src/spiral.cpp.o] 错误 1
+[9.191s] gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:107：CMakeFiles/armor_detector.dir/src/armor_pose_estimator.cpp.o] 错误 1
+[13.636s] gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:93：CMakeFiles/armor_detector.dir/src/armor_detector_node.cpp.o] 错误 1
+[13.636s] gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+[13.637s] gmake: *** [Makefile:146：all] 错误 2
+[13.639s] Invoked command in '/home/ckl/RM/Combat_vision2026/build/armor_detector' returned '2': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/armor_detector -- -j16 -l16

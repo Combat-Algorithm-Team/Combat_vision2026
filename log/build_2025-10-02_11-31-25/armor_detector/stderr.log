@@ -1,0 +1,82 @@
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:64:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kg2o[m[K’ does not name a type
+   64 |     [01;31m[Kg2o[m[K::SparseOptimizer optimizer_;
+      |     [01;31m[K^~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:65:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kg2o[m[K’ does not name a type
+   65 |     [01;31m[Kg2o[m[K::OptimizationAlgorithmProperty solver_property_;
+      |     [01;31m[K^~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:66:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kg2o[m[K’ does not name a type
+   66 |     [01;31m[Kg2o[m[K::OptimizationAlgorithmLevenberg *lm_algorithm_;
+      |     [01;31m[K^~~[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:27[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:64:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kg2o[m[K’ does not name a type
+   64 |     [01;31m[Kg2o[m[K::SparseOptimizer optimizer_;
+      |     [01;31m[K^~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:65:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kg2o[m[K’ does not name a type
+   65 |     [01;31m[Kg2o[m[K::OptimizationAlgorithmProperty solver_property_;
+      |     [01;31m[K^~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:66:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kg2o[m[K’ does not name a type
+   66 |     [01;31m[Kg2o[m[K::OptimizationAlgorithmLevenberg *lm_algorithm_;
+      |     [01;31m[K^~~[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_pose_estimator.hpp:32[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_pose_estimator.cpp:15[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:64:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kg2o[m[K’ does not name a type
+   64 |     [01;31m[Kg2o[m[K::SparseOptimizer optimizer_;
+      |     [01;31m[K^~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:65:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kg2o[m[K’ does not name a type
+   65 |     [01;31m[Kg2o[m[K::OptimizationAlgorithmProperty solver_property_;
+      |     [01;31m[K^~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:66:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kg2o[m[K’ does not name a type
+   66 |     [01;31m[Kg2o[m[K::OptimizationAlgorithmLevenberg *lm_algorithm_;
+      |     [01;31m[K^~~[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_pose_estimator.hpp:32[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_detector_node.hpp:47[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_detector_node.cpp:47[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:64:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kg2o[m[K’ does not name a type
+   64 |     [01;31m[Kg2o[m[K::SparseOptimizer optimizer_;
+      |     [01;31m[K^~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:65:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kg2o[m[K’ does not name a type
+   65 |     [01;31m[Kg2o[m[K::OptimizationAlgorithmProperty solver_property_;
+      |     [01;31m[K^~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:66:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kg2o[m[K’ does not name a type
+   66 |     [01;31m[Kg2o[m[K::OptimizationAlgorithmLevenberg *lm_algorithm_;
+      |     [01;31m[K^~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:[m[K In constructor ‘[01m[Kfyt::auto_aim::BoundSolver::BoundSolver(sensor_msgs::msg::CameraInfo_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:34:3:[m[K [01;31m[Kerror: [m[K‘[01m[Koptimizer_[m[K’ was not declared in this scope
+   34 |   [01;31m[Koptimizer_[m[K.setVerbose(false);
+      |   [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:38:23:[m[K [01;31m[Kerror: [m[K‘[01m[Ksolver_property_[m[K’ was not declared in this scope
+   38 |           "lm_dense", [01;31m[Ksolver_property_[m[K));
+      |                       [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:40:3:[m[K [01;31m[Kerror: [m[K‘[01m[Klm_algorithm_[m[K’ was not declared in this scope
+   40 |   [01;31m[Klm_algorithm_[m[K = dynamic_cast<g2o::OptimizationAlgorithmLevenberg *>(
+      |   [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:40:37:[m[K [01;31m[Kerror: [m[K‘[01m[KOptimizationAlgorithmLevenberg[m[K’ in namespace ‘[01m[Kg2o[m[K’ does not name a type; did you mean ‘[01m[KOptimizationAlgorithmProperty[m[K’?
+   40 |   lm_algorithm_ = dynamic_cast<g2o::[01;31m[KOptimizationAlgorithmLevenberg[m[K *>(
+      |                                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                     [32m[KOptimizationAlgorithmProperty[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:40:68:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K>[m[K’ before ‘[01m[K*[m[K’ token
+   40 |   lm_algorithm_ = dynamic_cast<g2o::OptimizationAlgorithmLevenberg [01;31m[K*[m[K>(
+      |                                                                    [01;31m[K^[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:40:68:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K([m[K’ before ‘[01m[K*[m[K’ token
+   40 |   lm_algorithm_ = dynamic_cast<g2o::OptimizationAlgorithmLevenberg [01;31m[K*[m[K>(
+      |                                                                    [01;31m[K^[m[K
+      |                                                                    [32m[K([m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:40:69:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   40 |   lm_algorithm_ = dynamic_cast<g2o::OptimizationAlgorithmLevenberg *[01;31m[K>[m[K(
+      |                                                                     [01;31m[K^[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:41:72:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K;[m[K’ token
+   41 |       const_cast<g2o::OptimizationAlgorithm *>(optimizer_.algorithm()))[01;31m[K;[m[K
+      |                                                                        [01;31m[K^[m[K
+      |                                                                        [32m[K)[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:[m[K In member function ‘[01m[KEigen::Matrix3d fyt::auto_aim::BoundSolver::solveBound(const fyt::auto_aim::Armor&, const Vector3d&, const Matrix3d&, const Matrix3d&)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:83:3:[m[K [01;31m[Kerror: [m[K‘[01m[Koptimizer_[m[K’ was not declared in this scope
+   83 |   [01;31m[Koptimizer_[m[K.addVertex(v_yaw);
+      |   [01;31m[K^~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:191：CMakeFiles/armor_detector.dir/src/spiral.cpp.o] 错误 1
+gmake[2]: *** 正在等待未完成的任务....
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:107：CMakeFiles/armor_detector.dir/src/armor_pose_estimator.cpp.o] 错误 1
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:135：CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o] 错误 1
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:93：CMakeFiles/armor_detector.dir/src/armor_detector_node.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

@@ -1,0 +1,61 @@
+[0.018s] Invoking command in '/home/ckl/RM/Combat_vision2026/build/armor_detector': AMENT_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/armor_detector -- -j16 -l16
+[0.049s] [ 14%] Built target gtest_main
+[0.050s] [ 14%] Built target gtest
+[0.052s] [ 22%] Built target armor_detector_node
+[0.103s] [ 25%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/armor_detector_node.cpp.o[0m
+[0.104s] [ 29%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/armor_pose_estimator.cpp.o[0m
+[0.105s] [ 33%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/spiral.cpp.o[0m
+[0.105s] [ 37%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o[0m
+[3.756s] In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[3.757s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:61:10:[m[K [01;31m[Kerror: [m[K‘[01m[KOptimizationAlgorithmLevenberg[m[K’ in namespace ‘[01m[Kg2o[m[K’ does not name a type; did you mean ‘[01m[KOptimizationAlgorithmProperty[m[K’?
+[3.757s]    61 |     g2o::[01;31m[KOptimizationAlgorithmLevenberg[m[K *lm_algorithm_;
+[3.757s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[3.757s]       |          [32m[KOptimizationAlgorithmProperty[m[K
+[4.517s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:[m[K In constructor ‘[01m[Kfyt::auto_aim::BoundSolver::BoundSolver(sensor_msgs::msg::CameraInfo_<std::allocator<void> >::SharedPtr)[m[K’:
+[4.517s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:40:3:[m[K [01;31m[Kerror: [m[K‘[01m[Klm_algorithm_[m[K’ was not declared in this scope
+[4.517s]    40 |   [01;31m[Klm_algorithm_[m[K = dynamic_cast<g2o::OptimizationAlgorithmLevenberg *>(
+[4.517s]       |   [01;31m[K^~~~~~~~~~~~~[m[K
+[4.517s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:40:37:[m[K [01;31m[Kerror: [m[K‘[01m[KOptimizationAlgorithmLevenberg[m[K’ in namespace ‘[01m[Kg2o[m[K’ does not name a type; did you mean ‘[01m[KOptimizationAlgorithmProperty[m[K’?
+[4.517s]    40 |   lm_algorithm_ = dynamic_cast<g2o::[01;31m[KOptimizationAlgorithmLevenberg[m[K *>(
+[4.517s]       |                                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.517s]       |                                     [32m[KOptimizationAlgorithmProperty[m[K
+[4.517s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:40:68:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K>[m[K’ before ‘[01m[K*[m[K’ token
+[4.517s]    40 |   lm_algorithm_ = dynamic_cast<g2o::OptimizationAlgorithmLevenberg [01;31m[K*[m[K>(
+[4.517s]       |                                                                    [01;31m[K^[m[K
+[4.517s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:40:68:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K([m[K’ before ‘[01m[K*[m[K’ token
+[4.517s]    40 |   lm_algorithm_ = dynamic_cast<g2o::OptimizationAlgorithmLevenberg [01;31m[K*[m[K>(
+[4.517s]       |                                                                    [01;31m[K^[m[K
+[4.517s]       |                                                                    [32m[K([m[K
+[4.517s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:40:69:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[4.518s]    40 |   lm_algorithm_ = dynamic_cast<g2o::OptimizationAlgorithmLevenberg *[01;31m[K>[m[K(
+[4.518s]       |                                                                     [01;31m[K^[m[K
+[4.518s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:41:72:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K;[m[K’ token
+[4.518s]    41 |       const_cast<g2o::OptimizationAlgorithm *>(optimizer_.algorithm()))[01;31m[K;[m[K
+[4.518s]       |                                                                        [01;31m[K^[m[K
+[4.518s]       |                                                                        [32m[K)[m[K
+[5.019s] In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:27[m[K:
+[5.020s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:61:10:[m[K [01;31m[Kerror: [m[K‘[01m[KOptimizationAlgorithmLevenberg[m[K’ in namespace ‘[01m[Kg2o[m[K’ does not name a type; did you mean ‘[01m[KOptimizationAlgorithmProperty[m[K’?
+[5.020s]    61 |     g2o::[01;31m[KOptimizationAlgorithmLevenberg[m[K *lm_algorithm_;
+[5.020s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.020s]       |          [32m[KOptimizationAlgorithmProperty[m[K
+[5.237s] In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_pose_estimator.hpp:32[m[K,
+[5.237s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_pose_estimator.cpp:15[m[K:
+[5.237s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:61:10:[m[K [01;31m[Kerror: [m[K‘[01m[KOptimizationAlgorithmLevenberg[m[K’ in namespace ‘[01m[Kg2o[m[K’ does not name a type; did you mean ‘[01m[KOptimizationAlgorithmProperty[m[K’?
+[5.237s]    61 |     g2o::[01;31m[KOptimizationAlgorithmLevenberg[m[K *lm_algorithm_;
+[5.237s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.237s]       |          [32m[KOptimizationAlgorithmProperty[m[K
+[5.350s] In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_pose_estimator.hpp:32[m[K,
+[5.350s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_detector_node.hpp:47[m[K,
+[5.350s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_detector_node.cpp:47[m[K:
+[5.350s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:61:10:[m[K [01;31m[Kerror: [m[K‘[01m[KOptimizationAlgorithmLevenberg[m[K’ in namespace ‘[01m[Kg2o[m[K’ does not name a type; did you mean ‘[01m[KOptimizationAlgorithmProperty[m[K’?
+[5.350s]    61 |     g2o::[01;31m[KOptimizationAlgorithmLevenberg[m[K *lm_algorithm_;
+[5.350s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[5.350s]       |          [32m[KOptimizationAlgorithmProperty[m[K
+[9.392s] gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:107：CMakeFiles/armor_detector.dir/src/armor_pose_estimator.cpp.o] 错误 1
+[9.392s] gmake[2]: *** 正在等待未完成的任务....
+[9.575s] gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:191：CMakeFiles/armor_detector.dir/src/spiral.cpp.o] 错误 1
+[10.773s] gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:135：CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o] 错误 1
+[13.879s] gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:93：CMakeFiles/armor_detector.dir/src/armor_detector_node.cpp.o] 错误 1
+[13.880s] gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+[13.880s] gmake: *** [Makefile:146：all] 错误 2
+[13.882s] Invoked command in '/home/ckl/RM/Combat_vision2026/build/armor_detector' returned '2': AMENT_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/armor_detector -- -j16 -l16

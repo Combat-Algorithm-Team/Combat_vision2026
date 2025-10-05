@@ -76,6 +76,7 @@ BaSolver::solveBa(const Armor &armor, const Eigen::Vector3d &t_camera_armor,
   } else {
     initial_armor_yaw = R_imu_armor(1, 1) > 0 ? 0 : CV_PI;
   }
+  // std::cout<<"initial angle is:"<<initial_armor_yaw * 180 / CV_PI<<std::endl;
 
   // Get the pitch angle of the armor
   double armor_pitch =
@@ -120,10 +121,11 @@ BaSolver::solveBa(const Armor &armor, const Eigen::Vector3d &t_camera_armor,
 
   // Start optimizing
   optimizer_.initializeOptimization();
-  optimizer_.optimize(20);
+  optimizer_.optimize(100);
 
   // Get yaw angle after optimization
   double yaw_optimized = v_yaw->estimate();
+  // std::cout<<"After optimization, yaw is:"<<yaw_optimized * 180 / 3.14<<std::endl;
 
   if (std::isnan(yaw_optimized)) {
     FYT_ERROR("armor_detector", "Yaw angle is nan after optimization");

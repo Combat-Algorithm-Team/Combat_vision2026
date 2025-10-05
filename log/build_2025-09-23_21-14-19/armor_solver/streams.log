@@ -1,0 +1,87 @@
+[0.013s] Invoking command in '/home/ckl/RM/Combat_vision2026/build/armor_solver': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_solver -DCMAKE_INSTALL_PREFIX=/home/ckl/RM/Combat_vision2026/install/armor_solver
+[0.061s] -- The C compiler identification is GNU 11.4.0
+[0.120s] -- The CXX compiler identification is GNU 11.4.0
+[0.128s] -- Detecting C compiler ABI info
+[0.185s] -- Detecting C compiler ABI info - done
+[0.197s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.197s] -- Detecting C compile features
+[0.198s] -- Detecting C compile features - done
+[0.210s] -- Detecting CXX compiler ABI info
+[0.279s] -- Detecting CXX compiler ABI info - done
+[0.292s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.292s] -- Detecting CXX compile features
+[0.292s] -- Detecting CXX compile features - done
+[0.302s] -- Found ament_cmake_auto: 1.3.12 (/opt/ros/humble/share/ament_cmake_auto/cmake)
+[0.419s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter
+[0.621s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.627s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.637s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.650s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.667s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.721s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.724s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.821s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")
+[0.854s] -- Found FastRTPS: /opt/ros/humble/include
+[0.900s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.911s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.972s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.974s] -- Found Threads: TRUE
+[1.192s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.194s] -- Found Eigen3: TRUE (found version "3.4.0")
+[1.194s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.329s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.363s] -- Found ament_cmake_gtest: 1.3.12 (/opt/ros/humble/share/ament_cmake_gtest/cmake)
+[1.365s] [0mIn this package, headers install destination is set to `include` by ament_auto_package. It is recommended to install `include/armor_solver` instead and will be the default behavior of ament_auto_package from ROS 2 Kilted Kaiju. On distributions before Kilted, ament_auto_package behaves the same way when you use USE_SCOPED_HEADER_INSTALL_DIR option.[0m
+[1.369s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.369s] -- Configured cppcheck include dirs: /home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_solver/include
+[1.369s] -- Configured cppcheck exclude dirs and/or files: 
+[1.370s] -- Added test 'lint_cmake' to check CMake code style
+[1.371s] -- Added test 'xmllint' to check XML markup files
+[1.374s] -- Configuring done (1.4s)
+[1.401s] -- Generating done (0.0s)
+[1.404s] -- Build files have been written to: /home/ckl/RM/Combat_vision2026/build/armor_solver
+[1.415s] Invoked command in '/home/ckl/RM/Combat_vision2026/build/armor_solver' returned '0': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake /home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_solver -DCMAKE_INSTALL_PREFIX=/home/ckl/RM/Combat_vision2026/install/armor_solver
+[1.416s] Invoking command in '/home/ckl/RM/Combat_vision2026/build/armor_solver': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/armor_solver -- -j16 -l16
+[1.450s] [ 50%] [32mBuilding CXX object CMakeFiles/armor_solver_node.dir/rclcpp_components/node_main_armor_solver_node.cpp.o[0m
+[1.450s] [ 50%] [32mBuilding CXX object CMakeFiles/armor_solver.dir/src/armor_solver.cpp.o[0m
+[1.450s] [ 50%] [32mBuilding CXX object CMakeFiles/armor_solver.dir/src/armor_solver_node.cpp.o[0m
+[1.450s] [ 66%] [32mBuilding CXX object CMakeFiles/armor_solver.dir/src/armor_tracker.cpp.o[0m
+[10.116s] [ 83%] [1m[32mLinking CXX executable armor_solver_node[0m
+[10.537s] [ 83%] Built target armor_solver_node
+[29.787s] [100%] [1m[32mLinking CXX shared library libarmor_solver.so[0m
+[30.009s] [100%] Built target armor_solver
+[30.016s] Invoked command in '/home/ckl/RM/Combat_vision2026/build/armor_solver' returned '0': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/armor_solver -- -j16 -l16
+[30.017s] Invoking command in '/home/ckl/RM/Combat_vision2026/build/armor_solver': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/ckl/RM/Combat_vision2026/build/armor_solver
+[30.021s] -- Install configuration: ""
+[30.022s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_solver/lib/armor_solver/armor_solver_node
+[30.022s] -- Set non-toolchain portion of runtime path of "/home/ckl/RM/Combat_vision2026/install/armor_solver/lib/armor_solver/armor_solver_node" to ""
+[30.022s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_solver/include
+[30.022s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_solver/include/armor_solver
+[30.022s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_solver/include/armor_solver/armor_tracker.hpp
+[30.022s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_solver/include/armor_solver/armor_solver.hpp
+[30.023s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_solver/include/armor_solver/motion_model.hpp
+[30.023s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_solver/include/armor_solver/armor_solver_node.hpp
+[30.023s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/environment/library_path.sh
+[30.023s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/environment/library_path.dsv
+[30.024s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_solver/lib/libarmor_solver.so
+[30.026s] -- Set non-toolchain portion of runtime path of "/home/ckl/RM/Combat_vision2026/install/armor_solver/lib/libarmor_solver.so" to ""
+[30.027s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_solver/share/ament_index/resource_index/package_run_dependencies/armor_solver
+[30.027s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_solver/share/ament_index/resource_index/parent_prefix_path/armor_solver
+[30.027s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/environment/ament_prefix_path.sh
+[30.027s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/environment/ament_prefix_path.dsv
+[30.027s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/environment/path.sh
+[30.028s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/environment/path.dsv
+[30.028s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/local_setup.bash
+[30.028s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/local_setup.sh
+[30.028s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/local_setup.zsh
+[30.028s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/local_setup.dsv
+[30.029s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/package.dsv
+[30.029s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_solver/share/ament_index/resource_index/packages/armor_solver
+[30.029s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_solver/share/ament_index/resource_index/rclcpp_components/armor_solver
+[30.029s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/cmake/ament_cmake_export_dependencies-extras.cmake
+[30.030s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/cmake/ament_cmake_export_include_directories-extras.cmake
+[30.030s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/cmake/ament_cmake_export_libraries-extras.cmake
+[30.030s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/cmake/armor_solverConfig.cmake
+[30.030s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/cmake/armor_solverConfig-version.cmake
+[30.031s] -- Installing: /home/ckl/RM/Combat_vision2026/install/armor_solver/share/armor_solver/package.xml
+[30.033s] Invoked command in '/home/ckl/RM/Combat_vision2026/build/armor_solver' returned '0': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/ckl/RM/Combat_vision2026/build/armor_solver

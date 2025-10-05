@@ -1,0 +1,63 @@
+[0.016s] Invoking command in '/home/ckl/RM/Combat_vision2026/build/armor_detector': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/armor_detector -- -j16 -l16
+[0.053s] [ 14%] Built target gtest_main
+[0.054s] [ 14%] Built target gtest
+[0.056s] [ 22%] Built target armor_detector_node
+[0.112s] [ 25%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/armor_detector_node.cpp.o[0m
+[0.112s] [ 29%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/armor_pose_estimator.cpp.o[0m
+[0.113s] [ 37%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o[0m
+[0.113s] [ 37%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/spiral.cpp.o[0m
+[5.333s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[5.334s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:58:49:[m[K [01;31m[Kerror: [m[K‘[01m[KArmorPoseEstimator[m[K’ was not declared in this scope; did you mean ‘[01m[Karmor_pose_estimator_[m[K’?
+[5.334s]    58 |   auto armor_pose_estimator_ = std::make_unique<[01;31m[KArmorPoseEstimator[m[K>(camera_info);
+[5.334s]       |                                                 [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[5.334s]       |                                                 [32m[Karmor_pose_estimator_[m[K
+[5.334s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:58:68:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_unique<<expression error> >(std::shared_ptr<sensor_msgs::msg::CameraInfo_<std::allocator<void> > >&)[m[K’
+[5.334s]    58 |   auto armor_pose_estimator_ = [01;31m[Kstd::make_unique<ArmorPoseEstimator>(camera_info)[m[K;
+[5.334s]       |                                [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[5.334s] In file included from [01m[K/usr/include/c++/11/bits/locale_conv.h:41[m[K,
+[5.334s]                  from [01m[K/usr/include/c++/11/locale:43[m[K,
+[5.335s]                  from [01m[K/usr/include/c++/11/bits/fs_path.h:37[m[K,
+[5.335s]                  from [01m[K/usr/include/c++/11/filesystem:45[m[K,
+[5.335s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:3[m[K:
+[5.335s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:961:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...)[m[K’
+[5.335s]   961 |     [01;36m[Kmake_unique[m[K(_Args&&... __args)
+[5.335s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[5.335s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:961:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.335s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:58:68:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.335s]    58 |   auto armor_pose_estimator_ = [01;31m[Kstd::make_unique<ArmorPoseEstimator>(camera_info)[m[K;
+[5.335s]       |                                [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[5.335s] In file included from [01m[K/usr/include/c++/11/bits/locale_conv.h:41[m[K,
+[5.335s]                  from [01m[K/usr/include/c++/11/locale:43[m[K,
+[5.336s]                  from [01m[K/usr/include/c++/11/bits/fs_path.h:37[m[K,
+[5.336s]                  from [01m[K/usr/include/c++/11/filesystem:45[m[K,
+[5.336s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:3[m[K:
+[5.336s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:967:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> typename std::_MakeUniq<_Tp>::__array std::make_unique(std::size_t)[m[K’
+[5.336s]   967 |     [01;36m[Kmake_unique[m[K(size_t __num)
+[5.336s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[5.336s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:967:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.336s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:58:68:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.336s]    58 |   auto armor_pose_estimator_ = [01;31m[Kstd::make_unique<ArmorPoseEstimator>(camera_info)[m[K;
+[5.336s]       |                                [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[5.336s] In file included from [01m[K/usr/include/c++/11/bits/locale_conv.h:41[m[K,
+[5.336s]                  from [01m[K/usr/include/c++/11/locale:43[m[K,
+[5.337s]                  from [01m[K/usr/include/c++/11/bits/fs_path.h:37[m[K,
+[5.337s]                  from [01m[K/usr/include/c++/11/filesystem:45[m[K,
+[5.337s]                  from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:3[m[K:
+[5.337s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:973:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> typename std::_MakeUniq<_Tp>::__invalid_type std::make_unique(_Args&& ...)[m[K’ (deleted)
+[5.337s]   973 |     [01;36m[Kmake_unique[m[K(_Args&&...) = delete;
+[5.337s]       |     [01;36m[K^~~~~~~~~~~[m[K
+[5.337s] [01m[K/usr/include/c++/11/bits/unique_ptr.h:973:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[5.337s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:58:68:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.337s]    58 |   auto armor_pose_estimator_ = [01;31m[Kstd::make_unique<ArmorPoseEstimator>(camera_info)[m[K;
+[5.337s]       |                                [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[5.345s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:71:23:[m[K [01;31m[Kerror: [m[K‘[01m[KArmors[m[K’ is not a member of ‘[01m[Krm_interfaces::msg[m[K’
+[5.345s]    71 |   rm_interfaces::msg::[01;31m[KArmors[m[K armors_msg_;
+[5.345s]       |                       [01;31m[K^~~~~~[m[K
+[5.362s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:101:3:[m[K [01;31m[Kerror: [m[K‘[01m[Karmors_msg_[m[K’ was not declared in this scope
+[5.362s]   101 |   [01;31m[Karmors_msg_[m[K.armors = armor_pose_estimator_->extractArmorPoses(armors, imu_to_camera_);
+[5.362s]       |   [01;31m[K^~~~~~~~~~~[m[K
+[9.122s] gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:191：CMakeFiles/armor_detector.dir/src/spiral.cpp.o] 错误 1
+[9.122s] gmake[2]: *** 正在等待未完成的任务....
+[25.621s] gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+[25.622s] gmake: *** [Makefile:146：all] 错误 2
+[25.624s] Invoked command in '/home/ckl/RM/Combat_vision2026/build/armor_detector' returned '2': CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/home/ckl/RM/Combat_vision2026/install/rm_bringup:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver:/home/ckl/RM/Combat_vision2026/install/rm_auto_aim:/home/ckl/RM/Combat_vision2026/install/armor_solver:/home/ckl/RM/Combat_vision2026/install/armor_detector:/home/ckl/RM/Combat_vision2026/install/rm_robot_description:/home/ckl/RM/Combat_vision2026/install/hik_camera:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:/home/ckl/RM/Combat_vision2026/install/rm_serial_driver/lib:/home/ckl/RM/Combat_vision2026/install/armor_solver/lib:/home/ckl/RM/Combat_vision2026/install/armor_detector/lib:/home/ckl/RM/Combat_vision2026/install/hik_camera/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/armor_detector -- -j16 -l16

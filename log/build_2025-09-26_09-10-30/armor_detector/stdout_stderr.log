@@ -1,0 +1,128 @@
+[ 11%] Built target gtest_main
+[ 14%] Built target gtest
+[ 22%] Built target armor_detector_node
+[ 25%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/spiral.cpp.o[0m
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:59:16:[m[K [01;31m[Kerror: [m[K‘[01m[KArmor[m[K’ has not been declared
+   59 |       "small", [01;31m[KArmor[m[K::buildObjectPoints<cv::Point3f>(SMALL_ARMOR_WIDTH,
+      |                [01;31m[K^~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:59:52:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   59 |       "small", Armor::buildObjectPoints<cv::Point3f[01;31m[K>[m[K(SMALL_ARMOR_WIDTH,
+      |                                                    [01;31m[K^[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:59:54:[m[K [01;31m[Kerror: [m[K‘[01m[KSMALL_ARMOR_WIDTH[m[K’ was not declared in this scope; did you mean ‘[01m[Kfyt::auto_aim::SMALL_ARMOR_WIDTH[m[K’?
+   59 |       "small", Armor::buildObjectPoints<cv::Point3f>([01;31m[KSMALL_ARMOR_WIDTH[m[K,
+      |                                                      [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |                                                      [32m[Kfyt::auto_aim::SMALL_ARMOR_WIDTH[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/light_corner_corrector.hpp:22[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_detector.hpp:31[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:27[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:37:18:[m[K [01;36m[Knote: [m[K‘[01m[Kfyt::auto_aim::SMALL_ARMOR_WIDTH[m[K’ declared here
+   37 | constexpr double [01;36m[KSMALL_ARMOR_WIDTH[m[K = 130 / 1000.0; // 135
+      |                  [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:60:54:[m[K [01;31m[Kerror: [m[K‘[01m[KSMALL_ARMOR_HEIGHT[m[K’ was not declared in this scope; did you mean ‘[01m[Kfyt::auto_aim::SMALL_ARMOR_HEIGHT[m[K’?
+   60 |                                                      [01;31m[KSMALL_ARMOR_HEIGHT[m[K));
+      |                                                      [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+      |                                                      [32m[Kfyt::auto_aim::SMALL_ARMOR_HEIGHT[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/light_corner_corrector.hpp:22[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_detector.hpp:31[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:27[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:38:18:[m[K [01;36m[Knote: [m[K‘[01m[Kfyt::auto_aim::SMALL_ARMOR_HEIGHT[m[K’ declared here
+   38 | constexpr double [01;36m[KSMALL_ARMOR_HEIGHT[m[K = 50 / 1000.0; // 55
+      |                  [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:62:16:[m[K [01;31m[Kerror: [m[K‘[01m[KArmor[m[K’ has not been declared
+   62 |       "large", [01;31m[KArmor[m[K::buildObjectPoints<cv::Point3f>(LARGE_ARMOR_WIDTH,
+      |                [01;31m[K^~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:62:52:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   62 |       "large", Armor::buildObjectPoints<cv::Point3f[01;31m[K>[m[K(LARGE_ARMOR_WIDTH,
+      |                                                    [01;31m[K^[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:62:54:[m[K [01;31m[Kerror: [m[K‘[01m[KLARGE_ARMOR_WIDTH[m[K’ was not declared in this scope; did you mean ‘[01m[Kfyt::auto_aim::LARGE_ARMOR_WIDTH[m[K’?
+   62 |       "large", Armor::buildObjectPoints<cv::Point3f>([01;31m[KLARGE_ARMOR_WIDTH[m[K,
+      |                                                      [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |                                                      [32m[Kfyt::auto_aim::LARGE_ARMOR_WIDTH[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/light_corner_corrector.hpp:22[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_detector.hpp:31[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:27[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:39:18:[m[K [01;36m[Knote: [m[K‘[01m[Kfyt::auto_aim::LARGE_ARMOR_WIDTH[m[K’ declared here
+   39 | constexpr double [01;36m[KLARGE_ARMOR_WIDTH[m[K = 225.0 / 1000.0;
+      |                  [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:63:54:[m[K [01;31m[Kerror: [m[K‘[01m[KLARGE_ARMOR_HEIGHT[m[K’ was not declared in this scope; did you mean ‘[01m[Kfyt::auto_aim::LARGE_ARMOR_HEIGHT[m[K’?
+   63 |                                                      [01;31m[KLARGE_ARMOR_HEIGHT[m[K));
+      |                                                      [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+      |                                                      [32m[Kfyt::auto_aim::LARGE_ARMOR_HEIGHT[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/light_corner_corrector.hpp:22[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_detector.hpp:31[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:27[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/types.hpp:40:18:[m[K [01;36m[Knote: [m[K‘[01m[Kfyt::auto_aim::LARGE_ARMOR_HEIGHT[m[K’ declared here
+   40 | constexpr double [01;36m[KLARGE_ARMOR_HEIGHT[m[K = 50.0 / 1000.0; // 55
+      |                  [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:84:42:[m[K [01;31m[Kerror: [m[K‘[01m[KDetector[m[K’ is not a member of ‘[01m[Kfyt[m[K’; did you mean ‘[01m[Kfyt::auto_aim::Detector[m[K’?
+   84 |   auto detector_ = std::make_unique<fyt::[01;31m[KDetector[m[K>(binary_thres, color, l_params, a_params);
+      |                                          [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:27[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_detector.hpp:38:7:[m[K [01;36m[Knote: [m[K‘[01m[Kfyt::auto_aim::Detector[m[K’ declared here
+   38 | class [01;36m[KDetector[m[K {
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:84:51:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_unique<<expression error> >(int&, fyt::EnemyColor&, fyt::auto_aim::Detector::LightParams&, fyt::auto_aim::Detector::ArmorParams&)[m[K’
+   84 |   auto detector_ = [01;31m[Kstd::make_unique<fyt::Detector>(binary_thres, color, l_params, a_params)[m[K;
+      |                    [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/locale_conv.h:41[m[K,
+                 from [01m[K/usr/include/c++/11/locale:43[m[K,
+                 from [01m[K/usr/include/c++/11/bits/fs_path.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/filesystem:45[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:3[m[K:
+[01m[K/usr/include/c++/11/bits/unique_ptr.h:961:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...)[m[K’
+  961 |     [01;36m[Kmake_unique[m[K(_Args&&... __args)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/unique_ptr.h:961:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:84:51:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   84 |   auto detector_ = [01;31m[Kstd::make_unique<fyt::Detector>(binary_thres, color, l_params, a_params)[m[K;
+      |                    [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/locale_conv.h:41[m[K,
+                 from [01m[K/usr/include/c++/11/locale:43[m[K,
+                 from [01m[K/usr/include/c++/11/bits/fs_path.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/filesystem:45[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:3[m[K:
+[01m[K/usr/include/c++/11/bits/unique_ptr.h:967:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> typename std::_MakeUniq<_Tp>::__array std::make_unique(std::size_t)[m[K’
+  967 |     [01;36m[Kmake_unique[m[K(size_t __num)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/unique_ptr.h:967:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:84:51:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   84 |   auto detector_ = [01;31m[Kstd::make_unique<fyt::Detector>(binary_thres, color, l_params, a_params)[m[K;
+      |                    [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/locale_conv.h:41[m[K,
+                 from [01m[K/usr/include/c++/11/locale:43[m[K,
+                 from [01m[K/usr/include/c++/11/bits/fs_path.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/filesystem:45[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:3[m[K:
+[01m[K/usr/include/c++/11/bits/unique_ptr.h:973:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> typename std::_MakeUniq<_Tp>::__invalid_type std::make_unique(_Args&& ...)[m[K’ (deleted)
+  973 |     [01;36m[Kmake_unique[m[K(_Args&&...) = delete;
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/unique_ptr.h:973:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:84:51:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   84 |   auto detector_ = [01;31m[Kstd::make_unique<fyt::Detector>(binary_thres, color, l_params, a_params)[m[K;
+      |                    [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:87:12:[m[K [01;31m[Kerror: [m[K‘[01m[KreadImages[m[K’ was not declared in this scope; did you mean ‘[01m[Kfyt::auto_aim::readImages[m[K’?
+   87 |   images = [01;31m[KreadImages[m[K(folder_path);
+      |            [01;31m[K^~~~~~~~~~[m[K
+      |            [32m[Kfyt::auto_aim::readImages[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:36[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:42:26:[m[K [01;36m[Knote: [m[K‘[01m[Kfyt::auto_aim::readImages[m[K’ declared here
+   42 |     std::vector<cv::Mat> [01;36m[KreadImages[m[K(const std::string& folder_path);
+      |                          [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:90:15:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KresizeWindow(const char [6], cv::Mat&, int)[m[K’
+   90 |   [01;31m[KresizeWindow("armor", img, 50)[m[K;
+      |   [01;31m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:24[m[K:
+[01m[K/usr/include/opencv4/opencv2/highgui.hpp:429:19:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::resizeWindow(const String&, int, int)[m[K’
+  429 | CV_EXPORTS_W void [01;36m[KresizeWindow[m[K(const String& winname, int width, int height);
+      |                   [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/usr/include/opencv4/opencv2/highgui.hpp:429:59:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kcv::Mat[m[K’ to ‘[01m[Kint[m[K’
+  429 | CV_EXPORTS_W void resizeWindow(const String& winname, [01;36m[Kint width[m[K, int height);
+      |                                                       [01;36m[K~~~~^~~~~[m[K
+[01m[K/usr/include/opencv4/opencv2/highgui.hpp:435:19:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid cv::resizeWindow(const String&, const Size&)[m[K’
+  435 | CV_EXPORTS_W void [01;36m[KresizeWindow[m[K(const String& winname, const cv::Size& size);
+      |                   [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/usr/include/opencv4/opencv2/highgui.hpp:435:19:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 3 provided
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:191：CMakeFiles/armor_detector.dir/src/spiral.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

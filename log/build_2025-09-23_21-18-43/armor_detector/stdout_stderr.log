@@ -1,0 +1,9 @@
+[  8%] Built target gtest
+[ 16%] Built target gtest_main
+[ 24%] Built target armor_detector_node
+[ 28%] [1m[32mLinking CXX shared library libarmor_detector.so[0m
+/usr/bin/ld: 找不到 -ltbb: 没有那个文件或目录
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:419：libarmor_detector.so] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

@@ -1,0 +1,59 @@
+[ 16%] Built target gtest
+[ 16%] Built target gtest_main
+[ 24%] Built target armor_detector_node
+[ 28%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/armor_detector.cpp.o[0m
+[ 32%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/spiral.cpp.o[0m
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:55:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kpnp_solver[m[K’ was not declared in this scope
+   55 |   [01;31m[Kpnp_solver[m[K = std::make_unique<PnPSolver>(camera_matrix, distortion_coefficients);
+      |   [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:55:33:[m[K [01;31m[Kerror: [m[K‘[01m[KPnPSolver[m[K’ was not declared in this scope; did you mean ‘[01m[Kfyt::PnPSolver[m[K’?
+   55 |   pnp_solver = std::make_unique<[01;31m[KPnPSolver[m[K>(camera_matrix, distortion_coefficients);
+      |                                 [01;31m[K^~~~~~~~~[m[K
+      |                                 [32m[Kfyt::PnPSolver[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:33[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/install/rm_utils/include/rm_utils/math/pnp_solver.hpp:26:7:[m[K [01;36m[Knote: [m[K‘[01m[Kfyt::PnPSolver[m[K’ declared here
+   26 | class [01;36m[KPnPSolver[m[K {
+      |       [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:55:43:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_unique<<expression error> >(std::array<double, 9>&, std::vector<double, std::allocator<double> >&)[m[K’
+   55 |   pnp_solver = [01;31m[Kstd::make_unique<PnPSolver>(camera_matrix, distortion_coefficients)[m[K;
+      |                [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/locale_conv.h:41[m[K,
+                 from [01m[K/usr/include/c++/11/locale:43[m[K,
+                 from [01m[K/usr/include/c++/11/bits/fs_path.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/filesystem:45[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:3[m[K:
+[01m[K/usr/include/c++/11/bits/unique_ptr.h:961:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> typename std::_MakeUniq<_Tp>::__single_object std::make_unique(_Args&& ...)[m[K’
+  961 |     [01;36m[Kmake_unique[m[K(_Args&&... __args)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/unique_ptr.h:961:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:55:43:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   55 |   pnp_solver = [01;31m[Kstd::make_unique<PnPSolver>(camera_matrix, distortion_coefficients)[m[K;
+      |                [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/locale_conv.h:41[m[K,
+                 from [01m[K/usr/include/c++/11/locale:43[m[K,
+                 from [01m[K/usr/include/c++/11/bits/fs_path.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/filesystem:45[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:3[m[K:
+[01m[K/usr/include/c++/11/bits/unique_ptr.h:967:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> typename std::_MakeUniq<_Tp>::__array std::make_unique(std::size_t)[m[K’
+  967 |     [01;36m[Kmake_unique[m[K(size_t __num)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/unique_ptr.h:967:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:55:43:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   55 |   pnp_solver = [01;31m[Kstd::make_unique<PnPSolver>(camera_matrix, distortion_coefficients)[m[K;
+      |                [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/locale_conv.h:41[m[K,
+                 from [01m[K/usr/include/c++/11/locale:43[m[K,
+                 from [01m[K/usr/include/c++/11/bits/fs_path.h:37[m[K,
+                 from [01m[K/usr/include/c++/11/filesystem:45[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:3[m[K:
+[01m[K/usr/include/c++/11/bits/unique_ptr.h:973:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> typename std::_MakeUniq<_Tp>::__invalid_type std::make_unique(_Args&& ...)[m[K’ (deleted)
+  973 |     [01;36m[Kmake_unique[m[K(_Args&&...) = delete;
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/unique_ptr.h:973:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:55:43:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   55 |   pnp_solver = [01;31m[Kstd::make_unique<PnPSolver>(camera_matrix, distortion_coefficients)[m[K;
+      |                [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:177：CMakeFiles/armor_detector.dir/src/spiral.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

@@ -1,0 +1,52 @@
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:1[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:61:10:[m[K [01;31m[Kerror: [m[K‘[01m[KOptimizationAlgorithmLevenberg[m[K’ in namespace ‘[01m[Kg2o[m[K’ does not name a type; did you mean ‘[01m[KOptimizationAlgorithmProperty[m[K’?
+   61 |     g2o::[01;31m[KOptimizationAlgorithmLevenberg[m[K *lm_algorithm_;
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |          [32m[KOptimizationAlgorithmProperty[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:[m[K In constructor ‘[01m[Kfyt::auto_aim::BoundSolver::BoundSolver(sensor_msgs::msg::CameraInfo_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:40:3:[m[K [01;31m[Kerror: [m[K‘[01m[Klm_algorithm_[m[K’ was not declared in this scope
+   40 |   [01;31m[Klm_algorithm_[m[K = dynamic_cast<g2o::OptimizationAlgorithmLevenberg *>(
+      |   [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:40:37:[m[K [01;31m[Kerror: [m[K‘[01m[KOptimizationAlgorithmLevenberg[m[K’ in namespace ‘[01m[Kg2o[m[K’ does not name a type; did you mean ‘[01m[KOptimizationAlgorithmProperty[m[K’?
+   40 |   lm_algorithm_ = dynamic_cast<g2o::[01;31m[KOptimizationAlgorithmLevenberg[m[K *>(
+      |                                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                     [32m[KOptimizationAlgorithmProperty[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:40:68:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K>[m[K’ before ‘[01m[K*[m[K’ token
+   40 |   lm_algorithm_ = dynamic_cast<g2o::OptimizationAlgorithmLevenberg [01;31m[K*[m[K>(
+      |                                                                    [01;31m[K^[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:40:68:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K([m[K’ before ‘[01m[K*[m[K’ token
+   40 |   lm_algorithm_ = dynamic_cast<g2o::OptimizationAlgorithmLevenberg [01;31m[K*[m[K>(
+      |                                                                    [01;31m[K^[m[K
+      |                                                                    [32m[K([m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:40:69:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   40 |   lm_algorithm_ = dynamic_cast<g2o::OptimizationAlgorithmLevenberg *[01;31m[K>[m[K(
+      |                                                                     [01;31m[K^[m[K
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:41:72:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K;[m[K’ token
+   41 |       const_cast<g2o::OptimizationAlgorithm *>(optimizer_.algorithm()))[01;31m[K;[m[K
+      |                                                                        [01;31m[K^[m[K
+      |                                                                        [32m[K)[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/spiral.cpp:27[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:61:10:[m[K [01;31m[Kerror: [m[K‘[01m[KOptimizationAlgorithmLevenberg[m[K’ in namespace ‘[01m[Kg2o[m[K’ does not name a type; did you mean ‘[01m[KOptimizationAlgorithmProperty[m[K’?
+   61 |     g2o::[01;31m[KOptimizationAlgorithmLevenberg[m[K *lm_algorithm_;
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |          [32m[KOptimizationAlgorithmProperty[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_pose_estimator.hpp:32[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_pose_estimator.cpp:15[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:61:10:[m[K [01;31m[Kerror: [m[K‘[01m[KOptimizationAlgorithmLevenberg[m[K’ in namespace ‘[01m[Kg2o[m[K’ does not name a type; did you mean ‘[01m[KOptimizationAlgorithmProperty[m[K’?
+   61 |     g2o::[01;31m[KOptimizationAlgorithmLevenberg[m[K *lm_algorithm_;
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |          [32m[KOptimizationAlgorithmProperty[m[K
+In file included from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_pose_estimator.hpp:32[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/armor_detector_node.hpp:47[m[K,
+                 from [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_detector_node.cpp:47[m[K:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/include/armor_detector/bound_solver.hpp:61:10:[m[K [01;31m[Kerror: [m[K‘[01m[KOptimizationAlgorithmLevenberg[m[K’ in namespace ‘[01m[Kg2o[m[K’ does not name a type; did you mean ‘[01m[KOptimizationAlgorithmProperty[m[K’?
+   61 |     g2o::[01;31m[KOptimizationAlgorithmLevenberg[m[K *lm_algorithm_;
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |          [32m[KOptimizationAlgorithmProperty[m[K
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:107：CMakeFiles/armor_detector.dir/src/armor_pose_estimator.cpp.o] 错误 1
+gmake[2]: *** 正在等待未完成的任务....
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:191：CMakeFiles/armor_detector.dir/src/spiral.cpp.o] 错误 1
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:135：CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o] 错误 1
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:93：CMakeFiles/armor_detector.dir/src/armor_detector_node.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

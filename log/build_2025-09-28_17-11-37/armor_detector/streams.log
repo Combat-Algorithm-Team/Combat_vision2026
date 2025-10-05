@@ -1,0 +1,29 @@
+[0.015s] Invoking command in '/home/ckl/RM/Combat_vision2026/build/armor_detector': AMENT_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/armor_detector -- -j16 -l16
+[0.049s] [ 14%] Built target gtest_main
+[0.049s] [ 14%] Built target gtest
+[0.052s] [ 22%] Built target armor_detector_node
+[0.103s] [ 25%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/armor_detector_node.cpp.o[0m
+[0.103s] [ 29%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/armor_pose_estimator.cpp.o[0m
+[0.105s] [ 33%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o[0m
+[0.106s] [ 37%] [32mBuilding CXX object CMakeFiles/armor_detector.dir/src/spiral.cpp.o[0m
+[3.915s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:[m[K In member function ‘[01m[KEigen::Matrix3d fyt::auto_aim::BoundSolver::solveBound(const fyt::auto_aim::Armor&, const Vector3d&, const Matrix3d&, const Matrix3d&)[m[K’:
+[3.915s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:17:16:[m[K [01;31m[Kerror: [m[Kvariable ‘[01m[KR_camera_imu[m[K’ set but not used [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Werror=unused-but-set-variable]8;;[m[K]
+[3.915s]    17 |   Sophus::SO3d [01;31m[KR_camera_imu[m[K = Sophus::SO3d(R_imu_camera.transpose());
+[3.915s]       |                [01;31m[K^~~~~~~~~~~~[m[K
+[3.915s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:33:16:[m[K [01;31m[Kerror: [m[Kvariable ‘[01m[KR_pitch[m[K’ set but not used [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Werror=unused-but-set-variable]8;;[m[K]
+[3.915s]    33 |   Sophus::SO3d [01;31m[KR_pitch[m[K = Sophus::SO3d::exp(Eigen::Vector3d(0, armor_pitch, 0));
+[3.915s]       |                [01;31m[K^~~~~~~[m[K
+[3.932s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:[m[K In member function ‘[01m[Kvoid fyt::auto_aim::BoundSolver::reprojection(std::vector<Eigen::Matrix<double, 3, 1> >, Eigen::Matrix3d, Eigen::Vector3d)[m[K’:
+[3.932s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:115:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kobject_point[m[K’ was not declared in this scope; did you mean ‘[01m[Kobject_points[m[K’?
+[3.932s]   115 |     cv::eigen2cv([01;31m[Kobject_point[m[K, bound_point);
+[3.932s]       |                  [01;31m[K^~~~~~~~~~~~[m[K
+[3.932s]       |                  [32m[Kobject_points[m[K
+[3.932s] [01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/bound_solver.cpp:116:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kcv::Point3f[m[K’ {aka ‘[01m[Kclass cv::Point3_<float>[m[K’} has no member named ‘[01m[Kemplace_back[m[K’
+[3.932s]   116 |     bound_point.[01;31m[Kemplace_back[m[K(bound_point);
+[3.932s]       |                 [01;31m[K^~~~~~~~~~~~[m[K
+[4.848s] cc1plus: all warnings being treated as errors
+[4.893s] gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:135：CMakeFiles/armor_detector.dir/src/bound_solver.cpp.o] 错误 1
+[4.893s] gmake[2]: *** 正在等待未完成的任务....
+[25.239s] gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+[25.240s] gmake: *** [Makefile:146：all] 错误 2
+[25.242s] Invoked command in '/home/ckl/RM/Combat_vision2026/build/armor_detector' returned '2': AMENT_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils:/home/ckl/RM/Combat_vision2026/install/rm_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/ckl/RM/Combat_vision2026/install/rm_utils/lib:/home/ckl/RM/Combat_vision2026/install/rm_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ckl/RM/Combat_vision2026/install/rm_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ckl/RM/Combat_vision2026/build/armor_detector -- -j16 -l16

@@ -1,0 +1,9 @@
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_pose_estimator.cpp:[m[K In member function ‘[01m[Kstd::vector<rm_interfaces::msg::Armor_<std::allocator<void> > > fyt::auto_aim::ArmorPoseEstimator::extractArmorPoses(const std::vector<fyt::auto_aim::Armor>&, Eigen::Matrix3d)[m[K’:
+[01m[K/home/ckl/RM/Combat_vision2026/src/rm_auto_aim/armor_detector/src/armor_pose_estimator.cpp:57:31:[m[K [01;31m[Kerror: [m[K‘[01m[Ktvec[m[K’ was not declared in this scope; did you mean ‘[01m[Ktvecs[m[K’?
+   57 |       std::cout<<"tvec is :"<<[01;31m[Ktvec[m[K<<std::endl;
+      |                               [01;31m[K^~~~[m[K
+      |                               [32m[Ktvecs[m[K
+gmake[2]: *** [CMakeFiles/armor_detector.dir/build.make:107：CMakeFiles/armor_detector.dir/src/armor_pose_estimator.cpp.o] 错误 1
+gmake[2]: *** 正在等待未完成的任务....
+gmake[1]: *** [CMakeFiles/Makefile2:185：CMakeFiles/armor_detector.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2
