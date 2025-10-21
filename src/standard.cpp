@@ -8,11 +8,11 @@
 // #include "io/cboard.hpp"
 #include "io/gimbal/gimbal.hpp"
 #include "tasks/auto_aim/aimer.hpp"
+#include "tasks/auto_aim/detector.hpp"
 #include "tasks/auto_aim/multithread/commandgener.hpp"
 #include "tasks/auto_aim/shooter.hpp"
 #include "tasks/auto_aim/solver.hpp"
 #include "tasks/auto_aim/tracker.hpp"
-#include "tasks/auto_aim/yolo.hpp"
 #include "tools/exiter.hpp"
 #include "tools/img_tools.hpp"
 #include "tools/logger.hpp"
@@ -42,7 +42,7 @@ int main(int argc, char *argv[]) {
   io::Gimbal gimbal(config_path);
   io::Camera camera(config_path);
 
-  auto_aim::YOLO detector(config_path, false);
+  auto_aim::Detector detector(config_path, false);
   auto_aim::Solver solver(config_path);
   auto_aim::Tracker tracker(config_path, solver);
   auto_aim::Aimer aimer(config_path);
@@ -58,7 +58,7 @@ int main(int argc, char *argv[]) {
   while (!exiter.exit()) {
     const auto loop_start = steady_clock::now();
     camera.read(img, t);
-    q = gimbal.q(t - 15ms);
+    q = gimbal.q(t - 2ms);
     mode = gimbal.mode();
 
     if (last_mode != mode) {
@@ -77,7 +77,18 @@ int main(int argc, char *argv[]) {
     auto targets = tracker.track(armors, t);
 
     // 调试阶段：使用固定弹速 20 m/s（而非从下位机读取）
-    auto command = aimer.aim(targets, t, 20.0);
+    // auto command = aimer.aim(targets, t, 20.0);
+    // 使用下位机返回的弹速；若未提供有效值则回退到 20.0 m/s
+    const auto gs = gimbal.state();
+    const double bullet_speed =
+        (gs.bullet_speed > 0.1 && std::isfinite(gs.bullet_speed))
+            ? static_cast<double>(gs.bullet_speed)
+            : 20.0;
+
+    // 基于配置与容差策略决定是否开火（auto_fire 在 Shooter 内部读取并生效）
+    auto command = aimer.aim(targets, t, bullet_speed);
+    command.shoot = shooter.shoot(command, aimer, targets, ypr);
+
     // 复用 io::Command 的 horizon_distance
     // 字段，按现有多线程实现的方式计算水平距离
     command.horizon_distance =

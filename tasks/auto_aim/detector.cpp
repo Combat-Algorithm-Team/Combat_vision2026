@@ -5,8 +5,23 @@
 
 #include <filesystem>
 
+#include "armor.hpp"
 #include "tools/img_tools.hpp"
 #include "tools/logger.hpp"
+#include <cstdlib>
+#include <cstring>
+
+namespace {
+// 判断当前是否具备图形显示环境（X11/Wayland），用于在 headless 环境下关闭所有 GUI 显示
+inline bool gui_available() {
+  const char *disp = getenv("DISPLAY");
+  const char *wayland = getenv("WAYLAND_DISPLAY");
+  const char *headless = getenv("OPENCV_HEADLESS");
+  // 显式设置 OPENCV_HEADLESS=1 时强制无 GUI
+  if (headless && std::strcmp(headless, "1") == 0) return false;
+  return disp != nullptr || wayland != nullptr;
+}
+}
 
 namespace auto_aim
 {
@@ -39,7 +54,11 @@ std::list<Armor> Detector::detect(const cv::Mat & bgr_img, int frame_count)
   // 进行二值化
   cv::Mat binary_img;
   cv::threshold(gray_img, binary_img, threshold_, 255, cv::THRESH_BINARY);
-  cv::imshow("binary_img", binary_img);
+  if (debug_) {
+    if (debug_ && gui_available()) {
+      cv::imshow("binary_img", binary_img);
+    }
+  }
 
   // 获取轮廓点
   std::vector<std::vector<cv::Point>> contours;
@@ -73,6 +92,8 @@ std::list<Armor> Detector::detect(const cv::Mat & bgr_img, int frame_count)
 
       armor.pattern = get_pattern(bgr_img, armor);
       classifier_.classify(armor);
+      // armor.confidence = 1.0;
+      // armor.name = ArmorName::four;
       if (!check_name(armor)) continue;
 
       armor.type = get_type(armor);
@@ -270,7 +291,7 @@ bool Detector::check_type(const Armor & armor) const
   if (!name_ok) {
     tools::logger()->debug(
       "see strange armor: {} {}", ARMOR_TYPES[armor.type], ARMOR_NAMES[armor.name]);
-    save(armor);
+    //save(armor);
   }
 
   return name_ok;
@@ -379,8 +400,10 @@ void Detector::show_result(
   cv::resize(binary_img, binary_img2, {}, 0.5, 0.5);  // 显示时缩小图片尺寸
   cv::resize(detection, detection, {}, 0.5, 0.5);     // 显示时缩小图片尺寸
 
-  // cv::imshow("threshold", binary_img2);
-  cv::imshow("detection", detection);
+  if (debug_ && gui_available()) {
+    // cv::imshow("threshold", binary_img2);
+    cv::imshow("detection", detection);
+  }
 }
 
 void Detector::lightbar_points_corrector(Lightbar & lightbar, const cv::Mat & gray_img) const

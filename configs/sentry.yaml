@@ -8,8 +8,8 @@ classify_model: assets/tiny_resnet.onnx
 yolo11_model_path: assets/yolo11.xml
 yolov8_model_path: assets/yolov8.xml
 yolov5_model_path: assets/yolov5.xml
-device: GPU
-min_confidence: 0.8
+device: CPU
+min_confidence: 0.6
 use_traditional: false
 
 #####-----ROI-----#####
@@ -35,13 +35,13 @@ usb_gain: 10 #0-96
 
 #####-----工业相机参数-----#####
 camera_name: "mindvision"
-exposure_ms: 5
+exposure_ms: 10
 gain: 16.9
 vid_pid: "f622:d206"
 gamma : 1.0
 
 #####-----传统方法参数-----#####
-threshold: 150
+threshold: 120
 max_angle_error: 45 # degree
 min_lightbar_ratio: 1.5
 max_lightbar_ratio: 20
@@ -50,7 +50,7 @@ min_armor_ratio: 1
 max_armor_ratio: 5
 max_side_ratio: 1.5
 max_rectangular_error: 25 # degree
-min_confidence: 0.8
+min_confidence: 0.6
 
 #####-----cboard参数-----#####
 quaternion_canid: 0x01
@@ -63,7 +63,7 @@ com_port: "/dev/gimbal"
 baudrate: 115200
 
 #####-----tracker参数-----#####
-min_detect_count: 5
+min_detect_count: 2
 max_temp_lost_count: 25
 outpost_max_temp_lost_count: 75
 
@@ -82,7 +82,7 @@ low_speed_delay_time: 0.010 # s
 first_tolerance: 5 # 近距离射击容差，degree
 second_tolerance: 2 # 远距离射击容差，degree
 judge_distance: 3 #距离判断阈值
-auto_fire: false # 是否由自瞄控制射击
+auto_fire: true # 是否由自瞄控制射击
 
 #####-----decider参数-----#####
 mode: 1
@@ -92,10 +92,10 @@ R_gimbal2imubody: [1, 0, 0, 0, 1, 0, 0, 0, 1]
 
 
 重投影误差: 1.3357px
-camera_matrix: [1770.4876732200139, 0, 871.39895079297958, 0, 1741.6825254922926, 586.72149880026313, 0, 0, 1]
-distort_coeffs: [-0.016574631950862027, 0.096004499943020738, -0.0052231892730780233, -0.020740902916706303, 0]
+camera_matrix: [1723.7882569925207, 0, 981.62090788748833, 0, 1709.6727741787524, 639.47167255594036, 0, 0, 1]
+distort_coeffs: [-0.073404521497377737, 0.3127905270921853, 0.0027111360192407282, 0.00076462908417211444, 0]
 # 相机同理想情况的偏角: yaw-1.11 pitch0.01 roll-0.06 degree
 # 标定板到世界坐标系原点的水平距离: 1.20 m
 # 标定板同竖直摆放时的偏角: yaw123.89 pitch14.05 roll-0.86 degree
-R_camera2gimbal: [0.0, 0.0, 1.0, -1.0, 0.0, 0.0, 0.0, -1.0, 0.0]
-t_camera2gimbal: [0, 0.0, 0]
+R_camera2gimbal: [0.0, 0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0]
+t_camera2gimbal: [-0.09136 ,0.0  ,-0.08679]
