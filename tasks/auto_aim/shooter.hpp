@@ -2,6 +2,7 @@
 #define AUTO_AIM__SHOOTER_HPP
 
 #include <string>
+#include <chrono>
 
 #include "io/command.hpp"
 #include "tasks/auto_aim/aimer.hpp"
@@ -18,10 +19,12 @@ public:
     const std::list<auto_aim::Target> & targets, const Eigen::Vector3d & gimbal_pos);
 
 private:
+  std::chrono::steady_clock::time_point last_fire_time_;
   io::Command last_command_;
   double judge_distance_;
   double first_tolerance_;
   double second_tolerance_;
+  double fire_gap_time_;
   bool auto_fire_;
 };
 }  // namespace auto_aim

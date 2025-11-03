@@ -106,8 +106,8 @@ std::list<Armor> Detector::detect(const cv::Mat & bgr_img, int frame_count)
 
       armor.pattern = get_pattern(bgr_img, armor); // 提取装甲板图案ROI
       classifier_.classify(armor); // 分类器识别装甲板编号
-      // armor.confidence = 1.0;
-      // armor.name = ArmorName::four;
+      //armor.confidence = 1.0;
+      //armor.name = ArmorName::four;
       if (!check_name(armor)) continue; // 名称/置信度筛选
 
       armor.type = get_type(armor); // 判定大小装甲板
@@ -285,11 +285,11 @@ bool Detector::check_geometry(const Armor & armor) const
 
 bool Detector::check_name(const Armor & armor) const
 {
-  auto name_ok = armor.name != ArmorName::not_armor;
+  auto name_ok = (armor.name != ArmorName::not_armor);
   auto confidence_ok = armor.confidence > min_confidence_;
 
   // 保存不确定的图案，用于分类器的迭代
-  if (name_ok && !confidence_ok) save(armor);
+  if (name_ok && !confidence_ok) /*save(armor)*/;
 
   // 出现 5号 则显示 debug 信息。但不过滤。
   if (armor.name == ArmorName::five) tools::logger()->debug("See pattern 5");
@@ -304,6 +304,7 @@ bool Detector::check_type(const Armor & armor) const
                    : (armor.name == ArmorName::one || armor.name == ArmorName::base);
 
   // 保存异常的图案，用于分类器的迭代
+  name_ok = true; // 临时放宽限制，方便采集数据
   if (!name_ok) {
     tools::logger()->debug(
       "see strange armor: {} {}", ARMOR_TYPES[armor.type], ARMOR_NAMES[armor.name]);
@@ -327,22 +328,83 @@ Color Detector::get_color(const cv::Mat & bgr_img, const std::vector<cv::Point> 
 
 cv::Mat Detector::get_pattern(const cv::Mat & bgr_img, const Armor & armor) const
 {
-  // 延长灯条获得装甲板角点
-  // 1.125 = 0.5 * armor_height / lightbar_length = 0.5 * 126mm / 56mm
-  auto tl = armor.left.center - armor.left.top2bottom * 1.125;
-  auto bl = armor.left.center + armor.left.top2bottom * 1.125;
-  auto tr = armor.right.center - armor.right.top2bottom * 1.125;
-  auto br = armor.right.center + armor.right.top2bottom * 1.125;
+  // 透视矫正：使用灯条四点将装甲板数字区域“拉正”，得到固定尺寸的正视图
+  // 参考实现参数
+  static const int light_length = 12;     // 图中两灯条的垂直长度
+  static const int warp_height = 28;      // 矫正后图像高度
+  static const int small_armor_width = 10;
+  static const int large_armor_width = 32;
 
-  auto roi_left = std::max<int>(std::min(tl.x, bl.x), 0);
-  auto roi_top = std::max<int>(std::min(tl.y, tr.y), 0);
-  auto roi_right = std::min<int>(std::max(tr.x, br.x), bgr_img.cols);
-  auto roi_bottom = std::min<int>(std::max(bl.y, br.y), bgr_img.rows);
-  auto roi_tl = cv::Point(roi_left, roi_top);
-  auto roi_br = cv::Point(roi_right, roi_bottom);
-  auto roi = cv::Rect(roi_tl, roi_br);
+  // 灯条四点（左下、左上、右上、右下），与参考实现保持一致顺序
+  cv::Point2f lights_vertices[4] = {
+    armor.left.bottom, armor.left.top, armor.right.top, armor.right.bottom};
 
-  return bgr_img(roi);
+  // 目标平面上两灯条的垂直位置（保持与参考实现一致）
+  const int top_light_y = (warp_height - light_length) / 2 - 1;
+  const int bottom_light_y = top_light_y + light_length;
+  const int warp_width = (armor.type == ArmorType::small) ? small_armor_width : large_armor_width;
+
+  cv::Point2f target_vertices[4] = {
+    cv::Point2f(0.f, static_cast<float>(bottom_light_y)),
+    cv::Point2f(0.f, static_cast<float>(top_light_y)),
+    cv::Point2f(static_cast<float>(warp_width - 1), static_cast<float>(top_light_y)),
+    cv::Point2f(static_cast<float>(warp_width - 1), static_cast<float>(bottom_light_y)),
+  };
+
+  // 计算源点的紧致ROI，减少warp时的访存与插值成本
+  cv::Rect src_bounds = cv::boundingRect(std::vector<cv::Point2f>{
+    lights_vertices[0], lights_vertices[1], lights_vertices[2], lights_vertices[3]});
+  // 适当加一点边距，防止边缘截断
+  const int margin = 6;
+  src_bounds.x = std::max(0, src_bounds.x - margin);
+  src_bounds.y = std::max(0, src_bounds.y - margin);
+  src_bounds.width = std::min(bgr_img.cols - src_bounds.x, src_bounds.width + 2 * margin);
+  src_bounds.height = std::min(bgr_img.rows - src_bounds.y, src_bounds.height + 2 * margin);
+
+  // 将源点坐标平移到ROI坐标系
+  cv::Point2f offset(static_cast<float>(src_bounds.x), static_cast<float>(src_bounds.y));
+  cv::Point2f src_in_roi[4] = {
+    lights_vertices[0] - offset, lights_vertices[1] - offset,
+    lights_vertices[2] - offset, lights_vertices[3] - offset};
+
+  // 计算透视矩阵并进行矫正（在小ROI上warp，目标尺寸依旧小，速度更快）
+  cv::Mat M = cv::getPerspectiveTransform(src_in_roi, target_vertices);
+  cv::Mat warped;
+  if (!M.empty()) {
+    // 使用最近邻插值以进一步降低开销；对后续二值化与分类影响很小
+    cv::warpPerspective(bgr_img(src_bounds), warped, M, cv::Size(warp_width, warp_height),
+                        cv::INTER_NEAREST, cv::BORDER_REPLICATE);
+  }
+
+  // 若透视失败，退回到原先的矩形 ROI 策略，保证稳健性
+  if (warped.empty()) {
+    // 延长灯条获得装甲板角点（原逻辑）
+    auto tl = armor.left.center - armor.left.top2bottom * 1.125;
+    auto bl = armor.left.center + armor.left.top2bottom * 1.125;
+    auto tr = armor.right.center - armor.right.top2bottom * 1.125;
+    auto br = armor.right.center + armor.right.top2bottom * 1.125;
+
+    auto roi_left = std::max<int>(std::min(tl.x, bl.x) + 50, 0);
+    auto roi_top = std::max<int>(std::min(tl.y, tr.y), 0);
+    auto roi_right = std::min<int>(std::max(tr.x, br.x) - 50, bgr_img.cols);
+    auto roi_bottom = std::min<int>(std::max(bl.y, br.y), bgr_img.rows);
+    auto roi_tl = cv::Point(roi_left, roi_top);
+    auto roi_br = cv::Point(roi_right, roi_bottom);
+    auto roi = cv::Rect(roi_tl, roi_br) & cv::Rect(0, 0, bgr_img.cols, bgr_img.rows);
+    return bgr_img(roi);
+  }
+
+  // 从正视图中间截取 20x28 的数字 ROI
+  const int roi_w = 24;
+  const int roi_h = 28;
+  int x0 = std::max(0, (warp_width - roi_w) / 2);
+  int y0 = 0;
+  // 边界保护
+  if (x0 + roi_w > warped.cols) x0 = std::max(0, warped.cols - roi_w);
+  if (y0 + roi_h > warped.rows) y0 = std::max(0, warped.rows - roi_h);
+
+  cv::Rect number_roi(x0, y0, std::min(roi_w, warped.cols - x0), std::min(roi_h, warped.rows - y0));
+  return warped(number_roi);
 }
 
 ArmorType Detector::get_type(const Armor & armor)

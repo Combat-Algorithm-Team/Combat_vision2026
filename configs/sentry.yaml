@@ -4,13 +4,13 @@ enemy_color: "blue"
 
 #####-----神经网络参数-----#####
 yolo_name: yolov5
-classify_model: assets/tiny_resnet.onnx
+classify_model: assets/lenet.onnx
 yolo11_model_path: assets/yolo11.xml
 yolov8_model_path: assets/yolov8.xml
 yolov5_model_path: assets/yolov5.xml
 device: CPU
-min_confidence: 0.6
-use_traditional: false
+min_confidence: 0.2
+use_traditional: true
 
 #####-----ROI-----#####
 roi: 
@@ -35,13 +35,13 @@ usb_gain: 10 #0-96
 
 #####-----工业相机参数-----#####
 camera_name: "mindvision"
-exposure_ms: 10
+exposure_ms: 8
 gain: 16.9
 vid_pid: "f622:d206"
 gamma : 1.0
 
 #####-----传统方法参数-----#####
-threshold: 120
+threshold: 110
 max_angle_error: 45 # degree
 min_lightbar_ratio: 1.5
 max_lightbar_ratio: 20
@@ -50,7 +50,10 @@ min_armor_ratio: 1
 max_armor_ratio: 5
 max_side_ratio: 1.5
 max_rectangular_error: 25 # degree
-min_confidence: 0.6
+# 分类置信度阈值：你的分类器当前对数字的 softmax 约 ~0.25
+# 之前设置为 0.8 会导致装甲在 check_name 阶段被全部过滤
+# 将阈值下调至 0.20，使通过检验并进入跟踪/解算
+min_confidence: 0.20
 
 #####-----cboard参数-----#####
 quaternion_canid: 0x01
@@ -58,9 +61,17 @@ bullet_speed_canid: 0x110
 send_canid: 0xff
 can_interface: "can0"
 
+#####-----Plotter UDP 参数-----#####
+# 用于发送实时数据到 PlotJuggler
+# Docker 容器内使用 host.docker.internal 指向宿主机
+# 如果使用 --network host，可设为 127.0.0.1
+plotter_host: "127.0.0.1"
+plotter_port: 9870
+
 #####-----gimbal 串口参数-----#####
 com_port: "/dev/gimbal"
 baudrate: 115200
+gimbal_time_offset_ms: -34  # 图像时间戳相对云台姿态的补偿，负值表示取更早的姿态 -18 -12 -40     -31
 
 #####-----tracker参数-----#####
 min_detect_count: 2
@@ -79,10 +90,11 @@ high_speed_delay_time: 0.026 # s
 low_speed_delay_time: 0.010 # s
 
 #####-----shooter参数-----#####
-first_tolerance: 5 # 近距离射击容差，degree
+first_tolerance: 3 # 近距离射击容差，degree
 second_tolerance: 2 # 远距离射击容差，degree
 judge_distance: 3 #距离判断阈值
 auto_fire: true # 是否由自瞄控制射击
+fire_gap_time: 0.3 # 最小开火间隔，单位：秒
 
 #####-----decider参数-----#####
 mode: 1
@@ -99,3 +111,21 @@ distort_coeffs: [-0.073404521497377737, 0.3127905270921853, 0.002711136019240728
 # 标定板同竖直摆放时的偏角: yaw123.89 pitch14.05 roll-0.86 degree
 R_camera2gimbal: [0.0, 0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0]
 t_camera2gimbal: [-0.09136 ,0.0  ,-0.08679]
+
+#####-----planner 参数-----#####
+# 启用装甲切换时的显式平滑（提前减速）；不启用则走 TinyMPC 原流程
+explicit_smoothing: false
+
+# 轨迹误差阈值（单位：rad），yaw/pitch 同时与期望轨迹的欧氏距离
+# 小于该阈值时才允许开火，避免规划轨迹与执行轨迹偏差过大
+fire_thresh: 0.003
+
+# 云台加速度约束（单位：rad/s^2），数值可按设备实测微调
+max_yaw_acc: 120.0
+max_pitch_acc: 100.0
+
+# MPC 权重（长度严格要求：Q 为2项 [位置, 速度]，R 为1项 [加速度]）
+Q_yaw:   [12.0, 1.5]
+R_yaw:   [0.2]
+Q_pitch: [10.0, 1.2]
+R_pitch: [0.2]
