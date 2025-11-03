@@ -87,11 +87,7 @@ int main(int argc, char * argv[])
   while (!exiter.exit()) {
     const auto loop_start = steady_clock::now();
     camera.read(img, t);
-<<<<<<< HEAD
-    q = gimbal.q(t - 2ms);
-=======
     q = gimbal.q(t + gimbal_time_offset);
->>>>>>> tracker
     mode = gimbal.mode();
 
     if (last_mode != mode) {
@@ -119,7 +115,6 @@ int main(int argc, char * argv[])
     // 传给跟踪器
     auto targets = tracker.track(armors, t);
 
-<<<<<<< HEAD
     // 调试阶段：使用固定弹速 20 m/s（而非从下位机读取）
     // auto command = aimer.aim(targets, t, 20.0);
     // 使用下位机返回的弹速；若未提供有效值则回退到 20.0 m/s
@@ -130,24 +125,6 @@ int main(int argc, char * argv[])
             : 20.0;
 
     // 基于配置与容差策略决定是否开火（auto_fire 在 Shooter 内部读取并生效）
-=======
-    // 使用下位机返回的弹速；若未提供有效值则回退到 20.0 m/s
-    const auto gs = gimbal.state();
-    const double bullet_speed = (gs.bullet_speed > 0.1 && std::isfinite(gs.bullet_speed))
-                                  ? static_cast<double>(gs.bullet_speed)
-                                  : 20.0;
-
-    // // 使用 Planner 进行轨迹规划（带提前减速策略）
-    // auto_aim::Plan plan = targets.empty() ? planner.plan(std::nullopt, bullet_speed)
-    //                                       : planner.plan(targets.front(), bullet_speed);
-
-    // // 将 Plan 转换为 Command 接口（直接使用 bool 类型）
-    // io::Command command;
-    // command.control = plan.control;
-    // command.shoot = plan.fire;
-    // command.yaw = plan.yaw;
-    // command.pitch = plan.pitch;
->>>>>>> tracker
     auto command = aimer.aim(targets, t, bullet_speed);
     command.shoot = shooter.shoot(command, aimer, targets, ypr);
 
