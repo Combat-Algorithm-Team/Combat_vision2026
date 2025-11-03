@@ -1,95 +1,130 @@
+
+// detector.cpp 实现装甲板检测主流程，包含灯条、装甲板的几何筛选、分类、去重、可视化等功能
+// 依赖 OpenCV、YAML、fmt、C++17 filesystem 及本项目自定义类型
+/*
+结构概述
+头文件引用：包含本地和第三方依赖。
+匿名命名空间：提供 GUI 检查的辅助函数。
+auto_aim 命名空间：实现 Detector 类，包含构造、主检测流程、辅助几何/类型/名称检查、颜色/图案提取、结果展示、灯条点修正等方法。
+功能与意图
+主要功能：检测输入图像中的装甲板（Armor），并对其进行分类、类型判别、去重、可视化等处理。
+意图：为自动瞄准系统提供高鲁棒性、高准确率的装甲板检测与识别能力，支持调试、数据采集和模型迭代
+*/
 #include "detector.hpp"
 
-#include <fmt/chrono.h>
-#include <yaml-cpp/yaml.h>
 
-#include <filesystem>
+#include <fmt/chrono.h>         // 用于格式化时间字符串
+#include <yaml-cpp/yaml.h>      // 用于解析 YAML 配置
+#include <filesystem>           // C++17 文件系统操作
+#include "armor.hpp"           // 装甲板相关类型定义
+#include "tools/img_tools.hpp" // 图像工具函数
+#include "tools/logger.hpp"    // 日志工具
+#include <cstdlib>              // getenv
+#include <cstring>              // strcmp
 
-#include "tools/img_tools.hpp"
-#include "tools/logger.hpp"
+
+namespace {
+// 判断当前是否具备图形显示环境（X11/Wayland），用于在 headless 环境下关闭所有 GUI 显示
+// 若设置 OPENCV_HEADLESS=1，则强制无 GUI
+inline bool gui_available() {
+  const char *disp = getenv("DISPLAY");           // X11 环境变量
+  const char *wayland = getenv("WAYLAND_DISPLAY"); // Wayland 环境变量
+  const char *headless = getenv("OPENCV_HEADLESS"); // OpenCV 无头模式
+  if (headless && std::strcmp(headless, "1") == 0) return false;
+  return disp != nullptr || wayland != nullptr;
+}
+}
 
 namespace auto_aim
 {
+
+// Detector 构造函数：加载 YAML 配置，初始化分类器、参数，创建图案保存目录
 Detector::Detector(const std::string & config_path, bool debug)
-: classifier_(config_path), debug_(debug)
+  : classifier_(config_path), debug_(debug)
 {
-  auto yaml = YAML::LoadFile(config_path);
+  auto yaml = YAML::LoadFile(config_path); // 读取 YAML 配置
 
-  threshold_ = yaml["threshold"].as<double>();
-  max_angle_error_ = yaml["max_angle_error"].as<double>() / 57.3;  // degree to rad
-  min_lightbar_ratio_ = yaml["min_lightbar_ratio"].as<double>();
-  max_lightbar_ratio_ = yaml["max_lightbar_ratio"].as<double>();
-  min_lightbar_length_ = yaml["min_lightbar_length"].as<double>();
-  min_armor_ratio_ = yaml["min_armor_ratio"].as<double>();
-  max_armor_ratio_ = yaml["max_armor_ratio"].as<double>();
-  max_side_ratio_ = yaml["max_side_ratio"].as<double>();
-  min_confidence_ = yaml["min_confidence"].as<double>();
-  max_rectangular_error_ = yaml["max_rectangular_error"].as<double>() / 57.3;  // degree to rad
+  // 各类参数初始化
+  threshold_ = yaml["threshold"].as<double>(); // 二值化阈值
+  max_angle_error_ = yaml["max_angle_error"].as<double>() / 57.3;  // 最大角度误差（弧度）
+  min_lightbar_ratio_ = yaml["min_lightbar_ratio"].as<double>();    // 灯条最小长宽比
+  max_lightbar_ratio_ = yaml["max_lightbar_ratio"].as<double>();    // 灯条最大长宽比
+  min_lightbar_length_ = yaml["min_lightbar_length"].as<double>();  // 灯条最小长度
+  min_armor_ratio_ = yaml["min_armor_ratio"].as<double>();          // 装甲板最小长宽比
+  max_armor_ratio_ = yaml["max_armor_ratio"].as<double>();          // 装甲板最大长宽比
+  max_side_ratio_ = yaml["max_side_ratio"].as<double>();            // 装甲板最大边比
+  min_confidence_ = yaml["min_confidence"].as<double>();            // 分类最小置信度
+  max_rectangular_error_ = yaml["max_rectangular_error"].as<double>() / 57.3; // 最大矩形误差（弧度）
 
-  save_path_ = "patterns";
-  std::filesystem::create_directory(save_path_);
+  save_path_ = "patterns"; // 图案保存目录
+  std::filesystem::create_directory(save_path_); // 若不存在则创建
 }
 
+
+// 主检测流程：输入BGR图像，输出装甲板列表
 std::list<Armor> Detector::detect(const cv::Mat & bgr_img, int frame_count)
 {
-  // 彩色图转灰度图
+  // 1. 预处理：彩色转灰度，二值化
   cv::Mat gray_img;
-  cv::cvtColor(bgr_img, gray_img, cv::COLOR_BGR2GRAY);
+  cv::cvtColor(bgr_img, gray_img, cv::COLOR_BGR2GRAY); // 灰度化
 
-  // 进行二值化
   cv::Mat binary_img;
-  cv::threshold(gray_img, binary_img, threshold_, 255, cv::THRESH_BINARY);
-  cv::imshow("binary_img", binary_img);
+  cv::threshold(gray_img, binary_img, threshold_, 255, cv::THRESH_BINARY); // 二值化
+  if (debug_ && gui_available()) {
+    cv::imshow("binary_img", binary_img); // 调试可视化
+  }
 
-  // 获取轮廓点
+  // 2. 轮廓提取，寻找所有可能的灯条区域
   std::vector<std::vector<cv::Point>> contours;
   cv::findContours(binary_img, contours, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_NONE);
 
-  // 获取灯条
+  // 3. 灯条筛选与属性提取
   std::size_t lightbar_id = 0;
   std::list<Lightbar> lightbars;
   for (const auto & contour : contours) {
-    auto rotated_rect = cv::minAreaRect(contour);
-    auto lightbar = Lightbar(rotated_rect, lightbar_id);
+    auto rotated_rect = cv::minAreaRect(contour); // 最小外接矩形
+    auto lightbar = Lightbar(rotated_rect, lightbar_id); // 构造灯条对象
 
-    if (!check_geometry(lightbar)) continue;
+    if (!check_geometry(lightbar)) continue; // 几何筛选
 
-    lightbar.color = get_color(bgr_img, contour);
-    lightbars.emplace_back(lightbar);
+    lightbar.color = get_color(bgr_img, contour); // 判断颜色
+    lightbars.emplace_back(lightbar); // 加入灯条列表
     lightbar_id += 1;
   }
 
-  // 将灯条从左到右排序
+  // 4. 灯条排序（从左到右）
   lightbars.sort([](const Lightbar & a, const Lightbar & b) { return a.center.x < b.center.x; });
 
-  // 获取装甲板
+  // 5. 装甲板候选生成与筛选
   std::list<Armor> armors;
   for (auto left = lightbars.begin(); left != lightbars.end(); left++) {
     for (auto right = std::next(left); right != lightbars.end(); right++) {
-      if (left->color != right->color) continue;
+      if (left->color != right->color) continue; // 颜色不同跳过
 
-      auto armor = Armor(*left, *right);
-      if (!check_geometry(armor)) continue;
+      auto armor = Armor(*left, *right); // 构造装甲板
+      if (!check_geometry(armor)) continue; // 装甲板几何筛选
 
-      armor.pattern = get_pattern(bgr_img, armor);
-      classifier_.classify(armor);
-      if (!check_name(armor)) continue;
+      armor.pattern = get_pattern(bgr_img, armor); // 提取装甲板图案ROI
+      classifier_.classify(armor); // 分类器识别装甲板编号
+      //armor.confidence = 1.0;
+      //armor.name = ArmorName::four;
+      if (!check_name(armor)) continue; // 名称/置信度筛选
 
-      armor.type = get_type(armor);
-      if (!check_type(armor)) continue;
+      armor.type = get_type(armor); // 判定大小装甲板
+      if (!check_type(armor)) continue; // 类型筛选
 
-      armor.center_norm = get_center_norm(bgr_img, armor.center);
-      armors.emplace_back(armor);
+      armor.center_norm = get_center_norm(bgr_img, armor.center); // 归一化中心
+      armors.emplace_back(armor); // 加入装甲板列表
     }
   }
 
-  // 检查装甲板是否存在共用灯条的情况
+  // 6. 去重：检查装甲板是否存在共用灯条的情况，重叠/相连时保留面积小或置信度高的
   for (auto armor1 = armors.begin(); armor1 != armors.end(); armor1++) {
     for (auto armor2 = std::next(armor1); armor2 != armors.end(); armor2++) {
       if (
         armor1->left.id != armor2->left.id && armor1->left.id != armor2->right.id &&
         armor1->right.id != armor2->left.id && armor1->right.id != armor2->right.id) {
-        continue;
+        continue; // 没有共用灯条
       }
 
       // 装甲板重叠, 保留roi小的
@@ -112,11 +147,13 @@ std::list<Armor> Detector::detect(const cv::Mat & bgr_img, int frame_count)
     }
   }
 
+  // 7. 移除重复装甲板
   armors.remove_if([&](const Armor & a) { return a.duplicated; });
 
+  // 8. 可视化调试
   if (debug_) show_result(binary_img, bgr_img, lightbars, armors, frame_count);
 
-  return armors;
+  return armors; // 返回检测结果
 }
 
 bool Detector::detect(Armor & armor, const cv::Mat & bgr_img)
@@ -176,7 +213,7 @@ bool Detector::detect(Armor & armor, const cv::Mat & bgr_img)
     if (!check_geometry(lightbar)) continue;
 
     lightbar.color = get_color(bgr_img, contour);
-    // lightbar_points_corrector(lightbar, gray_img); //关闭PCA
+    lightbar_points_corrector(lightbar, gray_img); //使用PCA修正灯条点
     lightbars.emplace_back(lightbar);
     lightbar_id += 1;
   }
@@ -248,11 +285,11 @@ bool Detector::check_geometry(const Armor & armor) const
 
 bool Detector::check_name(const Armor & armor) const
 {
-  auto name_ok = armor.name != ArmorName::not_armor;
+  auto name_ok = (armor.name != ArmorName::not_armor);
   auto confidence_ok = armor.confidence > min_confidence_;
 
   // 保存不确定的图案，用于分类器的迭代
-  if (name_ok && !confidence_ok) save(armor);
+  if (name_ok && !confidence_ok) /*save(armor)*/;
 
   // 出现 5号 则显示 debug 信息。但不过滤。
   if (armor.name == ArmorName::five) tools::logger()->debug("See pattern 5");
@@ -267,10 +304,11 @@ bool Detector::check_type(const Armor & armor) const
                    : (armor.name == ArmorName::one || armor.name == ArmorName::base);
 
   // 保存异常的图案，用于分类器的迭代
+  name_ok = true; // 临时放宽限制，方便采集数据
   if (!name_ok) {
     tools::logger()->debug(
       "see strange armor: {} {}", ARMOR_TYPES[armor.type], ARMOR_NAMES[armor.name]);
-    save(armor);
+    //save(armor);
   }
 
   return name_ok;
@@ -290,22 +328,83 @@ Color Detector::get_color(const cv::Mat & bgr_img, const std::vector<cv::Point> 
 
 cv::Mat Detector::get_pattern(const cv::Mat & bgr_img, const Armor & armor) const
 {
-  // 延长灯条获得装甲板角点
-  // 1.125 = 0.5 * armor_height / lightbar_length = 0.5 * 126mm / 56mm
-  auto tl = armor.left.center - armor.left.top2bottom * 1.125;
-  auto bl = armor.left.center + armor.left.top2bottom * 1.125;
-  auto tr = armor.right.center - armor.right.top2bottom * 1.125;
-  auto br = armor.right.center + armor.right.top2bottom * 1.125;
+  // 透视矫正：使用灯条四点将装甲板数字区域“拉正”，得到固定尺寸的正视图
+  // 参考实现参数
+  static const int light_length = 12;     // 图中两灯条的垂直长度
+  static const int warp_height = 28;      // 矫正后图像高度
+  static const int small_armor_width = 10;
+  static const int large_armor_width = 32;
 
-  auto roi_left = std::max<int>(std::min(tl.x, bl.x), 0);
-  auto roi_top = std::max<int>(std::min(tl.y, tr.y), 0);
-  auto roi_right = std::min<int>(std::max(tr.x, br.x), bgr_img.cols);
-  auto roi_bottom = std::min<int>(std::max(bl.y, br.y), bgr_img.rows);
-  auto roi_tl = cv::Point(roi_left, roi_top);
-  auto roi_br = cv::Point(roi_right, roi_bottom);
-  auto roi = cv::Rect(roi_tl, roi_br);
+  // 灯条四点（左下、左上、右上、右下），与参考实现保持一致顺序
+  cv::Point2f lights_vertices[4] = {
+    armor.left.bottom, armor.left.top, armor.right.top, armor.right.bottom};
 
-  return bgr_img(roi);
+  // 目标平面上两灯条的垂直位置（保持与参考实现一致）
+  const int top_light_y = (warp_height - light_length) / 2 - 1;
+  const int bottom_light_y = top_light_y + light_length;
+  const int warp_width = (armor.type == ArmorType::small) ? small_armor_width : large_armor_width;
+
+  cv::Point2f target_vertices[4] = {
+    cv::Point2f(0.f, static_cast<float>(bottom_light_y)),
+    cv::Point2f(0.f, static_cast<float>(top_light_y)),
+    cv::Point2f(static_cast<float>(warp_width - 1), static_cast<float>(top_light_y)),
+    cv::Point2f(static_cast<float>(warp_width - 1), static_cast<float>(bottom_light_y)),
+  };
+
+  // 计算源点的紧致ROI，减少warp时的访存与插值成本
+  cv::Rect src_bounds = cv::boundingRect(std::vector<cv::Point2f>{
+    lights_vertices[0], lights_vertices[1], lights_vertices[2], lights_vertices[3]});
+  // 适当加一点边距，防止边缘截断
+  const int margin = 6;
+  src_bounds.x = std::max(0, src_bounds.x - margin);
+  src_bounds.y = std::max(0, src_bounds.y - margin);
+  src_bounds.width = std::min(bgr_img.cols - src_bounds.x, src_bounds.width + 2 * margin);
+  src_bounds.height = std::min(bgr_img.rows - src_bounds.y, src_bounds.height + 2 * margin);
+
+  // 将源点坐标平移到ROI坐标系
+  cv::Point2f offset(static_cast<float>(src_bounds.x), static_cast<float>(src_bounds.y));
+  cv::Point2f src_in_roi[4] = {
+    lights_vertices[0] - offset, lights_vertices[1] - offset,
+    lights_vertices[2] - offset, lights_vertices[3] - offset};
+
+  // 计算透视矩阵并进行矫正（在小ROI上warp，目标尺寸依旧小，速度更快）
+  cv::Mat M = cv::getPerspectiveTransform(src_in_roi, target_vertices);
+  cv::Mat warped;
+  if (!M.empty()) {
+    // 使用最近邻插值以进一步降低开销；对后续二值化与分类影响很小
+    cv::warpPerspective(bgr_img(src_bounds), warped, M, cv::Size(warp_width, warp_height),
+                        cv::INTER_NEAREST, cv::BORDER_REPLICATE);
+  }
+
+  // 若透视失败，退回到原先的矩形 ROI 策略，保证稳健性
+  if (warped.empty()) {
+    // 延长灯条获得装甲板角点（原逻辑）
+    auto tl = armor.left.center - armor.left.top2bottom * 1.125;
+    auto bl = armor.left.center + armor.left.top2bottom * 1.125;
+    auto tr = armor.right.center - armor.right.top2bottom * 1.125;
+    auto br = armor.right.center + armor.right.top2bottom * 1.125;
+
+    auto roi_left = std::max<int>(std::min(tl.x, bl.x) + 50, 0);
+    auto roi_top = std::max<int>(std::min(tl.y, tr.y), 0);
+    auto roi_right = std::min<int>(std::max(tr.x, br.x) - 50, bgr_img.cols);
+    auto roi_bottom = std::min<int>(std::max(bl.y, br.y), bgr_img.rows);
+    auto roi_tl = cv::Point(roi_left, roi_top);
+    auto roi_br = cv::Point(roi_right, roi_bottom);
+    auto roi = cv::Rect(roi_tl, roi_br) & cv::Rect(0, 0, bgr_img.cols, bgr_img.rows);
+    return bgr_img(roi);
+  }
+
+  // 从正视图中间截取 20x28 的数字 ROI
+  const int roi_w = 24;
+  const int roi_h = 28;
+  int x0 = std::max(0, (warp_width - roi_w) / 2);
+  int y0 = 0;
+  // 边界保护
+  if (x0 + roi_w > warped.cols) x0 = std::max(0, warped.cols - roi_w);
+  if (y0 + roi_h > warped.rows) y0 = std::max(0, warped.rows - roi_h);
+
+  cv::Rect number_roi(x0, y0, std::min(roi_w, warped.cols - x0), std::min(roi_h, warped.rows - y0));
+  return warped(number_roi);
 }
 
 ArmorType Detector::get_type(const Armor & armor)
@@ -379,8 +478,10 @@ void Detector::show_result(
   cv::resize(binary_img, binary_img2, {}, 0.5, 0.5);  // 显示时缩小图片尺寸
   cv::resize(detection, detection, {}, 0.5, 0.5);     // 显示时缩小图片尺寸
 
-  // cv::imshow("threshold", binary_img2);
-  cv::imshow("detection", detection);
+  if (debug_ && gui_available()) {
+    // cv::imshow("threshold", binary_img2);
+    cv::imshow("detection", detection);
+  }
 }
 
 void Detector::lightbar_points_corrector(Lightbar & lightbar, const cv::Mat & gray_img) const

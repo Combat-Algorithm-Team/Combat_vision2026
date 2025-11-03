@@ -127,10 +127,17 @@ void Gimbal::send(const io::Command &cmd) {
   std::memcpy(&buf[0x14], &nsec, 4);
 
   buf[0x1F] = 0x0D;
-  // fmt::print("[TX cmd] ");
-  // for (auto b : buf)
-  //   fmt::print("{:02X} ", b);
-  // fmt::print("\n");
+
+  // Debug 打印：解释值与原始字节（debug 级别）
+  // if (tools::logger()->should_log(spdlog::level::debug)) {
+  //   tools::logger()->debug(
+  //     "[TX] fire={}, pitch(rad)={:.3f}, yaw(deg)={:.2f}, dist={:.2f}, ts={}+{}",
+  //     static_cast<int>(buf[0x01]), static_cast<float>(cmd.pitch), yaw_deg,
+  //     static_cast<float>(cmd.horizon_distance), sec, nsec);
+  //   std::string hex; hex.reserve(32 * 3);
+  //   for (int i = 0; i < 32; ++i) hex += fmt::format("{:02X} ", buf[i]);
+  //   tools::logger()->debug("[TX] bytes: {}", hex);
+  // }
 
   try {
     serial_.write(buf, sizeof(buf));
@@ -249,10 +256,24 @@ void Gimbal::read_thread() {
     Eigen::AngleAxisd Ry(pitch, Eigen::Vector3d::UnitY());
     Eigen::AngleAxisd Rz(yaw, Eigen::Vector3d::UnitZ());
     Eigen::Quaterniond q = Rz * Ry;
+
+
     Eigen::Vector3d ypr = tools::eulers(q.toRotationMatrix(), 2, 1, 0);
-    constexpr double kRad2Deg = 180.0 / M_PI;
-    // fmt::print("[Gimbal RX] yaw: {:.2f}, pitch: {:.2f}, roll: {:.2f}
-    // (deg)\n",
+    
+    // Eigen::Matrix3d R = q.toRotationMatrix();
+    // const auto ex = R.col(0), ey = R.col(1), ez = R.col(2);
+    // fmt::print("[det] {:.3f}, ex×ey·ez = {:.3f}\n", R.determinant(),
+    //            ex.cross(ey).normalized().dot(ez));
+    // Eigen::Matrix3d R = q.toRotationMatrix();
+    // const auto ex = R.col(0), ey = R.col(1), ez = R.col(2);
+    // fmt::print("[basis] X=({:+.2f},{:+.2f},{:+.2f}) "
+    //            "Y=({:+.2f},{:+.2f},{:+.2f}) Z=({:+.2f},{:+.2f},{:+.2f})\n",
+    //            ex.x(), ex.y(), ex.z(), ey.x(), ey.y(), ey.z(), ez.x(),
+    //            ez.y(), ez.z());
+    // det≈+1 且 点积≈+1 则为右手系
+    
+    // constexpr double kRad2Deg = 180.0 / M_PI;
+    // fmt::print("[Gimbal RX] yaw: {:.2f}, pitch: {:.2f}, roll: {:.2f}(deg)\n",
     //            ypr[0] * kRad2Deg, ypr[1] * kRad2Deg, ypr[2] * kRad2Deg);
 
     queue_.push({q, t});
