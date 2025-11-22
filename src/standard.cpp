@@ -8,6 +8,7 @@
 // #include "io/cboard.hpp"
 #include "io/gimbal/gimbal.hpp"
 #include "tasks/auto_aim/aimer.hpp"
+#include "tasks/auto_aim/armor.hpp"
 #include "tasks/auto_aim/detector.hpp"
 #include "tasks/auto_aim/multithread/commandgener.hpp"
 #include "tasks/auto_aim/planner/planner.hpp"
@@ -57,6 +58,18 @@ int main(int argc, char * argv[])
   if (yaml["gimbal_time_offset_ms"]) {
     gimbal_time_offset_ms = yaml["gimbal_time_offset_ms"].as<double>();
   }
+  bool debug_display = false;
+  if (yaml["debug_display"]) {
+    debug_display = yaml["debug_display"].as<bool>();
+  }
+  double debug_display_scale = 0.5;
+  if (yaml["debug_display_scale"]) {
+    debug_display_scale = yaml["debug_display_scale"].as<double>();
+  }
+  int debug_display_wait_ms = 30;
+  if (yaml["debug_display_wait_ms"]) {
+    debug_display_wait_ms = yaml["debug_display_wait_ms"].as<int>();
+  }
   const auto gimbal_time_offset = std::chrono::duration_cast<std::chrono::steady_clock::duration>(
     std::chrono::duration<double, std::milli>(gimbal_time_offset_ms));
 
@@ -101,36 +114,43 @@ int main(int argc, char * argv[])
 
     Eigen::Vector3d ypr = tools::eulers(solver.R_gimbal2world(), 2, 1, 0);
 
-    auto armors = detector.detect(img);
 
-    // 打印每个装甲板的关键信息
-    // for (const auto& armor : armors) {
-    //   fmt::print("Armor: name={}, type={}, center=({:.1f},{:.1f}), conf={:.2f}\n",
-    //              static_cast<int>(armor.name),  // 或者用自定义的to_string(armor.name)
-    //              static_cast<int>(armor.type),  // 或者用自定义的to_string(armor.type)
-    //              armor.center.x, armor.center.y,
-    //              armor.confidence);
-    // }
+    auto armors = detector.detect(img);
+    
+    // 打印每个装甲板的PnP解算结果（x, y, z坐标和欧拉角）
+    for (auto & armor : armors) {
+      // 调用solver.solve()进行PnP解算
+      solver.solve(armor);
+      
+      // 打印Gimbal坐标系中的解算结果
+      // fmt::print(
+      //   "[Armor PnP] name={}, xyz_gimbal=({:.3f}, {:.3f}, {:.3f}), "
+      //   "ypr_gimbal=({:.2f}°, {:.2f}°, {:.2f}°)\n",
+      //   auto_aim::ARMOR_NAMES[armor.name],
+      //   armor.xyz_in_gimbal[0], armor.xyz_in_gimbal[1], armor.xyz_in_gimbal[2],
+      //   armor.ypr_in_gimbal[0] * 180.0 / M_PI, armor.ypr_in_gimbal[1] * 180.0 / M_PI,
+      //   armor.ypr_in_gimbal[2] * 180.0 / M_PI);
+      
+      // // 打印World坐标系中的解算结果
+      // fmt::print(
+      //   "[Armor World] name={}, xyz_world=({:.3f}, {:.3f}, {:.3f}), "
+      //   "ypr_world=({:.2f}°, {:.2f}°, {:.2f}°)\n",
+      //   auto_aim::ARMOR_NAMES[armor.name],
+      //   armor.xyz_in_world[0], armor.xyz_in_world[1], armor.xyz_in_world[2],
+      //   armor.ypr_in_world[0] * 180.0 / M_PI, armor.ypr_in_world[1] * 180.0 / M_PI,
+      //   armor.ypr_in_world[2] * 180.0 / M_PI);
+    }
 
     // 传给跟踪器
-    auto targets = tracker.track(armors, t);
+    auto targets = tracker.track(armors, t);//dsjajknklfsfkljan
 
     // 使用下位机返回的弹速；若未提供有效值则回退到 20.0 m/s
     const auto gs = gimbal.state();
-    const double bullet_speed = (gs.bullet_speed > 0.1 && std::isfinite(gs.bullet_speed))
-                                  ? static_cast<double>(gs.bullet_speed)
-                                  : 20.0;
+    // const double bullet_speed = (gs.bullet_speed > 0.1 && std::isfinite(gs.bullet_speed))
+    //                               ? static_cast<double>(gs.bullet_speed)
+    //                               : 20.0;
+    const double bullet_speed = 26.0; // 暂时固定为 26 m/s
 
-    // // 使用 Planner 进行轨迹规划（带提前减速策略）
-    // auto_aim::Plan plan = targets.empty() ? planner.plan(std::nullopt, bullet_speed)
-    //                                       : planner.plan(targets.front(), bullet_speed);
-
-    // // 将 Plan 转换为 Command 接口（直接使用 bool 类型）
-    // io::Command command;
-    // command.control = plan.control;
-    // command.shoot = plan.fire;
-    // command.yaw = plan.yaw;
-    // command.pitch = plan.pitch;
     auto command = aimer.aim(targets, t, bullet_speed);
     command.shoot = shooter.shoot(command, aimer, targets, ypr);
 
@@ -142,93 +162,79 @@ int main(int argc, char * argv[])
         : std::sqrt(
             tools::square(targets.front().ekf_x()[0]) + tools::square(targets.front().ekf_x()[2]));
 
-    // // 观测yaw：由目标在世界(或云台)系下的水平位置计算方位角
-    // // 假设状态向量次序为 [x, vx, z, vz, y, vy, yaw, yaw_rate, ...]
-    // double observed_yaw = 0.0;
-    // double observed_yaw_tfly = 0.0;  // t+tfly 的预测方位角（用于验证提前量）
-    // if (!targets.empty()) {
-    //   const auto& s = targets.front().ekf_x();
-    //   if (s.size() >= 4) {
-    //     const double tx = s[0];  // x
-    //     const double tz = s[2];  // z
-    //     const double vx = s[1];  // vx
-    //     const double vz = s[3];  // vz
-
-    //     observed_yaw = std::atan2(tx, tz);
-
-    //     // 估算弹丸运动飞行时间 tfly ≈ 水平距离 / 子弹速度
-    //     const double horiz_dist = std::hypot(tx, tz);
-    //     const double tfly = (bullet_speed > 1e-3) ? (horiz_dist / bullet_speed) : 0.0;
-
-    //     // 线性外推目标水平位置到 t+tfly，得到对应方位角
-    //     const double tx_t = tx + vx * tfly;
-    //     const double tz_t = tz + vz * tfly;
-    //     observed_yaw_tfly = std::atan2(tx_t, tz_t);
-    //   }
-    // }
-    // double shoot_yaw = command.yaw;
-
-    // // 数值微分：命令yaw的速度/加速度，便于看是否“提前减速”和“限加速度”
-    // static bool first = true;
-    // static double prev_cmd_yaw = 0.0;
-    // static double prev_cmd_vel = 0.0;
-    // static double prev_obs_yaw = 0.0;
-    // static std::chrono::steady_clock::time_point prev_t = t;
-
-    // const double dt = std::max(1e-3, tools::delta_time(t, prev_t));  // s
-    // const double cmd_vel = first ? 0.0 : (shoot_yaw - prev_cmd_yaw) / dt;
-    // const double cmd_acc = first ? 0.0 : (cmd_vel - prev_cmd_vel) / dt;
-
-    // // 检测“装甲切换”：观测yaw出现较大跳变（环绕处理）
-    // auto angle_diff = [](double a, double b) {
-    //   double d = a - b;
-    //   // wrap到[-pi, pi]
-    //   d = std::atan2(std::sin(d), std::cos(d));
-    //   return d;
-    // };
-    // const double d_obs = first ? 0.0 : angle_diff(observed_yaw, prev_obs_yaw);
-    // const bool switch_event = std::abs(d_obs) > 0.6;  // 阈值可调：~0.6rad≈34°
-
-    // prev_t = t;
-    // prev_cmd_yaw = shoot_yaw;
-    // prev_cmd_vel = cmd_vel;
-    // prev_obs_yaw = observed_yaw;
-    // first = false;
-
-    // // 发送到Plotter
-    // nlohmann::json j;
-    // j["observed_yaw"] = observed_yaw;
-    // j["observed_yaw_tfly"] = observed_yaw_tfly;
-    // j["shoot_yaw"] = shoot_yaw;
-    // j["yaw_cmd_vel"] = cmd_vel;   // 命令yaw速度
-    // j["yaw_cmd_acc"] = cmd_acc;   // 命令yaw加速度
-    // j["yaw_error"] = shoot_yaw - observed_yaw;
-    // j["yaw_error_tfly"] = shoot_yaw - observed_yaw_tfly;
-    // j["switch_event"] = switch_event ? 1 : 0;  // 观察切换时刻
-    // j["shoot_flag"] = static_cast<int>(command.shoot); // 开火标志
-    // j["frame_id"] = frame_id;
-    // plotter.plot(j);
-
     // 通过串口发送指令（复用已有 Command 接口，内部会按 32B
     // 协议打包并带上时间戳）
     constexpr double kRad2Deg = 180.0 / M_PI;
     const double yaw_deg = command.yaw * kRad2Deg;
     const double pitch_deg = command.pitch * kRad2Deg;
 
-    // 控制台打印开销较大，默认每 50 帧输出一次，降低对帧率的影响
-    // if ((frame_id % 50) == 0) {
-    //   fmt::print(
-    //     "[Planner] control: {}, fire: {}, yaw: {:.3f} deg (vel: {:.3f}, acc: {:.3f}), pitch: "
-    //     "{:.3f} deg (vel: {:.3f}, acc: {:.3f})\n",
-    //     plan.control, plan.fire, plan.yaw * kRad2Deg, plan.yaw_vel, plan.yaw_acc,
-    //     plan.pitch * kRad2Deg, plan.pitch_vel, plan.pitch_acc);
-    // }
-    if ((frame_id % 50) == 0) {
+    if ((frame_id % 50) == 100) {
       fmt::print(
         "[Gimbal Cmd] control: {}, shoot: {}, yaw: {:.3f} deg, pitch: {:.3f} deg, "
         "horizon_distance: {:.3f}\n",
         static_cast<int>(command.control), static_cast<int>(command.shoot), yaw_deg, pitch_deg,
         command.horizon_distance);
+    }
+
+    if (debug_display) {
+      cv::Mat display_img;
+      img.copyTo(display_img);
+
+      tools::draw_text(
+        display_img,
+        fmt::format(
+          "command is {},{:.2f},{:.2f},shoot:{}", command.control, command.yaw * kRad2Deg,
+          command.pitch * kRad2Deg, command.shoot),
+        {10, 60}, {154, 50, 205});
+
+      Eigen::Quaterniond gimbal_q = q;
+      const double gimbal_yaw_deg = tools::eulers(gimbal_q, 2, 1, 0)[0] * kRad2Deg;
+      tools::draw_text(
+        display_img, fmt::format("gimbal yaw{:.2f}", gimbal_yaw_deg), {10, 90}, {255, 255, 255});
+
+      // 绘制检测阶段得到的装甲板角点（绿色线框）
+      for (const auto & armor : armors) {
+        if (armor.points.size() >= 4) {
+          tools::draw_points(display_img, armor.points, {0, 255, 0});
+        }
+      }
+
+      // 绘制跟踪器内部的重投影结果（绿色）
+      for (const auto & target : targets) {
+        auto armor_xyza_list = target.armor_xyza_list();
+        for (const Eigen::Vector4d & xyza : armor_xyza_list) {
+          auto image_points =
+            solver.reproject_armor(xyza.head(3), xyza[3], target.armor_type, target.name);
+          tools::draw_points(display_img, image_points, {0, 255, 0});
+        }
+      }
+
+      // 绘制瞄准点（红色）
+      if (!targets.empty()) {
+        const auto & primary_target = targets.front();
+        const auto & aim_point = aimer.debug_aim_point;
+        if (aim_point.valid) {
+          auto aim_points = solver.reproject_armor(
+            aim_point.xyza.head(3), aim_point.xyza[3], primary_target.armor_type,
+            primary_target.name);
+          tools::draw_points(display_img, aim_points, {0, 0, 255});
+        }
+      }
+
+      cv::Mat display_view;
+      if (
+        debug_display_scale > 0.0 && (debug_display_scale < 0.999 || debug_display_scale > 1.001)) {
+        cv::resize(display_img, display_view, {}, debug_display_scale, debug_display_scale);
+      } else {
+        display_view = display_img;
+      }
+
+      const int wait_time = debug_display_wait_ms > 0 ? debug_display_wait_ms : 1;
+      cv::imshow("auto_aim_debug", display_view);
+      const int key = cv::waitKey(wait_time);
+      if (key == 'q' || key == 27) {
+        break;
+      }
     }
 
     gimbal.send(command);
@@ -249,14 +255,15 @@ int main(int argc, char * argv[])
     }
 
     if (!targets.empty()) {
-      const auto & x = targets.front().ekf_x();
+      const auto & target = targets.front();
+      const auto & x = target.ekf_x();
       //fmt::print("[EKF] x=[");
       // for (int i = 0; i < x.size(); ++i) {
       //   fmt::print("{:.4f}{}", x[i], (i + 1 == x.size() ? "]\n" : ", "));
       // }
       // //fmt::print("        // [x, vx, y, vy, z, vz, a, w, r, l, h]\n");
 
-      // Plot EKF states
+      // Plot EKF states and raw observations
       nlohmann::json j;
       if (x.size() >= 6) {
         j["ekf_x"] = x[0];
@@ -270,6 +277,21 @@ int main(int argc, char * argv[])
         j["ekf_yaw"] = x[6];
         j["ekf_w"] = x[7];
       }
+      // 原始观测量（未经滤波）
+      j["obs_yaw"] = target.obs_yaw;
+      j["obs_pitch"] = target.obs_pitch;
+      j["obs_dist"] = target.obs_dist;
+      j["obs_angle"] = target.obs_angle;
+
+      // 从观测反推的目标中心位置和速度（未经滤波）
+      j["obs_center_x"] = target.obs_center_x;
+      j["obs_center_y"] = target.obs_center_y;
+      j["obs_center_z"] = target.obs_center_z;
+      j["obs_vx"] = target.obs_vx;
+      j["obs_vy"] = target.obs_vy;
+      j["obs_vz"] = target.obs_vz;
+      j["obs_w"] = target.obs_w;
+
       j["frame_id"] = frame_id;
       plotter.plot(j);
     }

@@ -9,9 +9,9 @@
 
 namespace auto_aim
 {
-constexpr double LIGHTBAR_LENGTH = 56e-3;     // m
+constexpr double LIGHTBAR_LENGTH = 47.05882e-3;     // m
 constexpr double BIG_ARMOR_WIDTH = 230e-3;    // m
-constexpr double SMALL_ARMOR_WIDTH = 135e-3;  // m
+constexpr double SMALL_ARMOR_WIDTH = 129.411765e-3;  // m
 
 const std::vector<cv::Point3f> BIG_ARMOR_POINTS{
   {0, BIG_ARMOR_WIDTH / 2, LIGHTBAR_LENGTH / 2},
@@ -64,6 +64,25 @@ void Solver::solve(Armor & armor) const
 
   Eigen::Vector3d xyz_in_camera;
   cv::cv2eigen(tvec, xyz_in_camera);
+  
+  // 计算相机坐标系下的欧拉角
+  // cv::Mat rmat_camera;
+  // cv::Rodrigues(rvec, rmat_camera);
+  // Eigen::Matrix3d R_armor2camera_temp;
+  // cv::cv2eigen(rmat_camera, R_armor2camera_temp);
+  // Eigen::Vector3d euler_in_camera = tools::eulers(R_armor2camera_temp, 2, 1, 0);
+  
+  // // 打印相机坐标系下的PnP解算结果
+  // tools::logger()->info(
+  //   "[PnP in Camera] armor={}, xyz=({:.4f}, {:.4f}, {:.4f}) m, "
+  //   "ypr=({:.4f}, {:.4f}, {:.4f}) rad ({:.2f}, {:.2f}, {:.2f}) deg",
+  //   static_cast<int>(armor.name), 
+  //   xyz_in_camera[0], xyz_in_camera[1], xyz_in_camera[2],
+  //   euler_in_camera[0], euler_in_camera[1], euler_in_camera[2],
+  //   euler_in_camera[0] * 180.0 / M_PI, 
+  //   euler_in_camera[1] * 180.0 / M_PI, 
+  //   euler_in_camera[2] * 180.0 / M_PI);
+  
   armor.xyz_in_gimbal = R_camera2gimbal_ * xyz_in_camera + t_camera2gimbal_;
   armor.xyz_in_world = R_gimbal2world_ * armor.xyz_in_gimbal;
 

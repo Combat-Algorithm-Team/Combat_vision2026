@@ -219,6 +219,50 @@ void Target::update_ypda(const Armor & armor, int id)
   const Eigen::VectorXd & ypr = armor.ypr_in_world;
   Eigen::VectorXd z{{ypd[0], ypd[1], ypd[2], ypr[0]}};  //获得观测量
 
+  // 保存原始观测量（未经滤波）
+  obs_yaw = z[0];
+  obs_pitch = z[1];
+  obs_dist = z[2];
+  obs_angle = z[3];
+
+  // 从观测量反推目标旋转中心位置（使用当前EKF预测的r值）
+  // 这是通过h函数的逆运算：从装甲板位置推算中心
+  // obs_yaw, obs_pitch, obs_dist 是观测到的装甲板的球坐标
+  // 先转换为装甲板的笛卡尔坐标
+  double armor_x = obs_dist * std::cos(obs_pitch) * std::sin(obs_yaw);
+  double armor_y = obs_dist * std::cos(obs_pitch) * std::cos(obs_yaw);
+  double armor_z = obs_dist * std::sin(obs_pitch);
+
+  // 使用当前半径估计值反推中心位置
+  double r_estimate = ekf_.x[8];  // 当前半径估计
+  double angle_estimate = obs_angle;  // 观测到的角度
+  
+  obs_center_x = armor_x + r_estimate * std::cos(angle_estimate);
+  obs_center_y = armor_y + r_estimate * std::sin(angle_estimate);
+  obs_center_z = armor_z;  // z方向不受半径影响
+
+  // 计算速度（数值微分）
+  auto current_t = std::chrono::steady_clock::now();
+  if (prev_obs_t_.time_since_epoch().count() > 0) {  // 非首次观测
+    double dt = std::chrono::duration<double>(current_t - prev_obs_t_).count();
+    if (dt > 1e-6) {  // 避免除零
+      obs_vx = (obs_center_x - prev_obs_x_) / dt;
+      obs_vy = (obs_center_y - prev_obs_y_) / dt;
+      obs_vz = (obs_center_z - prev_obs_z_) / dt;
+      
+      // 角速度（注意角度环绕）
+      double d_angle = tools::limit_rad(obs_angle - prev_obs_angle_);
+      obs_w = d_angle / dt;
+    }
+  }
+
+  // 保存当前观测用于下次微分
+  prev_obs_x_ = obs_center_x;
+  prev_obs_y_ = obs_center_y;
+  prev_obs_z_ = obs_center_z;
+  prev_obs_angle_ = obs_angle;
+  prev_obs_t_ = current_t;
+
   ekf_.update(z, H, R, h, z_subtract);
 }
 

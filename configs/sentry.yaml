@@ -1,6 +1,8 @@
 # enemy_color: "red"
 enemy_color: "blue"
-
+debug_display: false
+debug_display_scale: 0.5
+debug_display_wait_ms: 30
 
 #####-----神经网络参数-----#####
 yolo_name: yolov5
@@ -34,14 +36,14 @@ usb_gamma: 160
 usb_gain: 10 #0-96
 
 #####-----工业相机参数-----#####
-camera_name: "mindvision"
-exposure_ms: 8
-gain: 16.9
-vid_pid: "f622:d206"
-gamma : 1.0
+camera_name: "hikrobot"
+exposure_ms: 1
+gain: 16
+vid_pid: "2bdf:0001"
+gamma : 0.7
 
 #####-----传统方法参数-----#####
-threshold: 110
+threshold: 180
 max_angle_error: 45 # degree
 min_lightbar_ratio: 1.5
 max_lightbar_ratio: 20
@@ -71,7 +73,7 @@ plotter_port: 9870
 #####-----gimbal 串口参数-----#####
 com_port: "/dev/gimbal"
 baudrate: 115200
-gimbal_time_offset_ms: -34  # 图像时间戳相对云台姿态的补偿，负值表示取更早的姿态 -18 -12 -40     -31
+gimbal_time_offset_ms: -1  # 图像时间戳相对云台姿态的补偿，负值表示取更早的姿态 -18 -12 (-40)     -31  -20 -15
 
 #####-----tracker参数-----#####
 min_detect_count: 5
@@ -92,9 +94,9 @@ low_speed_delay_time: 0.010 # s
 #####-----shooter参数-----#####
 first_tolerance: 3 # 近距离射击容差，degree
 second_tolerance: 2 # 远距离射击容差，degree
-judge_distance: 3 #距离判断阈值
+judge_distance: 5 #距离判断阈值
 auto_fire: true # 是否由自瞄控制射击
-fire_gap_time: 0.3 # 最小开火间隔，单位：秒
+fire_gap_time: 0.5 # 最小开火间隔，单位：秒
 
 #####-----decider参数-----#####
 mode: 1
@@ -103,14 +105,15 @@ mode: 1
 R_gimbal2imubody: [1, 0, 0, 0, 1, 0, 0, 0, 1]
 
 
-重投影误差: 1.3357px
-camera_matrix: [1723.7882569925207, 0, 981.62090788748833, 0, 1709.6727741787524, 639.47167255594036, 0, 0, 1]
-distort_coeffs: [-0.073404521497377737, 0.3127905270921853, 0.0027111360192407282, 0.00076462908417211444, 0]
+# 重投影误差: 0.7081px
+camera_matrix: [2362.8567686503243, 0, 717.97736462016246, 0, 2333.4579885082539, 556.8404113201351, 0, 0, 1]
+distort_coeffs: [-0.046393055662647419, -0.40591074542400812, -0.00080338722074019394, -0.00015455426413595798, 0]
 # 相机同理想情况的偏角: yaw-1.11 pitch0.01 roll-0.06 degree
 # 标定板到世界坐标系原点的水平距离: 1.20 m
 # 标定板同竖直摆放时的偏角: yaw123.89 pitch14.05 roll-0.86 degree
 R_camera2gimbal: [0.0, 0.0, 1.0, -1.0, 0.0, 0.0, 0.0, 1.0, 0.0]
-t_camera2gimbal: [-0.09136 ,0.0  ,-0.08679]
+#t_camera2gimbal: [-0.09136 ,0.0  ,-0.08679]
+t_camera2gimbal: [-0.045, 0, -0.09579]
 
 #####-----planner 参数-----#####
 # 启用装甲切换时的显式平滑（提前减速）；不启用则走 TinyMPC 原流程
