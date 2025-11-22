@@ -355,7 +355,7 @@ cv::Mat Detector::get_pattern(const cv::Mat & bgr_img, const Armor & armor) cons
   cv::Rect src_bounds = cv::boundingRect(std::vector<cv::Point2f>{
     lights_vertices[0], lights_vertices[1], lights_vertices[2], lights_vertices[3]});
   // 适当加一点边距，防止边缘截断
-  const int margin = 6;
+  const int margin = 15;
   src_bounds.x = std::max(0, src_bounds.x - margin);
   src_bounds.y = std::max(0, src_bounds.y - margin);
   src_bounds.width = std::min(bgr_img.cols - src_bounds.x, src_bounds.width + 2 * margin);

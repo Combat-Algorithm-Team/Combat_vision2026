@@ -10,13 +10,13 @@ ARG https_proxy
 ENV http_proxy=$http_proxy
 ENV https_proxy=$https_proxy
 
+# 🚀 换源，确保国内下载速度 (先用 HTTP 镜像，避免无证书无法下载)
+RUN sed -i 's|http://archive.ubuntu.com|http://mirrors.aliyun.com|g' /etc/apt/sources.list && \
+    sed -i 's|http://security.ubuntu.com|http://mirrors.aliyun.com|g' /etc/apt/sources.list
+
 # 确保 apt-get 在非交互模式下运行，并更新源
 RUN apt-get update && apt-get install -y ca-certificates && \
     rm -rf /var/lib/apt/lists/*
-
-# 🚀 换源，确保国内下载速度
-RUN sed -i 's|http://archive.ubuntu.com|https://mirrors.aliyun.com|g' /etc/apt/sources.list && \
-    sed -i 's|http://security.ubuntu.com|https://mirrors.aliyun.com|g' /etc/apt/sources.list
 
 # 安装所有必需的依赖
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -25,7 +25,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libspdlog-dev libyaml-cpp-dev libusb-1.0-0-dev \
     libgoogle-glog-dev libgflags-dev \
     libatlas-base-dev libsuitesparse-dev \
-    software-properties-common && \
+    software-properties-common \
+    libcanberra-gtk-module libcanberra-gtk3-module && \
     rm -rf /var/lib/apt/lists/*
 
 # 解决 CMake 找不到头文件库的问题
@@ -65,7 +66,7 @@ ENV https_proxy=$https_proxy
 # 下载并安装 OpenVINO
 RUN mkdir -p /opt/intel && \
     cd /tmp && \
-    curl -L --fail --silent --show-error \
+    curl -L --fail --show-error --retry 5 --retry-delay 10 --connect-timeout 60 \
     https://storage.openvinotoolkit.org/repositories/openvino/packages/2024.6/linux/l_openvino_toolkit_ubuntu22_2024.6.0.17404.4c0f47d2335_x86_64.tgz \
     -o openvino.tgz && \
     tar -xzf openvino.tgz && \
@@ -80,8 +81,8 @@ RUN cd /opt/intel && \
     ln -s openvino_2024.6.0 openvino_2024
 
 ENV OPENVINO_DIR=/opt/intel/openvino_2024
-# 修正后的 LD_LIBRARY_PATH 声明，使用 :- 语法避免警告
-ENV LD_LIBRARY_PATH="${OPENVINO_DIR}/runtime/lib/intel64:${LD_LIBRARY_PATH:-}"
+# 设置 LD_LIBRARY_PATH
+ENV LD_LIBRARY_PATH="${OPENVINO_DIR}/runtime/lib/intel64"
 ENV PATH="${OPENVINO_DIR}/tools:${PATH}"
 
 # 更新动态链接库缓存
@@ -98,6 +99,9 @@ ARG http_proxy
 ARG https_proxy
 ENV http_proxy=$http_proxy
 ENV https_proxy=$https_proxy
+
+# 抑制 GTK dbind 警告 (Couldn't connect to accessibility bus)
+ENV NO_AT_BRIDGE=1
 
 # 设置工作目录
 WORKDIR /app

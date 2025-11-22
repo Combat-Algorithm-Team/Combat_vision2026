@@ -1,0 +1,5 @@
+~ /bin/bash -c "export LD_LIBRARY_PATH=/home/sentry/plotjuggler_ws/install/lib/:$LD_LIBRARY_PATH && /home/sentry/plotjuggler_ws/install/lib/plotjuggler/plotjuggler"
+
+
+docker run -it --rm     --name sp_vision_25     --user root     --privileged     --net=host     -e DISPLAY=$DISPLAY     -e QT_X11_NO_MITSHM=1     -e LD_LIBRARY_PATH=/opt/MVS/bin:/opt/MVS/lib/64:/app/io/hikrobot/lib/amd64:$LD_LIBRARY_PATH     -v /tmp/.X11-unix:/tmp/.X11-unix:rw     -v $HOME/.Xauthority:$HOME/.Xauthority:rw     -v /dev:/dev:rw     -v /lib/modules:/lib/modules:ro     -v /opt/MVS:/opt/MVS:ro     -v $(pwd):/app     sp_vision_base:1
+ 123

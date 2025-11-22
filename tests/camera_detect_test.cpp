@@ -34,7 +34,7 @@ int main(int argc, char * argv[])
   // 初始化保存计数，避免覆盖已有文件（查找目录中最大数字命名）
   int save_count_initial = 0;
   if (!output_folder.empty()) {
-    for (auto &p : std::filesystem::directory_iterator(output_folder)) {
+    for (auto & p : std::filesystem::directory_iterator(output_folder)) {
       if (!p.is_regular_file()) continue;
       auto name = p.path().filename().string();
       // 期望格式为 N.jpg
@@ -50,7 +50,6 @@ int main(int argc, char * argv[])
     }
   }
 
-
   tools::Exiter exiter;
 
   io::Camera camera(config_path);
@@ -65,7 +64,7 @@ int main(int argc, char * argv[])
 
     camera.read(img, timestamp);
 
-  if (img.empty()) break;
+    if (img.empty()) break;
 
     auto last = std::chrono::steady_clock::now();
 
