@@ -33,6 +33,8 @@ packages/
 *.log
 logs/
 *.log.*
+MvSdkLog/
+MvSDkLog/
 
 # 环境变量文件
 .env
