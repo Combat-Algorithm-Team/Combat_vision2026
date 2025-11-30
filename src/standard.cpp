@@ -58,18 +58,6 @@ int main(int argc, char * argv[])
   if (yaml["gimbal_time_offset_ms"]) {
     gimbal_time_offset_ms = yaml["gimbal_time_offset_ms"].as<double>();
   }
-  bool debug_display = false;
-  if (yaml["debug_display"]) {
-    debug_display = yaml["debug_display"].as<bool>();
-  }
-  double debug_display_scale = 0.5;
-  if (yaml["debug_display_scale"]) {
-    debug_display_scale = yaml["debug_display_scale"].as<double>();
-  }
-  int debug_display_wait_ms = 30;
-  if (yaml["debug_display_wait_ms"]) {
-    debug_display_wait_ms = yaml["debug_display_wait_ms"].as<int>();
-  }
   const auto gimbal_time_offset = std::chrono::duration_cast<std::chrono::steady_clock::duration>(
     std::chrono::duration<double, std::milli>(gimbal_time_offset_ms));
 
@@ -176,67 +164,6 @@ int main(int argc, char * argv[])
         "horizon_distance: {:.3f}\n",
         static_cast<int>(command.control), static_cast<int>(command.shoot), yaw_deg, pitch_deg,
         command.horizon_distance);
-    }
-
-    if (debug_display) {
-      cv::Mat display_img;
-      img.copyTo(display_img);
-
-      tools::draw_text(
-        display_img,
-        fmt::format(
-          "command is {},{:.2f},{:.2f},shoot:{}", command.control, command.yaw * kRad2Deg,
-          command.pitch * kRad2Deg, command.shoot),
-        {10, 60}, {154, 50, 205});
-
-      Eigen::Quaterniond gimbal_q = q;
-      const double gimbal_yaw_deg = tools::eulers(gimbal_q, 2, 1, 0)[0] * kRad2Deg;
-      tools::draw_text(
-        display_img, fmt::format("gimbal yaw{:.2f}", gimbal_yaw_deg), {10, 90}, {255, 255, 255});
-
-      // 绘制检测阶段得到的装甲板角点（绿色线框）
-      for (const auto & armor : armors) {
-        if (armor.points.size() >= 4) {
-          tools::draw_points(display_img, armor.points, {0, 255, 0});
-        }
-      }
-
-      // 绘制跟踪器内部的重投影结果（绿色）
-      for (const auto & target : targets) {
-        auto armor_xyza_list = target.armor_xyza_list();
-        for (const Eigen::Vector4d & xyza : armor_xyza_list) {
-          auto image_points =
-            solver.reproject_armor(xyza.head(3), xyza[3], target.armor_type, target.name);
-          tools::draw_points(display_img, image_points, {0, 255, 0});
-        }
-      }
-
-      // 绘制瞄准点（红色）
-      if (!targets.empty()) {
-        const auto & primary_target = targets.front();
-        const auto & aim_point = aimer.debug_aim_point;
-        if (aim_point.valid) {
-          auto aim_points = solver.reproject_armor(
-            aim_point.xyza.head(3), aim_point.xyza[3], primary_target.armor_type,
-            primary_target.name);
-          tools::draw_points(display_img, aim_points, {0, 0, 255});
-        }
-      }
-
-      cv::Mat display_view;
-      if (
-        debug_display_scale > 0.0 && (debug_display_scale < 0.999 || debug_display_scale > 1.001)) {
-        cv::resize(display_img, display_view, {}, debug_display_scale, debug_display_scale);
-      } else {
-        display_view = display_img;
-      }
-
-      const int wait_time = debug_display_wait_ms > 0 ? debug_display_wait_ms : 1;
-      cv::imshow("auto_aim_debug", display_view);
-      const int key = cv::waitKey(wait_time);
-      if (key == 'q' || key == 27) {
-        break;
-      }
     }
 
     gimbal.send(command);

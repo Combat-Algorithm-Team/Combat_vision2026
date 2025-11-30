@@ -474,12 +474,8 @@ void Detector::show_result(
     tools::draw_text(detection, info, armor.left.bottom, {0, 255, 0});
   }
 
-  cv::Mat binary_img2;
-  cv::resize(binary_img, binary_img2, {}, 0.5, 0.5);  // 显示时缩小图片尺寸
-  cv::resize(detection, detection, {}, 0.5, 0.5);     // 显示时缩小图片尺寸
-
   if (debug_ && gui_available()) {
-    // cv::imshow("threshold", binary_img2);
+    // cv::imshow("threshold", binary_img);
     cv::imshow("detection", detection);
   }
 }

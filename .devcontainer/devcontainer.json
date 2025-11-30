@@ -1,0 +1,57 @@
+{
+    "name": "SP Vision Dev",
+    "image": "sp_vision_base:2",
+    "privileged": true,
+    "workspaceMount": "source=${localWorkspaceFolder},target=/app,type=bind",
+    "workspaceFolder": "/app",
+    
+    // 对应 --net=host
+    "runArgs": [
+        "--net=host",
+        "--cap-add=SYS_PTRACE",
+        "--security-opt", "seccomp=unconfined"
+    ],
+
+    // 对应环境变量 -e
+    "containerEnv": {
+        "DISPLAY": "${localEnv:DISPLAY}",
+        "QT_X11_NO_MITSHM": "1",
+        "LD_LIBRARY_PATH": "/opt/MVS/bin:/opt/MVS/lib/64:/app/io/hikrobot/lib/amd64:${containerEnv:LD_LIBRARY_PATH}"
+    },
+
+    // 对应挂载 -v
+    "mounts": [
+        // X11 支持
+        "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind",
+        "source=${localEnv:HOME}/.Xauthority,target=/root/.Xauthority,type=bind",
+        
+        // 硬件访问
+        "source=/dev,target=/dev,type=bind",
+        "source=/lib/modules,target=/lib/modules,type=bind,readonly",
+        
+        // MVS SDK
+        "source=/opt/MVS,target=/opt/MVS,type=bind,readonly",
+
+        // ZSH 配置 (如果宿主机没有这些文件，启动可能会失败，请根据情况注释掉)
+        "source=${localEnv:HOME}/.oh-my-zsh,target=/root/.oh-my-zsh,type=bind,readonly",
+        "source=${localEnv:HOME}/.zshrc,target=/root/.zshrc,type=bind,readonly"
+    ],
+
+    // 对应 xhost 权限放行
+    "initializeCommand": "xhost +local:docker || xhost +",
+
+    // 自动安装 VS Code 插件
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cmake-tools",
+                "twxs.cmake",
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+    },
+
+    // 容器创建后执行的命令
+    "postCreateCommand": "git config --global --add safe.directory /app"
+}
