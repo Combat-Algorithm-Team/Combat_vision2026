@@ -1,0 +1,21 @@
+[INFO] [launch]: All log files can be found below /root/.ros/log/2025-12-19-17-38-15-281686-jwj-rune-THUNDEROBOT-DT-Computer-2248
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [robot_state_publisher-1]: process started with pid [2250]
+[robot_state_publisher-1] [WARN] [1766165895.371704637] [kdl_parser]: Converting unknown joint type of joint 'gimbal_joint' into a fixed joint
+[robot_state_publisher-1] [INFO] [1766165895.371744455] [robot_state_publisher]: got segment camera_link
+[robot_state_publisher-1] [INFO] [1766165895.371776856] [robot_state_publisher]: got segment camera_optical_frame
+[robot_state_publisher-1] [INFO] [1766165895.371781613] [robot_state_publisher]: got segment gimbal_link
+[robot_state_publisher-1] [INFO] [1766165895.371785056] [robot_state_publisher]: got segment odom
+[robot_state_publisher-1] [INFO] [1766165895.371790872] [robot_state_publisher]: Floating joint. Not adding segment from odom to gimbal_link.
+[INFO] [rm_serial_driver_node-2]: process started with pid [2261]
+[rm_serial_driver_node-2] [38;2;255;255;255m[INFO]  [serial_driver]  [2025-12-19 17:38:16] : Initializing SerialDriverNode!
+[rm_serial_driver_node-2] [0m[38;2;255;255;255m[INFO]  [serial_driver]  [2025-12-19 17:38:16] : Protocol has been created with type: sentry, port: /dev/ttyACM0
+[rm_serial_driver_node-2] [0m[38;2;255;255;255m[INFO]  [serial_driver]  [2025-12-19 17:38:16] : Subscribe to topic: /armor_solver/cmd_gimbal
+[rm_serial_driver_node-2] [0m[38;2;255;255;255m[INFO]  [serial_driver]  [2025-12-19 17:38:16] : Subscribe to topic: /rune_solver/cmd_gimbal
+[rm_serial_driver_node-2] [0m[38;2;255;255;255m[INFO]  [serial_driver]  [2025-12-19 17:38:16] : Subscribe to topic: /cmd_chassis
+[rm_serial_driver_node-2] [0m[38;2;255;255;255m[INFO]  [serial_driver]  [2025-12-19 17:38:16] : Create client for service: /armor_detector/set_mode
+[rm_serial_driver_node-2] [0m[38;2;255;255;255m[INFO]  [serial_driver]  [2025-12-19 17:38:16] : Create client for service: /armor_solver/set_mode
+[rm_serial_driver_node-2] [0m[38;2;255;255;255m[INFO]  [serial_driver]  [2025-12-19 17:38:16] : SerialDriverNode has been initialized!
+[rm_serial_driver_node-2] [0m[38;2;255;000;000m[ERROR]  [serial_driver]  [2025-12-19 17:38:16] : transporter_->read() failed
+[INFO] [armor_solver_node-3]: process started with pid [2274]
+[armor_solver_node-3] [38;2;255;255;255m[INFO]  [armor_solver]  [2025-12-19 17:38:17] : Starting ArmorSolverNode!
