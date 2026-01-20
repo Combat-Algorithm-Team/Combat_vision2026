@@ -24,13 +24,13 @@
       lost_time_thres: 1.0  #1.0
     
     solver:
-      prediction_delay: 0.0 #0.03
-      controller_delay: 0.159 #0.159   
+      prediction_delay: 0.00 #0.0  0.01
+      controller_delay: 0.06 #0.05  0.11 
       max_tracking_v_yaw: 10.0 #转速(rad/s)大于这个值时瞄准机器人中心 
       side_angle: 20.0 
-      bullet_speed: 25.0
+      bullet_speed: 20.9 #27.0
       compenstator_type: "ideal"
-      gravity: 9.88
+      gravity: 9.795
       resistance: 0.092
       iteration_times: 20 # 补偿的迭代次数
       # ["距离下限, 距离上限, 高度下限, 高度下限, pitch轴补偿值"]
