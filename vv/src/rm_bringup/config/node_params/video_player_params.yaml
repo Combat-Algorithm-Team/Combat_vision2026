@@ -1,7 +1,7 @@
 /**:
   ros__parameters:
     camera_info_url: package://rm_bringup/config/camera_info.yaml
-    path: "/home/zcf/csurm/csurm-RMUC2022/red.avi"
+    path: "/home/jwj-rune/rm_rune/images/rune_1.0_(0, -1, 2, 9, 4)_2_000011.png"
     frame_rate: 10
     start_frame: 0
     frame_id: "camera_optical_frame"

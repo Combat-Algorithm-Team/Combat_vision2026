@@ -152,10 +152,15 @@ bool FixedPacketTool<capacity>::recvPacket(FixedPacket<capacity> &packet) {
   if (recv_len > 0) {
     // print data
     if (use_data_print_) {
-      for (int i = 0; i < recv_len; i++) {
-        std::cout << std::hex << static_cast<int>(tmp_buffer_[i]) << " ";
+      // parse and print data according to protocol
+      if (recv_len == 32 && tmp_buffer_[0] == 0xFF && tmp_buffer_[31] == 0x0D) {
+        float pitch;
+        std::memcpy(&pitch, &tmp_buffer_[4], sizeof(float));
+        float yaw;
+        std::memcpy(&yaw, &tmp_buffer_[8], sizeof(float));
+
+        std::cout << "Pitch: " << pitch << " rad, Yaw: " << yaw << " deg" << std::endl;
       }
-      std::cout << "\n";
     }
 
     // check packet

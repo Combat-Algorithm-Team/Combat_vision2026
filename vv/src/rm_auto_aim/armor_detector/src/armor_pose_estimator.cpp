@@ -121,6 +121,9 @@ void ArmorPoseEstimator::sortPnPResult(const Armor &armor,
   cv::Rodrigues(rvec1, R1_cv);
   cv::Rodrigues(rvec2, R2_cv);
 
+    std::cout << "tvec1:\n" << tvec1 << std::endl;
+    std::cout << "tvec2:\n" << tvec2 << std::endl;
+
   // 转换为Eigen矩阵
   Eigen::Matrix3d R1 = utils::cvToEigen(R1_cv);
   Eigen::Matrix3d R2 = utils::cvToEigen(R2_cv);
