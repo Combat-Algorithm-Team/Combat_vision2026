@@ -49,6 +49,9 @@ public:
                                         const rclcpp::Time &current_time,
                                         std::shared_ptr<tf2_ros::Buffer> tf2_buffer_);
 
+    // Update bullet speed from lower computer
+    void updateBulletSpeed(double bullet_speed);
+
     enum State { TRACKING_ARMOR = 0, TRACKING_CENTER = 1 } state;
 
     std::vector<std::pair<double, double>> getTrajectory() const noexcept;

@@ -36,6 +36,9 @@ ArmorSolverNode::ArmorSolverNode(const rclcpp::NodeOptions &options)
 
     debug_mode_ = this->declare_parameter("debug", true);
 
+    // Bullet speed (default from parameter, can be updated from lower computer)
+    bullet_speed_ = this->declare_parameter("solver.bullet_speed", 20.0);
+
     // Tracker
     double max_match_distance = this->declare_parameter("tracker.max_match_distance", 0.2);
     double max_match_yaw_diff = this->declare_parameter("tracker.max_match_yaw_diff", 1.0);
@@ -123,6 +126,11 @@ ArmorSolverNode::ArmorSolverNode(const rclcpp::NodeOptions &options)
     // Register a callback with tf2_ros::MessageFilter to be called when
     // transforms are available
     tf2_filter_->registerCallback(&ArmorSolverNode::armorsCallback, this);
+
+    // Serial receive data subscriber (for bullet_speed from lower computer)
+    serial_sub_ = this->create_subscription<rm_interfaces::msg::SerialReceiveData>(
+        "serial/receive", rclcpp::SensorDataQoS(),
+        std::bind(&ArmorSolverNode::serialReceiveCallback, this, std::placeholders::_1));
 
     // Measurement publisher (for debug usage)
     measure_pub_ = this->create_publisher<rm_interfaces::msg::Measurement>(
@@ -247,6 +255,19 @@ void ArmorSolverNode::initMarkers() noexcept
 
     marker_pub_ =
         this->create_publisher<visualization_msgs::msg::MarkerArray>("armor_solver/marker", 10);
+}
+
+void ArmorSolverNode::serialReceiveCallback(
+    const rm_interfaces::msg::SerialReceiveData::SharedPtr serial_msg)
+{
+    // Update bullet speed from lower computer if valid
+    if (serial_msg->bullet_speed > 0.0) {
+        bullet_speed_ = serial_msg->bullet_speed;
+        // Update solver bullet speed if solver is initialized
+        if (solver_ != nullptr) {
+            solver_->updateBulletSpeed(bullet_speed_);
+        }
+    }
 }
 
 void ArmorSolverNode::armorsCallback(const rm_interfaces::msg::Armors::SharedPtr armors_msg)

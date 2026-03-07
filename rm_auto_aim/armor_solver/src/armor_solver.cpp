@@ -58,6 +58,14 @@ Solver::Solver(std::weak_ptr<rclcpp::Node> n) : node_(n)
     node.reset();
 }
 
+void Solver::updateBulletSpeed(double bullet_speed)
+{
+    if (bullet_speed > 0.0) {
+        trajectory_compensator_->velocity = bullet_speed;
+        FYT_INFO("armor_solver", "Bullet speed updated to {:.2f} m/s", bullet_speed);
+    }
+}
+
 rm_interfaces::msg::GimbalCmd Solver::solve(const rm_interfaces::msg::Target &target,
                                             const rclcpp::Time &current_time,
                                             std::shared_ptr<tf2_ros::Buffer> tf2_buffer_)

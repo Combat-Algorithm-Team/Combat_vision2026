@@ -38,6 +38,7 @@
 #include "armor_solver/armor_tracker.hpp"
 #include "rm_interfaces/msg/armors.hpp"
 #include "rm_interfaces/msg/measurement.hpp"
+#include "rm_interfaces/msg/serial_receive_data.hpp"
 #include "rm_interfaces/msg/target.hpp"
 #include "rm_interfaces/srv/set_mode.hpp"
 #include "rm_utils/heartbeat.hpp"
@@ -52,6 +53,8 @@ public:
 
 private:
     void armorsCallback(const rm_interfaces::msg::Armors::SharedPtr armors_ptr);
+
+    void serialReceiveCallback(const rm_interfaces::msg::SerialReceiveData::SharedPtr serial_msg);
 
     void initMarkers() noexcept;
 
@@ -79,6 +82,9 @@ private:
     // Armor Solver
     std::unique_ptr<Solver> solver_;
 
+    // Bullet speed from lower computer
+    double bullet_speed_;
+
     // Subscriber with tf2 message_filter
     std::string target_frame_;
     std::shared_ptr<tf2_ros::Buffer> tf2_buffer_;
@@ -86,6 +92,9 @@ private:
     message_filters::Subscriber<rm_interfaces::msg::Armors> armors_sub_;
     rm_interfaces::msg::Target armor_target_;
     std::shared_ptr<tf2_filter> tf2_filter_;
+
+    // Serialfor receive data subscriber ( bullet_speed)
+    rclcpp::Subscription<rm_interfaces::msg::SerialReceiveData>::SharedPtr serial_sub_;
 
     // Measurement publisher
     rclcpp::Publisher<rm_interfaces::msg::Measurement>::SharedPtr measure_pub_;
