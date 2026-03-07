@@ -1,0 +1,7 @@
+usb_camera:
+  ros__parameters:
+    device_id: dev/video0
+    width: 1280
+    height: 720
+    fps: 60.0
+    frame_id: usb_camera_optical_frame
