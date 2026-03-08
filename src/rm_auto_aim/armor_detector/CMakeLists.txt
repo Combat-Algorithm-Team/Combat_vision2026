@@ -28,6 +28,7 @@ find_package(TBB REQUIRED COMPONENTS tbb)
 find_package(G2O REQUIRED)
 find_package(fmt REQUIRED)
 find_package(Sophus REQUIRED)
+find_package(OpenVINO REQUIRED COMPONENTS Runtime)
 ament_auto_find_build_dependencies()
 
 ###########
@@ -55,6 +56,7 @@ g2o_types_slam3d
 g2o_solver_dense
 fmt::fmt
 tbb
+openvino::runtime
 )
 
 

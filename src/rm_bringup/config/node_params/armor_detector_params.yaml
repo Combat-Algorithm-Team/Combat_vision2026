@@ -5,9 +5,17 @@
     detect_color: 0
     binary_thres: 90
 
+    use_model_detector: false # true: 使用模型推理检测装甲板, false: 使用传统视觉检测
+
     use_pca: true # 使用PCA算法矫正灯条的角点
     use_ba: true # 使用BA优化算法求解装甲板的Yaw角 
 
+    # 模型推理检测参数 (仅在 use_model_detector: true 时生效)
+    model_detector.model_path: "package://armor_detector/model/armor_detect.onnx"
+    model_detector.confidence_threshold: 0.5
+    model_detector.nms_threshold: 0.45
+
+    # 传统检测参数 (仅在 use_model_detector: false 时生效)
     light.min_ratio: 0.0001
     light.max_ratio: 1.0
     light.max_angle: 40.0

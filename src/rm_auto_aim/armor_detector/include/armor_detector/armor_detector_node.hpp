@@ -45,6 +45,7 @@
 // project
 #include "armor_detector/armor_detector.hpp"
 #include "armor_detector/armor_pose_estimator.hpp"
+#include "armor_detector/model_detector.hpp"
 #include "armor_detector/number_classifier.hpp"
 #include "rm_interfaces/msg/armors.hpp"
 #include "rm_interfaces/msg/target.hpp"
@@ -67,6 +68,7 @@ private:
   // target_msg);
 
   std::unique_ptr<Detector> initDetector();
+  std::unique_ptr<ModelDetector> initModelDetector();
 
   std::vector<Armor>
   detectArmors(const sensor_msgs::msg::Image::ConstSharedPtr &img_msg);
@@ -90,7 +92,9 @@ private:
   HeartBeatPublisher::SharedPtr heartbeat_;
 
   // Armor Detector
+  bool use_model_detector_;
   std::unique_ptr<Detector> detector_;
+  std::unique_ptr<ModelDetector> model_detector_;
 
   // Pose Solver
   bool use_ba_;
