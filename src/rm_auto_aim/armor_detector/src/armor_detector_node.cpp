@@ -46,6 +46,7 @@
 // project
 #include "armor_detector/armor_detector_node.hpp"
 #include "armor_detector/ba_solver.hpp"
+#include "armor_detector/model_detector.hpp"
 #include "armor_detector/types.hpp"
 #include "rm_utils/assert.hpp"
 #include "rm_utils/common.hpp"
@@ -59,8 +60,17 @@ ArmorDetectorNode::ArmorDetectorNode(const rclcpp::NodeOptions &options)
     : Node("armor_detector", options) {
   FYT_REGISTER_LOGGER("armor_detector", "~/fyt2024-log", INFO);
   FYT_INFO("armor_detector", "Starting ArmorDetectorNode!");
-  // Detector
-  detector_ = initDetector();
+
+  // Choose between traditional detector and model-based detector
+  use_model_detector_ = this->declare_parameter("use_model_detector", false);
+
+  if (use_model_detector_) {
+    FYT_INFO("armor_detector", "Using model-based detector (OpenVINO)");
+    model_detector_ = initModelDetector();
+  } else {
+    FYT_INFO("armor_detector", "Using traditional detector");
+    detector_ = initDetector();
+  }
 
   // Tricks to make pose more accurate
   use_ba_ = this->declare_parameter("use_ba", true);
@@ -273,45 +283,78 @@ std::unique_ptr<Detector> ArmorDetectorNode::initDetector() {
   return detector;
 }
 
+std::unique_ptr<ModelDetector> ArmorDetectorNode::initModelDetector() {
+  namespace fs = std::filesystem;
+  fs::path model_path = utils::URLResolver::getResolvedPath(
+      this->declare_parameter("model_detector.model_path",
+                              "package://armor_detector/model/armor_detect.onnx"));
+  FYT_ASSERT_MSG(fs::exists(model_path),
+                 model_path.string() + " Not Found!");
+
+  float conf_threshold = static_cast<float>(
+      this->declare_parameter("model_detector.confidence_threshold", 0.5));
+  float nms_threshold = static_cast<float>(
+      this->declare_parameter("model_detector.nms_threshold", 0.45));
+
+  auto model_det = std::make_unique<ModelDetector>(
+      model_path.string(), conf_threshold, nms_threshold, EnemyColor::RED);
+
+  // Set dynamic parameter callback
+  on_set_parameters_callback_handle_ =
+      this->add_on_set_parameters_callback(std::bind(
+          &ArmorDetectorNode::onSetParameters, this, std::placeholders::_1));
+
+  return model_det;
+}
+
 std::vector<Armor> ArmorDetectorNode::detectArmors(
     const sensor_msgs::msg::Image::ConstSharedPtr &img_msg) {
   // Convert ROS img to cv::Mat
   auto img = cv_bridge::toCvShare(img_msg, "rgb8")->image;
 
-  auto armors = detector_->detect(img);
+  std::vector<Armor> armors;
+  if (use_model_detector_ && model_detector_ != nullptr) {
+    armors = model_detector_->detect(img);
+  } else {
+    armors = detector_->detect(img);
+  }
 
   auto final_time = this->now();
   auto latency = (final_time - img_msg->header.stamp).seconds() * 1000;
 
   // Publish debug info
   if (debug_) {
-    binary_img_pub_.publish(
-        cv_bridge::CvImage(img_msg->header, "mono8", detector_->binary_img)
-            .toImageMsg());
+    if (!use_model_detector_ && detector_ != nullptr) {
+      binary_img_pub_.publish(
+          cv_bridge::CvImage(img_msg->header, "mono8", detector_->binary_img)
+              .toImageMsg());
 
-    // Sort lights and armors data by x coordinate
-    std::sort(detector_->debug_lights.data.begin(),
-              detector_->debug_lights.data.end(),
-              [](const auto &l1, const auto &l2) {
-                return l1.center_x < l2.center_x;
-              });
-    std::sort(detector_->debug_armors.data.begin(),
-              detector_->debug_armors.data.end(),
-              [](const auto &a1, const auto &a2) {
-                return a1.center_x < a2.center_x;
-              });
+      // Sort lights and armors data by x coordinate
+      std::sort(detector_->debug_lights.data.begin(),
+                detector_->debug_lights.data.end(),
+                [](const auto &l1, const auto &l2) {
+                  return l1.center_x < l2.center_x;
+                });
+      std::sort(detector_->debug_armors.data.begin(),
+                detector_->debug_armors.data.end(),
+                [](const auto &a1, const auto &a2) {
+                  return a1.center_x < a2.center_x;
+                });
 
-    lights_data_pub_->publish(detector_->debug_lights);
-    armors_data_pub_->publish(detector_->debug_armors);
+      lights_data_pub_->publish(detector_->debug_lights);
+      armors_data_pub_->publish(detector_->debug_armors);
 
-    if (!armors.empty()) {
-      auto all_num_img = detector_->getAllNumbersImage();
-      number_img_pub_.publish(
-          *cv_bridge::CvImage(img_msg->header, "mono8", all_num_img)
-               .toImageMsg());
+      if (!armors.empty()) {
+        auto all_num_img = detector_->getAllNumbersImage();
+        number_img_pub_.publish(
+            *cv_bridge::CvImage(img_msg->header, "mono8", all_num_img)
+                 .toImageMsg());
+      }
+
+      detector_->drawResults(img);
+    } else if (use_model_detector_ && model_detector_ != nullptr) {
+      model_detector_->drawResults(img);
     }
-
-    detector_->drawResults(img);
 
     // Draw camera center
     cv::circle(img, cam_center_, 5, cv::Scalar(255, 0, 0), 2);
@@ -334,30 +377,40 @@ ArmorDetectorNode::onSetParameters(std::vector<rclcpp::Parameter> parameters) {
   rcl_interfaces::msg::SetParametersResult result;
   result.successful = true;
   for (const auto &param : parameters) {
-    if (param.get_name() == "binary_thres") {
-      detector_->binary_thres = param.as_int();
-    } else if (param.get_name() == "classifier_threshold") {
-      detector_->classifier->threshold = param.as_double();
-    } else if (param.get_name() == "light.min_ratio") {
-      detector_->light_params.min_ratio = param.as_double();
-    } else if (param.get_name() == "light.max_ratio") {
-      detector_->light_params.max_ratio = param.as_double();
-    } else if (param.get_name() == "light.max_angle") {
-      detector_->light_params.max_angle = param.as_double();
-    } else if (param.get_name() == "light.color_diff_thresh") {
-      detector_->light_params.color_diff_thresh = param.as_int();
-    } else if (param.get_name() == "armor.min_light_ratio") {
-      detector_->armor_params.min_light_ratio = param.as_double();
-    } else if (param.get_name() == "armor.min_small_center_distance") {
-      detector_->armor_params.min_small_center_distance = param.as_double();
-    } else if (param.get_name() == "armor.max_small_center_distance") {
-      detector_->armor_params.max_small_center_distance = param.as_double();
-    } else if (param.get_name() == "armor.min_large_center_distance") {
-      detector_->armor_params.min_large_center_distance = param.as_double();
-    } else if (param.get_name() == "armor.max_large_center_distance") {
-      detector_->armor_params.max_large_center_distance = param.as_double();
-    } else if (param.get_name() == "armor.max_angle") {
-      detector_->armor_params.max_angle = param.as_double();
+    if (use_model_detector_ && model_detector_ != nullptr) {
+      // Model detector dynamic parameters
+      if (param.get_name() == "model_detector.confidence_threshold") {
+        model_detector_->confidence_threshold = static_cast<float>(param.as_double());
+      } else if (param.get_name() == "model_detector.nms_threshold") {
+        model_detector_->nms_threshold = static_cast<float>(param.as_double());
+      }
+    } else if (detector_ != nullptr) {
+      // Traditional detector dynamic parameters
+      if (param.get_name() == "binary_thres") {
+        detector_->binary_thres = param.as_int();
+      } else if (param.get_name() == "classifier_threshold") {
+        detector_->classifier->threshold = param.as_double();
+      } else if (param.get_name() == "light.min_ratio") {
+        detector_->light_params.min_ratio = param.as_double();
+      } else if (param.get_name() == "light.max_ratio") {
+        detector_->light_params.max_ratio = param.as_double();
+      } else if (param.get_name() == "light.max_angle") {
+        detector_->light_params.max_angle = param.as_double();
+      } else if (param.get_name() == "light.color_diff_thresh") {
+        detector_->light_params.color_diff_thresh = param.as_int();
+      } else if (param.get_name() == "armor.min_light_ratio") {
+        detector_->armor_params.min_light_ratio = param.as_double();
+      } else if (param.get_name() == "armor.min_small_center_distance") {
+        detector_->armor_params.min_small_center_distance = param.as_double();
+      } else if (param.get_name() == "armor.max_small_center_distance") {
+        detector_->armor_params.max_small_center_distance = param.as_double();
+      } else if (param.get_name() == "armor.min_large_center_distance") {
+        detector_->armor_params.min_large_center_distance = param.as_double();
+      } else if (param.get_name() == "armor.max_large_center_distance") {
+        detector_->armor_params.max_large_center_distance = param.as_double();
+      } else if (param.get_name() == "armor.max_angle") {
+        detector_->armor_params.max_angle = param.as_double();
+      }
     }
   }
   return result;
@@ -431,12 +484,20 @@ void ArmorDetectorNode::setModeCallback(
 
   switch (mode) {
   case VisionMode::AUTO_AIM_RED: {
-    detector_->detect_color = EnemyColor::RED;
+    if (use_model_detector_ && model_detector_ != nullptr) {
+      model_detector_->detect_color = EnemyColor::RED;
+    } else if (detector_ != nullptr) {
+      detector_->detect_color = EnemyColor::RED;
+    }
     createImageSub();
     break;
   }
   case VisionMode::AUTO_AIM_BLUE: {
-    detector_->detect_color = EnemyColor::BLUE;
+    if (use_model_detector_ && model_detector_ != nullptr) {
+      model_detector_->detect_color = EnemyColor::BLUE;
+    } else if (detector_ != nullptr) {
+      detector_->detect_color = EnemyColor::BLUE;
+    }
     createImageSub();
     break;
   }
