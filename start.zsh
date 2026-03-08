@@ -10,8 +10,7 @@ sudo rm -r build install log
 
 colcon build --symlink-install --parallel-workers  4
 
-docker start 493a3dc7fab1
-docker exec -it 493a3dc7fab1 /bin/bash
+docker start 493a3dc7fab1 && docker exec -it 493a3dc7fab1 /bin/bash 
 cd /workspace
 source install/setup.bash
 ros2 launch rm_bringup bringup.launch.py

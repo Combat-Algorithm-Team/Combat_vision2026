@@ -92,7 +92,8 @@ bool ProtocolSentry::receive(rm_interfaces::msg::SerialReceiveData &data) {
 
     packet.unloadData(data.judge_system_data.game_status, 25);
 
-    data.bullet_speed = 25;
+    //packet.unloadData(data.bullet_speed, 26);
+    data.bullet_speed = 23.0;
     return true;
   } else {
     return false;
