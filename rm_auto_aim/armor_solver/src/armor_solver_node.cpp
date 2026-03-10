@@ -37,7 +37,7 @@ ArmorSolverNode::ArmorSolverNode(const rclcpp::NodeOptions &options)
     debug_mode_ = this->declare_parameter("debug", true);
 
     // Bullet speed (default from parameter, can be updated from lower computer)
-    bullet_speed_ = this->declare_parameter("solver.bullet_speed", 20.0);
+    // bullet_speed_ = this->declare_parameter("solver.bullet_speed", 20.0);
 
     // Tracker
     double max_match_distance = this->declare_parameter("tracker.max_match_distance", 0.2);
