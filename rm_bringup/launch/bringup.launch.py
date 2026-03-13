@@ -222,7 +222,7 @@ def generate_launch_description():
     push_namespace = PushRosNamespace(launch_params['namespace'])
     
     launch_description_list = [
-        # robot_gimbal_publisher,#
+        robot_gimbal_publisher,#
         standard_robot_pp_ros2_node,
         push_namespace,#
         # delay_serial_node,#

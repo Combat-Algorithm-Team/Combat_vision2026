@@ -1,5 +1,5 @@
 /camera_driver:
   ros__parameters:
     camera_info_url: package://rm_bringup/config/camera_info.yaml
-    exposure_time:  3000 #晚上3000 白天1200
+    exposure_time:  1500 #晚上2500 白天1200
     gain: 16.0
