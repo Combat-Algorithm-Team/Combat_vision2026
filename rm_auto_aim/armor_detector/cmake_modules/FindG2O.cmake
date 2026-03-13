@@ -19,7 +19,7 @@ IF(UNIX)
   MESSAGE(STATUS "Searching for g2o ...")
   FIND_PATH(G2O_INCLUDE_DIR
     NAMES core math_groups types
-    PATHS /usr/local /usr/local/lib
+    PATHS /usr/local /usr
     PATH_SUFFIXES include/g2o include)
 
   IF (G2O_INCLUDE_DIR)
