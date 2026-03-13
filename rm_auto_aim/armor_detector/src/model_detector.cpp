@@ -15,8 +15,10 @@
 #include "armor_detector/model_detector.hpp"
 // std
 #include <algorithm>
+#include <array>
 #include <cmath>
 #include <cstring>
+#include <thread>
 #include <vector>
 // OpenCV
 #include <opencv2/core.hpp>
@@ -27,17 +29,8 @@
 
 namespace fyt::auto_aim {
 
-// 回调为 9 个类别，匹配 22 维度的输出
 const std::vector<std::string> ModelDetector::NUMBER_NAMES = {
-    "sentry",    // G  (哨兵)
-    "1",         // 1  (一号)
-    "2",         // 2  (二号)
-    "3",         // 3  (三号)
-    "4",         // 4  (四号)
-    "5",         // 5  (五号)
-    "outpost",   // O  (前哨站)
-    "base",      // Bs (基地)
-    "negative",  // negative
+    "sentry", "1", "2", "3", "4", "5", "outpost", "base", "negative",
 };
 
 const std::vector<std::string> ModelDetector::COLOR_NAMES = {
@@ -47,6 +40,11 @@ const std::vector<std::string> ModelDetector::COLOR_NAMES = {
     "purple",
 };
 
+static inline float fast_sigmoid(float x) {
+  x = std::max(-10.0f, std::min(10.0f, x));
+  return 1.0f / (1.0f + std::exp(-x));
+}
+
 ModelDetector::ModelDetector(const std::string &model_path,
                              float confidence_threshold,
                              float nms_threshold,
@@ -54,15 +52,12 @@ ModelDetector::ModelDetector(const std::string &model_path,
 : detect_color(detect_color),
   confidence_threshold(confidence_threshold),
   nms_threshold(nms_threshold) {
-  // Load model
   auto model = core_.read_model(model_path);
 
-  // Get input shape [1, 3, H, W]
   auto input_shape = model->input().get_shape();
   input_h_ = static_cast<int>(input_shape[2]);
   input_w_ = static_cast<int>(input_shape[3]);
 
-  // Set up PrePostProcessor for automatic preprocessing
   ov::preprocess::PrePostProcessor ppp(model);
   ppp.input().tensor()
       .set_element_type(ov::element::u8)
@@ -74,12 +69,17 @@ ModelDetector::ModelDetector(const std::string &model_path,
       .scale({255.0f, 255.0f, 255.0f});
   ppp.input().model().set_layout("NCHW");
   ppp.output().tensor().set_element_type(ov::element::f32);
-
-  // Build model with preprocessing
   model = ppp.build();
 
-  // Compile model for CPU
-  compiled_model_ = core_.compile_model(model, "CPU");
+  compiled_model_ = core_.compile_model(
+      model, "CPU",
+      ov::AnyMap{
+        {ov::hint::performance_mode.name(), ov::hint::PerformanceMode::THROUGHPUT},
+        {ov::streams::num.name(), "1"},
+        {ov::inference_num_threads.name(), 6},  // 按你CPU试 4/6/8
+        {ov::hint::enable_cpu_pinning.name(), true},
+      });
+
   infer_request_ = compiled_model_.create_infer_request();
 }
 
@@ -87,17 +87,17 @@ cv::Mat ModelDetector::letterbox(const cv::Mat &src,
                                  float &scale,
                                  float &pad_x,
                                  float &pad_y) {
-  float scale_x = static_cast<float>(input_w_) / static_cast<float>(src.cols);
-  float scale_y = static_cast<float>(input_h_) / static_cast<float>(src.rows);
+  const float scale_x = static_cast<float>(input_w_) / static_cast<float>(src.cols);
+  const float scale_y = static_cast<float>(input_h_) / static_cast<float>(src.rows);
   scale = std::min(scale_x, scale_y);
 
-  int new_w = static_cast<int>(src.cols * scale);
-  int new_h = static_cast<int>(src.rows * scale);
-  pad_x = (input_w_ - new_w) / 2.0f;
-  pad_y = (input_h_ - new_h) / 2.0f;
+  const int new_w = static_cast<int>(src.cols * scale);
+  const int new_h = static_cast<int>(src.rows * scale);
+  pad_x = (input_w_ - new_w) * 0.5f;
+  pad_y = (input_h_ - new_h) * 0.5f;
 
   cv::Mat resized;
-  cv::resize(src, resized, cv::Size(new_w, new_h));
+  cv::resize(src, resized, cv::Size(new_w, new_h), 0, 0, cv::INTER_LINEAR);
 
   cv::Mat padded(input_h_, input_w_, CV_8UC3, cv::Scalar(114, 114, 114));
   resized.copyTo(
@@ -106,65 +106,44 @@ cv::Mat ModelDetector::letterbox(const cv::Mat &src,
   return padded;
 }
 
-// Sigmoid function
-static float sigmoid(float x) {
-  return 1.0f / (1.0f + std::exp(-x));
-}
-
 std::vector<Armor> ModelDetector::detect(const cv::Mat &input) {
-  // 1. Preprocess: letterbox
-  float scale, pad_x, pad_y;
+  // 1) Preprocess
+  float scale = 1.0f, pad_x = 0.0f, pad_y = 0.0f;
   cv::Mat padded = letterbox(input, scale, pad_x, pad_y);
 
-  // 2. Set input tensor
+  // 2) Input tensor copy
   auto input_tensor = infer_request_.get_input_tensor();
-  uchar *input_data = input_tensor.data<uchar>();
+  auto *input_data = input_tensor.data<uchar>();
   std::memcpy(input_data, padded.data, padded.total() * padded.elemSize());
 
-  // 3. Run inference
+  // 3) Inference
   infer_request_.infer();
 
-  // 4. Get output tensor
+  // 4) Output parse
   auto output_tensor = infer_request_.get_output_tensor();
-  auto output_shape = output_tensor.get_shape();
+  const auto output_shape = output_tensor.get_shape();
   const float *output_data = output_tensor.data<float>();
 
-  // Determine the format and get number of candidates
-  int num_candidates;
-  bool need_transpose;
+  int num_candidates = 0;
+  bool layout_1_22_N = false;
+
   if (output_shape.size() == 3) {
     if (output_shape[1] == NUM_OUTPUT_VALUES) {
-      // Shape: [1, 22, N]
+      // [1, 22, N]
       num_candidates = static_cast<int>(output_shape[2]);
-      need_transpose = true;
+      layout_1_22_N = true;
     } else {
-      // Shape: [1, N, 22]
+      // [1, N, 22]
       num_candidates = static_cast<int>(output_shape[1]);
-      need_transpose = false;
+      layout_1_22_N = false;
     }
   } else {
     armors_.clear();
     return armors_;
   }
 
-  // Transpose if needed: [1, 22, N] -> [N, 22]
-  const float *data_ptr;
-  if (need_transpose) {
-    // 使用类成员变量避免重复分配内存
-    transposed_buffer_.resize(num_candidates * NUM_OUTPUT_VALUES);
-    for (int i = 0; i < NUM_OUTPUT_VALUES; i++) {
-      for (int j = 0; j < num_candidates; j++) {
-        transposed_buffer_[j * NUM_OUTPUT_VALUES + i] = output_data[i * num_candidates + j];
-      }
-    }
-    data_ptr = transposed_buffer_.data();
-  } else {
-    data_ptr = output_data;
-  }
-
-  // 5. Postprocess (传入 scale 和 padding 进行准确反算)
-  armors_ = postprocess(data_ptr, num_candidates, scale, pad_x, pad_y);
-
+  // 5) Postprocess (no transpose copy)
+  armors_ = postprocess(output_data, num_candidates, scale, pad_x, pad_y, layout_1_22_N);
   return armors_;
 }
 
@@ -172,102 +151,101 @@ std::vector<Armor> ModelDetector::postprocess(const float *output_data,
                                               int num_candidates,
                                               float scale,
                                               float pad_x,
-                                              float pad_y) {
+                                              float pad_y,
+                                              bool layout_1_22_N) {
   std::vector<Armor> armors;
+  armors.reserve(64);
+
   std::vector<cv::Rect2d> boxes;
   std::vector<float> scores;
   std::vector<int> indices;
+  boxes.reserve(num_candidates);
+  scores.reserve(num_candidates);
+  indices.reserve(num_candidates);
 
-  // Temporary storage for all valid detections before NMS
   struct Detection {
-    cv::Point2f keypoints[4];
+    std::array<cv::Point2f, 4> keypoints;
     float confidence;
     int color_id;
     int number_id;
     float number_confidence;
   };
   std::vector<Detection> detections;
+  detections.reserve(num_candidates);
 
   for (int i = 0; i < num_candidates; i++) {
-    const float *row = output_data + i * NUM_OUTPUT_VALUES;
+    auto getv = [&](int j) -> float {
+      return layout_1_22_N ? output_data[j * num_candidates + i]
+                           : output_data[i * NUM_OUTPUT_VALUES + j];
+    };
 
-    // 1. Objectness score (index 8)
-    float objectness = sigmoid(row[8]);
-    if (objectness < confidence_threshold) {
-      continue;
-    }
+    // objectness
+    const float objectness = fast_sigmoid(getv(8));
+    if (objectness < confidence_threshold) continue;
 
-    // 2. Color class (indices 9-12): 0=Blue, 1=Red, 2=Gray, 3=Purple
+    // color logits [9..12]
     int color_id = 0;
-    float max_color_prob = row[9];
+    float max_color_prob = getv(9);
     for (int c = 1; c < NUM_COLORS; c++) {
-      if (row[9 + c] > max_color_prob) {
-        max_color_prob = row[9 + c];
+      const float v = getv(9 + c);
+      if (v > max_color_prob) {
+        max_color_prob = v;
         color_id = c;
       }
     }
 
-    // Filter
-    if (color_id >= 2) continue;
+    // color filter
+    if (color_id >= 2) continue;  // gray/purple pass off
     if (detect_color == EnemyColor::RED && color_id != 0) continue;
     if (detect_color == EnemyColor::BLUE && color_id != 1) continue;
 
-    // 3. Number class (indices 13-21)
+    // number logits [13..21]
     int number_id = 0;
-    float max_num_prob = row[13];
+    float max_num_prob = getv(13);
     for (int n = 1; n < NUM_NUMBERS; n++) {
-      if (row[13 + n] > max_num_prob) {
-        max_num_prob = row[13 + n];
+      const float v = getv(13 + n);
+      if (v > max_num_prob) {
+        max_num_prob = v;
         number_id = n;
       }
     }
 
-    float class_prob = sigmoid(max_num_prob);
-    float final_score = objectness * class_prob;
-    if (final_score < confidence_threshold) {
-      continue;
-    }
+    const float class_prob = fast_sigmoid(max_num_prob);
+    const float final_score = objectness * class_prob;
+    if (final_score < confidence_threshold) continue;
 
-    // 4. Decode keypoints and map back to original image coordinates
-    cv::Point2f kps[4];
+    // decode keypoints
+    std::array<cv::Point2f, 4> kps;
     float min_x = 1e5f, min_y = 1e5f;
     float max_x = -1e5f, max_y = -1e5f;
+
     for (int k = 0; k < 4; k++) {
-      // 修复：先减去 padding 再除以 scale
-      kps[k].x = (row[k * 2] - pad_x) / scale;
-      kps[k].y = (row[k * 2 + 1] - pad_y) / scale;
-      
-      min_x = std::min(min_x, kps[k].x);
-      min_y = std::min(min_y, kps[k].y);
-      max_x = std::max(max_x, kps[k].x);
-      max_y = std::max(max_y, kps[k].y);
+      const float x = (getv(k * 2) - pad_x) / scale;
+      const float y = (getv(k * 2 + 1) - pad_y) / scale;
+      kps[k] = {x, y};
+      min_x = std::min(min_x, x);
+      min_y = std::min(min_y, y);
+      max_x = std::max(max_x, x);
+      max_y = std::max(max_y, y);
     }
 
     boxes.emplace_back(min_x, min_y, max_x - min_x, max_y - min_y);
-    scores.push_back(final_score);
-
-    Detection det;
-    std::copy(kps, kps + 4, det.keypoints);
-    det.confidence = final_score;
-    det.color_id = color_id;
-    det.number_id = number_id;
-    det.number_confidence = class_prob;
-    detections.push_back(det);
+    scores.emplace_back(final_score);
+    detections.push_back(Detection{kps, final_score, color_id, number_id, class_prob});
   }
 
-  // Apply NMS
   if (!boxes.empty()) {
     cv::dnn::NMSBoxes(boxes, scores, confidence_threshold, nms_threshold, indices);
   }
 
-  // Build Armor objects
+  armors.reserve(indices.size());
   for (int idx : indices) {
     const auto &det = detections[idx];
 
     Light left_light;
     left_light.top = det.keypoints[0];
     left_light.bottom = det.keypoints[1];
-    left_light.center = (left_light.top + left_light.bottom) / 2;
+    left_light.center = (left_light.top + left_light.bottom) * 0.5f;
     left_light.length = cv::norm(left_light.top - left_light.bottom);
     left_light.width = 0;
     if (left_light.length > 0) {
@@ -283,7 +261,7 @@ std::vector<Armor> ModelDetector::postprocess(const float *output_data,
     Light right_light;
     right_light.top = det.keypoints[3];
     right_light.bottom = det.keypoints[2];
-    right_light.center = (right_light.top + right_light.bottom) / 2;
+    right_light.center = (right_light.top + right_light.bottom) * 0.5f;
     right_light.length = cv::norm(right_light.top - right_light.bottom);
     right_light.width = 0;
     if (right_light.length > 0) {
@@ -298,25 +276,20 @@ std::vector<Armor> ModelDetector::postprocess(const float *output_data,
 
     Armor armor(left_light, right_light);
 
-    float width = (cv::norm(det.keypoints[3] - det.keypoints[0]) +
-                   cv::norm(det.keypoints[2] - det.keypoints[1])) /
-                  2.0f;
-    float height = (cv::norm(det.keypoints[1] - det.keypoints[0]) +
-                    cv::norm(det.keypoints[2] - det.keypoints[3])) /
-                   2.0f;
-    float aspect_ratio = (height > 0) ? (width / height) : 0;
+    const float width = (cv::norm(det.keypoints[3] - det.keypoints[0]) +
+                         cv::norm(det.keypoints[2] - det.keypoints[1])) * 0.5f;
+    const float height = (cv::norm(det.keypoints[1] - det.keypoints[0]) +
+                          cv::norm(det.keypoints[2] - det.keypoints[3])) * 0.5f;
+    const float aspect_ratio = (height > 0) ? (width / height) : 0.0f;
     armor.type = aspect_ratio > 3.2f ? ArmorType::LARGE : ArmorType::SMALL;
 
     armor.number = NUMBER_NAMES[det.number_id];
     armor.confidence = det.number_confidence;
     armor.classfication_result =
-        fmt::format("{}:{:.1f}%", armor.number, armor.confidence * 100.0);
+        fmt::format("{}:{:.1f}%", armor.number, armor.confidence * 100.0f);
 
-    if (armor.number == "negative") {
-      continue;
-    }
-
-    armors.push_back(armor);
+    if (armor.number == "negative") continue;
+    armors.push_back(std::move(armor));
   }
 
   return armors;

@@ -37,7 +37,7 @@ ArmorSolverNode::ArmorSolverNode(const rclcpp::NodeOptions &options)
     debug_mode_ = this->declare_parameter("debug", true);
 
     // Bullet speed is declared by Solver. Here we only cache runtime updates from serial.
-    bullet_speed_ = 0.0;
+    bullet_speed_ = 25.0;
     has_serial_bullet_speed_ = false;
 
     // Tracker
@@ -52,7 +52,7 @@ ArmorSolverNode::ArmorSolverNode(const rclcpp::NodeOptions &options)
     // state: xc, v_xc, yc, v_yc, zc, v_zc, yaw, v_yaw, r, d_zc
     // measurement: p, y, d, yaw
     // f - Process function
-    auto f = Predict(0.00606);
+    auto f = Predict(0.01515);
     // h - Observation function
     auto h = Measure();
     // update_Q - process noise covariance matrix
@@ -96,11 +96,16 @@ ArmorSolverNode::ArmorSolverNode(const rclcpp::NodeOptions &options)
     r_yaw_ = declare_parameter("ekf.r_yaw", 0.02);
     auto u_r = [this](const Eigen::Matrix<double, Z_N, 1> &z) {
         Eigen::Matrix<double, Z_N, Z_N> r;
+        double delta_angle = std::abs(std::abs(atan2(z[0], z[1])) - std::abs(z[3] - 3.14/2));
+        delta_angle = delta_angle / 3.14 * 180; // convert to degree
+        double distance = sqrt(pow(z[0], 2) + pow(z[1], 2) + pow(z[2], 2));
+        //std::cout << "delta_angle: " << delta_angle << std::endl;
         // clang-format off
-    r << r_x_ * std::abs(z[0]), 0, 0, 0,
-         0, r_y_ * std::abs(z[1]), 0, 0,
-         0, 0, r_z_ * std::abs(z[2]), 0,
-         0, 0, 0, r_yaw_;
+    r << r_x_ * distance, 0, 0, 0,
+         0, r_y_ * distance, 0, 0,
+         0, 0, r_z_ * distance, 0,
+         0, 0, 0, r_yaw_ * (1 + log(1 + delta_angle));
+
         // clang-format on
         return r;
     };

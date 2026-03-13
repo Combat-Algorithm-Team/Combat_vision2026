@@ -62,7 +62,7 @@ void Solver::updateBulletSpeed(double bullet_speed)
 {
     if (bullet_speed > 0.0) {
         trajectory_compensator_->velocity = bullet_speed;
-        FYT_INFO("armor_solver", "Bullet speed updated to {:.2f} m/s", bullet_speed);
+        //FYT_INFO("armor_solver", "Bullet speed updated to {:.2f} m/s", bullet_speed);
     }
 }
 
@@ -104,6 +104,8 @@ rm_interfaces::msg::GimbalCmd Solver::solve(const rm_interfaces::msg::Target &ta
     double flying_time = trajectory_compensator_->getFlyingTime(target_position);
     double dt = (current_time - rclcpp::Time(target.header.stamp)).seconds() + flying_time +
                 prediction_delay_;
+    // std::cout << "Flying time: " << flying_time << " Prediction delay: " << prediction_delay_
+    //           << " dt: " << dt << std::endl;
     target_position.x() += dt * target.velocity.x;
     target_position.y() += dt * target.velocity.y;
     target_position.z() += dt * target.velocity.z;
@@ -210,8 +212,8 @@ bool Solver::isOnTarget(const double cur_yaw, const double cur_pitch, const doub
     double shooting_range_pitch = std::abs(atan2(shooting_range_h_ / 2, distance));
     // Limit the shooting area to 1 degree to avoid not shooting when distance is
     // too large
-    shooting_range_yaw = std::max(shooting_range_yaw, 1.0 * M_PI / 180);
-    shooting_range_pitch = std::max(shooting_range_pitch, 1.0 * M_PI / 180);
+    shooting_range_yaw = std::max(shooting_range_yaw, 0.5 * M_PI / 180);
+    shooting_range_pitch = std::max(shooting_range_pitch, 0.3 * M_PI / 180);
     if (std::abs(cur_yaw - target_yaw) < shooting_range_yaw &&
         std::abs(cur_pitch - target_pitch) < shooting_range_pitch) {
         return true;

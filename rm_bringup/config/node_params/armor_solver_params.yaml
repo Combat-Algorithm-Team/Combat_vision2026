@@ -5,7 +5,7 @@
     max_armor_distance: 10.0
 
     ekf:
-      sigma2_q_x: 1.0 #0.05
+      sigma2_q_x: 0.05 #0.05
       sigma2_q_y: 0.05
       sigma2_q_z: 0.05
       sigma2_q_yaw: 1.0
@@ -13,8 +13,8 @@
       sigma2_q_d_zc: 80.0
 
       r_x: 4e-4
-      r_y: 4e-5
-      r_z: 9e-4
+      r_y: 4e-4
+      r_z: 9e-5
       r_yaw: 5e-3
 
     tracker:
@@ -25,10 +25,10 @@
       lost_time_thres: 1.0
     
     solver:
-      prediction_delay: 0.0 #0.03
-      controller_delay: 0.022 #0.159 0.075 0.08875 0.088
+      prediction_delay: 0.027 #0.03 0.00
+      controller_delay: 0.0 #0.159 0.075 0.08875 0.088 0.022
       max_tracking_v_yaw: 10.0 #转速(rad/s)大于这个值时瞄准机器人中心 
-      side_angle: 30.0 
+      side_angle: 10.0 
       bullet_speed: 25.0
       compenstator_type: "ideal"
       gravity: 10.0
@@ -36,9 +36,9 @@
       iteration_times: 20 # 补偿的迭代次数
       # ["距离下限, 距离上限, 高度下限, 高度上限, pitch轴补偿值, yaw轴补偿值"]
       angle_offset: [
-        "4.0 6.0 -1.0 0.4 0.0 -1.0",
-        "4.0 6.0  0.4 0.8 0.0 0.0",
-        "5.0 6.0  0.8 1.2 0.0 0.0",
+        "4.0 6.0 -1.0 0.4 0.8 0.0",
+        "4.0 6.0  0.4 0.8 0.8 0.0",
+        "5.0 6.0  0.8 1.2 1.0 0.0",
         "6.0 7.0 -1.0 0.4 0.0 0.0",
         "6.0 7.0  0.4 0.8 0.0 0.0",
         "6.0 7.0  0.8 1.2 0.0 0.0",

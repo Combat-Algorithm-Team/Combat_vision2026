@@ -14,6 +14,7 @@
 // limitations under the License.
 
 #include "rm_utils/math/trajectory_compensator.hpp"
+#include <iostream>
 
 namespace fyt {
 bool TrajectoryCompensator::compensate(const Eigen::Vector3d &target_position,

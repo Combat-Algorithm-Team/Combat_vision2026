@@ -30,9 +30,9 @@ namespace fyt::auto_aim {
 // Armor detector based on deep learning model inference using OpenVINO
 // Model output format per detection (22 values):
 //   0-7:   4 keypoints (x1,y1,x2,y2,x3,y3,x4,y4), counterclockwise from top-left
-//   8:     confidence
-//   9-12:  color class probabilities (red, blue, gray, purple)
-//   13-21: number class probabilities (G,1,2,3,4,5,O,Bs,negative)
+//   8:     confidence (objectness logit)
+//   9-12:  color class logits (red, blue, gray, purple)
+//   13-21: number class logits (G,1,2,3,4,5,O,Bs,negative)
 class ModelDetector {
 public:
   ModelDetector(const std::string &model_path,
@@ -53,12 +53,14 @@ private:
   cv::Mat letterbox(const cv::Mat &src, float &scale, float &pad_x, float &pad_y);
 
   // Postprocess model output into Armor objects
-  // 修改：传入 scale 和 padding 用于正确的坐标逆映射
+  // layout_1_22_N = true  -> output shape [1, 22, N]
+  // layout_1_22_N = false -> output shape [1, N, 22]
   std::vector<Armor> postprocess(const float *output_data,
                                  int num_candidates,
                                  float scale,
                                  float pad_x,
-                                 float pad_y);
+                                 float pad_y,
+                                 bool layout_1_22_N);
 
   // OpenVINO inference members
   ov::Core core_;
@@ -73,7 +75,7 @@ private:
   static constexpr int NUM_KEYPOINT_VALUES = 8;    // 4 keypoints * 2
   static constexpr int NUM_CONFIDENCE = 1;
   static constexpr int NUM_COLORS = 4;             // red, blue, gray, purple
-  static constexpr int NUM_NUMBERS = 9;            // G,1,2,3,4,5,O,Bs,negative (22维)
+  static constexpr int NUM_NUMBERS = 9;            // G,1,2,3,4,5,O,Bs,negative
   static constexpr int NUM_OUTPUT_VALUES = NUM_KEYPOINT_VALUES + NUM_CONFIDENCE +
                                            NUM_COLORS + NUM_NUMBERS;  // 22
 
@@ -84,9 +86,6 @@ private:
 
   // Detected armors (for debug drawing)
   std::vector<Armor> armors_;
-
-  // 内存优化：预分配的转置 Buffer，避免每帧都在堆上分配内存
-  std::vector<float> transposed_buffer_; 
 };
 
 }  // namespace fyt::auto_aim

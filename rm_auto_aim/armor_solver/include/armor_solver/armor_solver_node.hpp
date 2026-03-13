@@ -56,6 +56,8 @@ private:
 
     void serialReceiveCallback(const rm_interfaces::msg::SerialReceiveData::SharedPtr serial_msg);
 
+    void refreshBulletSpeed() noexcept;
+
     void initMarkers() noexcept;
 
     void publishMarkers(const rm_interfaces::msg::Target &target_msg,
@@ -84,7 +86,10 @@ private:
 
     // Bullet speed from lower computer
     double bullet_speed_;
+    double default_bullet_speed_;
+    double bullet_speed_timeout_;
     bool has_serial_bullet_speed_;
+    rclcpp::Time last_serial_bullet_speed_time_;
 
     // Subscriber with tf2 message_filter
     std::string target_frame_;
