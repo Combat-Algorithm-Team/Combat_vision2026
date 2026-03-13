@@ -36,8 +36,9 @@ ArmorSolverNode::ArmorSolverNode(const rclcpp::NodeOptions &options)
 
     debug_mode_ = this->declare_parameter("debug", true);
 
-    // Bullet speed (default from parameter, can be updated from lower computer)
-    // bullet_speed_ = this->declare_parameter("solver.bullet_speed", 20.0);
+    // Bullet speed is declared by Solver. Here we only cache runtime updates from serial.
+    bullet_speed_ = 0.0;
+    has_serial_bullet_speed_ = false;
 
     // Tracker
     double max_match_distance = this->declare_parameter("tracker.max_match_distance", 0.2);
@@ -132,9 +133,9 @@ ArmorSolverNode::ArmorSolverNode(const rclcpp::NodeOptions &options)
         "serial/receive", rclcpp::SensorDataQoS(),
         std::bind(&ArmorSolverNode::serialReceiveCallback, this, std::placeholders::_1));
 
-    // Measurement publisher (for debug usage)
+    // Measurement is a low-rate debug topic, so use reliable QoS for easier inspection.
     measure_pub_ = this->create_publisher<rm_interfaces::msg::Measurement>(
-        "armor_solver/measurement", rclcpp::SensorDataQoS());
+        "armor_solver/measurement", rclcpp::QoS(10).reliable());
 
     // Publisher
     target_pub_ = this->create_publisher<rm_interfaces::msg::Target>("armor_solver/target",
@@ -260,10 +261,9 @@ void ArmorSolverNode::initMarkers() noexcept
 void ArmorSolverNode::serialReceiveCallback(
     const rm_interfaces::msg::SerialReceiveData::SharedPtr serial_msg)
 {
-    // Update bullet speed from lower computer if valid
     if (serial_msg->bullet_speed > 0.0) {
         bullet_speed_ = serial_msg->bullet_speed;
-        // Update solver bullet speed if solver is initialized
+        has_serial_bullet_speed_ = true;
         if (solver_ != nullptr) {
             solver_->updateBulletSpeed(bullet_speed_);
         }
@@ -278,6 +278,9 @@ void ArmorSolverNode::armorsCallback(const rm_interfaces::msg::Armors::SharedPtr
     // Lazy initialize solver owing to weak_from_this() can't be called in constructor
     if (solver_ == nullptr) {
         solver_ = std::make_unique<Solver>(weak_from_this());
+        if (has_serial_bullet_speed_) {
+            solver_->updateBulletSpeed(bullet_speed_);
+        }
     }
 
     // Tranform armor position from image frame to world coordinate

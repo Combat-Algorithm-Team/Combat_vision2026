@@ -84,6 +84,7 @@ private:
 
     // Bullet speed from lower computer
     double bullet_speed_;
+    bool has_serial_bullet_speed_;
 
     // Subscriber with tf2 message_filter
     std::string target_frame_;
@@ -93,7 +94,7 @@ private:
     rm_interfaces::msg::Target armor_target_;
     std::shared_ptr<tf2_filter> tf2_filter_;
 
-    // Serialfor receive data subscriber ( bullet_speed)
+    // Serial receive data subscriber (bullet_speed)
     rclcpp::Subscription<rm_interfaces::msg::SerialReceiveData>::SharedPtr serial_sub_;
 
     // Measurement publisher

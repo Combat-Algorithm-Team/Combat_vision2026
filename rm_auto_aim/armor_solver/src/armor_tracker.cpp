@@ -139,6 +139,7 @@ void Tracker::update(const Armors::SharedPtr &armors_msg) noexcept
             handleArmorJump(same_id_armor);
         } else {
             // No matched armor found
+            std::cout <<"min_position_diff: "<< min_position_diff <<" yaw_diff: "<< yaw_diff << std::endl;
             FYT_WARN("armor_solver", "No matched armor found!");
         }
     }
