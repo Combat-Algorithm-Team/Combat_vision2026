@@ -101,9 +101,9 @@ ArmorSolverNode::ArmorSolverNode(const rclcpp::NodeOptions &options)
         double distance = sqrt(pow(z[0], 2) + pow(z[1], 2) + pow(z[2], 2));
         //std::cout << "delta_angle: " << delta_angle << std::endl;
         // clang-format off
-    r << r_x_ * distance, 0, 0, 0,
-         0, r_y_ * distance, 0, 0,
-         0, 0, r_z_ * distance, 0,
+    r << r_x_ * (1+log(1+distance)), 0, 0, 0,
+         0, r_y_ * (1+log(1+distance)), 0, 0,
+         0, 0, r_z_ * (1+log(1+distance)), 0,
          0, 0, 0, r_yaw_ * (1 + log(1 + delta_angle));
 
         // clang-format on
