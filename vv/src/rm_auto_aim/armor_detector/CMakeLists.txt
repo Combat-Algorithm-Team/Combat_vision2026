@@ -19,14 +19,13 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 #######################
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake_modules)
-set(EXTERNAL_INCLUDE_DIRS ${G2O_INCLUDE_DIR})
-set(EXTERNAL_LIBS ${G2O_LIBRARIES})
 
 find_package(ament_cmake_auto REQUIRED)
 find_package(OpenCV REQUIRED)
 find_package(TBB REQUIRED COMPONENTS tbb)
+
 # 手动设置 G2O 库路径
-set(G2O_LIBRARIES 
+set(G2O_LIBRARIES
     /usr/local/lib/libg2o_core.so
     /usr/local/lib/libg2o_stuff.so
     /usr/local/lib/libg2o_solver_csparse.so
@@ -34,6 +33,12 @@ set(G2O_LIBRARIES
     /usr/local/lib/libg2o_types_slam3d.so
     /usr/local/lib/libg2o_solver_dense.so
 )
+set(G2O_INCLUDE_DIRS /usr/local/include)
+
+# 手动设置 OpenVINO 路径
+set(OpenVINO_DIR /opt/intel/openvino_2024.6.0)
+set(OpenVINO_INCLUDE_DIRS ${OpenVINO_DIR}/runtime/include)
+set(OpenVINO_LIBRARY_DIRS ${OpenVINO_DIR}/runtime/lib/intel64)
 
 find_package(fmt REQUIRED)
 find_package(Sophus REQUIRED)
@@ -52,18 +57,15 @@ ${OpenCV_INCLUDE_DIRS}
 ${G2O_INCLUDE_DIRS}
 ${Sophus_INCLUDE_DIRS}
 ${EIGEN3_INCLUDE_DIRS}
+${OpenVINO_INCLUDE_DIRS}
 )
 
 target_link_libraries(${PROJECT_NAME}
 ${OpenCV_LIBS}
-g2o_core
-g2o_stuff
-g2o_solver_csparse
-g2o_types_sba
-g2o_types_slam3d
-g2o_solver_dense
+${G2O_LIBRARIES}
 fmt::fmt
 tbb
+${OpenVINO_DIR}/runtime/lib/intel64/libopenvino.so
 )
 
 

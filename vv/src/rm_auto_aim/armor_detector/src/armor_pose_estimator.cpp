@@ -121,9 +121,6 @@ void ArmorPoseEstimator::sortPnPResult(const Armor &armor,
   cv::Rodrigues(rvec1, R1_cv);
   cv::Rodrigues(rvec2, R2_cv);
 
-    // std::cout << "tvec1:\n" << tvec1 << std::endl;
-    // std::cout << "tvec2:\n" << tvec2 << std::endl;
-
   // 转换为Eigen矩阵
   Eigen::Matrix3d R1 = utils::cvToEigen(R1_cv);
   Eigen::Matrix3d R2 = utils::cvToEigen(R2_cv);
@@ -163,7 +160,7 @@ void ArmorPoseEstimator::sortPnPResult(const Armor &armor,
       (angle < 0 && rpy1[2] < 0 && rpy2[2] > 0)) {
     std::swap(rvec1, rvec2);
     std::swap(tvec1, tvec2);
-    FYT_DEBUG("armor_detector", "PnP Solution 2 Selected");
+    //FYT_DEBUG("armor_detector", "PnP Solution 2 Selected");
   }
 }
 

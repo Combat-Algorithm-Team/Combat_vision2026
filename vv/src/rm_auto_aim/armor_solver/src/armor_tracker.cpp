@@ -120,6 +120,10 @@ void Tracker::update(const Armors::SharedPtr &armors_msg) noexcept {
 
     // Check if the distance and yaw difference of closest armor are within the
     // threshold
+    std::cout<<"min_position_diff:"<<min_position_diff<<std::endl;
+    // std::cout<<"max_match_distance_:"<<max_match_distance_<<std::endl;        0.5
+    std::cout<<"yaw_diff:"<< yaw_diff<<std::endl<<std::endl;
+    // std::cout<<"max_match_yaw_diff_:"<<max_match_yaw_diff_<<std::endl<<std::endl;       2.0
     if (min_position_diff < max_match_distance_ && yaw_diff < max_match_yaw_diff_) {
       // Matched armor found
       matched = true;
@@ -133,18 +137,19 @@ void Tracker::update(const Armors::SharedPtr &armors_msg) noexcept {
       // and yaw has jumped, take this case as the target is spinning and armor
       // jumped
       handleArmorJump(same_id_armor);
+      // std::cout<<2<<std::endl;        //debug
     } else {
       // No matched armor found
+      //debug
+      // if(min_position_diff > max_match_distance_ ){
+      //   std::cout<<"min_position_diff:"<<min_position_diff<<std::endl;
+      //   std::cout<<"max_match_distance_:"<<max_match_distance_<<std::endl;
+      // }
+      // if(yaw_diff < max_match_yaw_diff_){
+      //   std::cout<<"yaw_diff:"<< yaw_diff<<std::endl;
+      //   std::cout<<"max_match_yaw_diff_:"<<max_match_yaw_diff_<<std::endl;
+      // }
       FYT_WARN("armor_solver", "No matched armor found!");
-      if(min_position_diff >= max_match_distance_){
-          std::cout<<"min_position_diff:"<<min_position_diff<<std::endl;
-          std::cout<<"max_match_distance_:"<<max_match_distance_<<std::endl;
-      }
-      if(yaw_diff >= max_match_yaw_diff_){
-          std::cout<<"yaw_diff:"<<yaw_diff<<std::endl;
-          std::cout<<"max_match_yaw_diff_:"<<max_match_yaw_diff_<<std::endl;
-      }
-      
     }
   }
 

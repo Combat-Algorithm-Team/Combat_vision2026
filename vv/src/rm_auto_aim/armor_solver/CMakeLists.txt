@@ -16,7 +16,6 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 ## Find dependencies ##
 #######################
 
-include_directories(/usr/include/asio)
 find_package(ament_cmake_auto REQUIRED)
 ament_auto_find_build_dependencies()
 

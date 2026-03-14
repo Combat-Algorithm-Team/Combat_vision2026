@@ -179,7 +179,7 @@ rm_interfaces::msg::GimbalCmd Solver::solve(const rm_interfaces::msg::Target &ta
   double cmd_yaw = angles::normalize_angle(yaw + yaw_offset);
 
 
-  gimbal_cmd.yaw = cmd_yaw * 180 / M_PI;  
+  gimbal_cmd.yaw = cmd_yaw * 180 / M_PI;
   //if(gimbal_cmd.yaw < 0) gimbal_cmd.yaw =-180.0-gimbal_cmd.yaw;
   //else gimbal_cmd.yaw= 180.0-gimbal_cmd.yaw;
   gimbal_cmd.pitch = cmd_pitch * 180 / M_PI;  
@@ -204,25 +204,10 @@ bool Solver::isOnTarget(const double cur_yaw,
   // too large
   shooting_range_yaw = std::max(shooting_range_yaw, 1.0 * M_PI / 180);
   shooting_range_pitch = std::max(shooting_range_pitch, 1.0 * M_PI / 180);
-  bool yaw_ok = std::abs(cur_yaw - target_yaw) < shooting_range_yaw;
-  bool pitch_ok = std::abs(cur_pitch - target_pitch) < shooting_range_pitch;
-
-  if (yaw_ok && pitch_ok) {
+  if (std::abs(cur_yaw - target_yaw) < shooting_range_yaw &&
+      std::abs(cur_pitch - target_pitch) < shooting_range_pitch) {
     return true;
   }
-
-  // if (!yaw_ok) {
-  //   FYT_INFO("armor_solver",
-  //            "Don't fire: yaw not ready. diff: {:.2f}, range: {:.2f}",
-  //            (cur_yaw - target_yaw) * 180 / M_PI,
-  //            shooting_range_yaw * 180 / M_PI);
-  // }
-  // if (!pitch_ok) {
-  //   FYT_INFO("armor_solver",
-  //            "Don't fire: pitch not ready. diff: {:.2f}, range: {:.2f}",
-  //            (cur_pitch - target_pitch) * 180 / M_PI,
-  //            shooting_range_pitch * 180 / M_PI);
-  // }
 
   return false;
 }

@@ -53,7 +53,7 @@ void LightCornerCorrector::correctCorners(Armor &armor, const cv::Mat &gray_img)
 }
 
 SymmetryAxis LightCornerCorrector::findSymmetryAxis(const cv::Mat &gray_img, const Light &light) {
-  constexpr float MAX_BRIGHTNESS = 63;
+  constexpr float MAX_BRIGHTNESS = 25;
   constexpr float SCALE = 0.07;
 
   // Scale the bounding box
