@@ -5,23 +5,23 @@
     max_armor_distance: 10.0
 
     ekf:
-      sigma2_q_x: 0.2 #0.05
-      sigma2_q_y: 0.2
+      sigma2_q_x: 0.1 #0.05
+      sigma2_q_y: 0.1
       sigma2_q_z: 0.05
       sigma2_q_yaw: 1.0
       sigma2_q_r: 80.0
       sigma2_q_d_zc: 80.0
 
-      r_x: 1e-4
-      r_y: 1e-4
-      r_z: 1e-4
+      r_x: 4e-4
+      r_y: 4e-4
+      r_z: 7e-5
       r_yaw: 5e-3
 
     tracker:
       max_match_distance: 0.5
       max_match_yaw_diff: 1.0
 
-      tracking_thres: 2
+      tracking_thres: 10
       lost_time_thres: 1.0
     
     solver:
@@ -36,9 +36,9 @@
       iteration_times: 20 # 补偿的迭代次数
       # ["距离下限, 距离上限, 高度下限, 高度上限, pitch轴补偿值, yaw轴补偿值"]
       angle_offset: [
-        "4.0 6.0 -1.0 0.4 0.8 0.0",
-        "4.0 6.0  0.4 0.8 0.8 0.0",
-        "5.0 6.0  0.8 1.2 1.0 0.0",
+        "4.0 6.0 -1.0 0.4 1.2 -1.0",
+        "4.0 6.0  0.4 0.8 1.2 0.0",
+        "4.0 6.0  0.8 1.2 1.2 0.0",
         "6.0 7.0 -1.0 0.4 0.0 0.0",
         "6.0 7.0  0.4 0.8 0.0 0.0",
         "6.0 7.0  0.8 1.2 0.0 0.0",

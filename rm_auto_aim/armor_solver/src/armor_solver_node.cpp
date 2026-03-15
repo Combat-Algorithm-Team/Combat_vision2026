@@ -52,7 +52,7 @@ ArmorSolverNode::ArmorSolverNode(const rclcpp::NodeOptions &options)
     // state: xc, v_xc, yc, v_yc, zc, v_zc, yaw, v_yaw, r, d_zc
     // measurement: p, y, d, yaw
     // f - Process function
-    auto f = Predict(0.01515);
+    auto f = Predict(0.0125);
     // h - Observation function
     auto h = Measure();
     // update_Q - process noise covariance matrix
@@ -101,9 +101,9 @@ ArmorSolverNode::ArmorSolverNode(const rclcpp::NodeOptions &options)
         double distance = sqrt(pow(z[0], 2) + pow(z[1], 2) + pow(z[2], 2));
         //std::cout << "delta_angle: " << delta_angle << std::endl;
         // clang-format off
-    r << r_x_ * (1+log(1+distance)), 0, 0, 0,
-         0, r_y_ * (1+log(1+distance)), 0, 0,
-         0, 0, r_z_ * (1+log(1+distance)), 0,
+    r << r_x_ * (1+log(1+distance))* (1 + log(1 + delta_angle)), 0, 0, 0,
+         0, r_y_ * (1+log(1+distance))* (1 + log(1 + delta_angle)), 0, 0,
+         0, 0, r_z_ * (1+log(1+distance))* (1 + log(1 + delta_angle)), 0,
          0, 0, 0, r_yaw_ * (1 + log(1 + delta_angle));
 
         // clang-format on
@@ -327,6 +327,7 @@ void ArmorSolverNode::armorsCallback(const rm_interfaces::msg::Armors::SharedPtr
         } else {
             tracker_->ekf->setPredictFunc(Predict{dt_, MotionModel::CONSTANT_VEL_ROT});
         }
+
         tracker_->update(armors_msg);
         // Publish measurement
         measure_msg.x = tracker_->measurement(0);

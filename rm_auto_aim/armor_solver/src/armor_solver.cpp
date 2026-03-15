@@ -60,10 +60,13 @@ Solver::Solver(std::weak_ptr<rclcpp::Node> n) : node_(n)
 
 void Solver::updateBulletSpeed(double bullet_speed)
 {
-    if (bullet_speed > 0.0) {
-        trajectory_compensator_->velocity = bullet_speed;
-        //FYT_INFO("armor_solver", "Bullet speed updated to {:.2f} m/s", bullet_speed);
+    if (bullet_speed < 20.0 || bullet_speed > 30.0) {
+        bullet_speed = 24.0;  // default value
+        return;
+     
     }
+    trajectory_compensator_->velocity = bullet_speed;
+    //FYT_INFO("armor_solver", "Bullet speed updated to {:.2f} m/s", bullet_speed);
 }
 
 rm_interfaces::msg::GimbalCmd Solver::solve(const rm_interfaces::msg::Target &target,
@@ -133,7 +136,7 @@ rm_interfaces::msg::GimbalCmd Solver::solve(const rm_interfaces::msg::Target &ta
     rm_interfaces::msg::GimbalCmd gimbal_cmd;
     gimbal_cmd.header = target.header;
     gimbal_cmd.distance = distance;
-    gimbal_cmd.fire_advice = isOnTarget(rpy_[2], rpy_[1], yaw, pitch, distance);
+    gimbal_cmd.fire_advice = false;
 
     switch (state) {
         case TRACKING_ARMOR: {
@@ -177,8 +180,8 @@ rm_interfaces::msg::GimbalCmd Solver::solve(const rm_interfaces::msg::Target &ta
                 state = TRACKING_ARMOR;
                 overflow_count_ = 0;
             }
-            gimbal_cmd.fire_advice = true;
             calcYawAndPitch(target_position, rpy_, yaw, pitch);
+            gimbal_cmd.distance = target_position.norm();
             break;
         }
     }
@@ -190,6 +193,10 @@ rm_interfaces::msg::GimbalCmd Solver::solve(const rm_interfaces::msg::Target &ta
     double yaw_offset = angle_offset[1] * M_PI / 180;
     double cmd_pitch = pitch + pitch_offset;
     double cmd_yaw = angles::normalize_angle(yaw + yaw_offset);
+
+    // Use the commanded target angle for fire gating to avoid mismatch between
+    // aiming command and on-target judgement.
+    gimbal_cmd.fire_advice = isOnTarget(rpy_[2], rpy_[1], cmd_yaw, cmd_pitch, gimbal_cmd.distance);
 
     gimbal_cmd.yaw = cmd_yaw * 180 / M_PI;
     // if(gimbal_cmd.yaw < 0) gimbal_cmd.yaw =-180.0-gimbal_cmd.yaw;
@@ -210,14 +217,23 @@ bool Solver::isOnTarget(const double cur_yaw, const double cur_pitch, const doub
     // Judge whether to shoot
     double shooting_range_yaw = std::abs(atan2(shooting_range_w_ / 2, distance));
     double shooting_range_pitch = std::abs(atan2(shooting_range_h_ / 2, distance));
+    // std::cout<<"distance: "<<distance<<" shooting_range_yaw: "<<shooting_range_yaw<<" shooting_range_pitch: "<<shooting_range_pitch<<std::endl;
+
+    if (distance  > 5.5) {
+        std::cout << "distance: " << distance << std::endl;
+        return false;
+    }
     // Limit the shooting area to 1 degree to avoid not shooting when distance is
     // too large
     shooting_range_yaw = std::max(shooting_range_yaw, 0.5 * M_PI / 180);
     shooting_range_pitch = std::max(shooting_range_pitch, 0.3 * M_PI / 180);
     if (std::abs(cur_yaw - target_yaw) < shooting_range_yaw &&
         std::abs(cur_pitch - target_pitch) < shooting_range_pitch) {
+            
         return true;
     }
+    // std::cout << "yaw开火差值" << std::abs(cur_yaw - target_yaw) * 180 / M_PI << " pitch开火差值" << std::abs(cur_pitch - target_pitch) * 180 / M_PI << std::endl;
+    
 
     return false;
 }

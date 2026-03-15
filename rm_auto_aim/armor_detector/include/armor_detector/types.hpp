@@ -34,8 +34,8 @@
 namespace fyt::auto_aim {
 
 // Armor size, Unit: m
-constexpr double SMALL_ARMOR_WIDTH = 131.969696969697 / 1000.0;  // 135
-constexpr double SMALL_ARMOR_HEIGHT = 53.3333333333333 / 1000.0;      // 55
+constexpr double SMALL_ARMOR_WIDTH = 134.969696969697 / 1000.0;  // 135
+constexpr double SMALL_ARMOR_HEIGHT = 55.9833333333333 / 1000.0;      // 55
 constexpr double LARGE_ARMOR_WIDTH = 225.0 / 1000.0;
 constexpr double LARGE_ARMOR_HEIGHT = 50.0 / 1000.0;  // 55
 
